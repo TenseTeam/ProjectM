@@ -40,7 +40,7 @@
         public AudioManager AudioManager { get; private set; }
 
         [field: SerializeField, Header("Game Stats")]
-        public GameStatsBase GameStats { get; private set; }
+        public GameStats GameStats { get; private set; }
 
         [field: SerializeField, Header("Pooling")]
         public PoolsManager PoolsManager { get; private set; }
@@ -48,7 +48,9 @@
         protected override void Awake()
         {
             base.Awake();
-            GameStateMachine.Init();
+
+            if(GameStateMachine)
+                GameStateMachine.Init();
         }
     }
 }

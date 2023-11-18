@@ -1,16 +1,13 @@
-﻿namespace VUDK.Generic.Managers.Main.Bases
+﻿namespace VUDK.Generic.Managers.Main
 {
     using UnityEngine;
     using UnityEngine.UI;
 
     [DefaultExecutionOrder(-800)]
-    public abstract class GameStatsBase : MonoBehaviour
+    public class GameStats : MonoBehaviour
     {
         [field: SerializeField, Header("Main Camera")]
         public Camera MainCamera { get; private set; }
-
-        [field: SerializeField, Header("Layer Masks")]
-        public LayerMask GroundLayerMask { get; private set; }
         [field: SerializeField]
         public LayerMask PlayerLayerMask { get; private set; }
 

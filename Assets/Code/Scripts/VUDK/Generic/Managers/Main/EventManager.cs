@@ -1,8 +1,8 @@
 ﻿namespace VUDK.Generic.Managers.Main
 {
-    using UnityEngine;
     using System;
     using System.Collections.Generic;
+    using UnityEngine;
 
     [DefaultExecutionOrder(-850)]
     public class EventManager : MonoBehaviour

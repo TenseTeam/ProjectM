@@ -1,14 +1,13 @@
 ﻿namespace VUDK.Features.Main.CharacterController
 {
     using UnityEngine;
-    using VUDK.Generic.Managers.Main;
 
     [RequireComponent(typeof(Rigidbody2D))]
-    public abstract class CharacterController2D : CharacterControllerBase
+    public abstract class CharacterController2DBase : CharacterControllerBase
     {
         protected Rigidbody2D Rigidbody;
 
-        public override bool IsGrounded => Physics2D.OverlapCircle(transform.position + GroundedOffset, GroundedRadius, MainManager.Ins.GameStats.GroundLayerMask);
+        public override bool IsGrounded => Physics2D.OverlapCircle(transform.position + GroundedOffset, GroundedRadius, GroundLayers);
 
         protected virtual void Awake()
         {
@@ -17,20 +16,25 @@
 
         public override void StopCharacterOnPosition()
         {
-            base.StopCharacterOnPosition();
+            StopInputMovementCharacter();
             Rigidbody.velocity = Vector2.zero;
         }
 
         public override void StopCharacterOnXPosition()
         {
-            base.StopCharacterOnXPosition();
+            StopInputMovementCharacter();
             Rigidbody.velocity = new Vector2(0f, Rigidbody.velocity.y);
         }
 
         public override void StopCharacterOnYPosition()
         {
-            base.StopCharacterOnYPosition();
+            StopInputMovementCharacter();
             Rigidbody.velocity = new Vector2(Rigidbody.velocity.x, 0f);
+        }
+
+        public override void StopCharacterOnZPosition()
+        {
+            StopInputMovementCharacter();
         }
 
         public override void Jump(Vector3 direction)

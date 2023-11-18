@@ -26,7 +26,9 @@
         private static void GameOpen()
         {
             HasBeenStarted = true;
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.GameEvents.OnGameOpened);
+
+            if(MainManager.Ins)
+                MainManager.Ins.EventManager.TriggerEvent(EventKeys.GameEvents.OnGameOpened);
         }
 
         private static void FirstLaunch()
@@ -37,7 +39,8 @@
             {
                 PlayerPrefs.SetInt(Constants.Prefs.FirstLaunch, 0); // 0 = false
                 PlayerPrefs.Save();
-                MainManager.Ins.EventManager.TriggerEvent(EventKeys.GameEvents.OnFirstLaunch);
+                if (MainManager.Ins)
+                    MainManager.Ins.EventManager.TriggerEvent(EventKeys.GameEvents.OnFirstLaunch);
             }
         }
     }
