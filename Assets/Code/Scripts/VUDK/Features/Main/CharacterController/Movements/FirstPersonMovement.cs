@@ -1,6 +1,5 @@
 ﻿namespace VUDK.Features.Main.CharacterController.Movements
 {
-    using System;
     using UnityEngine;
     using UnityEngine.InputSystem;
     using VUDK.Features.Main.InputSystem;

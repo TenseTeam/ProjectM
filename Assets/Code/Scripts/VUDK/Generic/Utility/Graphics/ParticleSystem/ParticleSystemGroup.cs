@@ -1,4 +1,4 @@
-namespace VUDK.Generic.Utility.Graphics
+namespace VUDK.Generic.Utility.Graphics.ParticleSystem
 {
     using UnityEngine;
 

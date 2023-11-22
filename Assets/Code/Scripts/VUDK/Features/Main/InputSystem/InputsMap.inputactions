@@ -264,6 +264,17 @@
                 },
                 {
                     "name": "",
+                    "id": "ee51f9d7-e4e1-4b98-83a4-8eda9b1ea589",
+                    "path": "<Touchscreen>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Touch",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "7a4454f2-e5a9-49d1-985f-77094c7aa55f",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",

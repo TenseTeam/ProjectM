@@ -9,6 +9,11 @@
             public const string OnFirstLaunch = "OnFirstLaunch";
         }
 
+        public static class WeatherEvents
+        {
+            public static string OnWeatherChanged = "OnWeatherChanged";
+        }
+
         public static class CountdownEvents
         {
             public const string OnCountdownTimesUp = "OnCountdownTimesUp";

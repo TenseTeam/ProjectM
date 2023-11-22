@@ -3,7 +3,7 @@
     using UnityEngine;
     using CharacterControllerBase = VUDK.Features.Main.CharacterController.CharacterControllerBase;
 
-    public class FirstPersonCamera : CameraFreeLookBase
+    public class FirstPersonCamera : CameraFreeLook
     {
         [SerializeField, Header("First Person Settings"), Tooltip("Target Character Controller")]
         private CharacterControllerBase _targetCharacter;
