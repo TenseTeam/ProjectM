@@ -18,7 +18,6 @@
         [Tooltip("API-KEYS to get weather data.")]
         [SerializeField]
         private APIPackageData _apiPackage;
-
         [Tooltip(
             "Query parameter based on which data is sent back.\n" +
             "It could be following:\r\n\r\n" +
@@ -42,7 +41,6 @@
 
         [Header("Major Weather Events")]
         public UnityEvent OnClear;
-
         public UnityEvent OnCloudy;
         public UnityEvent OnRain;
         public UnityEvent OnSnow;
@@ -52,19 +50,32 @@
         [SerializeField]
         private SerializableDictionary<WeatherConditionType, UnityEvent> _weatherEvents;
 
-        private TimeDelay _timeUpdateDelay;
-
         [Header("Day Night Events")]
         public UnityEvent OnDay;
-
         public UnityEvent OnNight;
+
+        [Header("Default Settings")]
+        [SerializeField]
+        private WeatherConditionType _defaultWeatherCondition = WeatherConditionType.Clear;
+        [SerializeField]
+        private bool _defaultIsDay;
+
+        private TimeDelay _timeUpdateDelay;
 
         private void Awake()
         {
-            UpdateInGameWeather();
             _timeUpdateDelay = new TimeDelay(_updateHours * 3600f);
-            _timeUpdateDelay.Start();
-            _timeUpdateDelay.OnCompleted += RestartTimeUpdateDelay;
+            UpdateInGameWeather();
+        }
+
+        private void OnEnable()
+        {
+            _timeUpdateDelay.OnCompleted += UpdateInGameWeather;
+        }
+
+        private void OnDisable()
+        {
+            _timeUpdateDelay.OnCompleted -= UpdateInGameWeather;
         }
 
         private void Update()
@@ -72,13 +83,14 @@
             _timeUpdateDelay.Process();
         }
 
-        private void RestartTimeUpdateDelay()
+        [ContextMenu("Update Weather")]
+        private void UpdateInGameWeather()
         {
-            UpdateInGameWeather();
+            WeatherCalculator.GetWeather(_apiPackage, _weatherLocationQuery,
+                onReceivedWeatherData: TriggerWeatherEvent,
+                onFailedToReceiveWeatherData: TriggerDefaults);
             _timeUpdateDelay.Start();
         }
-
-        private void UpdateInGameWeather() => WeatherCalculator.GetWeather(_apiPackage, _weatherLocationQuery, TriggerWeatherEvent);
 
         private void TriggerWeatherEvent(WeatherData weatherData)
         {
@@ -164,6 +176,13 @@
         {
             if (_weatherEvents.Dict.ContainsKey(weatherCondition))
                 _weatherEvents[weatherCondition]?.Invoke();
+        }
+
+        private void TriggerDefaults()
+        {
+            TriggerDayNightEvent(_defaultIsDay);
+            TriggerMajorWeatherEvent(_defaultWeatherCondition);
+            TriggerSpecificWeatherEvent(_defaultWeatherCondition);
         }
     }
 }

@@ -10,20 +10,29 @@ namespace VUDK.Features.More.WeatherSystem
 
     public static class WeatherCalculator
     {
-        public static void GetWeather(APIPackageData apipackage, string query, Action<WeatherData> onReceivedWeatherData)
+        public static class Errors
         {
-            GetWeather(apipackage.APIS, query, onReceivedWeatherData);
+            public const int APIInvalid = 401;
+            public const int APIExceededCallsPerMonthQuota = 403;
+            public const int InvalidQueryOrURL = 400;
+            public const int TooManyRequests = 429;
         }
 
-        public static void GetWeather(string[] apikeys, string query, Action<WeatherData> onReceivedWeatherData)
+        public static void GetWeather(APIPackageData apipackage, string query, Action<WeatherData> onReceivedWeatherData, Action onFailedToReceiveWeatherData)
+        {
+            GetWeather(apipackage.APIS, query, onReceivedWeatherData, onFailedToReceiveWeatherData);
+        }
+
+        public static void GetWeather(string[] apikeys, string query, Action<WeatherData> onReceivedWeatherData, Action onFailedToReceivedWeatherData)
         {
             string url = $"https://weatherapi-com.p.rapidapi.com/current.json?q={query}";
 
             UnityWebRequest request = UnityWebRequest.Get(url);
 
-            if(apikeys.Length == 0)
+            if (apikeys.Length == 0)
             {
-                Debug.LogError("Invalid API-KEYS");
+                Debug.LogWarning("No Valid API-KEYS found.");
+                onFailedToReceivedWeatherData?.Invoke();
                 return;
             }
 
@@ -36,8 +45,17 @@ namespace VUDK.Features.More.WeatherSystem
             {
                 if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
                 {
-                    Debug.LogWarning($"Error with API-KEY {apikeys[0]}: {request.error}.\n Trying Next API-KEY.");
-                    GetWeather(apikeys.Skip(1).ToArray(), query, onReceivedWeatherData);
+                    if( request.responseCode == Errors.APIInvalid || 
+                        request.responseCode == Errors.APIExceededCallsPerMonthQuota || 
+                        request.responseCode == Errors.TooManyRequests)
+                    {
+                        Debug.LogWarning($"Error with API-KEY {apikeys[0]}: {request.error}.\n Trying Next API-KEY.");
+                        GetWeather(apikeys.Skip(1).ToArray(), query, onReceivedWeatherData, onFailedToReceivedWeatherData);
+                        return;
+                    }
+
+                    Debug.LogWarning($"Error: {request.error}");
+                    onFailedToReceivedWeatherData?.Invoke();
                 }
                 else
                 {
