@@ -6,6 +6,8 @@
     using VUDK.Features.More.APISystem.Data;
     using VUDK.Features.More.WeatherSystem.Data;
     using VUDK.Features.More.WeatherSystem.Enums;
+    using VUDK.Generic.Managers.Main;
+    using VUDK.Config;
 
     /// <summary>
     /// Manages real-time weather events in the game based on data retrieved from a weather API.
@@ -97,6 +99,7 @@
 #if DEBUG
             Debug.Log($"Triggering Weather: {weatherData}");
 #endif
+            MainManager.Ins.EventManager.TriggerEvent(EventKeys.WeatherEvents.OnWeatherChanged, weatherData);
             WeatherConditionType condition = (WeatherConditionType)weatherData.current.condition.code;
             TriggerDayNightEvent(weatherData.current.is_day == 1);
             TriggerMajorWeatherEvent(condition);

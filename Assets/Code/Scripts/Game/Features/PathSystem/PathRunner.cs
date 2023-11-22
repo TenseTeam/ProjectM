@@ -34,6 +34,8 @@
         /// </summary>
         public void StartPath(Vector3[] positions)
         {
+            if (_isRunningPath) return;
+
             _positions = positions;
             _isRunningPath = true;
         }
