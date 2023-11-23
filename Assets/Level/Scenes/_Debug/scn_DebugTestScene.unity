@@ -22699,21 +22699,6 @@ PrefabInstance:
       propertyPath: m_ShowCameraFrustum
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7403378190600956493, guid: 4eac7f971ecf48140b6dcaab3db19b6b,
-        type: 3}
-      propertyPath: m_Path
-      value: 
-      objectReference: {fileID: 237821037}
-    - target: {fileID: 7403378190600956493, guid: 4eac7f971ecf48140b6dcaab3db19b6b,
-        type: 3}
-      propertyPath: m_Position
-      value: -0.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 7403378190600956493, guid: 4eac7f971ecf48140b6dcaab3db19b6b,
-        type: 3}
-      propertyPath: m_PositionUnits
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8198674855179783120, guid: 4eac7f971ecf48140b6dcaab3db19b6b,
         type: 3}
       propertyPath: m_Path

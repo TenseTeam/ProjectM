@@ -7,7 +7,8 @@
     using ProjectM.Constants;
     using ProjectM.Features.PathSystem.Data;
 
-    public class PathFollower : CinemachineDollyCart
+    [RequireComponent(typeof(CinemachineDollyCart))]
+    public class PathFollower : MonoBehaviour
     {
         [Header("Follower Settings")]
         [SerializeField]
@@ -19,12 +20,16 @@
         private int _targetWaypointIndex;
         private bool _isRunning;
 
-        public bool IsOnTargetWaypoint => m_Position.IsApproximatelyEqual(_targetWaypointIndex);
+        public CinemachineDollyCart Cart { get; private set; }
+
+        public bool IsOnTargetWaypoint => Cart.m_Position.IsApproximatelyEqual(_targetWaypointIndex);
 
         private void Awake()
         {
-            m_PositionUnits = CinemachinePathBase.PositionUnits.PathUnits;
-            m_Speed = 0f;
+            TryGetComponent(out CinemachineDollyCart cart);
+            Cart = cart;
+            Cart.m_PositionUnits = CinemachinePathBase.PositionUnits.PathUnits;
+            Cart.m_Speed = 0f;
         }
 
         private void OnEnable()
@@ -41,9 +46,8 @@
             MainManager.Ins.EventManager.RemoveListener<PathTrackChangeEventData>(GameEventKeys.OnTryTrackChange, ChangeTrack);
         }
 
-        protected override void Update()
+        private void Update()
         {
-            base.Update();
             OnRunningCart();
         }
 
@@ -53,7 +57,7 @@
 
             _isRunning = true;
             SetWaypointIndex(waypoint);
-            m_Speed = GetCorrectSpeed();
+            Cart.m_Speed = GetCorrectSpeed();
         }
 
         private void SetWaypointIndex(int index)
@@ -63,15 +67,15 @@
 
         private void ChangeTrack(PathTrackChangeEventData path)
         {
-            if(path.NewPath == m_Path) return;
+            if(path.NewPath == Cart.m_Path) return;
 
-            m_Path = path.NewPath;
-            m_Position = path.StartWaypointOnChange;
+            Cart.m_Path = path.NewPath;
+            Cart.m_Position = path.StartWaypointOnChange;
         }
 
         private float GetCorrectSpeed()
         {
-            return _targetWaypointIndex > m_Position ? _targetSpeed : -_targetSpeed;
+            return _targetWaypointIndex > Cart.m_Position ? _targetSpeed : -_targetSpeed;
         }
 
         private void OnRunningCart()
@@ -81,7 +85,7 @@
             if (IsOnTargetWaypoint) // Reached target waypoint
             {
                 Debug.Log("Reached target waypoint");
-                m_Speed = 0f;
+                Cart.m_Speed = 0f;
                 _isRunning = false;
             }
         }

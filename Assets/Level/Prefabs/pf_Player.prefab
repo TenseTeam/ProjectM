@@ -328,6 +328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4350595905174322833}
+  - component: {fileID: 7403378190600956493}
   - component: {fileID: 8198674855179783120}
   m_Layer: 0
   m_Name: pf_Player
@@ -352,6 +353,23 @@ Transform:
   - {fileID: 3432968294416254957}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7403378190600956493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8570637680378928845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a9c787e5d1bbf48a389834c4a9641c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Path: {fileID: 0}
+  m_UpdateMethod: 0
+  m_PositionUnits: 1
+  m_Speed: 0
+  m_Position: 0
 --- !u!114 &8198674855179783120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,9 +382,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbe07a9e809f4e49b77b06f6e3dc2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Path: {fileID: 0}
-  m_UpdateMethod: 0
-  m_PositionUnits: 1
-  m_Speed: 0
-  m_Position: 0
-  _startSpeed: 0
+  _targetSpeed: 0
+  _camera: {fileID: 0}
+  <Cart>k__BackingField: {fileID: 0}

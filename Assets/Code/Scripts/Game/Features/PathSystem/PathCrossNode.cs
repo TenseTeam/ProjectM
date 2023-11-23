@@ -22,7 +22,7 @@
 
         public override void TargetNode()
         {
-            MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnCrossNodePathChosen, _correctPositionByPath[_pathFollower.m_Path]);
+            MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnCrossNodePathChosen, _correctPositionByPath[_pathFollower.Cart.m_Path]);
         }
     }
 }
