@@ -2,6 +2,7 @@
 {
     public static class GameEventKeys
     {
-        public const string OnPathTriggered = "OnPathTriggered";
+        public const string OnNodeTrackSelected = "OnNodeTrackSelected";
+        public const string OnCrossNodeSelected = "OnCrossNodeSelected";
     }
 }

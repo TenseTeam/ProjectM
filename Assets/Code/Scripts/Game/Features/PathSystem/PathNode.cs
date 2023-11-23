@@ -1,50 +1,47 @@
 ﻿namespace ProjectM.Features.PathSystem
 {
-    using System;
-    using System.Linq;
     using UnityEngine;
     using UnityEngine.UI;
     using VUDK.Generic.Managers.Main;
     using ProjectM.Constants;
+    using ProjectM.Features.PathSystem.Data;
 
-    public class PathNode : MonoBehaviour
+    public class PathNode : PathNodeBase
     {
-        [Header("UI Settings")]
-        [SerializeField]
-        private Button _triggerButton;
-
         [Header("Path Node Settings")]
         [SerializeField]
-        private PathLine _associatedPath;
-        [SerializeField]
-        private bool _isReversed;
+        private PathEventData _pathEventData;
+
+        [Header("Next Nodes Settings")]
         [SerializeField]
         private PathNode[] _nextNodes;
-
-        private void OnEnable()
+        
+        public override void TargetNode()
         {
-            _triggerButton.onClick.AddListener(OnTriggerButtonClicked);
+            MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnNodeTrackSelected, _pathEventData);
+            //SelectNode();
         }
 
-        private void OnDisable()
-        {
-            _triggerButton.onClick.RemoveListener(OnTriggerButtonClicked);
-        }
+        //public void SelectNode()
+        //{
+        //    MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnNodeSelected);
+        //}
 
-        private void OnTriggerButtonClicked()
-        {
-            Vector3[] positions = _associatedPath.GetPathPositions().ToArray();
-            if (_isReversed) Array.Reverse(positions);
+        //public void SelectNodeAsStart()
+        //{
+        //    SelectNode();
+        //    EnableNextNodes();
+        //}
 
-            MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnPathTriggered, positions);
-            EnableNextNodes();
-        }
+        //private void EnableNextNodes()
+        //{
+        //    foreach (PathNode node in _nextNodes)
+        //        node.gameObject.SetActive(true);
+        //}
 
-        private void EnableNextNodes()
-        {
-            gameObject.SetActive(false);
-            foreach (PathNode node in _nextNodes)
-                node.gameObject.SetActive(true);
-        }
+        //private void DisableNode()
+        //{
+        //    gameObject.SetActive(false);
+        //}
     }
 }
