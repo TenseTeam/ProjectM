@@ -6,13 +6,15 @@
     using VUDK.Extensions.Mathematics;
     using ProjectM.Constants;
     using ProjectM.Features.PathSystem.Data;
-    using System;
 
     public class PathFollower : CinemachineDollyCart
     {
         [Header("Follower Settings")]
         [SerializeField]
         private float _targetSpeed;
+
+        [SerializeField]
+        private Camera _camera;
 
         private int _targetWaypointIndex;
         private bool _isRunning;
