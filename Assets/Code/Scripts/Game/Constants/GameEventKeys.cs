@@ -3,6 +3,7 @@
     public static class GameEventKeys
     {
         public const string OnNodeTrackSelected = "OnNodeTrackSelected";
-        public const string OnCrossNodeSelected = "OnCrossNodeSelected";
+        public const string OnCrossNodePathChosen = "OnCrossNodeSelected";
+        public const string OnTryTrackChange = "OnTrackChanged";
     }
 }

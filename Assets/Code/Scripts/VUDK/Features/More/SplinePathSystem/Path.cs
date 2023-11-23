@@ -1,4 +1,4 @@
-﻿namespace ProjectM.Features.PathSystem
+﻿namespace VUDK.Features.More.PathSystem
 {
     using UnityEngine;
     using VUDK.Extensions.Mathematics;

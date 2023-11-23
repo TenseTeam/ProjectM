@@ -1,24 +1,22 @@
 ﻿namespace ProjectM.Features.PathSystem
 {
     using UnityEngine;
-    using UnityEngine.UI;
     using VUDK.Generic.Managers.Main;
     using ProjectM.Constants;
-    using ProjectM.Features.PathSystem.Data;
 
     public class PathNode : PathNodeBase
     {
         [Header("Path Node Settings")]
         [SerializeField]
-        private PathEventData _pathEventData;
+        private int _waypointIndex;
 
-        [Header("Next Nodes Settings")]
-        [SerializeField]
-        private PathNode[] _nextNodes;
+        //[Header("Next Nodes Settings")]
+        //[SerializeField]
+        //private PathNode[] _nextNodes;
         
         public override void TargetNode()
         {
-            MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnNodeTrackSelected, _pathEventData);
+            MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnNodeTrackSelected, _waypointIndex);
             //SelectNode();
         }
 

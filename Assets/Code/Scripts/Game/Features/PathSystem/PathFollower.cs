@@ -6,14 +6,13 @@
     using VUDK.Extensions.Mathematics;
     using ProjectM.Constants;
     using ProjectM.Features.PathSystem.Data;
+    using System;
 
     public class PathFollower : CinemachineDollyCart
     {
         [Header("Follower Settings")]
         [SerializeField]
         private float _targetSpeed;
-        [SerializeField]
-        private Transform _cameraTarget;
 
         private int _targetWaypointIndex;
         private bool _isRunning;
@@ -28,14 +27,16 @@
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener<PathEventData>(GameEventKeys.OnNodeTrackSelected, StartRun);
-            MainManager.Ins.EventManager.AddListener(GameEventKeys.OnCrossNodeSelected, ReturnToBegin);
+            MainManager.Ins.EventManager.AddListener<int>(GameEventKeys.OnNodeTrackSelected, StartRun);
+            MainManager.Ins.EventManager.AddListener<int>(GameEventKeys.OnCrossNodePathChosen, StartRun);
+            MainManager.Ins.EventManager.AddListener<PathTrackChangeEventData>(GameEventKeys.OnTryTrackChange, ChangeTrack);
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener<PathEventData>(GameEventKeys.OnNodeTrackSelected, StartRun);
-            MainManager.Ins.EventManager.RemoveListener(GameEventKeys.OnCrossNodeSelected, ReturnToBegin);
+            MainManager.Ins.EventManager.RemoveListener<int>(GameEventKeys.OnNodeTrackSelected, StartRun);
+            MainManager.Ins.EventManager.RemoveListener<int>(GameEventKeys.OnCrossNodePathChosen, StartRun);
+            MainManager.Ins.EventManager.RemoveListener<PathTrackChangeEventData>(GameEventKeys.OnTryTrackChange, ChangeTrack);
         }
 
         protected override void Update()
@@ -44,25 +45,13 @@
             OnRunningCart();
         }
 
-        private void StartRun(PathEventData pathEventData)
+        private void StartRun(int waypoint)
         {
             if (_isRunning) return;
 
             _isRunning = true;
-            SetTrackAndWaypoint(pathEventData.PathToFollow, pathEventData.WaypointTargetIndex);
+            SetWaypointIndex(waypoint);
             m_Speed = GetCorrectSpeed();
-        }
-
-        private void ReturnToBegin()
-        {
-            SetWaypointIndex(0);
-            m_Speed = GetCorrectSpeed();
-        }
-
-        private void SetTrackAndWaypoint(CinemachinePathBase path, int index)
-        {
-            SetPath(path);
-            SetWaypointIndex(index);
         }
 
         private void SetWaypointIndex(int index)
@@ -70,13 +59,12 @@
             _targetWaypointIndex = index;
         }
 
-        private void SetPath(CinemachinePathBase path)
+        private void ChangeTrack(PathTrackChangeEventData path)
         {
-            if(path == m_Path) return;
+            if(path.NewPath == m_Path) return;
 
-            Quaternion rot = _cameraTarget.rotation;
-            m_Path = path;
-            _cameraTarget.rotation = rot;
+            m_Path = path.NewPath;
+            m_Position = path.StartWaypointOnChange;
         }
 
         private float GetCorrectSpeed()
