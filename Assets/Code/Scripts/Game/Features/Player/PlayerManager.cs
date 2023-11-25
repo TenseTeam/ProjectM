@@ -9,31 +9,32 @@
     [RequireComponent(typeof(PathExplorer))]
     public class PlayerManager : MonoBehaviour
     {
-        [SerializeField]
-        private PlayerCamera _playerCamera;
+        [field: SerializeField]
+        public PlayerCamera PlayerCamera { get; private set; }
 
-        private PathExplorer _pathExplorer;
+        public PathExplorer PathExplorer { get; private set; }
 
         private void OnValidate()
         {
-            if (_playerCamera == null) _playerCamera = FindAnyObjectByType<PlayerCamera>();
+            if (PlayerCamera == null) PlayerCamera = FindAnyObjectByType<PlayerCamera>();
         }
 
         private void Awake()
         {
-            TryGetComponent(out _pathExplorer);
+            TryGetComponent(out PathExplorer pathExplorer);
+            PathExplorer = pathExplorer;
         }
 
-        private void OnEnable()
-        {
-            MainManager.Ins.EventManager.AddListener(GameEventKeys.OnBeginTransition, _playerCamera.Disable);
-            MainManager.Ins.EventManager.AddListener(GameEventKeys.OnEndTransition, _playerCamera.Enable);
-        }
+        //private void OnEnable()
+        //{
+        //    MainManager.Ins.EventManager.AddListener(GameEventKeys.OnBeginTransition, PlayerCamera.Disable);
+        //    MainManager.Ins.EventManager.AddListener(GameEventKeys.OnEndTransition, PlayerCamera.Enable);
+        //}
 
-        private void OnDisable()
-        {
-            MainManager.Ins.EventManager.RemoveListener(GameEventKeys.OnBeginTransition, _playerCamera.Disable);
-            MainManager.Ins.EventManager.RemoveListener(GameEventKeys.OnEndTransition, _playerCamera.Enable);
-        }
+        //private void OnDisable()
+        //{
+        //    MainManager.Ins.EventManager.RemoveListener(GameEventKeys.OnBeginTransition, PlayerCamera.Disable);
+        //    MainManager.Ins.EventManager.RemoveListener(GameEventKeys.OnEndTransition, PlayerCamera.Enable);
+        //}
     }
 }

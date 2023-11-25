@@ -16,6 +16,8 @@
         {
             MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnBeginTransition);
             Context.Transition.Begin();
+            Context.PlayerCamera.Disable();
+            Context.TargetNode.NodeExit();
             ChangeState(TransitionStateKey.Process);
         }
 

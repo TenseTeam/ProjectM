@@ -8,5 +8,9 @@
         /// Interacts with this object.
         /// </summary>
         public void Interact();
+
+        public void EnableInteraction();
+
+        public void DisableInteraction();
     }
 }

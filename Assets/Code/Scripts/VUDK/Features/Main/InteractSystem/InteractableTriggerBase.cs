@@ -3,11 +3,9 @@
     using UnityEngine;
     using VUDK.Features.Main.InteractSystem.Interfaces;
 
-    public abstract class InteractableTriggerBase : MonoBehaviour, IInteractable
+    public abstract class InteractableTriggerBase : InteractableBase
     {
         public IInteractor Interactor { get; private set; }
-
-        public abstract void Interact();
 
         protected virtual void OnTriggerEnter(Collider other)
         {

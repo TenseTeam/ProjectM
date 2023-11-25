@@ -5,6 +5,10 @@ namespace VUDK.Features.Main.InteractSystem
 
     public abstract class InteractableBase : MonoBehaviour, IInteractable
     {
+        public abstract void DisableInteraction();
+
+        public abstract void EnableInteraction();
+
         public abstract void Interact();
     }
 }

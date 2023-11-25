@@ -25,7 +25,7 @@
 
         private void Start()
         {
-            Init();
+            _firstNode.StartFirstNode();
         }
 
         private void OnEnable()
@@ -36,12 +36,6 @@
         private void OnDisable()
         {
             MainManager.Ins.EventManager.RemoveListener<NodeBase>(GameEventKeys.OnNodeInteract, TargetNode);
-        }
-
-        public void Init()
-        {
-            PlaceExplorerAtStart();
-            _firstNode.FirstNode();
         }
 
         public void SetTransition(TransitionBase transition)
@@ -55,11 +49,6 @@
 
             CurrentTargetNode = targetNode;
             PathExplorer.StartMachine();
-        }
-
-        private void PlaceExplorerAtStart()
-        {
-            PathExplorer.transform.position = _firstNode.NodePosition;
         }
     }
 }

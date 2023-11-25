@@ -6,11 +6,10 @@
 
     public class TransitionFov : TransitionLinear
     {
-        private TimeDelayTask _timeProcess;
         private CameraFovChanger _fovChanger;
         private bool _hasReverted;
 
-        public TransitionFov(CameraFovChanger fovChanger, TimeDelayTask timeProcess) : base(timeProcess)
+        public TransitionFov(TransitionContext context, CameraFovChanger fovChanger, TimeDelayTask timeProcess) : base(context, timeProcess)
         {
             _fovChanger = fovChanger;
             _fovChanger.TimeProcess.ChangeDuration(TimeProcess.Duration / 2f);
@@ -25,7 +24,6 @@
         public override void Process()
         {
             base.Process();
-            ////if (!TimeProcess.Process()) return;
 
             if (_fovChanger.TimeProcess.IsCompleted && !_hasReverted)
             {

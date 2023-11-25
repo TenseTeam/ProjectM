@@ -3,16 +3,13 @@
     using UnityEngine;
     using VUDK.Generic.Serializable;
     using VUDK.Patterns.StateMachine;
-    using VUDK.Generic.Managers.Main;
-    using VUDK.Generic.Managers.Main.Interfaces;
     using VUDK.Features.Main.Camera.CameraModifiers;
-    using ProjectM.Managers;
     using ProjectM.Patterns.Factories;
     using ProjectM.Features.ExplorationSystem.Transition.Phases;
     using ProjectM.Features.ExplorationSystem.Transition.Types.Keys;
     using ProjectM.Features.ExplorationSystem.Transition.Phases.Keys;
 
-    public class TransitionMachine : StateMachine, ICastGameManager<GameManager>
+    public class TransitionMachine : StateMachine
     {
         [Header("Transition Settings")]
         [SerializeField]
@@ -23,27 +20,22 @@
         [SerializeField]
         private CameraFovChanger _fovChanger;
 
-        public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
-        private ExplorationManager _explorationManager => GameManager.ExplorationManager;
-
-        protected virtual void Awake()
-        {
-            SetTransition(_transitionType);
-        }
+        private TransitionContext _context;
 
         protected override void Start()
         {
             base.Start();
             Init();
+            SetTransition(_transitionType);
         }
 
         public override void Init()
         {
-            TransitionContext context = MachineFactory.Create();
+            _context = MachineFactory.Create();
 
-            TransitionBegin beginPhase = MachineFactory.Create(TransitionStateKey.Start, this, context) as TransitionBegin;
-            TransitionProcess processPhase = MachineFactory.Create(TransitionStateKey.Process, this, context) as TransitionProcess;
-            TransitionEnd endPhase = MachineFactory.Create(TransitionStateKey.End, this, context) as TransitionEnd;
+            TransitionBegin beginPhase = MachineFactory.Create(TransitionStateKey.Start, this, _context) as TransitionBegin;
+            TransitionProcess processPhase = MachineFactory.Create(TransitionStateKey.Process, this, _context) as TransitionProcess;
+            TransitionEnd endPhase = MachineFactory.Create(TransitionStateKey.End, this, _context) as TransitionEnd;
 
             AddState(TransitionStateKey.Start, beginPhase);
             AddState(TransitionStateKey.Process, processPhase);
@@ -52,7 +44,7 @@
 
         public void SetTransition(TransitionType transitionType)
         {
-            _explorationManager.SetTransition(GameFactory.Create(transitionType, _fovChanger, _timeProcess));
+            _context.ExplorationManager.SetTransition(GameFactory.Create(_context, transitionType, _fovChanger, _timeProcess));
         }
     }
 }
