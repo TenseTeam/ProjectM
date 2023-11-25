@@ -3,6 +3,7 @@
     using UnityEngine;
     using VUDK.Features.Main.InputSystem;
 
+    [DisallowMultipleComponent]
     [RequireComponent(typeof(Camera))]
     public class CameraFreeLook : MonoBehaviour
     {
@@ -18,10 +19,11 @@
 
         [Header("Angles Settings")]
         [Tooltip("How far in degrees you can move the camera up")]
+        [SerializeField]
         private float _topClamp = 90.0f;
         [Tooltip("How far in degrees you can move the camera down")]
+        [SerializeField]
         private float _bottomClamp = -90.0f;
-
 
         protected Vector2 LookRotation;
         protected float ClampSens => _sensitivity * _sensitivityCoefficient / 100f;

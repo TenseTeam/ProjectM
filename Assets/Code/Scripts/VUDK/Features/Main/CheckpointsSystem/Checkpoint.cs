@@ -19,7 +19,7 @@
             }
         }
 
-#if DEBUG
+#if UNITY_EDITOR
         private void OnDrawGizmos()
         {
             float size = transform.localScale.magnitude / 8f;

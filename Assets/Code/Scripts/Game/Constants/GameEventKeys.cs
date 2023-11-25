@@ -2,8 +2,10 @@
 {
     public static class GameEventKeys
     {
-        public const string OnNodeTrackSelected = "OnNodeTrackSelected";
-        public const string OnCrossNodePathChosen = "OnCrossNodeSelected";
-        public const string OnTryTrackChange = "OnTrackChanged";
+        public const string OnChangedNode = "OnFirstNode";
+        public const string OnNodeInteract = "OnNodeInteract";
+
+        public const string OnBeginTransition = "OnBeginTransition";
+        public const string OnEndTransition = "OnEndTransition";
     }
 }

@@ -113,6 +113,52 @@ MonoBehaviour:
   _canvasScaler: {fileID: 0}
   _gameScaleTime: 1
   _gameFPS: 0
+--- !u!1 &2690734938432154108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1962545199903592284}
+  - component: {fileID: 5518765678894764276}
+  m_Layer: 0
+  m_Name: MobileInputsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1962545199903592284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2690734938432154108}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3917062993017019718}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5518765678894764276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2690734938432154108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6405800b238e245958e6cc8f3ddc5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <MobileInputsActions>k__BackingField:
+    _dictionary: []
 --- !u!1 &3106328928638039898
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1301742293949912431
 Transform:
   m_ObjectHideFlags: 0
@@ -138,8 +184,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3106328928638039898}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0032349, y: 2.198484, z: -28.174377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -157,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db86f0efb43359140827b597f04233e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _apiPackage: {fileID: 11400000, guid: 9888784c33db7454aa433a5a3915e228, type: 2}
+  _APIPackage: {fileID: 11400000, guid: 9888784c33db7454aa433a5a3915e228, type: 2}
   _weatherLocationQuery: Milan
   _updateHours: 1
   OnClear:
@@ -315,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bcbfe7c56908dc47ba316ed3dc760b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <GameManager>k__BackingField: {fileID: 0}
+  <GameManager>k__BackingField: {fileID: 8009024803231350783}
   <UIManager>k__BackingField: {fileID: 0}
   <EventManager>k__BackingField: {fileID: 8975009725621067725}
   <GameStateMachine>k__BackingField: {fileID: 0}
@@ -323,6 +369,52 @@ MonoBehaviour:
   <AudioManager>k__BackingField: {fileID: 0}
   <GameStats>k__BackingField: {fileID: 7571364931165014669}
   <PoolsManager>k__BackingField: {fileID: 0}
+--- !u!1 &3989418636470428942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1689548180823364712}
+  - component: {fileID: 63042512176143575}
+  m_Layer: 0
+  m_Name: ExplorationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1689548180823364712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3989418636470428942}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3917062993017019718}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &63042512176143575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3989418636470428942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b741996f4e5734681a36d4202c7200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <PathExplorer>k__BackingField: {fileID: 0}
+  <TransitionSpeed>k__BackingField: 2
 --- !u!1 &4339226715303913619
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,6 +424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3917062993017019718}
+  - component: {fileID: 8009024803231350783}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -353,8 +446,25 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1301742293949912431}
+  - {fileID: 1962545199903592284}
+  - {fileID: 1689548180823364712}
   m_Father: {fileID: 5812637801896931851}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8009024803231350783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4339226715303913619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9d1cf0dc1401f468dfcf89da53eb0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <MobileInputsManager>k__BackingField: {fileID: 5518765678894764276}
+  <WeatherManager>k__BackingField: {fileID: 6899193427566014676}
+  <ExplorationManager>k__BackingField: {fileID: 63042512176143575}
 --- !u!1 &6027239755425227337
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,8 +553,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7533762427093910261}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -500.39163, y: -0.6781927, z: -500.6115}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

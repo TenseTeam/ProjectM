@@ -85,6 +85,8 @@ namespace VUDK.Patterns.StateMachine
         /// <returns>True if is the same, False if not.</returns>
         public bool IsState(Enum stateKey)
         {
+            if (CurrentState == null) return false;
+
             return Equals(CurrentState.StateKey, stateKey);
         }
 

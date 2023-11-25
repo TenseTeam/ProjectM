@@ -6,9 +6,11 @@
     [DefaultExecutionOrder(-800)]
     public class GameStats : MonoBehaviour
     {
-        [field: SerializeField, Header("Main Camera")]
+        [field: SerializeField, Header("Camera")]
         public Camera MainCamera { get; private set; }
         [field: SerializeField]
+        public Camera PlayerCamera { get; private set; }
+        [field: SerializeField, Header("Layer Masks")]
         public LayerMask PlayerLayerMask { get; private set; }
 
         [SerializeField, Header("Screen")]

@@ -129,7 +129,7 @@ namespace VUDK.Patterns.Pooling
         {
             if (!pooledGameobject.TryGetComponent(out IPooledObject pooledObjectCheck))
             {
-#if DEBUG
+#if UNITY_EDITOR
                 Debug.LogError($"GameObject {_pooledObject.transform.name} is not a IPooledObject.");
 #endif
                 return false;

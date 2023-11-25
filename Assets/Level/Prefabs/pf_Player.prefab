@@ -9,13 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3432968294416254957}
-  - component: {fileID: 44053690781247816}
-  - component: {fileID: 2555029050516554126}
-  - component: {fileID: 448969112021738337}
-  - component: {fileID: 6672873392525131603}
-  - component: {fileID: 4805053289745088561}
+  - component: {fileID: 7849783913207011114}
+  - component: {fileID: 4972042560368682620}
+  - component: {fileID: 8556138633662412283}
+  - component: {fileID: 1202779522883528716}
+  - component: {fileID: 1138993967259901526}
   m_Layer: 0
-  m_Name: PlayerCamera
+  m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ Transform:
   - {fileID: 7847956047924025243}
   m_Father: {fileID: 4350595905174322833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &44053690781247816
+--- !u!20 &7849783913207011114
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,7 +70,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -88,15 +88,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2555029050516554126
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82200313775990468}
-  m_Enabled: 1
---- !u!114 &448969112021738337
+--- !u!114 &4972042560368682620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,8 +112,8 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 1
-  m_Antialiasing: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -141,7 +133,15 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!114 &6672873392525131603
+--- !u!81 &8556138633662412283
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82200313775990468}
+  m_Enabled: 1
+--- !u!114 &1202779522883528716
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,47 +150,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 82200313775990468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfee9e4424ee4bb4eb6a849d0106cb1a, type: 3}
+  m_Script: {fileID: 11500000, guid: d6aaca7252052bd47850b6e9a9573fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetFov: 70
+  <TimeProcess>k__BackingField:
+    <Duration>k__BackingField: 0
+--- !u!114 &1138993967259901526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82200313775990468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b937ad897e328147a5d746e499fabba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sensitivity: 20
   _sensitivityCoefficient: 0.5
   _hasSmoothing: 1
   _smoothTime: 5
---- !u!114 &4805053289745088561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82200313775990468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowDebugText: 0
-  m_ShowCameraFrustum: 1
-  m_IgnoreTimeScale: 0
-  m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
-  m_BlendUpdateMethod: 1
-  m_DefaultBlend:
-    m_Style: 1
-    m_Time: 2
-    m_CustomCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  m_CustomBlends: {fileID: 0}
-  m_CameraCutEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_CameraActivatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  _topClamp: 60
+  _bottomClamp: -60
 --- !u!1 &6773637525321698682
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,8 +311,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4350595905174322833}
-  - component: {fileID: 7403378190600956493}
-  - component: {fileID: 8198674855179783120}
+  - component: {fileID: 3760586510404336149}
+  - component: {fileID: 6010632263649316978}
   m_Layer: 0
   m_Name: pf_Player
   m_TagString: Untagged
@@ -353,7 +336,7 @@ Transform:
   - {fileID: 3432968294416254957}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7403378190600956493
+--- !u!114 &3760586510404336149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -362,15 +345,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8570637680378928845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99a9c787e5d1bbf48a389834c4a9641c, type: 3}
+  m_Script: {fileID: 11500000, guid: 46890939124a4024b99edb4d297ea2df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Path: {fileID: 0}
-  m_UpdateMethod: 0
-  m_PositionUnits: 1
-  m_Speed: 0
-  m_Position: 0
---- !u!114 &8198674855179783120
+  _playerCamera: {fileID: 1138993967259901526}
+--- !u!114 &6010632263649316978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -379,9 +358,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8570637680378928845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbbe07a9e809f4e49b77b06f6e3dc2c0, type: 3}
+  m_Script: {fileID: 11500000, guid: cf0bc7e040e998146804e0bdaeb5a0d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetSpeed: 0
-  _camera: {fileID: 0}
-  <Cart>k__BackingField: {fileID: 0}
+  _transitionType: 2
+  _timeProcess:
+    <Duration>k__BackingField: 2
+  _fovChanger: {fileID: 1202779522883528716}

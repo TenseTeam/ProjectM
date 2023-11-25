@@ -88,7 +88,7 @@ namespace VUDK.Editor.Tools.Project
                 if (!Directory.Exists(folderPath))
                 {
                     AssetDatabase.CreateFolder(parentFolder, folderName);
-#if DEBUG
+#if UNITY_EDITOR
                     Debug.Log("Directory created: " + folderPath);
 #endif
                 }
