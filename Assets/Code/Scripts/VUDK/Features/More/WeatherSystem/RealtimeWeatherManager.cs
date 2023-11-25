@@ -16,10 +16,10 @@
     /// </summary>
     public class RealtimeWeatherManager : MonoBehaviour
     {
-        [Header("Settings")]
+        [Header("API Settings")]
         [Tooltip("API-KEYS to get weather data.")]
         [SerializeField]
-        private APIPackageData _apiPackage;
+        private APIPackageData _APIPackage;
         [Tooltip(
             "Query parameter based on which data is sent back.\n" +
             "It could be following:\r\n\r\n" +
@@ -62,22 +62,22 @@
         [SerializeField]
         private bool _defaultIsDay;
 
-        private TimeDelay _timeUpdateDelay;
+        private TimeDelayTask _timeUpdateDelay;
 
         private void Awake()
         {
-            _timeUpdateDelay = new TimeDelay(_updateHours * 3600f);
+            _timeUpdateDelay = new TimeDelayTask(_updateHours * 3600f);
             UpdateInGameWeather();
         }
 
         private void OnEnable()
         {
-            _timeUpdateDelay.OnCompleted += UpdateInGameWeather;
+            _timeUpdateDelay.OnTaskCompleted += UpdateInGameWeather;
         }
 
         private void OnDisable()
         {
-            _timeUpdateDelay.OnCompleted -= UpdateInGameWeather;
+            _timeUpdateDelay.OnTaskCompleted -= UpdateInGameWeather;
         }
 
         private void Update()
@@ -88,7 +88,7 @@
         [ContextMenu("Update Weather")]
         private void UpdateInGameWeather()
         {
-            WeatherCalculator.GetWeather(_apiPackage, _weatherLocationQuery,
+            WeatherCalculator.GetWeather(_APIPackage, _weatherLocationQuery,
                 onReceivedWeatherData: TriggerWeatherEvent,
                 onFailedToReceiveWeatherData: TriggerDefaults);
             _timeUpdateDelay.Start();
@@ -96,7 +96,7 @@
 
         private void TriggerWeatherEvent(WeatherData weatherData)
         {
-#if DEBUG
+#if UNITY_EDITOR
             Debug.Log($"Triggering Weather: {weatherData}");
 #endif
             MainManager.Ins.EventManager.TriggerEvent(EventKeys.WeatherEvents.OnWeatherChanged, weatherData);

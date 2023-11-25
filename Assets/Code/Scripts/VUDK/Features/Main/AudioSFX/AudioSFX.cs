@@ -3,7 +3,7 @@
     using UnityEngine;
     using VUDK.Patterns.Pooling;
     using VUDK.Patterns.Pooling.Interfaces;
-    using VUDK.Extensions.Transform;
+    using VUDK.Extensions;
     using VUDK.Features.AudioSFX.Interfaces;
 
     [RequireComponent(typeof(AudioSource))]

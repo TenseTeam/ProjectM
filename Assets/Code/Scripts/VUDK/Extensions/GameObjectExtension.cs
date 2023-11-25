@@ -1,4 +1,4 @@
-﻿namespace VUDK.Extensions.GameObject
+﻿namespace VUDK.Extensions
 {
     using UnityEngine;
 

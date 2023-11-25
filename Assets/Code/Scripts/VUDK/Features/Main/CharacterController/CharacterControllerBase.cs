@@ -99,7 +99,7 @@
             CurrentSpeed = IsGrounded ? (IsRunning ? SprintSpeed : MoveSpeed) : AirSpeed;
         }
 
-#if DEBUG
+#if UNITY_EDITOR
         protected virtual void OnDrawGizmos()
         {
             DrawCheckGroundSphere();

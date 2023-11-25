@@ -2,7 +2,7 @@
 {
     using UnityEngine;
     using UnityEngine.UI;
-    using VUDK.Extensions.Vectors;
+    using VUDK.Extensions;
 
     public class Grid<T> : MonoBehaviour where T : GridTileBase
     {

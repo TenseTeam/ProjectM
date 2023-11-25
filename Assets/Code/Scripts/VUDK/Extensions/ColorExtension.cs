@@ -1,4 +1,4 @@
-﻿namespace VUDK.Extensions.Colors
+﻿namespace VUDK.Extensions
 {
     using UnityEngine;
 

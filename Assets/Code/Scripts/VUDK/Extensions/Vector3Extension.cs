@@ -1,7 +1,6 @@
-﻿namespace VUDK.Extensions.Vectors
+﻿namespace VUDK.Extensions
 {
     using UnityEngine;
-    using VUDK.Extensions.Mathematics;
 
     public enum Vector3Direction
     {
@@ -78,12 +77,12 @@
             vz = new Vector3(0, 0, v1.z);
         }
 
-        public static bool IsApproximatelyEqual(this Vector3 v1, Vector3 v2, float tollerance = 0.01f)
+        public static bool IsApproximatelyEqual(this Vector3 v1, Vector3 v2, float tolerance = 0.01f)
         {
             return 
-                v1.x.IsApproximatelyEqual(v2.x, tollerance) &&
-                v1.y.IsApproximatelyEqual(v2.y, tollerance) &&
-                v1.z.IsApproximatelyEqual(v2.z, tollerance);
+                v1.x.IsApproximatelyEqual(v2.x, tolerance) &&
+                v1.y.IsApproximatelyEqual(v2.y, tolerance) &&
+                v1.z.IsApproximatelyEqual(v2.z, tolerance);
         }
 
         public static Vector3 SwapXY(this Vector3 v)

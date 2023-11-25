@@ -1,4 +1,4 @@
-﻿namespace VUDK.Extensions.Finders
+﻿namespace VUDK.Extensions
 {
     using UnityEngine;
 

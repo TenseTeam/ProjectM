@@ -10,7 +10,7 @@
         public Enum StateKey { get; protected set; }
         protected StateMachineContext Context { get; private set; }
 
-        protected State(Enum stateKey, StateMachine relatedStateMachine, StateMachineContext context)
+        public State(Enum stateKey, StateMachine relatedStateMachine, StateMachineContext context)
         {
             StateKey = stateKey;
             _relatedStateMachine = relatedStateMachine;
@@ -61,7 +61,7 @@
     {
         public new T Context => (T)base.Context;
 
-        protected State(Enum stateKey, StateMachine relatedStateMachine, StateMachineContext context) : base(stateKey, relatedStateMachine, context)
+        public State(Enum stateKey, StateMachine relatedStateMachine, StateMachineContext context) : base(stateKey, relatedStateMachine, context)
         {
         }
     }

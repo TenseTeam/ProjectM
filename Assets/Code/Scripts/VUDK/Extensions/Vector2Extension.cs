@@ -1,4 +1,4 @@
-﻿namespace VUDK.Extensions.Vectors
+﻿namespace VUDK.Extensions
 {
     using UnityEngine;
 

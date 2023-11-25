@@ -9,7 +9,7 @@
     {
         public override void Init()
         {
-#if DEBUG
+#if UNITY_EDITOR
             Debug.Log("GameStateMachine initialized.");
 #endif
             MainManager.Ins.EventManager.TriggerEvent(EventKeys.GameEvents.OnGameMachineStart);

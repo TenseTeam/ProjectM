@@ -1,4 +1,4 @@
-﻿namespace VUDK.Extensions.Strings
+﻿namespace VUDK.Extensions
 {
     using System;
 
