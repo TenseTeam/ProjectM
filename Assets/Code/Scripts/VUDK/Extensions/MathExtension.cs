@@ -1,4 +1,4 @@
-﻿namespace VUDK.Extensions.Mathematics
+﻿namespace VUDK.Extensions
 {
     using System.Collections.Generic;
     using UnityEngine;

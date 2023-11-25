@@ -18,7 +18,6 @@
 
         public override void Process()
         {
-            Debug.Log($"Transition Processing.");
             Context.Transition.Process();
         }
 

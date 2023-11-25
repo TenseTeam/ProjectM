@@ -6,6 +6,7 @@
     using ProjectM.Features.ExplorationSystem.Nodes;
     using ProjectM.Managers;
     using UnityEngine;
+    using ProjectM.Features.Player;
 
     public abstract class TransitionBase : ICastGameManager<GameManager>
     {
@@ -13,13 +14,13 @@
 
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
         protected GameStats GameStats => MainManager.Ins.GameStats;
-        protected Camera PlayerCamera => GameStats.PlayerCamera; 
         protected PathExplorer PathExplorer => GameManager.ExplorationManager.PathExplorer;
         protected NodeBase TargetNode => GameManager.ExplorationManager.CurrentTargetNode;
-
+        protected PlayerCamera PlayerCamera { get; private set; }
 
         public TransitionBase()
         {
+            PlayerCamera = GameStats.PlayerCamera.TryGetComponent(out PlayerCamera playerCamera) ? playerCamera : null;
         }
 
         public virtual void Begin()

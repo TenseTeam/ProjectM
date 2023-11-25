@@ -2,7 +2,7 @@ namespace VUDK.Patterns.Pooling
 {
     using System.Collections.Generic;
     using UnityEngine;
-    using VUDK.Extensions.Transform;
+    using VUDK.Extensions;
     using VUDK.Patterns.Pooling.Interfaces;
 
     public sealed class Pool : MonoBehaviour

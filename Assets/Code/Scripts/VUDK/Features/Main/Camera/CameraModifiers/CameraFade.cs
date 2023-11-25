@@ -3,7 +3,6 @@
     using System;
     using System.Collections;
     using UnityEngine;
-    using VUDK.Features.Main.Camera.CameraModifiers;
 
     public class CameraFade : CameraBaseModifier
     {

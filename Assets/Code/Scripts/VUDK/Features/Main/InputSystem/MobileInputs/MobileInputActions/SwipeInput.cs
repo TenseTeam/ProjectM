@@ -2,7 +2,7 @@
 {
     using UnityEngine;
     using UnityEngine.InputSystem;
-    using VUDK.Extensions.Vectors;
+    using VUDK.Extensions;
     using VUDK.Features.Main.InputSystem;
 
     public class SwipeInput : InputTouchBase

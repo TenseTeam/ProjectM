@@ -11,6 +11,7 @@
 
         public override void Begin()
         {
+            PlayerCamera.SetRotation(TargetNode.NodeRotation);
         }
 
         public override void Process()

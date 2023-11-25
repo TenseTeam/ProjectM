@@ -1,21 +1,23 @@
 ﻿namespace ProjectM.Features.ExplorationSystem.Nodes
 {
+    using System.Collections.Generic;
     using UnityEngine;
     using UnityEngine.UI;
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Managers.Main.Interfaces;
-    using VUDK.Extensions.Gizmos;
+    using VUDK.Features.Main.InteractSystem.Interfaces;
+    using VUDK.Extensions;
     using ProjectM.Managers;
     using ProjectM.Constants;
 
-    public class NodeInteractive : NodeBase, ICastGameManager<GameManager>
+    public class NodeInteractive : NodeBase, ICastGameManager<GameManager>, IInteractable
     {
         [SerializeField]
         private Button _interactButton;
 
         [Header("Linked Nodes")]
         [SerializeField]
-        private NodeInteractive[] _linkedNodes;
+        private List<NodeInteractive> _linkedNodes;
 
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
         private PathExplorer _pathExplorer => GameManager.ExplorationManager.PathExplorer;
@@ -23,19 +25,23 @@
         private void OnValidate()
         {
             if (!_interactButton)
+            {
                 _interactButton = GetComponentInChildren<Button>();
+                if (!_interactButton)
+                    Debug.LogError("No button found in children", gameObject);
+            }
         }
 
         private void OnEnable()
         {
             MainManager.Ins.EventManager.AddListener(GameEventKeys.OnChangedNode, DisableInteraction);
-            _interactButton.onClick.AddListener(InteractNode);
+            _interactButton.onClick.AddListener(Interact);
         }
 
         private void OnDisable()
         {
             MainManager.Ins.EventManager.RemoveListener(GameEventKeys.OnChangedNode, DisableInteraction);
-            _interactButton.onClick.RemoveListener(InteractNode);
+            _interactButton.onClick.RemoveListener(Interact);
         }
 
         private void Update()
@@ -60,7 +66,7 @@
             _interactButton.gameObject.SetActive(false);
         }
 
-        private void InteractNode()
+        public void Interact()
         {
             MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnNodeInteract, this);
             MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnChangedNode);
@@ -84,6 +90,7 @@
         protected override void OnDrawGizmos()
         {
             base.OnDrawGizmos();
+            DrawLinkWithTargetNode();
             DrawButtonLine();
 
             if(UnityEditor.Selection.activeGameObject == gameObject)
@@ -92,9 +99,17 @@
                 DrawLinks();
         }
 
+        private void DrawLinkWithTargetNode()
+        {
+            if (!NodeTarget) return;
+
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawLine(transform.position, NodePosition);
+        }
+
         private void DrawLinks()
         {
-            if (_linkedNodes.Length == 0) return;
+            if (_linkedNodes.Count == 0) return;
 
             Gizmos.color = Color.cyan;
             foreach (var node in _linkedNodes)
@@ -106,13 +121,13 @@
 
         private void DrawArrows()
         {
-            if(_linkedNodes.Length == 0) return;
+            if (_linkedNodes.Count == 0) return;
 
             Gizmos.color = Color.yellow;
             foreach (var node in _linkedNodes)
             {
                 if(!node) continue;
-                GizmosExtension.DrawArrow(transform.position, node.transform.position, Vector3.up * 160f, 2f);
+                GizmosExtension.DrawArrow(transform.position, node.transform.position, transform.lossyScale.magnitude);
             }
         }
 

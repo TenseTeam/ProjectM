@@ -9,15 +9,14 @@
     
     public class TransitionContext : StateMachineContext, ICastGameManager<GameManager>
     {
-        public TransitionBase Transition { get; private set; }
-
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
         public PathExplorer PathExplorer => GameManager.ExplorationManager.PathExplorer;
+        public ExplorationManager ExplorationManager => GameManager.ExplorationManager;
         public NodeBase CurrentTargetNode => GameManager.ExplorationManager.CurrentTargetNode;
+        public TransitionBase Transition => GameManager.ExplorationManager.CurrentTransition;
 
-        public TransitionContext(TransitionBase transition) : base()
+        public TransitionContext() : base()
         {
-            Transition = transition;
         }
     }
 }

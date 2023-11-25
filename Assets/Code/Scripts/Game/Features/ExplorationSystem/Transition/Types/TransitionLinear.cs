@@ -2,34 +2,39 @@
 {
     using UnityEngine;
     using VUDK.Generic.Serializable;
+    using ProjectM.Features.Player;
 
     public class TransitionLinear : TransitionBase
     {
-        private TimeDelayTask _timeProcess;
-        private Vector3 _startPosition;
+        protected TimeDelayTask TimeProcess;
+        protected Vector3 StartPosition;
+        protected Quaternion StartRotation;
 
         public TransitionLinear(TimeDelayTask timeProcess) : base()
         {
-            _timeProcess = timeProcess;
+            TimeProcess = timeProcess;
         }
 
         public override void Begin()
         {
-            _startPosition = PathExplorer.transform.position;
-            _timeProcess.Start();
-            _timeProcess.OnTaskCompleted += OnTransitionCompletedHandler;
+            StartPosition = PathExplorer.transform.position;
+            StartRotation = PlayerCamera.transform.rotation;
+            TimeProcess.Start();
+            TimeProcess.OnTaskCompleted += OnTransitionCompletedHandler;
         }
 
         public override void Process()
         {
-            if (!_timeProcess.Process()) return;
+            if (!TimeProcess.Process()) return;
 
-            PathExplorer.transform.position = Vector3.Lerp(_startPosition, TargetNode.NodePosition, _timeProcess.ElapsedPercentPrecise);
+            PathExplorer.transform.position = Vector3.Lerp(StartPosition, TargetNode.NodePosition, TimeProcess.ElapsedPercentPrecise);
+            PlayerCamera.transform.rotation = Quaternion.Lerp(StartRotation, TargetNode.NodeRotation, TimeProcess.ElapsedPercentPrecise);
         }
 
         public override void End()
         {
-            _timeProcess.OnTaskCompleted -= OnTransitionCompletedHandler;
+            PlayerCamera.SetRotation(TargetNode.NodeRotation);
+            TimeProcess.OnTaskCompleted -= OnTransitionCompletedHandler;
         }
     }
 }

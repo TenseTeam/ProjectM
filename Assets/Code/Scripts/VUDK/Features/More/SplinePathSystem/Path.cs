@@ -1,7 +1,7 @@
 ﻿namespace VUDK.Features.More.PathSystem
 {
     using UnityEngine;
-    using VUDK.Extensions.Mathematics;
+    using VUDK.Extensions;
 
     public class Path : MonoBehaviour
     {

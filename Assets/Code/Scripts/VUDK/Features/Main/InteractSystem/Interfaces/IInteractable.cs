@@ -7,7 +7,6 @@
         /// <summary>
         /// Interacts with this object.
         /// </summary>
-        /// <param name="Interactor">Interactor GameObject.</param>
-        public void Interact(InteractorBase interactor);
+        public void Interact();
     }
 }

@@ -9,6 +9,11 @@
             public const string OnFirstLaunch = "OnFirstLaunch";
         }
 
+        public static class CameraEvents
+        {
+            public const string OnCameraViewChanged = "OnCameraViewChanged";
+        }
+
         public static class WeatherEvents
         {
             public static string OnWeatherChanged = "OnWeatherChanged";

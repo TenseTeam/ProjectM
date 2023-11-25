@@ -5,14 +5,5 @@
 
     public class PlayerCamera : CameraFreeLook
     {
-        public void Enable()
-        {
-            InputsManager.Inputs.Camera.Enable();
-        }
-
-        public void Disable()
-        {
-            InputsManager.Inputs.Camera.Disable();
-        }
     }
 }

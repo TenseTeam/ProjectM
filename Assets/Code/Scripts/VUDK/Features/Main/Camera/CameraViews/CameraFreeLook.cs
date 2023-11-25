@@ -1,19 +1,20 @@
 ﻿namespace VUDK.Features.Main.Camera.CameraViews
 {
     using UnityEngine;
+    using VUDK.Extensions;
     using VUDK.Features.Main.InputSystem;
 
     [DisallowMultipleComponent]
     [RequireComponent(typeof(Camera))]
     public class CameraFreeLook : MonoBehaviour
     {
+        public Vector3 TargetRotation;
+
         [Header("Sensitivity Settings")]
         [SerializeField, Range(1f, 100f)]
         protected float _sensitivity = 2f;
         [SerializeField, Range(0f, 1f)]
         private float _sensitivityCoefficient = 0.1f;
-        [SerializeField]
-        private bool _hasSmoothing;
         [SerializeField]
         private float _smoothTime = 0.1f;
 
@@ -25,10 +26,10 @@
         [SerializeField]
         private float _bottomClamp = -90.0f;
 
-        protected Vector2 LookRotation;
         protected float ClampSens => _sensitivity * _sensitivityCoefficient / 100f;
-
         protected Camera Camera { get; private set; }
+
+        private bool _canRotate = true;
 
         protected virtual void Awake()
         {
@@ -36,31 +37,46 @@
             Camera = camera;
         }
 
+        public virtual void Enable()
+        {
+            InputsManager.Inputs.Camera.Enable();
+            _canRotate = true;
+        }
+
+        public virtual void Disable()
+        {
+            InputsManager.Inputs.Camera.Disable();
+            _canRotate = false;
+        }
+
+        public virtual void ResetTargetRotation()
+        {
+            TargetRotation = Vector3.zero;
+        }
+
         protected virtual void LateUpdate()
         {
-            SetLookDirection();
             LookRotate();
         }
 
-        private void SetLookDirection()
+        public void SetRotation(Quaternion rotation)
         {
-            Vector2 _lookDirection = InputsManager.Inputs.Camera.Look.ReadValue<Vector2>();
-            float mouseX = _lookDirection.x * ClampSens;
-            float mouseY = _lookDirection.y * ClampSens;
-
-            LookRotation.y += mouseX;
-            LookRotation.x -= mouseY;
-            LookRotation.x = Mathf.Clamp(LookRotation.x, _bottomClamp, _topClamp);
+            TargetRotation = rotation.SignedEulerAngles();
         }
 
         protected virtual void LookRotate()
         {
-            Quaternion targetRotation = Quaternion.Euler(LookRotation.x, LookRotation.y, 0f);
+            if(!_canRotate) return;
 
-            if(_hasSmoothing)
-                transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, Time.deltaTime * _smoothTime);
-            else
-                transform.localRotation = targetRotation;
+            Vector2 _lookDirection = InputsManager.Inputs.Camera.Look.ReadValue<Vector2>();
+            float mouseX = _lookDirection.x * ClampSens;
+            float mouseY = _lookDirection.y * ClampSens;
+
+            TargetRotation.y += mouseX;
+            TargetRotation.x -= mouseY;
+            TargetRotation.x = Mathf.Clamp(TargetRotation.x, _bottomClamp, _topClamp);
+
+            transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(TargetRotation), Time.deltaTime * _smoothTime);
         }
     }
 }

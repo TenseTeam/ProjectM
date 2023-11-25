@@ -1,4 +1,4 @@
-﻿namespace VUDK.Extensions.Audio
+﻿namespace VUDK.Extensions
 {
     using UnityEngine;
     using VUDK.Factories;

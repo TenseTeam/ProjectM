@@ -3,6 +3,7 @@
     using ProjectM.Constants;
     using ProjectM.Features.ExplorationSystem.Nodes;
     using ProjectM.Features.ExplorationSystem.Transition.Phases.Keys;
+    using ProjectM.Features.ExplorationSystem.Transition.Types;
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
 
@@ -15,6 +16,7 @@
         public PathExplorer PathExplorer { get; private set; }
 
         public NodeBase CurrentTargetNode { get; private set; }
+        public TransitionBase CurrentTransition { get; private set; }
 
         private void OnValidate()
         {
@@ -40,6 +42,11 @@
         {
             PlaceExplorerAtStart();
             _firstNode.FirstNode();
+        }
+
+        public void SetTransition(TransitionBase transition)
+        {
+            CurrentTransition = transition;
         }
 
         private void TargetNode(NodeBase targetNode)

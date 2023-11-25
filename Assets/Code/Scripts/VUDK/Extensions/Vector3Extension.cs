@@ -1,7 +1,6 @@
-﻿namespace VUDK.Extensions.Vectors
+﻿namespace VUDK.Extensions
 {
     using UnityEngine;
-    using VUDK.Extensions.Mathematics;
 
     public enum Vector3Direction
     {
