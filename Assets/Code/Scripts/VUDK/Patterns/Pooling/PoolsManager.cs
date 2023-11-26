@@ -7,6 +7,6 @@
     public sealed class PoolsManager : MonoBehaviour
     {
         [field: SerializeField]
-        public SerializableDictionary<PoolKeys, Pool> Pools { get; private set; }
+        public SerializableDictionary<PoolKeys, GameObjectPool> Pools { get; private set; }
     }
 }

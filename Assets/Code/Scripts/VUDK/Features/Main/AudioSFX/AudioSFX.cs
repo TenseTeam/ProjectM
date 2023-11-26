@@ -11,7 +11,7 @@
     {
         private AudioSource _audioSource;
 
-        public Pool RelatedPool { get; private set; }
+        public GameObjectPool RelatedPool { get; private set; }
 
         private void Awake()
         {
@@ -30,7 +30,7 @@
             transform.SetPosition(position);
         }
 
-        public void AssociatePool(Pool associatedPool)
+        public void AssociatePool(GameObjectPool associatedPool)
         {
             RelatedPool = associatedPool;
         }

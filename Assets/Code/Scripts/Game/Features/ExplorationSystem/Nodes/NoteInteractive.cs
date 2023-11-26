@@ -5,84 +5,97 @@
     using UnityEngine.UI;
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Managers.Main.Interfaces;
-    using VUDK.Features.Main.InteractSystem.Interfaces;
     using VUDK.Extensions;
     using ProjectM.Managers;
     using ProjectM.Constants;
+    using ProjectM.Features.ExplorationSystem.Transition.Types.Keys;
 
-    public class NodeInteractive : NodeBase, ICastGameManager<GameManager>, IInteractable
+    public class NodeInteractive : NodeBase, ICastGameManager<GameManager>
     {
+        [Header("Node Interaction Settings")]
         [SerializeField]
-        private Button _interactButton;
+        protected Button InteractButton;
+
+        [Header("Transition Settings")]
+        [SerializeField]
+        private bool _hasCustomTransition;
+        [SerializeField]
+        private TransitionType _customTransition;
 
         [Header("Linked Nodes")]
         [SerializeField]
-        private List<NodeInteractive> _linkedNodes;
-
-        public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
-        private PathExplorer _pathExplorer => GameManager.ExplorationManager.PathExplorer;
+        protected List<NodeInteractive> LinkedNodes;
 
         private void OnValidate()
         {
-            if (!_interactButton)
+            if (!InteractButton)
             {
-                _interactButton = GetComponentInChildren<Button>();
-                if (!_interactButton)
+                InteractButton = GetComponentInChildren<Button>();
+                if (!InteractButton)
                     Debug.LogError("No button found in children", gameObject);
             }
         }
 
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
             MainManager.Ins.EventManager.AddListener(GameEventKeys.OnChangedNode, DisableInteraction);
-            _interactButton.onClick.AddListener(Interact);
+            InteractButton.onClick.AddListener(Interact);
         }
 
-        private void OnDisable()
+        protected virtual void OnDisable()
         {
             MainManager.Ins.EventManager.RemoveListener(GameEventKeys.OnChangedNode, DisableInteraction);
-            _interactButton.onClick.RemoveListener(Interact);
+            InteractButton.onClick.RemoveListener(Interact);
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             LookAtExplorer();
         }
 
-        public override void FirstNode()
+        public override void StartFirstNode()
         {
-            MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnChangedNode);
-            DisableInteraction();
+            base.StartFirstNode();
             EnableLinkedNodesInteraction();
         }
 
-        public void EnableInteraction()
+        public override void EnableInteraction()
         {
-            _interactButton.gameObject.SetActive(true);
+            InteractButton.gameObject.SetActive(true);
         }
 
-        public void DisableInteraction()
+        public override void DisableInteraction()
         {
-            _interactButton.gameObject.SetActive(false);
+            InteractButton.gameObject.SetActive(false);
         }
 
-        public void Interact()
+        public override void Interact()
         {
+            if (_hasCustomTransition)
+                GameManager.ExplorationManager.PathExplorer.ChangeTransitionType(_customTransition);
+            else
+                GameManager.ExplorationManager.PathExplorer.DefaultTransition();
+
             MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnNodeInteract, this);
             MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnChangedNode);
             DisableInteraction();
+        }
+
+        public override void NodeEnter()
+        {
+            base.NodeEnter();
             EnableLinkedNodesInteraction();
         }
 
         private void LookAtExplorer()
         {
-            Vector3 direction = _pathExplorer.transform.position - _interactButton.transform.parent.position;
-            _interactButton.transform.parent.rotation = Quaternion.LookRotation(-direction, Vector3.up);
+            Vector3 direction = PathExplorer.transform.position - InteractButton.transform.parent.position;
+            InteractButton.transform.parent.rotation = Quaternion.LookRotation(-direction, Vector3.up);
         }
 
         private void EnableLinkedNodesInteraction()
         {
-            foreach (var node in _linkedNodes)
+            foreach (var node in LinkedNodes)
                 node.EnableInteraction();
         }
 
@@ -93,7 +106,7 @@
             DrawLinkWithTargetNode();
             DrawButtonLine();
 
-            if(UnityEditor.Selection.activeGameObject == gameObject)
+            if (IsNodeSelectedInScene())
                 DrawArrows();
             else
                 DrawLinks();
@@ -109,10 +122,10 @@
 
         private void DrawLinks()
         {
-            if (_linkedNodes.Count == 0) return;
+            if (LinkedNodes.Count == 0) return;
 
             Gizmos.color = Color.cyan;
-            foreach (var node in _linkedNodes)
+            foreach (var node in LinkedNodes)
             {
                 if (!node) continue;
                 Gizmos.DrawLine(transform.position, node.transform.position);
@@ -121,10 +134,10 @@
 
         private void DrawArrows()
         {
-            if (_linkedNodes.Count == 0) return;
+            if (LinkedNodes.Count == 0) return;
 
             Gizmos.color = Color.yellow;
-            foreach (var node in _linkedNodes)
+            foreach (var node in LinkedNodes)
             {
                 if(!node) continue;
                 GizmosExtension.DrawArrow(transform.position, node.transform.position, transform.lossyScale.magnitude);
@@ -133,10 +146,10 @@
 
         private void DrawButtonLine()
         {
-            if(!_interactButton) return;
+            if(!InteractButton) return;
 
             Gizmos.color = Color.red;
-            Gizmos.DrawLine(_interactButton.transform.position, transform.position);
+            Gizmos.DrawLine(InteractButton.transform.position, transform.position);
         }
 #endif
     }

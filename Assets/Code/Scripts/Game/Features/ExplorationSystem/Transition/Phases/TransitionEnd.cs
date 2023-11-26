@@ -4,6 +4,7 @@
     using VUDK.Generic.Managers.Main;
     using VUDK.Patterns.StateMachine;
     using ProjectM.Constants;
+    using ProjectM.Features.ExplorationSystem.Nodes;
 
     public class TransitionEnd : TransitionPhaseBase
     {
@@ -15,6 +16,8 @@
         {
             MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnEndTransition);
             Context.Transition.End();
+            Context.TargetNode.NodeEnter();
+            CheckCameraEnable();
         }
 
         public override void Process()
@@ -27,6 +30,12 @@
 
         public override void Exit()
         {
+        }
+
+        private void CheckCameraEnable()
+        {
+            if (Context.TargetNode is not NodeInteractiveView)
+                Context.PlayerCamera.Enable();
         }
     }
 }

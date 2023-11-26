@@ -1,23 +1,20 @@
 ﻿namespace ProjectM.Features.ExplorationSystem.Transition.Types
 {
-    using UnityEngine;
-    using ProjectM.Features.ExplorationSystem.Nodes;
-
     public class TransitionInstant : TransitionBase
     {
-        public TransitionInstant() : base()
+        public TransitionInstant(TransitionContext context) : base(context)
         {
         }
 
         public override void Begin()
         {
-            PlayerCamera.SetRotation(TargetNode.NodeRotation);
+            Context.PlayerCamera.SetRotation(Context.TargetNode.NodeRotation);
         }
 
         public override void Process()
         {
-            PathExplorer.transform.position = TargetNode.NodePosition;
-            OnTransitionCompleted?.Invoke();
+            Context.PathExplorer.transform.position = Context.TargetNode.NodePosition;
+            OnTransitionCompletedHandler();
         }
 
         public override void End()

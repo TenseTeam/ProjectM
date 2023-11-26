@@ -5,22 +5,16 @@
     using VUDK.Generic.Managers.Main.Interfaces;
     using ProjectM.Features.ExplorationSystem.Nodes;
     using ProjectM.Managers;
-    using UnityEngine;
     using ProjectM.Features.Player;
 
-    public abstract class TransitionBase : ICastGameManager<GameManager>
+    public abstract class TransitionBase
     {
         public Action OnTransitionCompleted;
+        protected TransitionContext Context { get; private set; }
 
-        public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
-        protected GameStats GameStats => MainManager.Ins.GameStats;
-        protected PathExplorer PathExplorer => GameManager.ExplorationManager.PathExplorer;
-        protected NodeBase TargetNode => GameManager.ExplorationManager.CurrentTargetNode;
-        protected PlayerCamera PlayerCamera { get; private set; }
-
-        public TransitionBase()
+        public TransitionBase(TransitionContext context)
         {
-            PlayerCamera = GameStats.PlayerCamera.TryGetComponent(out PlayerCamera playerCamera) ? playerCamera : null;
+            Context = context;
         }
 
         public virtual void Begin()

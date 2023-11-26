@@ -17,7 +17,7 @@
 
         protected Rigidbody Rigidbody;
 
-        public Pool RelatedPool { get; private set; }
+        public GameObjectPool RelatedPool { get; private set; }
 
         /// <summary>
         /// Initializes this <see cref="Bullet"/>.
@@ -59,7 +59,7 @@
             Rigidbody.velocity = transform.forward * Speed;
         }
 
-        public void AssociatePool(Pool associatedPool)
+        public void AssociatePool(GameObjectPool associatedPool)
         {
             RelatedPool = associatedPool;
         }

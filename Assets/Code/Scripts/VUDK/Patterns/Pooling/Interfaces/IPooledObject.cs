@@ -4,16 +4,16 @@
 
     public interface IPooledObject
     {
-        public Pool RelatedPool { get; }
+        public GameObjectPool RelatedPool { get; }
 
         /// <summary>
-        /// Associates the Object with a <see cref="Pool"/>.
+        /// Associates the Object with a <see cref="GameObjectPool"/>.
         /// </summary>
         /// <param name="associatedPool"></param>
-        public void AssociatePool(Pool associatedPool);
+        public void AssociatePool(GameObjectPool associatedPool);
 
         /// <summary>
-        /// Disposes the object and returns it to the <see cref="Pool"/>.
+        /// Disposes the object and returns it to the <see cref="GameObjectPool"/>.
         /// </summary>
         public void Dispose();
 

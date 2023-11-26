@@ -4,7 +4,7 @@
     using System.Collections;
     using UnityEngine;
 
-    public class CameraFade : CameraBaseModifier
+    public class CameraFade : CameraModifierBase
     {
         public enum FadeType
         {
