@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 2954907501636503151}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,4 +355,4 @@ MonoBehaviour:
   _transitionType: 2
   _timeProcess:
     <Duration>k__BackingField: 2
-  _fovChanger: {fileID: 0}
+  _fovChanger: {fileID: 7005691253769576022}
