@@ -76,9 +76,7 @@
             else
                 GameManager.ExplorationManager.PathExplorer.DefaultTransition();
 
-            MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnNodeInteract, this);
-            MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnChangedNode);
-            DisableInteraction();
+            base.Interact();
         }
 
         public override void NodeEnter()

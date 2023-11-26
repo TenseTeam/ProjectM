@@ -22,6 +22,7 @@
         private void OnValidate()
         {
             if (PathExplorer == null) PathExplorer = FindObjectOfType<PathExplorer>();
+            if (_firstNode == null) Debug.LogError("First Node NOT Selected!");
         }
 
         private void Start()
@@ -51,5 +52,14 @@
             CurrentTargetNode = targetNode;
             PathExplorer.StartMachine();
         }
+
+#if UNITY_EDITOR
+        private void OnDrawGizmos()
+        {
+            if(_firstNode == null) return;
+
+            UnityEditor.Handles.Label(_firstNode.NodePosition, "--Start Node");
+        }
+#endif
     }
 }
