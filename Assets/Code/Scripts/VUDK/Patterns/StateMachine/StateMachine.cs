@@ -39,7 +39,7 @@ namespace VUDK.Patterns.StateMachine
         /// <param name="stateKey">State key.</param>
         public void ChangeState(Enum stateKey)
         {
-            if(_isChangingState) return;
+            if (_isChangingState) return;
             if (States[stateKey] != CurrentState)
             {
                 CurrentState?.Exit();

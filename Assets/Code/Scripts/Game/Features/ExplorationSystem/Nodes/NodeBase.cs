@@ -1,5 +1,6 @@
 namespace ProjectM.Features.ExplorationSystem.Nodes
 {
+    using ProjectM.Constants;
     using ProjectM.Managers;
     using UnityEngine;
     using UnityEngine.Events;
@@ -33,7 +34,22 @@ namespace ProjectM.Features.ExplorationSystem.Nodes
             }
         }
 
-        public abstract void Interact();
+        public virtual void Interact()
+        {
+            OnNodeInteractHandler();
+            OnNodeChangedHandler();
+            DisableInteraction();
+        }
+
+        protected void OnNodeChangedHandler()
+        {
+            MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnChangedNode);
+        }
+
+        protected virtual void OnNodeInteractHandler()
+        {
+            MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnNodeInteract, this);
+        }
 
         public abstract void EnableInteraction();
 
@@ -43,6 +59,7 @@ namespace ProjectM.Features.ExplorationSystem.Nodes
         {
             PathExplorer.transform.position = NodePosition;
             PathExplorer.transform.rotation = NodeRotation;
+            OnNodeChangedHandler();
             DisableInteraction();
         }
 
