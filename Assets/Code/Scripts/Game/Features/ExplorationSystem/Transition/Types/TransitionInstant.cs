@@ -14,7 +14,7 @@
         public override void Process()
         {
             Context.PathExplorer.transform.position = Context.TargetNode.NodePosition;
-            OnTransitionCompleted?.Invoke();
+            OnTransitionCompletedHandler();
         }
 
         public override void End()

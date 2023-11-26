@@ -6,6 +6,7 @@
     using ProjectM.Features.ExplorationSystem.Transition.Phases.Keys;
     using ProjectM.Features.ExplorationSystem.Transition.Types;
     using VUDK.Generic.Managers.Main;
+    using UnityEngine.Pool;
 
     public class ExplorationManager : MonoBehaviour
     {

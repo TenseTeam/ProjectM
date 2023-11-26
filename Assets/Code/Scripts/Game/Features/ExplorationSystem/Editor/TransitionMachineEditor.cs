@@ -4,7 +4,6 @@
     using UnityEngine;
     using ProjectM.Features.ExplorationSystem.Transition.Types.Keys;
     using ProjectM.Features.ExplorationSystem.Transition;
-    using static System.TimeZoneInfo;
 
     [CustomEditor(typeof(TransitionMachine), true)]
     public class TransitionMachineEditor : Editor
@@ -42,7 +41,7 @@
         private void ChangeTransitionType(TransitionType transitionType)
         {
             if(Application.isPlaying)
-                _target.SetTransition(transitionType);
+                _target.ChangeTransitionType(transitionType);
             _previousTransitionType = transitionType;
         }
 

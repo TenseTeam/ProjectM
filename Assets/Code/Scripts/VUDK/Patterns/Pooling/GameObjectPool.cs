@@ -5,7 +5,7 @@ namespace VUDK.Patterns.Pooling
     using VUDK.Extensions;
     using VUDK.Patterns.Pooling.Interfaces;
 
-    public sealed class Pool : MonoBehaviour
+    public sealed class GameObjectPool : MonoBehaviour
     {
         [Tooltip("The prefab to be pooled.")]
         [SerializeField]

@@ -8,12 +8,19 @@
     using VUDK.Extensions;
     using ProjectM.Managers;
     using ProjectM.Constants;
+    using ProjectM.Features.ExplorationSystem.Transition.Types.Keys;
 
     public class NodeInteractive : NodeBase, ICastGameManager<GameManager>
     {
         [Header("Node Interaction Settings")]
         [SerializeField]
         protected Button InteractButton;
+
+        [Header("Transition Settings")]
+        [SerializeField]
+        private bool _hasCustomTransition;
+        [SerializeField]
+        private TransitionType _customTransition;
 
         [Header("Linked Nodes")]
         [SerializeField]
@@ -64,6 +71,11 @@
 
         public override void Interact()
         {
+            if (_hasCustomTransition)
+                GameManager.ExplorationManager.PathExplorer.ChangeTransitionType(_customTransition);
+            else
+                GameManager.ExplorationManager.PathExplorer.DefaultTransition();
+
             MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnNodeInteract, this);
             MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnChangedNode);
             DisableInteraction();

@@ -5266,7 +5266,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   InteractButton: {fileID: 1621641932}
-  HasViewLocked: 1
+  _hasCustomTransition: 0
+  _customTransition: 0
   LinkedNodes:
   - {fileID: 1321525003}
 --- !u!1 &251487192
@@ -5533,7 +5534,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   InteractButton: {fileID: 754123072}
-  HasViewLocked: 1
+  _hasCustomTransition: 0
+  _customTransition: 0
   LinkedNodes:
   - {fileID: 1321525003}
 --- !u!1 &432362966
@@ -16409,6 +16411,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014096943}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1089120461 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7005691253769576022, guid: 4eac7f971ecf48140b6dcaab3db19b6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4713879421891074209}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6aaca7252052bd47850b6e9a9573fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &1089120462 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2759103048085610410, guid: 4eac7f971ecf48140b6dcaab3db19b6b,
@@ -16490,7 +16504,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3391502806394119558, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
+      propertyPath: _customTransition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391502806394119558, guid: e1a54c0f3111e4148bd77999ffb71b8c,
+        type: 3}
       propertyPath: LockRotationOnNode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391502806394119558, guid: e1a54c0f3111e4148bd77999ffb71b8c,
+        type: 3}
+      propertyPath: _hasCustomTransition
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3391502806394119558, guid: e1a54c0f3111e4148bd77999ffb71b8c,
@@ -16804,6 +16828,11 @@ PrefabInstance:
         type: 3}
       propertyPath: CanRotateView
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391502806394119558, guid: e1a54c0f3111e4148bd77999ffb71b8c,
+        type: 3}
+      propertyPath: _hasCustomTransition
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3391502806394119558, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
@@ -22127,7 +22156,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   InteractButton: {fileID: 8674595010378374243}
-  HasViewLocked: 1
+  _hasCustomTransition: 0
+  _customTransition: 0
   LinkedNodes:
   - {fileID: 1321525003}
 --- !u!1 &1714236414
@@ -22742,6 +22772,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3391502806394119558, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
+      propertyPath: _customTransition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391502806394119558, guid: e1a54c0f3111e4148bd77999ffb71b8c,
+        type: 3}
+      propertyPath: _hasCustomTransition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391502806394119558, guid: e1a54c0f3111e4148bd77999ffb71b8c,
+        type: 3}
       propertyPath: LinkedNodes.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -22871,6 +22911,16 @@ PrefabInstance:
     - target: {fileID: 4350595905174322833, guid: 4eac7f971ecf48140b6dcaab3db19b6b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010632263649316978, guid: 4eac7f971ecf48140b6dcaab3db19b6b,
+        type: 3}
+      propertyPath: _fovChanger
+      value: 
+      objectReference: {fileID: 1089120461}
+    - target: {fileID: 6010632263649316978, guid: 4eac7f971ecf48140b6dcaab3db19b6b,
+        type: 3}
+      propertyPath: _transitionType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8009319568855556739, guid: 4eac7f971ecf48140b6dcaab3db19b6b,
@@ -23051,13 +23101,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133351342559275428}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.6399943, z: -0, w: 0.7683797}
-  m_LocalPosition: {x: -0.216, y: 1.924, z: -0.338}
+  m_LocalRotation: {x: -0, y: 0.62374485, z: -0, w: 0.7816281}
+  m_LocalPosition: {x: 0.04, y: 1.924, z: -0.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2643264799384823467}
-  m_LocalEulerAnglesHint: {x: 0, y: 79.583, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 77.18, z: 0}
 --- !u!1 &6153943688452829495
 GameObject:
   m_ObjectHideFlags: 0
