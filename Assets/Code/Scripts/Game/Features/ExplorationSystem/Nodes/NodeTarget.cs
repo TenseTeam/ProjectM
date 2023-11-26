@@ -16,7 +16,7 @@
         {
             Gizmos.color = Color.yellow;
             float size = transform.lossyScale.magnitude / 4f;
-            GizmosExtension.DrawWireCubeWithRotation(transform.position, transform.rotation, Vector3.one * size);
+            GizmosExtension.DrawWireSphere(transform.position, size, transform.rotation);
             GizmosExtension.DrawArrowRay(transform.position, transform.forward * size);
         }
 #endif

@@ -1,6 +1,5 @@
 ﻿namespace ProjectM.Features.ExplorationSystem.Transition.Types
 {
-    using UnityEngine;
     using VUDK.Features.Main.Camera.CameraModifiers;
     using VUDK.Generic.Serializable;
 

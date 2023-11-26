@@ -76,7 +76,7 @@
             TargetRotation.x -= mouseY;
             TargetRotation.x = Mathf.Clamp(TargetRotation.x, _bottomClamp, _topClamp);
 
-            transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(TargetRotation), Time.deltaTime * _smoothTime);
+            transform.rotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(TargetRotation), Time.deltaTime * _smoothTime);
         }
     }
 }

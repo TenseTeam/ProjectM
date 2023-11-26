@@ -1,8 +1,9 @@
 ﻿namespace ProjectM.Features.ExplorationSystem.Nodes
 {
-    using UnityEngine;
-    using VUDK.Generic.Managers.Main;
     using ProjectM.Constants;
+    using UnityEngine;
+    using VUDK.Extensions;
+    using VUDK.Generic.Managers.Main;
 
     public class NodeInteractiveView : NodeInteractive
     {
@@ -35,5 +36,30 @@
             int randomIndex = Random.Range(0, LinkedNodes.Count);
             LinkedNodes[randomIndex].Interact();
         }
+
+#if UNITY_EDITOR
+        protected override void OnDrawGizmos()
+        {
+            base.OnDrawGizmos();
+            DrawPreview();
+        }
+
+        protected override void DrawLabel()
+        {
+            UnityEditor.Handles.Label(transform.position, "-View");
+
+        }
+
+        private void DrawPreview()
+        {
+            if (IsNodeSelectedInScene())
+            {
+                if (!Camera.main) return;
+
+                Camera cam = Camera.main;
+                GizmosExtension.DrawCameraFrustum(NodeTarget.transform, cam.fieldOfView, cam.nearClipPlane, cam.farClipPlane, cam.aspect);
+            }
+        }
+#endif
     }
 }

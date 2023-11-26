@@ -3,7 +3,7 @@
     using UnityEngine;
     using VUDK.Generic.Serializable;
     
-    public class CameraFovChanger : CameraBaseModifier
+    public class CameraFovChanger : CameraModifierBase
     {
         [Header("FOV Settings")]
         [SerializeField]

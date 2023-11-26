@@ -60,8 +60,19 @@ namespace ProjectM.Features.ExplorationSystem.Nodes
         protected virtual void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            UnityEditor.Handles.Label(transform.position, $"---Node");
-            Gizmos.DrawSphere(transform.position, transform.localScale.magnitude / 6f);
+            DrawLabel();
+        }
+
+        protected virtual void DrawLabel()
+        {
+            UnityEditor.Handles.Label(transform.position, $"-Node");
+        }
+
+        protected bool IsNodeSelectedInScene()
+        {
+            return
+                UnityEditor.Selection.activeGameObject == gameObject ||
+                UnityEditor.Selection.activeObject == NodeTarget.gameObject;
         }
 #endif
     }

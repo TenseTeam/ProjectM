@@ -14,7 +14,6 @@
         [Header("Node Interaction Settings")]
         [SerializeField]
         protected Button InteractButton;
-        public bool HasViewLocked;
 
         [Header("Linked Nodes")]
         [SerializeField]
@@ -95,7 +94,7 @@
             DrawLinkWithTargetNode();
             DrawButtonLine();
 
-            if(UnityEditor.Selection.activeGameObject == gameObject)
+            if (IsNodeSelectedInScene())
                 DrawArrows();
             else
                 DrawLinks();

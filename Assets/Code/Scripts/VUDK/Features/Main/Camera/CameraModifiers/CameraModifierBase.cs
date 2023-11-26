@@ -3,7 +3,7 @@
     using UnityEngine;
 
     [RequireComponent(typeof(Camera))]
-    public class CameraBaseModifier : MonoBehaviour
+    public abstract class CameraModifierBase : MonoBehaviour
     {
         protected Camera Camera { get; private set; }
 

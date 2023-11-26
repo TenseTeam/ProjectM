@@ -34,15 +34,8 @@
 
         private void CheckCameraEnable()
         {
-            if (Context.TargetNode is NodeInteractive interactiveNode)
-            {
-                if (!interactiveNode.HasViewLocked)
-                    Context.PlayerCamera.Enable();
-            }
-            else
-            { 
+            if (Context.TargetNode is not NodeInteractiveView)
                 Context.PlayerCamera.Enable();
-            }
         }
     }
 }

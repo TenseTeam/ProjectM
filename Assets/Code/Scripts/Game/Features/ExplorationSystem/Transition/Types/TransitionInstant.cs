@@ -1,8 +1,5 @@
 ﻿namespace ProjectM.Features.ExplorationSystem.Transition.Types
 {
-    using UnityEngine;
-    using ProjectM.Features.ExplorationSystem.Nodes;
-
     public class TransitionInstant : TransitionBase
     {
         public TransitionInstant(TransitionContext context) : base(context)

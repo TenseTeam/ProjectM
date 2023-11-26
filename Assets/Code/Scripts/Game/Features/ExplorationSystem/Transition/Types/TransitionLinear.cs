@@ -27,7 +27,7 @@
             if (!TimeProcess.Process()) return;
 
             Context.PathExplorer.transform.position = Vector3.Lerp(StartPosition, Context.TargetNode.NodePosition, TimeProcess.ElapsedPercentPrecise);
-            Context.PlayerCamera.transform.localRotation = Quaternion.Lerp(StartRotation, Context.TargetNode.NodeRotation, TimeProcess.ElapsedPercentPrecise);
+            Context.PlayerCamera.transform.rotation = Quaternion.Lerp(StartRotation, Context.TargetNode.NodeRotation, TimeProcess.ElapsedPercentPrecise);
         }
 
         public override void End()

@@ -1,10 +1,10 @@
 ﻿namespace ProjectM.Features.ExplorationSystem
 {
+    using UnityEngine;
     using ProjectM.Constants;
     using ProjectM.Features.ExplorationSystem.Nodes;
     using ProjectM.Features.ExplorationSystem.Transition.Phases.Keys;
     using ProjectM.Features.ExplorationSystem.Transition.Types;
-    using UnityEngine;
     using VUDK.Generic.Managers.Main;
 
     public class ExplorationManager : MonoBehaviour
