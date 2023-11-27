@@ -47,7 +47,6 @@
         protected override void DrawLabel()
         {
             UnityEditor.Handles.Label(transform.position, "-View");
-
         }
 
         private void DrawPreview()
