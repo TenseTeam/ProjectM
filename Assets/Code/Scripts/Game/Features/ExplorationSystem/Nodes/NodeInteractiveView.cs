@@ -1,23 +1,17 @@
 ﻿namespace ProjectM.Features.ExplorationSystem.Nodes
 {
     using ProjectM.Constants;
+    using UnityEditor.Experimental.GraphView;
     using UnityEngine;
     using VUDK.Extensions;
     using VUDK.Generic.Managers.Main;
 
     public class NodeInteractiveView : NodeInteractive
     {
-        protected override void OnEnable()
-        {
-            base.OnEnable();
-            MainManager.Ins.EventManager.AddListener(GameEventKeys.OnExitButtonViewArt, BackToALinkedNode);
-        }
-
-        protected override void OnDisable()
-        {
-            base.OnDisable();
-            MainManager.Ins.EventManager.RemoveListener(GameEventKeys.OnExitButtonViewArt, BackToALinkedNode);
-        }
+        [SerializeField]
+        private bool _useBackTargetNode;
+        [SerializeField]
+        private NodeBase _backTargetNode;
 
         public override void NodeEnter()
         {
@@ -31,8 +25,14 @@
             MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnExitNodeView);
         }
 
-        private void BackToALinkedNode()
+        public void InteractNextNode()
         {
+            if (_useBackTargetNode)
+            {
+                _backTargetNode.Interact();
+                return;
+            }
+
             int randomIndex = Random.Range(0, LinkedNodes.Count);
             LinkedNodes[randomIndex].Interact();
         }
@@ -41,12 +41,21 @@
         protected override void OnDrawGizmos()
         {
             base.OnDrawGizmos();
+            DrawArrowToBack();
             DrawPreview();
         }
 
         protected override void DrawLabel()
         {
             UnityEditor.Handles.Label(transform.position, "-View");
+
+        }
+
+        private void DrawArrowToBack()
+        {
+            if (!_backTargetNode) return;
+            Gizmos.color = Color.yellow;
+            GizmosExtension.DrawArrow(transform.position, _backTargetNode.transform.position, transform.lossyScale.magnitude);
         }
 
         private void DrawPreview()

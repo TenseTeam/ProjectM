@@ -5268,8 +5268,9 @@ MonoBehaviour:
   InteractButton: {fileID: 1621641932}
   _hasCustomTransition: 0
   _customTransition: 0
-  LinkedNodes:
-  - {fileID: 1321525003}
+  LinkedNodes: []
+  _useBackTargetNode: 1
+  _backTargetNode: {fileID: 1321525003}
 --- !u!1 &251487192
 GameObject:
   m_ObjectHideFlags: 0
@@ -5536,8 +5537,9 @@ MonoBehaviour:
   InteractButton: {fileID: 754123072}
   _hasCustomTransition: 0
   _customTransition: 0
-  LinkedNodes:
-  - {fileID: 1321525003}
+  LinkedNodes: []
+  _useBackTargetNode: 1
+  _backTargetNode: {fileID: 1321525003}
 --- !u!1 &432362966
 GameObject:
   m_ObjectHideFlags: 0
@@ -22846,10 +22848,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3819280062158091079, guid: 1e1acaeccc5dd8c40b2ba31e511c97c5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.76724964
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819280062158091079, guid: 1e1acaeccc5dd8c40b2ba31e511c97c5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819280062158091079, guid: 1e1acaeccc5dd8c40b2ba31e511c97c5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6413485
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819280062158091079, guid: 1e1acaeccc5dd8c40b2ba31e511c97c5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819280062158091079, guid: 1e1acaeccc5dd8c40b2ba31e511c97c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 79.785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256012269889769154, guid: 1e1acaeccc5dd8c40b2ba31e511c97c5,
+        type: 3}
+      propertyPath: _backTargetNode
+      value: 
+      objectReference: {fileID: 1321525003}
+    - target: {fileID: 6256012269889769154, guid: 1e1acaeccc5dd8c40b2ba31e511c97c5,
+        type: 3}
+      propertyPath: _useBackTargetNode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6256012269889769154, guid: 1e1acaeccc5dd8c40b2ba31e511c97c5,
         type: 3}
       propertyPath: LinkedNodes.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6256012269889769154, guid: 1e1acaeccc5dd8c40b2ba31e511c97c5,
         type: 3}
