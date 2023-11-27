@@ -22,7 +22,11 @@
         private void OnValidate()
         {
             if (PathExplorer == null) PathExplorer = FindObjectOfType<PathExplorer>();
-            if (_firstNode == null) Debug.LogError("First Node NOT Selected!");
+        }
+
+        private void Awake()
+        {
+            if (_firstNode == null) Debug.LogError($"First Node in {nameof(ExplorationManager)} NOT Selected!");
         }
 
         private void Start()
