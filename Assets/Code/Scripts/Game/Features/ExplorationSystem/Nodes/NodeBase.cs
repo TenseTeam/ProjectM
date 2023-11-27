@@ -58,7 +58,7 @@ namespace ProjectM.Features.ExplorationSystem.Nodes
         public virtual void StartFirstNode()
         {
             PathExplorer.transform.position = NodePosition;
-            //PathExplorer.transform.rotation = NodeRotation;
+            PathExplorer.transform.rotation = NodeRotation;
 
             OnNodeChangedHandler();
             DisableInteraction();
