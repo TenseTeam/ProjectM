@@ -11,7 +11,6 @@
     /// Extensible managers:
     /// - GameManager: Orchestrates game-specific managers for precise game control; ExecutionOrder(-900).
     /// - UIManager: Manages the game's UIs; ExecutionOrder(-895).
-    /// - EventManager: Governs all in-game events, providing centralized event handling; ExecutionOrder(-850).
     /// - GameMachine: Manages the game's state through a versatile state machine; ExecutionOrder(-990).
     /// - GameStats: Manages all the possible game's configs and statistics; ExecutionOrder(-800).
     /// Not extensible managers:
@@ -26,9 +25,6 @@
 
         [field: SerializeField, Header("UI Manager")]
         public UIManagerBase UIManager { get; private set; }
-
-        [field: SerializeField, Header("Event Manager")]
-        public EventManager EventManager { get; private set; }
 
         [field: SerializeField, Header("Game State Machine")]
         public GameMachineBase GameStateMachine { get; private set; }

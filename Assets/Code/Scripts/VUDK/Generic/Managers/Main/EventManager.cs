@@ -3,9 +3,10 @@
     using System;
     using System.Collections.Generic;
     using UnityEngine;
+    using VUDK.Patterns.Singleton;
 
     [DefaultExecutionOrder(-850)]
-    public class EventManager : MonoBehaviour
+    public class EventManager : Singleton<EventManager>
     {
         private Dictionary<string, Delegate> _eventListeners = new Dictionary<string, Delegate>();
 

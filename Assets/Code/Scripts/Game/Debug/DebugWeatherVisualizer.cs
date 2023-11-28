@@ -18,7 +18,7 @@ namespace ProjectM.Debug
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener<WeatherData>(EventKeys.WeatherEvents.OnWeatherChanged, OnWeatherChanged);
+            EventManager.Ins.AddListener<WeatherData>(EventKeys.WeatherEvents.OnWeatherChanged, OnWeatherChanged);
         }
 
         private void OnWeatherChanged(WeatherData data)

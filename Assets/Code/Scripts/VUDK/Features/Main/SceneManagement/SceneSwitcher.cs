@@ -37,7 +37,7 @@ namespace VUDK.Features.Main.SceneManagement
             if (WaitLoadingSceneDelay.IsRunning) return;
 
             WaitLoadingSceneDelay.Start();
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.SceneEvents.OnBeforeChangeScene, WaitLoadingSceneDelay.Duration);
+            EventManager.Ins.TriggerEvent(EventKeys.SceneEvents.OnBeforeChangeScene, WaitLoadingSceneDelay.Duration);
             _sceneToWaitLoad = sceneIndex;
         }
 

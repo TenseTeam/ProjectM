@@ -1,8 +1,8 @@
 ﻿namespace ProjectM.Features.Player
 {
-    using ProjectM.Constants;
-    using ProjectM.Features.ExplorationSystem;
-    using ProjectM.Features.ExplorationSystem.Nodes;
+    using VUDK.Features.Packages.ExplorationSystem.Constants;
+    using VUDK.Features.Packages.ExplorationSystem.Managers;
+    using VUDK.Features.Packages.ExplorationSystem.Nodes;
     using VUDK.Extensions;
     using VUDK.Features.Main.Camera.CameraViews;
     using VUDK.Generic.Managers.Main;
@@ -13,14 +13,14 @@
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener(GameEventKeys.OnBeginTransition, OnBeginTransition);
-            MainManager.Ins.EventManager.AddListener(GameEventKeys.OnEndTransition, OnEndTransition);
+            EventManager.Ins.AddListener(ExplorationEventKeys.OnBeginTransition, OnBeginTransition);
+            EventManager.Ins.AddListener(ExplorationEventKeys.OnEndTransition, OnEndTransition);
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener(GameEventKeys.OnBeginTransition, OnBeginTransition);
-            MainManager.Ins.EventManager.AddListener(GameEventKeys.OnEndTransition, OnEndTransition);
+            EventManager.Ins.RemoveListener(ExplorationEventKeys.OnBeginTransition, OnBeginTransition);
+            EventManager.Ins.AddListener(ExplorationEventKeys.OnEndTransition, OnEndTransition);
         }
 
         public void Init(ExplorationManager eplorationManager)

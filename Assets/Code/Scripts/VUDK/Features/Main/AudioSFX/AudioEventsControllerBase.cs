@@ -6,7 +6,7 @@
     public abstract class AudioEventsControllerBase : MonoBehaviour
     {
         protected AudioManager AudioManager => MainManager.Ins.AudioManager;
-        protected EventManager EventManager => MainManager.Ins.EventManager;
+        protected EventManager EventManager => EventManager.Ins;
 
         private void OnEnable() => RegisterAudioEvents();
 

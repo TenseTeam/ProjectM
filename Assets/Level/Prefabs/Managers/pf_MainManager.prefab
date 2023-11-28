@@ -415,7 +415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3923938419540583336
 RectTransform:
   m_ObjectHideFlags: 0
@@ -476,13 +476,12 @@ Transform:
   m_Children:
   - {fileID: 3917062993017019718}
   - {fileID: 6431801516996590550}
-  - {fileID: 8672204996905010238}
   - {fileID: 8275561396334140591}
   - {fileID: 93932323987507601}
   - {fileID: 598409653899543985}
   - {fileID: 8686590549770985465}
   - {fileID: 5051130897048081764}
-  - {fileID: 8279299446757842456}
+  - {fileID: 1736357912796090098}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8284972787304317759
@@ -499,7 +498,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <GameManager>k__BackingField: {fileID: 8009024803231350783}
   <UIManager>k__BackingField: {fileID: 2962600377390197871}
-  <EventManager>k__BackingField: {fileID: 8975009725621067725}
   <GameStateMachine>k__BackingField: {fileID: 0}
   <SceneManager>k__BackingField: {fileID: 0}
   <AudioManager>k__BackingField: {fileID: 0}
@@ -514,7 +512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1689548180823364712}
-  - component: {fileID: 63042512176143575}
+  - component: {fileID: 703476227981562141}
   m_Layer: 0
   m_Name: ExplorationManager
   m_TagString: Untagged
@@ -537,7 +535,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3917062993017019718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &63042512176143575
+--- !u!114 &703476227981562141
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -546,7 +544,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3989418636470428942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7b741996f4e5734681a36d4202c7200, type: 3}
+  m_Script: {fileID: 11500000, guid: b908547a432e8c141a9c534bc0974668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _firstNode: {fileID: 0}
@@ -600,7 +598,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MobileInputsManager>k__BackingField: {fileID: 5518765678894764276}
   <WeatherManager>k__BackingField: {fileID: 6899193427566014676}
-  <ExplorationManager>k__BackingField: {fileID: 63042512176143575}
+  <GameExploration>k__BackingField: {fileID: 703476227981562141}
+--- !u!1 &5429199274182811759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1736357912796090098}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1736357912796090098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429199274182811759}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8672204996905010238}
+  - {fileID: 8279299446757842456}
+  m_Father: {fileID: 5812637801896931851}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6027239755425227337
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,8 +721,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5bf289b385f8324fbde847821db7874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _panel: {fileID: 0}
-  _button: {fileID: 4323165600040306878}
+  _panel: {fileID: 3923938419540583336}
+  _exitViewButton: {fileID: 4323165600040306878}
 --- !u!1 &6261777077548114815
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,12 +897,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7533762427093910261}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5812637801896931851}
+  m_Father: {fileID: 1736357912796090098}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3742887581776465229
 MonoBehaviour:
@@ -940,7 +971,7 @@ GameObject:
   - component: {fileID: 5051130897048081764}
   - component: {fileID: 3976672739619753845}
   m_Layer: 0
-  m_Name: Pooling
+  m_Name: PoolsManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1134,12 +1165,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8317981713149357966}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5812637801896931851}
+  m_Father: {fileID: 1736357912796090098}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8975009725621067725
 MonoBehaviour:

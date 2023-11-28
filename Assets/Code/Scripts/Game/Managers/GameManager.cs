@@ -4,7 +4,7 @@ namespace ProjectM.Managers
     using VUDK.Features.Main.InputSystem.MobileInputs;
     using VUDK.Features.More.WeatherSystem;
     using VUDK.Generic.Managers.Main.Bases;
-    using ProjectM.Features.ExplorationSystem;
+    using ProjectM.Features.Exploration;
 
     public class GameManager : GameManagerBase
     {
@@ -14,7 +14,7 @@ namespace ProjectM.Managers
         [field: SerializeField, Header("Weather Manager")]
         public RealtimeWeatherManager WeatherManager { get; private set; }
 
-        [field: SerializeField, Header("Exploration Manager")]
-        public ExplorationManager ExplorationManager { get; private set; }
+        [field: SerializeField, Header("Game Exploration")]
+        public GameExplorationManager GameExploration { get; private set; }
     }
 }

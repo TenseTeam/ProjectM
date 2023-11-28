@@ -99,7 +99,7 @@
 #if UNITY_EDITOR
             Debug.Log($"Triggering Weather: {weatherData}");
 #endif
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.WeatherEvents.OnWeatherChanged, weatherData);
+            EventManager.Ins.TriggerEvent(EventKeys.WeatherEvents.OnWeatherChanged, weatherData);
             WeatherConditionType condition = (WeatherConditionType)weatherData.current.condition.code;
             TriggerDayNightEvent(weatherData.current.is_day == 1);
             TriggerMajorWeatherEvent(condition);
