@@ -35,17 +35,17 @@ namespace VUDK.Features.Main.DialogueSystem
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener<Dialogue>(EventKeys.DialogueEvents.OnTriggeredDialouge, StartDialogue);
+            EventManager.Ins.AddListener<Dialogue>(EventKeys.DialogueEvents.OnTriggeredDialouge, StartDialogue);
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener<Dialogue>(EventKeys.DialogueEvents.OnTriggeredDialouge, StartDialogue);
+            EventManager.Ins.RemoveListener<Dialogue>(EventKeys.DialogueEvents.OnTriggeredDialouge, StartDialogue);
         }
 
         public void StartDialogue(Dialogue dialogue)
         {
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.DialogueEvents.OnStartDialogue);
+            EventManager.Ins.TriggerEvent(EventKeys.DialogueEvents.OnStartDialogue);
             _dialogue = dialogue;
             _dialoguePanel.gameObject.SetActive(true);
             DisplayNextSentence();
@@ -77,7 +77,7 @@ namespace VUDK.Features.Main.DialogueSystem
         private void EndDialogue()
         {
             OnEndDialogue?.Invoke();
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.DialogueEvents.OnEndDialogue);
+            EventManager.Ins.TriggerEvent(EventKeys.DialogueEvents.OnEndDialogue);
             _dialoguePanel.gameObject.SetActive(false);
             _sentenceText.text = "";
         }
@@ -88,7 +88,7 @@ namespace VUDK.Features.Main.DialogueSystem
             IsTalking = true;
             foreach (char letter in sentence.Phrase.ToCharArray())
             {
-                MainManager.Ins.EventManager.TriggerEvent(EventKeys.DialogueEvents.OnDialougeTypedLetter, _currentSpeaker);
+                EventManager.Ins.TriggerEvent(EventKeys.DialogueEvents.OnDialougeTypedLetter, _currentSpeaker);
                 _sentenceText.text += letter;
                 yield return new WaitForSeconds(_displayLetterTime);
             }

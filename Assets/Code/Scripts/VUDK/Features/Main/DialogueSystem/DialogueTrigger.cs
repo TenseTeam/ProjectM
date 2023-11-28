@@ -19,7 +19,7 @@ namespace VUDK.Features.Main.DialogueSystem
 
         public void TriggerDialogue()
         {
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.DialogueEvents.OnTriggeredDialouge, _dialogue);
+            EventManager.Ins.TriggerEvent(EventKeys.DialogueEvents.OnTriggeredDialouge, _dialogue);
         }
     }
 }

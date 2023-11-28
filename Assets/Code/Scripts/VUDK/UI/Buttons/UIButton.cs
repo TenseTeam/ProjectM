@@ -36,7 +36,7 @@
         /// </summary>
         protected virtual void Press()
         {
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.UIEvents.OnButtonPressed);
+            EventManager.Ins.TriggerEvent(EventKeys.UIEvents.OnButtonPressed);
             OnButtonPressedSuccess?.Invoke();
         }
 

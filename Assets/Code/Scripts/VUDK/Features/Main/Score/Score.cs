@@ -14,8 +14,8 @@ namespace VUDK.Features.Main.Score
 
         private void Start()
         {
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.ScoreEvents.OnScoreChange, ScoreValue);
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.ScoreEvents.OnHighScoreChange, HighScore);
+            EventManager.Ins.TriggerEvent(EventKeys.ScoreEvents.OnScoreChange, ScoreValue);
+            EventManager.Ins.TriggerEvent(EventKeys.ScoreEvents.OnHighScoreChange, HighScore);
         }
 
         public void ChangeScore(int scoreToAdd)
@@ -33,7 +33,7 @@ namespace VUDK.Features.Main.Score
             if (ScoreValue > HighScore)
             {
                 PlayerPrefs.SetInt(_scorePref, ScoreValue);
-                MainManager.Ins.EventManager.TriggerEvent(EventKeys.ScoreEvents.OnHighScoreChange, HighScore);
+                EventManager.Ins.TriggerEvent(EventKeys.ScoreEvents.OnHighScoreChange, HighScore);
             }
         }
     }

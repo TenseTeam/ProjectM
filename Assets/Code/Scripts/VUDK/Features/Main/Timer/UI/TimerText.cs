@@ -15,12 +15,12 @@
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener<int>(EventKeys.CountdownEvents.OnCountdownCount, UpdateTimerText);
+            EventManager.Ins.AddListener<int>(EventKeys.CountdownEvents.OnCountdownCount, UpdateTimerText);
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener<int>(EventKeys.CountdownEvents.OnCountdownCount, UpdateTimerText);
+            EventManager.Ins.RemoveListener<int>(EventKeys.CountdownEvents.OnCountdownCount, UpdateTimerText);
         }
 
         private void UpdateTimerText(int time)

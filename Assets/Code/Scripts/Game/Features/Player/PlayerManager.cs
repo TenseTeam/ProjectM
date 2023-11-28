@@ -2,8 +2,9 @@
 {
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
-    using ProjectM.Features.ExplorationSystem;
-    using ProjectM.Constants;
+    using VUDK.Features.Packages.ExplorationSystem.Managers;
+    using VUDK.Features.Packages.ExplorationSystem.Constants;
+    using VUDK.Features.Packages.ExplorationSystem.Explorers;
 
     [DisallowMultipleComponent]
     [RequireComponent(typeof(PathExplorer))]
@@ -19,22 +20,25 @@
             if (PlayerCamera == null) PlayerCamera = FindAnyObjectByType<PlayerCamera>();
         }
 
+        private void OnEnable()
+        {
+            EventManager.Ins.AddListener<ExplorationManager>(ExplorationEventKeys.OnExplorationManagerInit, Init);
+        }
+
+        private void OnDisable()
+        {
+            EventManager.Ins.RemoveListener<ExplorationManager>(ExplorationEventKeys.OnExplorationManagerInit, Init);
+        }
+
         private void Awake()
         {
             TryGetComponent(out PathExplorer pathExplorer);
             PathExplorer = pathExplorer;
         }
 
-        //private void OnEnable()
-        //{
-        //    MainManager.Ins.EventManager.AddListener(GameEventKeys.OnBeginTransition, PlayerCamera.Disable);
-        //    MainManager.Ins.EventManager.AddListener(GameEventKeys.OnEndTransition, PlayerCamera.Enable);
-        //}
-
-        //private void OnDisable()
-        //{
-        //    MainManager.Ins.EventManager.RemoveListener(GameEventKeys.OnBeginTransition, PlayerCamera.Disable);
-        //    MainManager.Ins.EventManager.RemoveListener(GameEventKeys.OnEndTransition, PlayerCamera.Enable);
-        //}
+        public void Init(ExplorationManager explorationManager)
+        {
+            PlayerCamera.Init(explorationManager);
+        }
     }
 }

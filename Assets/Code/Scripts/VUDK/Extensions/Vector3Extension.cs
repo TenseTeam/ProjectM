@@ -65,6 +65,11 @@
             return new Vector3(vector.x + n, vector.y + n, vector.z + n);
         }
 
+        public static Vector3 Sum(this Vector3 vector, float x = 0, float y = 0, float z = 0)
+        {
+            return new Vector3(vector.x + x, vector.y + y, vector.z + z);
+        }
+
         public static Vector3 Product(this Vector3 v1, Vector3 v2)
         {
             return new Vector3(v1.x * v2.x, v1.y * v2.y, v1.z * v2.z);

@@ -8,7 +8,7 @@ namespace VUDK.UI.Menu
     {
         private void Start()
         {
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.SceneEvents.OnMainMenuLoaded);
+            EventManager.Ins.TriggerEvent(EventKeys.SceneEvents.OnMainMenuLoaded);
         }
 
         public void WaitChangeScene(int sceneIndex)
@@ -25,7 +25,7 @@ namespace VUDK.UI.Menu
 
         public void ClickButton()
         {
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.UIEvents.OnButtonPressed);
+            EventManager.Ins.TriggerEvent(EventKeys.UIEvents.OnButtonPressed);
         }
     }
 }

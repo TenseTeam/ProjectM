@@ -19,14 +19,14 @@
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener<int>(EventKeys.ScoreEvents.OnScoreChange, UpdateScoreText);
-            MainManager.Ins.EventManager.AddListener<int>(EventKeys.ScoreEvents.OnHighScoreChange, UpdateHighScoreText);
+            EventManager.Ins.AddListener<int>(EventKeys.ScoreEvents.OnScoreChange, UpdateScoreText);
+            EventManager.Ins.AddListener<int>(EventKeys.ScoreEvents.OnHighScoreChange, UpdateHighScoreText);
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener<int>(EventKeys.ScoreEvents.OnScoreChange, UpdateScoreText);
-            MainManager.Ins.EventManager.RemoveListener<int>(EventKeys.ScoreEvents.OnHighScoreChange, UpdateHighScoreText);
+            EventManager.Ins.RemoveListener<int>(EventKeys.ScoreEvents.OnScoreChange, UpdateScoreText);
+            EventManager.Ins.RemoveListener<int>(EventKeys.ScoreEvents.OnHighScoreChange, UpdateHighScoreText);
         }
 
         private void UpdateScoreText(int score)

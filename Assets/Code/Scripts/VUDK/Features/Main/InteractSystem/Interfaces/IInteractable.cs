@@ -9,8 +9,14 @@
         /// </summary>
         public void Interact();
 
-        public void EnableInteraction();
+        /// <summary>
+        /// Enables interaction object.
+        /// </summary>
+        public void Enable();
 
-        public void DisableInteraction();
+        /// <summary>
+        /// Disables interaction object.
+        /// 
+        public void Disable();
     }
 }

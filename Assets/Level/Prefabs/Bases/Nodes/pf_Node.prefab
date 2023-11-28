@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2643264800921055952}
-  - component: {fileID: 3391502806394119558}
+  - component: {fileID: 4207140177957347673}
   m_Layer: 0
   m_Name: pf_Node
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 8887759562782804191}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3391502806394119558
+--- !u!114 &4207140177957347673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,12 +43,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 575124687362338471}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34dbc4b429ca925478c36989db874b50, type: 3}
+  m_Script: {fileID: 11500000, guid: 350b12ec444f2c644a5323ba1dc63ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <NodeTarget>k__BackingField: {fileID: 3889689914407103995}
-  _interactButton: {fileID: 8674595010972977176}
-  _linkedNodes: []
+  <HasCustomTransition>k__BackingField: 0
+  <CustomTransition>k__BackingField: 0
+  OnNodeEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnNodeExit:
+    m_PersistentCalls:
+      m_Calls: []
+  InteractButton: {fileID: 8674595010972977176}
+  LinkedNodes: []
 --- !u!1 &1133351344227499487
 GameObject:
   m_ObjectHideFlags: 0
