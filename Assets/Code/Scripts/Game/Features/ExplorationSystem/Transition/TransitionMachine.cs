@@ -21,25 +21,30 @@
         [SerializeField]
         private CameraFovChanger _fovChanger;
 
-        private TransitionContext _context;
+        private ExplorationManager _explorationManager;
 
         private TransitionType _defaultTransition;
-        private TransitionType _currentTransition;
+        private TransitionType _currentTransitionType;
+
+        #region Transitions Instances
+        private TransitionContext _context;
         private TransitionInstant _transitionInstant;
         private TransitionLinear _transitionLinear;
         private TransitionFov _transitionFov;
+        #endregion
 
-        protected override void Start()
+        public virtual void Init(ExplorationManager explorationManager)
         {
-            base.Start();
-            Init();
+            _explorationManager = explorationManager;
             _defaultTransition = _transitionType;
-            ChangeTransitionType(_defaultTransition);
+            Init();
+            SetTransition(_defaultTransition);
         }
 
         public override void Init()
         {
-            _context = MachineFactory.Create();
+            if(Check() == false) return;
+            _context = MachineFactory.Create(_explorationManager);
 
             TransitionBegin beginPhase = MachineFactory.Create(TransitionStateKey.Start, this, _context) as TransitionBegin;
             TransitionProcess processPhase = MachineFactory.Create(TransitionStateKey.Process, this, _context) as TransitionProcess;
@@ -50,36 +55,34 @@
             AddState(TransitionStateKey.End, endPhase);
         }
 
-        public void DefaultTransition()
+        public override bool Check()
+        {
+            return _explorationManager != null;
+        }
+
+        public void ResetToDefaultTransition()
         {
             ChangeTransitionType(_defaultTransition);
         }
 
         public void ChangeTransitionType(TransitionType transitionType)
         {
-            if(_currentTransition == transitionType) return;
+            if(_currentTransitionType == transitionType) return;
+            SetTransition(transitionType);
+        }
 
-            _currentTransition = transitionType;
-            switch(transitionType)
+        private void SetTransition(TransitionType transitionType)
+        {
+            _currentTransitionType = transitionType;
+            TransitionBase transition = transitionType switch
             {
-                case TransitionType.Instant:
-                    if(_transitionInstant == null)
-                        _transitionInstant = GameFactory.Create(_context, transitionType, _fovChanger, _timeProcess) as TransitionInstant;
-                    _context.ExplorationManager.SetTransition(_transitionInstant);
-                    break;
+                TransitionType.Instant => _transitionInstant ??= GameFactory.Create(_context),
+                TransitionType.Linear => _transitionLinear ??= GameFactory.Create(_context, _timeProcess),
+                TransitionType.Fov => _transitionFov ??= GameFactory.Create(_context, _fovChanger, _timeProcess),
+                _ => null,
+            };
 
-                case TransitionType.Linear:
-                    if(_transitionLinear == null)
-                        _transitionLinear = GameFactory.Create(_context, transitionType, _fovChanger, _timeProcess) as TransitionLinear;
-                    _context.ExplorationManager.SetTransition(_transitionLinear);
-                    break;
-
-                case TransitionType.Fov:
-                    if(_transitionFov == null)
-                        _transitionFov = GameFactory.Create(_context, transitionType, _fovChanger, _timeProcess) as TransitionFov;
-                    _context.ExplorationManager.SetTransition(_transitionFov);
-                    break;
-            }
+            _explorationManager.SetTransition(transition);
         }
     }
 }

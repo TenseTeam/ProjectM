@@ -17,7 +17,7 @@
         public override void Begin()
         {
             StartPosition = Context.PathExplorer.transform.position;
-            StartRotation = Context.PlayerCamera.transform.rotation;
+            StartRotation = Context.PathExplorer.transform.rotation;
             TimeProcess.Start();
             TimeProcess.OnTaskCompleted += OnTransitionCompletedHandler;
         }
@@ -27,12 +27,11 @@
             if (!TimeProcess.Process()) return;
 
             Context.PathExplorer.transform.position = Vector3.Lerp(StartPosition, Context.TargetNode.NodePosition, TimeProcess.ElapsedPercentPrecise);
-            Context.PlayerCamera.transform.rotation = Quaternion.Lerp(StartRotation, Context.TargetNode.NodeRotation, TimeProcess.ElapsedPercentPrecise);
+            Context.PathExplorer.transform.rotation = Quaternion.Lerp(StartRotation, Context.TargetNode.NodeRotation, TimeProcess.ElapsedPercentPrecise);
         }
 
         public override void End()
         {
-            Context.PlayerCamera.SetRotation(Context.TargetNode.NodeRotation);
             TimeProcess.OnTaskCompleted -= OnTransitionCompletedHandler;
         }
     }

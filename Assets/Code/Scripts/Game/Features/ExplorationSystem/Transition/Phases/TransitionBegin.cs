@@ -8,7 +8,7 @@
 
     public class TransitionBegin : TransitionPhaseBase
     {
-        public TransitionBegin(Enum stateKey, StateMachine relatedStateMachine, StateMachineContext context) : base(stateKey, relatedStateMachine, context)
+        public TransitionBegin(Enum stateKey, StateMachine relatedStateMachine, StateMachineContext context) : base(stateKey,  relatedStateMachine, context)
         {
         }
 
@@ -16,8 +16,7 @@
         {
             MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnBeginTransition);
             Context.Transition.Begin();
-            Context.PlayerCamera.Disable();
-            Context.TargetNode.NodeExit();
+            Context.PreviousNode.OnNodeExit();
             ChangeState(TransitionStateKey.Process);
         }
 

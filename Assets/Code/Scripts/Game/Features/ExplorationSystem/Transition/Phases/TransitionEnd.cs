@@ -1,6 +1,7 @@
 ﻿namespace ProjectM.Features.ExplorationSystem.Transition.Phases
 {
     using System;
+    using UnityEngine;
     using VUDK.Generic.Managers.Main;
     using VUDK.Patterns.StateMachine;
     using ProjectM.Constants;
@@ -16,8 +17,7 @@
         {
             MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnEndTransition);
             Context.Transition.End();
-            Context.TargetNode.NodeEnter();
-            CheckCameraEnable();
+            Context.TargetNode.OnNodeEnter();
         }
 
         public override void Process()
@@ -34,8 +34,6 @@
 
         private void CheckCameraEnable()
         {
-            if (Context.TargetNode is not NodeInteractiveView)
-                Context.PlayerCamera.Enable();
         }
     }
 }

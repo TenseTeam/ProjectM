@@ -8,12 +8,11 @@
 
         public override void Begin()
         {
-            Context.PlayerCamera.SetRotation(Context.TargetNode.NodeRotation);
+            Context.PathExplorer.transform.SetPositionAndRotation(Context.TargetNode.NodePosition, Context.TargetNode.NodeRotation);
         }
 
         public override void Process()
         {
-            Context.PathExplorer.transform.position = Context.TargetNode.NodePosition;
             OnTransitionCompletedHandler();
         }
 

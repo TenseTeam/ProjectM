@@ -1,22 +1,24 @@
 ﻿namespace ProjectM.Features.ExplorationSystem
 {
     using UnityEngine;
+    using VUDK.Generic.Managers.Main;
+    using VUDK.Patterns.FactoryMethod;
     using ProjectM.Constants;
     using ProjectM.Features.ExplorationSystem.Nodes;
     using ProjectM.Features.ExplorationSystem.Transition.Phases.Keys;
     using ProjectM.Features.ExplorationSystem.Transition.Types;
-    using VUDK.Generic.Managers.Main;
-    using UnityEngine.Pool;
 
-    public class ExplorationManager : MonoBehaviour
+    public class ExplorationManager : FactoryMethodBase
     {
-        [field: Header("Exploration Settings")]
+        [Header("Exploration Settings")]
         [SerializeField]
         private NodeBase _firstNode;
+
         [field: SerializeField]
         public PathExplorer PathExplorer { get; private set; }
 
-        public NodeBase CurrentTargetNode { get; private set; }
+        public NodeBase CurrentTargetNode;
+        public NodeBase PreviousTargetNode;
         public TransitionBase CurrentTransition { get; private set; }
 
         private void OnValidate()
@@ -31,30 +33,52 @@
 
         private void Start()
         {
-            _firstNode.StartFirstNode();
+            Init();
+        }
+
+        public override void Init()
+        {
+            MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnExplorationManagerInit, this);
+            PathExplorer.Init(this);
+            _firstNode.OnFirstNode();
+            CurrentTargetNode = _firstNode;
+            PreviousTargetNode = CurrentTargetNode;
+        }
+
+        public override bool Check()
+        {
+            return PathExplorer && _firstNode;
         }
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener<NodeBase>(GameEventKeys.OnNodeInteract, TargetNode);
+            MainManager.Ins.EventManager.AddListener(GameEventKeys.OnExitObservationButton, ChangeTargetToPrevious);
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener<NodeBase>(GameEventKeys.OnNodeInteract, TargetNode);
+            MainManager.Ins.EventManager.RemoveListener(GameEventKeys.OnExitObservationButton, ChangeTargetToPrevious);
         }
 
         public void SetTransition(TransitionBase transition)
         {
+            if(transition == null) return;
+
             CurrentTransition = transition;
         }
 
-        private void TargetNode(NodeBase targetNode)
+        public void ChangeTargetToPrevious()
+        {
+            if (PreviousTargetNode == null) return;
+            ChangeTargetNode(PreviousTargetNode);
+        }
+
+        public void ChangeTargetNode(NodeBase targetNode)
         {
             if (PathExplorer.IsState(TransitionStateKey.Process)) return;
-
+            PreviousTargetNode = CurrentTargetNode;
             CurrentTargetNode = targetNode;
-            PathExplorer.StartMachine();
+            PathExplorer.TransitionStart();
         }
 
 #if UNITY_EDITOR

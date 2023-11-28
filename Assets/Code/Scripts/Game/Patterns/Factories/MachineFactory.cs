@@ -4,6 +4,7 @@
     using ProjectM.Features.ExplorationSystem.Transition;
     using ProjectM.Features.ExplorationSystem.Transition.Phases;
     using ProjectM.Features.ExplorationSystem.Transition.Phases.Keys;
+    using ProjectM.Features.ExplorationSystem;
 
     /// <summary>
     /// Factory responsible for creating game-related state-machine states and contexts.
@@ -25,9 +26,9 @@
             return null;
         }
 
-        public static TransitionContext Create()
+        public static TransitionContext Create(ExplorationManager explorationManager)
         {
-            return new TransitionContext();
+            return new TransitionContext(explorationManager);
         }
     }
 }

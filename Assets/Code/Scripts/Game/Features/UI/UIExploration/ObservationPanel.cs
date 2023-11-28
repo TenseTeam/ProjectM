@@ -1,39 +1,62 @@
 namespace ProjectM.Features.UI.UIExploration
 {
-    using ProjectM.Features.ExplorationSystem.Nodes;
-    using ProjectM.Managers;
     using UnityEngine;
     using UnityEngine.UI;
     using VUDK.Generic.Managers.Main;
-    using VUDK.Generic.Managers.Main.Interfaces;
+    using VUDK.Patterns.FactoryMethod;
+    using ProjectM.Features.ExplorationSystem;
+    using ProjectM.Constants;
 
-    public class ObservationPanel : MonoBehaviour, ICastGameManager<GameManager>
+    public class ObservationPanel : MonoBehaviour
     {
+        [Header("Panel Settings")]
         [SerializeField]
-        private Button _button;
+        private RectTransform _panel;
+        [SerializeField]
+        private Button _exitViewButton;
 
-        public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
-        public NodeBase CurrentNode => GameManager.ExplorationManager.CurrentTargetNode;
+        private void Awake()
+        {
+            Disable();
+        }
 
         private void OnEnable()
         {
-            _button.onClick.AddListener(Disable);
+            MainManager.Ins.EventManager.AddListener(GameEventKeys.OnEnterNodeObservation, EnterObservation);
+            MainManager.Ins.EventManager.AddListener(GameEventKeys.OnExitNodeObservation, ExitObservation);
+            _exitViewButton.onClick.AddListener(OnExitObservationButtonHanlder);
         }
 
         private void OnDisable()
         {
-            _button.onClick.RemoveListener(Disable);
+            MainManager.Ins.EventManager.RemoveListener(GameEventKeys.OnEnterNodeObservation, EnterObservation);
+            MainManager.Ins.EventManager.RemoveListener(GameEventKeys.OnExitNodeObservation, ExitObservation);
+            _exitViewButton.onClick.RemoveListener(OnExitObservationButtonHanlder);
         }
 
         public void Enable()
         {
-            gameObject.SetActive(true);
+            _panel.gameObject.SetActive(true);
         }
 
         public void Disable()
         {
-            if (CurrentNode is NodeInteractiveView nodeInteractiveView) nodeInteractiveView.InteractNextNode();
-            gameObject.SetActive(false);
+            _panel.gameObject.SetActive(false);
+        }
+
+        private void EnterObservation()
+        {
+            Enable();
+        }
+
+        private void ExitObservation()
+        {
+            Disable();
+        }
+
+        private void OnExitObservationButtonHanlder()
+        {
+            MainManager.Ins.EventManager.TriggerEvent(GameEventKeys.OnExitObservationButton);
         }
     }
 }

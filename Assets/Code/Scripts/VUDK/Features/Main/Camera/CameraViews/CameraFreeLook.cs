@@ -37,6 +37,11 @@
             Camera = camera;
         }
 
+        protected virtual void Start()
+        {
+            TargetRotation = transform.root.rotation.SignedEulerAngles();
+        }
+
         public virtual void Enable()
         {
             InputsManager.Inputs.Camera.Enable();
@@ -76,7 +81,7 @@
             TargetRotation.x -= mouseY;
             TargetRotation.x = Mathf.Clamp(TargetRotation.x, _bottomClamp, _topClamp);
 
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(TargetRotation), Time.deltaTime * _smoothTime);
+            transform.root.rotation = Quaternion.Slerp(transform.root.rotation, Quaternion.Euler(TargetRotation), Time.deltaTime * _smoothTime);
         }
     }
 }
