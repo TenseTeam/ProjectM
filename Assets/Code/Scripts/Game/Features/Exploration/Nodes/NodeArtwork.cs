@@ -13,13 +13,20 @@ namespace ProjectM.Features.Exploration
         public override void OnNodeEnter()
         {
             base.OnNodeEnter();
-            _artwork.EnableUIInfo();
+            _artwork.EnableCanvas();
         }
 
         public override void OnNodeExit()
         {
             base.OnNodeExit();
-            _artwork.DisableCanvas();
+            _artwork.DisableAll();
         }
+
+#if UNITY_EDITOR
+        protected override void DrawLabel()
+        {
+            UnityEditor.Handles.Label(transform.position, "-Artwork View");
+        }
+#endif
     }
 }

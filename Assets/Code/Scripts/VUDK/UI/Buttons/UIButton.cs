@@ -3,8 +3,8 @@
     using UnityEngine;
     using UnityEngine.Events;
     using UnityEngine.UI;
-    using VUDK.Generic.Managers.Main;
-    using VUDK.Config;
+    using VUDK.Constants;
+    using VUDK.Features.Main.EventSystem;
 
     [RequireComponent(typeof(Button))]
     public class UIButton : MonoBehaviour

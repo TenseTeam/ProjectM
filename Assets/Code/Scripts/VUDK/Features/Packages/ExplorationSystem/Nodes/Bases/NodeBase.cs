@@ -2,6 +2,7 @@ namespace VUDK.Features.Packages.ExplorationSystem.Nodes
 {
     using UnityEngine;
     using UnityEngine.Events;
+    using VUDK.Features.Main.EventSystem;
     using VUDK.Features.Main.InteractSystem.Interfaces;
     using VUDK.Features.Packages.ExplorationSystem.Constants;
     using VUDK.Features.Packages.ExplorationSystem.Explorers;

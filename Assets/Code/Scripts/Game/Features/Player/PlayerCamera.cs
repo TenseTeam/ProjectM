@@ -3,9 +3,9 @@
     using VUDK.Features.Packages.ExplorationSystem.Constants;
     using VUDK.Features.Packages.ExplorationSystem.Managers;
     using VUDK.Features.Packages.ExplorationSystem.Nodes;
-    using VUDK.Extensions;
     using VUDK.Features.Main.Camera.CameraViews;
-    using VUDK.Generic.Managers.Main;
+    using VUDK.Features.Main.EventSystem;
+    using VUDK.Extensions;
 
     public class PlayerCamera : CameraFreeLook
     {

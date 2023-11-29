@@ -1,9 +1,9 @@
 ﻿namespace VUDK.Features.Main.EntitySystem
 {
     using UnityEngine;
-    using VUDK.Generic.Managers.Main;
+    using VUDK.Constants;
     using VUDK.Features.Main.EntitySystem.Interfaces;
-    using VUDK.Config;
+    using VUDK.Features.Main.EventSystem;
 
     public abstract class EntityBase : MonoBehaviour, IEntity
     {

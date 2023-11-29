@@ -50,8 +50,7 @@
 
         protected virtual void Start()
         {
-            DisableInfoPanel();
-            DisableCanvas();
+            DisableAll();
         }
 
         public virtual void Init()
@@ -63,6 +62,18 @@
         public virtual bool Check()
         {
             return NameText != null && DescriptionText != null && ArtworkData != null;
+        }
+
+        public void EnableAll()
+        {
+            EnableInfoPanel();
+            EnableCanvas();
+        }
+
+        public void DisableAll()
+        {
+            DisableInfoPanel();
+            DisableCanvas();
         }
 
         public void EnableInfoPanel()
@@ -77,7 +88,7 @@
             ChangeInfoButtonBehaviour();
         }
 
-        public void EnableUIInfo()
+        public void EnableCanvas()
         {
             _artworkCanvas.gameObject.SetActive(true);
         }

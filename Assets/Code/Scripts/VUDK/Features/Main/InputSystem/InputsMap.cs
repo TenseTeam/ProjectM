@@ -344,6 +344,17 @@ public partial class @InputsMap: IInputActionCollection2, IDisposable
                     ""action"": ""SkipSentence"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c7debcee-16f2-4b9b-b2f7-672dfc1d93a9"",
+                    ""path"": ""<Touchscreen>/Press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""SkipSentence"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },

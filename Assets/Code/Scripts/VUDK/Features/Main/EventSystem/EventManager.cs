@@ -1,4 +1,4 @@
-﻿namespace VUDK.Generic.Managers.Main
+﻿namespace VUDK.Features.Main.EventSystem
 {
     using System;
     using System.Collections.Generic;

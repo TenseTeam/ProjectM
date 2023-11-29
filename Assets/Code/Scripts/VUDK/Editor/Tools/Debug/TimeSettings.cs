@@ -8,7 +8,7 @@ namespace VUDK.Editor.Tools.Debug
         private int _targetFPS = 60;
         private float _targetTimeScale = 1f;
 
-        [MenuItem("Tools/VUDK/Debug/Time Settings")]
+        [MenuItem("VUDK/Debug/Time Settings")]
         public static void ShowWindow()
         {
             GetWindow(typeof(TimeSettings), false, "Time Settings");

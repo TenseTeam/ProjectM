@@ -10,6 +10,12 @@
         [SerializeField]
         protected List<NodeInteractiveBase> LinkedNodes;
 
+        protected override void OnValidate()
+        {
+            base.OnValidate();
+            LinkedNodes.RemoveAll(node => !node);
+        }
+
         public override void OnFirstNode()
         {
             base.OnFirstNode();

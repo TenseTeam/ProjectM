@@ -9,6 +9,7 @@
     using VUDK.Features.Packages.ExplorationSystem.Transition.Types;
     using VUDK.Features.Packages.ExplorationSystem.Explorers;
     using VUDK.Patterns.Initialization;
+    using VUDK.Features.Main.EventSystem;
 
     public class ExplorationManager : Initializer
     {
@@ -99,7 +100,7 @@
         {
             if(_firstNode == null) return;
 
-            UnityEditor.Handles.Label(_firstNode.NodePosition, "--Start Node");
+            UnityEditor.Handles.Label(_firstNode.NodePosition, "-Start");
         }
 #endif
     }

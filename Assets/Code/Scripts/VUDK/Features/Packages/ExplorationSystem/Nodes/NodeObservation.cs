@@ -2,8 +2,8 @@
 {
     using UnityEngine;
     using VUDK.Extensions;
-    using VUDK.Generic.Managers.Main;
     using VUDK.Features.Packages.ExplorationSystem.Constants;
+    using VUDK.Features.Main.EventSystem;
 
     public class NodeObservation : NodeInteractiveBase
     {

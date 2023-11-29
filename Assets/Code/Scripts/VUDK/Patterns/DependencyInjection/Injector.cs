@@ -3,7 +3,7 @@
     using UnityEngine;
     using VUDK.Patterns.DependencyInjection.Interfaces;
 
-    public abstract class Injector<T> : MonoBehaviour, IInject<T>
+    public abstract class Injector<T> : MonoBehaviour, IInjectPackage<T> where T : IDependencyPackage
     {
         protected T Dependency;
 

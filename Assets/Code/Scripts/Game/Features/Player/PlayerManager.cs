@@ -5,6 +5,7 @@
     using VUDK.Features.Packages.ExplorationSystem.Managers;
     using VUDK.Features.Packages.ExplorationSystem.Constants;
     using VUDK.Features.Packages.ExplorationSystem.Explorers;
+    using VUDK.Features.Main.EventSystem;
 
     [DisallowMultipleComponent]
     [RequireComponent(typeof(PathExplorer))]

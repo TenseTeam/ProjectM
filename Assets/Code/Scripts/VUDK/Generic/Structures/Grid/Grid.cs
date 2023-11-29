@@ -1,8 +1,6 @@
 ﻿namespace VUDK.Generic.Structures.Grid
 {
     using UnityEngine;
-    using UnityEngine.UI;
-    using VUDK.Extensions;
 
     public class Grid<T> : MonoBehaviour where T : GridTileBase
     {

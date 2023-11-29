@@ -8,7 +8,7 @@
     {
         private static InputActionAsset s_inputActionAsset;
 
-        [MenuItem("Tools/VUDK/Project/Inputs")]
+        [MenuItem("VUDK/Project/Inputs")]
         public static void OpenInputsMap()
         {
             if(!s_inputActionAsset)

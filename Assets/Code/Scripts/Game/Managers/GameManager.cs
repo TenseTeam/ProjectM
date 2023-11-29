@@ -4,6 +4,7 @@ namespace ProjectM.Managers
     using VUDK.Features.Main.InputSystem.MobileInputs;
     using VUDK.Features.More.WeatherSystem;
     using VUDK.Generic.Managers.Main.Bases;
+    using VUDK.Features.Main.DialogueSystem;
     using ProjectM.Features.Exploration;
 
     public class GameManager : GameManagerBase

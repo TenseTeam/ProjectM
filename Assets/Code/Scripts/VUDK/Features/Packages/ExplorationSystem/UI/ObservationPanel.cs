@@ -4,6 +4,7 @@ namespace ProjectM.Features.UI.UIExploration
     using UnityEngine.UI;
     using VUDK.Generic.Managers.Main;
     using VUDK.Features.Packages.ExplorationSystem.Constants;
+    using VUDK.Features.Main.EventSystem;
 
     public class ObservationPanel : MonoBehaviour
     {

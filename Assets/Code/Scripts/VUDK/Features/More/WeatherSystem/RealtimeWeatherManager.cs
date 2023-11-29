@@ -2,12 +2,12 @@
 {
     using UnityEngine;
     using UnityEngine.Events;
+    using VUDK.Constants;
     using VUDK.Generic.Serializable;
     using VUDK.Features.More.APISystem.Data;
     using VUDK.Features.More.WeatherSystem.Data;
     using VUDK.Features.More.WeatherSystem.Enums;
-    using VUDK.Generic.Managers.Main;
-    using VUDK.Config;
+    using VUDK.Features.Main.EventSystem;
 
     /// <summary>
     /// Manages real-time weather events in the game based on data retrieved from a weather API.

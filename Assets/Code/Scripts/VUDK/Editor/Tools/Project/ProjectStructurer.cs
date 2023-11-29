@@ -3,8 +3,6 @@ namespace VUDK.Editor.Tools.Project
     using System.IO;
     using UnityEditor;
     using UnityEngine;
-    using VUDK.Generic.Managers.Main;
-    using VUDK.Patterns.Pooling;
 
     public class ProjectStructurer : EditorWindow
     {
@@ -56,7 +54,7 @@ namespace VUDK.Editor.Tools.Project
                 "Third Party"
         };
 
-        [MenuItem("Tools/VUDK/Project/Project Structurer")]
+        [MenuItem("VUDK/Project/Project Structurer")]
         public static void ShowWindow()
         {
             GetWindow(typeof(ProjectStructurer), false, "Project Structurer");

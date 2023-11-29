@@ -2,9 +2,7 @@ namespace VUDK.Features.Main.SceneManagement
 {
     using UnityEngine.SceneManagement;
     using UnityEngine;
-    using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Serializable;
-    using VUDK.Config;
 
     public class SceneSwitcher : MonoBehaviour
     {
@@ -37,7 +35,6 @@ namespace VUDK.Features.Main.SceneManagement
             if (WaitLoadingSceneDelay.IsRunning) return;
 
             WaitLoadingSceneDelay.Start();
-            EventManager.Ins.TriggerEvent(EventKeys.SceneEvents.OnBeforeChangeScene, WaitLoadingSceneDelay.Duration);
             _sceneToWaitLoad = sceneIndex;
         }
 

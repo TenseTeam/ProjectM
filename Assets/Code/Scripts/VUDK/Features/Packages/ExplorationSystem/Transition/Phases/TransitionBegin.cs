@@ -2,9 +2,9 @@
 {
     using System;
     using VUDK.Patterns.StateMachine;
-    using VUDK.Generic.Managers.Main;
     using VUDK.Features.Packages.ExplorationSystem.Transition.Phases.Keys;
     using VUDK.Features.Packages.ExplorationSystem.Constants;
+    using VUDK.Features.Main.EventSystem;
 
     public class TransitionBegin : TransitionPhaseBase
     {

@@ -1,7 +1,8 @@
 namespace VUDK.UI.Menu
 {
     using UnityEngine;
-    using VUDK.Config;
+    using VUDK.Constants;
+    using VUDK.Features.Main.EventSystem;
     using VUDK.Generic.Managers.Main;
 
     public class UIMenuActions : MonoBehaviour

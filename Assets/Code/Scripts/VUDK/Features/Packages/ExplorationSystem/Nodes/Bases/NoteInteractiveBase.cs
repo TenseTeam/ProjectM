@@ -2,8 +2,8 @@
 {
     using UnityEngine;
     using UnityEngine.UI;
-    using VUDK.Generic.Managers.Main;
     using VUDK.Features.Packages.ExplorationSystem.Constants;
+    using VUDK.Features.Main.EventSystem;
 
     public abstract class NodeInteractiveBase : NodeBase
     {
@@ -13,7 +13,7 @@
 
         protected bool IsInteractable { get; private set; } = true;
 
-        private void OnValidate()
+        protected virtual void OnValidate()
         {
             if (!InteractButton)
             {

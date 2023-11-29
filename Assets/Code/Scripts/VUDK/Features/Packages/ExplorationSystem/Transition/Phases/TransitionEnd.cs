@@ -1,9 +1,9 @@
 ﻿namespace VUDK.Features.Packages.ExplorationSystem.Transition.Phases
 {
     using System;
-    using VUDK.Generic.Managers.Main;
     using VUDK.Patterns.StateMachine;
     using VUDK.Features.Packages.ExplorationSystem.Constants;
+    using VUDK.Features.Main.EventSystem;
 
     public class TransitionEnd : TransitionPhaseBase
     {

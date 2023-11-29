@@ -2,9 +2,9 @@ namespace ProjectM.Debug
 {
     using TMPro;
     using UnityEngine;
-    using VUDK.Config;
+    using VUDK.Constants;
+    using VUDK.Features.Main.EventSystem;
     using VUDK.Features.More.WeatherSystem.Data;
-    using VUDK.Generic.Managers.Main;
 
     [RequireComponent(typeof(TMP_Text))]
     public class DebugWeatherVisualizer : MonoBehaviour

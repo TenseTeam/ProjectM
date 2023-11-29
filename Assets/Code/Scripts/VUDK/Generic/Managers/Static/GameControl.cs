@@ -1,7 +1,8 @@
 ﻿namespace VUDK.Generic.Managers.Static
 {
     using UnityEngine;
-    using VUDK.Config;
+    using VUDK.Constants;
+    using VUDK.Features.Main.EventSystem;
     using VUDK.Generic.Managers.Main;
 
     public static class GameControl

@@ -5,14 +5,6 @@
     using VUDK.Features.Main.DialogueSystem.Data;
 
     [System.Serializable]
-    public struct Sentence
-    {
-        public int SpeakerId;
-        [TextArea(3, 10)]
-        public string Phrase;
-    }
-
-    [System.Serializable]
     public class Dialogue
     {
         [SerializeField, Header("Speakers")]
@@ -43,6 +35,11 @@
         public SpeakerData GetSpeakerForSentence(Sentence sentence)
         {
             return _speakers[sentence.SpeakerId];
+        }
+
+        public void Reset()
+        {
+            _index = 0;
         }
     }
 }

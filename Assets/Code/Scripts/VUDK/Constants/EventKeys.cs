@@ -1,4 +1,4 @@
-﻿namespace VUDK.Config
+﻿namespace VUDK.Constants
 {
     public static class EventKeys
     {
@@ -40,6 +40,7 @@
         {
             public const string OnDialougeTypedLetter = "OnDialougeTypedLetter";
             public const string OnTriggeredDialouge = "OnTriggeredDialouge";
+            public const string OnInterruptDialogue = "OnInterruptDialogue";
             public const string OnStartDialogue = "OnStartDialogue";
             public const string OnEndDialogue = "OnEndDialogue";
         }
