@@ -6,6 +6,7 @@
     public class ArtworkData : ScriptableObject
     {
         public string Name;
+        [TextArea(3, 10)]
         public string Description;
     }
 }

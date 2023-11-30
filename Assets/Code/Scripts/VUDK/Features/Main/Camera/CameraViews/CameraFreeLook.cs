@@ -1,5 +1,6 @@
 ﻿namespace VUDK.Features.Main.Camera.CameraViews
 {
+    using System;
     using UnityEngine;
     using VUDK.Extensions;
     using VUDK.Features.Main.InputSystem;
@@ -13,8 +14,10 @@
         [Header("Sensitivity Settings")]
         [SerializeField, Range(1f, 100f)]
         protected float _sensitivity = 2f;
+
         [SerializeField, Range(0f, 1f)]
         private float _sensitivityCoefficient = 0.1f;
+
         [SerializeField]
         private float _smoothTime = 0.1f;
 
@@ -22,6 +25,7 @@
         [Tooltip("How far in degrees you can move the camera up")]
         [SerializeField]
         private float _topClamp = 90.0f;
+
         [Tooltip("How far in degrees you can move the camera down")]
         [SerializeField]
         private float _bottomClamp = -90.0f;
@@ -39,7 +43,7 @@
 
         protected virtual void Start()
         {
-            TargetRotation = transform.root.rotation.SignedEulerAngles();
+            SetTargetRotation(transform.root.rotation);
         }
 
         public virtual void Enable()
@@ -54,6 +58,11 @@
             _canRotate = false;
         }
 
+        public void SetTargetRotation(Quaternion rotation)
+        {
+            TargetRotation = rotation.SignedEulerAngles();
+        }
+
         public virtual void ResetTargetRotation()
         {
             TargetRotation = Vector3.zero;
@@ -64,14 +73,9 @@
             LookRotate();
         }
 
-        public void SetRotation(Quaternion rotation)
-        {
-            TargetRotation = rotation.SignedEulerAngles();
-        }
-
         protected virtual void LookRotate()
         {
-            if(!_canRotate) return;
+            if (!_canRotate) return;
 
             Vector2 _lookDirection = InputsManager.Inputs.Camera.Look.ReadValue<Vector2>();
             float mouseX = _lookDirection.x * ClampSens;
