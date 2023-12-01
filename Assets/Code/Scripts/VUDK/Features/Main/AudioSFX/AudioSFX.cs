@@ -2,23 +2,30 @@
 {
     using UnityEngine;
     using VUDK.Patterns.Pooling;
-    using VUDK.Patterns.Pooling.Interfaces;
     using VUDK.Extensions;
-    using VUDK.Features.AudioSFX.Interfaces;
+    using VUDK.Generic.Managers.Main;
+    using VUDK.Patterns.Initialization.Interfaces;
 
     [RequireComponent(typeof(AudioSource))]
-    public class AudioSFX : MonoBehaviour, IPooledObject, IAudioSFX
+    public class AudioSFX : PooledObject, IInject<AudioClip>
     {
         private AudioSource _audioSource;
-
-        public GameObjectPool RelatedPool { get; private set; }
 
         private void Awake()
         {
             TryGetComponent(out _audioSource);
         }
 
-        public void Init(AudioClip clip)
+        public static AudioSFX Create(AudioClip clip)
+        {
+            GameObject goAud = MainManager.Ins.PoolsManager.Pools[PoolKeys.AudioSFX].Get();
+            if (goAud.TryGetComponent(out AudioSFX audioSFX))
+                audioSFX.Inject(clip);
+
+            return audioSFX;
+        }
+
+        public void Inject(AudioClip clip)
         {
             _audioSource.clip = clip;
         }
@@ -30,20 +37,15 @@
             transform.SetPosition(position);
         }
 
-        public void AssociatePool(GameObjectPool associatedPool)
-        {
-            RelatedPool = associatedPool;
-        }
-
-        public void Clear()
+        public override void Clear()
         {
             _audioSource.Stop();
             _audioSource.clip = null;
         }
 
-        public void Dispose()
+        public bool Check()
         {
-            RelatedPool.Dispose(gameObject);
+            return _audioSource.clip != null;
         }
     }
 }

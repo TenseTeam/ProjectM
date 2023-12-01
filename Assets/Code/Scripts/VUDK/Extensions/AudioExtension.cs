@@ -1,7 +1,7 @@
 ﻿namespace VUDK.Extensions
 {
     using UnityEngine;
-    using VUDK.Factories;
+    using VUDK.Features.AudioSFX;
 
     public static class AudioExtension
     {
@@ -12,7 +12,7 @@
         /// <param name="position">Position in space from where to play it.</param>
         public static void PlayClipAtPoint(this AudioClip clip, Vector3 position)
         {
-            SFXFactory.Create(clip).PlayClipAtPoint(position);
+            AudioSFX.Create(clip).PlayClipAtPoint(position);
         }
     }
 }

@@ -6,7 +6,7 @@
     using VUDK.Features.Main.Camera.CameraViews;
     using VUDK.Features.Main.EventSystem;
     using VUDK.Extensions;
-    using VUDK.Patterns.DependencyInjection.Interfaces;
+    using VUDK.Patterns.Initialization.Interfaces;
 
     public class PlayerCamera : CameraFreeLook, IInject<ExplorationManager>
     {

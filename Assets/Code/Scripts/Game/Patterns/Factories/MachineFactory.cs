@@ -11,6 +11,5 @@
     /// </summary>
     public static class MachineFactory
     {
-
     }
 }

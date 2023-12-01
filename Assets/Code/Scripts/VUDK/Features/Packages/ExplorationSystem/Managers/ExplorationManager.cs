@@ -2,7 +2,6 @@
 {
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
-    using VUDK.Patterns.DependencyInjection;
     using VUDK.Features.Packages.ExplorationSystem.Constants;
     using VUDK.Features.Packages.ExplorationSystem.Nodes;
     using VUDK.Features.Packages.ExplorationSystem.Transition.Phases.Keys;
