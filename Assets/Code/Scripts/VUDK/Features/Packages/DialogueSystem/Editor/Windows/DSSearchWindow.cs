@@ -53,18 +53,17 @@
             switch (SearchTreeEntry.userData)
             {
                 case DSDialogueType.SingleChoice:
-                    DSSingleChoiceNode singleChoiceNode = DSNode.Create(DSDialogueType.SingleChoice, Vector2.zero) as DSSingleChoiceNode;
+                    DSSingleChoiceNode singleChoiceNode = _graphView.CreateNode(DSDialogueType.SingleChoice, Vector2.zero) as DSSingleChoiceNode;
                     _graphView.AddElement(singleChoiceNode);
                     return true;
 
                 case DSDialogueType.MultipleChoice:
-                    DSMultipleChoiceNode multChoiceNode = DSNode.Create(DSDialogueType.MultipleChoice, Vector2.zero) as DSMultipleChoiceNode;
+                    DSMultipleChoiceNode multChoiceNode = _graphView.CreateNode(DSDialogueType.MultipleChoice, Vector2.zero) as DSMultipleChoiceNode;
                     _graphView.AddElement(multChoiceNode);
                     return true;
 
-                case Group _:
-                    Group group = _graphView.CreateGroup("DialogueGroup", localMousePosition);
-                    _graphView.AddElement(group);
+                case DSGroup _:
+                    _graphView.CreateGroup("DialogueGroup", localMousePosition);
                     return true;
 
                 default:
