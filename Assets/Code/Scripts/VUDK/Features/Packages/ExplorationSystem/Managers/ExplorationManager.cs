@@ -1,7 +1,6 @@
 ﻿namespace VUDK.Features.Packages.ExplorationSystem.Managers
 {
     using UnityEngine;
-    using VUDK.Generic.Managers.Main;
     using VUDK.Features.Packages.ExplorationSystem.Constants;
     using VUDK.Features.Packages.ExplorationSystem.Nodes;
     using VUDK.Features.Packages.ExplorationSystem.Transition.Phases.Keys;
@@ -10,6 +9,7 @@
     using VUDK.Patterns.Initialization;
     using VUDK.Features.Main.EventSystem;
 
+    [DefaultExecutionOrder(-100)]
     public class ExplorationManager : Initializer
     {
         [Header("Exploration Settings")]
