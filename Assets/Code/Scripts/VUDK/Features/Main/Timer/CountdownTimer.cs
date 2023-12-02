@@ -4,7 +4,6 @@ namespace VUDK.Features.Main.Timer
     using UnityEngine;
     using VUDK.Constants;
     using VUDK.Features.Main.EventSystem;
-    using VUDK.Generic.Managers.Main;
 
     public class CountdownTimer : MonoBehaviour
     {

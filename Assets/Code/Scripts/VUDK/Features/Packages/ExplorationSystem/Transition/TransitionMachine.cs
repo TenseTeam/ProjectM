@@ -3,6 +3,7 @@
     using UnityEngine;
     using VUDK.Generic.Serializable;
     using VUDK.Patterns.StateMachine;
+    using VUDK.Patterns.Initialization.Interfaces;
     using VUDK.Features.Main.Camera.CameraModifiers;
     using VUDK.Features.Packages.ExplorationSystem.Transition.Phases;
     using VUDK.Features.Packages.ExplorationSystem.Transition.Types.Keys;
@@ -10,7 +11,6 @@
     using VUDK.Features.Packages.ExplorationSystem.Transition.Types;
     using VUDK.Features.Packages.ExplorationSystem.Factory;
     using VUDK.Features.Packages.ExplorationSystem.Managers;
-    using VUDK.Patterns.DependencyInjection.Interfaces;
 
     public class TransitionMachine : StateMachine, IInject<ExplorationManager>
     {

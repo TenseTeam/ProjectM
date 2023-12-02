@@ -3,6 +3,7 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Windows
     using System;
     using UnityEditor;
     using UnityEngine.UIElements;
+    using VUDK.Features.Packages.DialogueSystem.Editor.Utilities;
 
     public class DSEditorWindow : EditorWindow
     {
@@ -20,7 +21,7 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Windows
 
         private void ConstructGraphView()
         {
-            DSGraphView graphView = new DSGraphView();
+            DSGraphView graphView = new DSGraphView(this);
 
             graphView.StretchToParentSize();
             rootVisualElement.Add(graphView);
@@ -28,8 +29,7 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Windows
 
         private void AddStyles()
         {
-            StyleSheet styleSheet = (StyleSheet) EditorGUIUtility.Load("DialogueSystem/DSVariables.uss");
-            rootVisualElement.styleSheets.Add(styleSheet);
+            rootVisualElement.AddStyleSheets("DialogueSystem/DSVariables.uss");
         }
     }
 }

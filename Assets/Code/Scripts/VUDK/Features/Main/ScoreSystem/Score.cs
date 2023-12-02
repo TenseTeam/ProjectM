@@ -1,4 +1,4 @@
-namespace VUDK.Features.Main.Score
+namespace VUDK.Features.Main.ScoreSystem
 {
     using UnityEngine;
     using VUDK.Constants;
@@ -6,11 +6,9 @@ namespace VUDK.Features.Main.Score
 
     public class Score : MonoBehaviour
     {
-        [SerializeField]
-        private string _scorePref;
-
         public int ScoreValue { get; private set; }
         public int HighScore => PlayerPrefs.GetInt(_scorePref);
+        private string _scorePref => Constants.Prefs.HighScore;
 
         private void Start()
         {

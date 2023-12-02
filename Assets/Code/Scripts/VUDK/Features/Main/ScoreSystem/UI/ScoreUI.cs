@@ -1,4 +1,4 @@
-﻿namespace VUDK.Features.Main.Score.UI
+﻿namespace VUDK.Features.Main.ScoreSystem.UI
 {
     using UnityEngine;
     using TMPro;

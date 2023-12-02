@@ -1,8 +1,8 @@
 namespace VUDK.Features.Main.SceneManagement
 {
-    using UnityEngine.SceneManagement;
     using UnityEngine;
     using VUDK.Generic.Serializable;
+    using UnityEngine.SceneManagement;
 
     public class SceneSwitcher : MonoBehaviour
     {

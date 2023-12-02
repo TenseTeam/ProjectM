@@ -1,23 +1,34 @@
 namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
 {
-    using System.Collections.Generic;
-    using UnityEditor.Experimental.GraphView;
     using UnityEngine;
-    using UnityEngine.UIElements;
+    using UnityEditor.Experimental.GraphView;
+    using VUDK.Features.Packages.DialogueSystem.Editor.Utilities;
     using VUDK.Features.Packages.DialogueSystem.Enums;
-    using VUDK.Patterns.DependencyInjection.Interfaces;
 
     public class DSSingleChoiceNode : DSNode
     {
-
-        public override void Inject(Vector2 position)
+        public override void Init(Vector2 position)
         {
-            base.Inject(position);
+            base.Init(position);
+            DialogueType = DSDialogueType.SingleChoice;
+            Choices.Add("Next Dialogue");
         }
 
         public override void Draw()
         {
             base.Draw();
+
+            #region OUTPUT CONTAINER
+
+            foreach (string choice in Choices)
+            {
+                Port choicePort = DSElementUtility.CreatePort(this, choice, Orientation.Horizontal, Direction.Output, Port.Capacity.Single);
+                outputContainer.Add(choicePort);
+            }
+
+            #endregion OUTPUT CONTAINER
+
+            RefreshExpandedState();
         }
     }
 }

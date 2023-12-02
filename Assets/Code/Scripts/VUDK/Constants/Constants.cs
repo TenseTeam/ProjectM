@@ -4,7 +4,13 @@
     {
         public static class Prefs
         {
-            public const string FirstLaunch = "FirstLaunch";
+            // Prefs have the prefix "vudk_" to avoid conflicts with other constants
+
+            // Game Control
+            public const string FirstLaunch = "vudk_FirstLaunch";
+
+            // Score
+            public const string HighScore = "vudk_HighScore";
         }
     }
 }
