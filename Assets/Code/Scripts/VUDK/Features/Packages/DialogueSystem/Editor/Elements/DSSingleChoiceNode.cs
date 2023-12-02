@@ -4,14 +4,22 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
     using UnityEditor.Experimental.GraphView;
     using VUDK.Features.Packages.DialogueSystem.Editor.Utilities;
     using VUDK.Features.Packages.DialogueSystem.Enums;
+    using VUDK.Features.Packages.DialogueSystem.Editor.Windows;
+    using VUDK.Features.Packages.DialogueSystem.Editor.Data.Save;
 
     public class DSSingleChoiceNode : DSNode
     {
-        public override void Init(Vector2 position)
+        public override void Init(Vector2 position, DSGraphView graphView)
         {
-            base.Init(position);
+            base.Init(position, graphView);
             DialogueType = DSDialogueType.SingleChoice;
-            Choices.Add("Next Dialogue");
+
+            DSChoiceSaveData dSChoiceSaveData = new DSChoiceSaveData()
+            {
+                Text = "Next Dialogue",
+            };
+
+            Choices.Add(dSChoiceSaveData);
         }
 
         public override void Draw()
@@ -20,9 +28,10 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
 
             #region OUTPUT CONTAINER
 
-            foreach (string choice in Choices)
+            foreach (DSChoiceSaveData choiceData in Choices)
             {
-                Port choicePort = DSElementUtility.CreatePort(this, choice, Orientation.Horizontal, Direction.Output, Port.Capacity.Single);
+                Port choicePort = this.CreatePort(choiceData.Text);
+                choicePort.userData = choiceData;
                 outputContainer.Add(choicePort);
             }
 

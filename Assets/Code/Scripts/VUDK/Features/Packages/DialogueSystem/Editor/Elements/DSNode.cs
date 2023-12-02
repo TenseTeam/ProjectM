@@ -5,30 +5,32 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
     using UnityEditor.Experimental.GraphView;
     using UnityEngine;
     using UnityEngine.UIElements;
+    using VUDK.Extensions;
+    using VUDK.Features.Packages.DialogueSystem.Editor.Data.Save;
     using VUDK.Features.Packages.DialogueSystem.Editor.Utilities;
+    using VUDK.Features.Packages.DialogueSystem.Editor.Windows;
     using VUDK.Features.Packages.DialogueSystem.Enums;
 
     public class DSNode : Node
     {
+        public string NodeID;
         public string DialogueName;
         public string DialogueText;
-        public List<string> Choices;
+        public List<DSChoiceSaveData> Choices;
         public DSDialogueType DialogueType;
+        public DSGroup Group;
 
-        public static DSNode Create(DSDialogueType dialogueType, Vector2 position)
-        {
-            Type nodeType = Type.GetType($"VUDK.Features.Packages.DialogueSystem.Editor.Elements.DS{dialogueType}Node");
-            DSNode node = Activator.CreateInstance(nodeType) as DSNode;
-            node.Init(position);
-            node.Draw();
-            return node;
-        }
+        protected DSGraphView GraphView;
+        private Color _defaultBackgroundColor;
 
-        public virtual void Init(Vector2 position)
+        public virtual void Init(Vector2 position, DSGraphView graphView)
         {
-            Choices = new List<string>();
+            NodeID = Guid.NewGuid().ToString();
+            Choices = new List<DSChoiceSaveData>();
+            GraphView = graphView;
             DialogueName = "DialogueName";
             DialogueText = "Dialogue text.";
+            _defaultBackgroundColor = new Color(29f / 255f, 29f / 255f, 30f / 255f);
             SetPosition(new Rect(position, Vector2.zero));
             mainContainer.AddToClassList("ds-node__main-container");
             extensionContainer.AddToClassList("ds-node__extension-container");
@@ -38,7 +40,27 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
         {
             #region TITLE CONTAINER
 
-            TextField dialogueNameTextField = DSElementUtility.CreateTextField(DialogueName);
+            TextField dialogueNameTextField = DSElementUtility.CreateTextField(DialogueName, null, callback =>
+            {
+                TextField target = (TextField)callback.target;
+                target.value = callback.newValue.RemoveSpecialAndWhitespaces();
+
+                if (Group == null)
+                {
+                    GraphView.RemoveUngroupedNode(this);
+                    DialogueName = target.value;
+                    GraphView.AddUngroupedNode(this);
+                    return;
+                }
+
+                DSGroup currentGroup = Group;
+
+                GraphView.RemoveNodeFromGroup(this, Group);
+
+                DialogueName = target.value;
+
+                GraphView.AddNodeInGroup(this, currentGroup);
+            });
 
             dialogueNameTextField.AddClasses
             (
@@ -53,7 +75,7 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
 
             #region INPUT CONTAINER
 
-            Port inputPort = DSElementUtility.CreatePort(this, "Dialogue Input", Orientation.Horizontal, Direction.Input, Port.Capacity.Single);
+            Port inputPort = DSElementUtility.CreatePort(this, "Dialogue Input", Orientation.Horizontal, Direction.Input, Port.Capacity.Multi);
             inputContainer.Add(inputPort);
 
             #endregion INPUT CONTAINER
@@ -78,6 +100,58 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
             extensionContainer.Add(customDataContainer);
 
             #endregion EXTENSIONS CONTAINER
+        }
+
+        public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
+        {
+            evt.menu.AppendAction("Disconnect Input Ports", action =>
+            {
+                DisconnectInputPorts();
+            });
+
+            evt.menu.AppendAction("Disconnect Output Ports", action =>
+            {
+                DisconnectOutputPorts();
+            });
+
+            base.BuildContextualMenu(evt);
+        }
+
+        public void SetErrorStyle(Color color)
+        {
+            mainContainer.style.backgroundColor = color;
+        }
+
+        public void ResetStyle()
+        {
+            mainContainer.style.backgroundColor = _defaultBackgroundColor;
+        }
+
+        public void DisconnectAllPorts()
+        {
+            DisconnectInputPorts();
+            DisconnectOutputPorts();
+        }
+
+        private void DisconnectInputPorts()
+        {
+            DisconnectPorts(inputContainer);
+        }
+        
+        private void DisconnectOutputPorts()
+        {
+            DisconnectPorts(outputContainer);
+        }
+
+        private void DisconnectPorts(VisualElement container)
+        {
+            foreach(Port port in container.Children())
+            {
+                if (!port.connected)
+                    continue;
+
+                GraphView.DeleteElements(port.connections);
+            }
         }
     }
 }

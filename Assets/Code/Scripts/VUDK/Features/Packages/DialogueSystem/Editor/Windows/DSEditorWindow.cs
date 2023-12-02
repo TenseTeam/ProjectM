@@ -1,12 +1,18 @@
 namespace VUDK.Features.Packages.DialogueSystem.Editor.Windows
 {
-    using System;
     using UnityEditor;
     using UnityEngine.UIElements;
     using VUDK.Features.Packages.DialogueSystem.Editor.Utilities;
+    using UnityEditor.UIElements;
+    using VUDK.Extensions;
 
     public class DSEditorWindow : EditorWindow
     {
+        private readonly string _defaultFileName = "New Dialogue Graph";
+
+        private TextField _fileNameTextField;
+        private Button _saveButton;
+
         [MenuItem("VUDK/Dialogue Graph")]
         public static void Open()
         {
@@ -15,11 +21,39 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Windows
 
         private void OnEnable()
         {
-            ConstructGraphView();
+            AddGraphView();
+            AddToolbar();
             AddStyles();
         }
 
-        private void ConstructGraphView()
+        public void EnableSaving()
+        {
+            _saveButton.SetEnabled(true);
+        }
+
+        public void DisableSaving()
+        {
+            _saveButton.SetEnabled(false);
+        }
+
+        private void AddToolbar()
+        {
+            Toolbar toolbar = new Toolbar();
+
+            TextField fileNameTextField = DSElementUtility.CreateTextField(_defaultFileName, "File Name:", callback =>
+            {
+                _fileNameTextField.value = callback.newValue.RemoveSpecialAndWhitespaces();
+            });
+
+            _saveButton = DSElementUtility.CreateButton("Save");
+            toolbar.Add(fileNameTextField);
+            toolbar.Add(_saveButton);
+            toolbar.AddStyleSheets("DialogueSystem/DSToolbarStyles.uss");
+
+            rootVisualElement.Add(toolbar);
+        }
+
+        private void AddGraphView()
         {
             DSGraphView graphView = new DSGraphView(this);
 

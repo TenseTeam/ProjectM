@@ -3,16 +3,25 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
     using UnityEditor.Experimental.GraphView;
     using UnityEngine;
     using UnityEngine.UIElements;
+    using VUDK.Features.Packages.DialogueSystem.Data;
+    using VUDK.Features.Packages.DialogueSystem.Editor.Data.Save;
     using VUDK.Features.Packages.DialogueSystem.Editor.Utilities;
+    using VUDK.Features.Packages.DialogueSystem.Editor.Windows;
     using VUDK.Features.Packages.DialogueSystem.Enums;
 
     public class DSMultipleChoiceNode : DSNode
     {
-        public override void Init(Vector2 position)
+        public override void Init(Vector2 position, DSGraphView graphView)
         {
-            base.Init(position);
+            base.Init(position, graphView);
             DialogueType = DSDialogueType.MultipleChoice;
-            Choices.Add("New Choice");
+
+            DSChoiceSaveData dsChoiceData = new DSChoiceSaveData()
+            {
+                Text = "New Choice",
+            };
+
+            Choices.Add(dsChoiceData);
         }
 
         public override void Draw()
@@ -23,10 +32,16 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
 
             Button addChoiceButton = DSElementUtility.CreateButton("Add Choice", () =>
             {
-                Port choicePort = CreateChoicePort("New Choice");
-                Choices.Add("New Choice");
+                DSChoiceSaveData dsChoiceData = new DSChoiceSaveData()
+                {
+                    Text = "New Choice",
+                };
+                Choices.Add(dsChoiceData);
+
+                Port choicePort = CreateChoicePort(dsChoiceData);
                 outputContainer.Add(choicePort);
             });
+
             addChoiceButton.AddToClassList("ds-node__button");
 
             mainContainer.Insert(1, addChoiceButton);
@@ -35,9 +50,9 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
 
             #region OUTPUT CONTAINER
 
-            foreach (string choice in Choices)
+            foreach (DSChoiceSaveData choiceData in Choices)
             {
-                Port choicePort = CreateChoicePort(choice);
+                Port choicePort = CreateChoicePort(choiceData);
                 outputContainer.Add(choicePort);
             }
 
@@ -46,14 +61,29 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
             RefreshExpandedState();
         }
 
-        private Port CreateChoicePort(string choice)
+        private Port CreateChoicePort(object userData)
         {
             Port choicePort = this.CreatePort();
+            choicePort.userData = userData as DSChoiceSaveData;
+            DSChoiceSaveData choiceData = choicePort.userData as DSChoiceSaveData;
 
-            Button deleteChoiceButton = DSElementUtility.CreateButton("x");
+            Button deleteChoiceButton = DSElementUtility.CreateButton("X", () =>
+            {
+                if (Choices.Count == 1) return;
+
+                if (choicePort.connected)
+                    GraphView.DeleteElements(choicePort.connections);
+
+                Choices.Remove(choiceData);
+                GraphView.RemoveElement(choicePort);
+            });
+
             deleteChoiceButton.AddToClassList("ds-node__button");
 
-            TextField choiceTextField = DSElementUtility.CreateTextField(choice);
+            TextField choiceTextField = DSElementUtility.CreateTextField(choiceData.Text, null, callback =>
+            {
+                choiceData.Text = callback.newValue;
+            });
 
             choiceTextField.AddClasses
             (

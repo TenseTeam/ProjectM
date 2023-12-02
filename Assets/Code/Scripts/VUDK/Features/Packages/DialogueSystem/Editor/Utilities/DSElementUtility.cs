@@ -7,11 +7,12 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Utilities
 {
     public static class DSElementUtility
     {
-        public static TextField CreateTextField(string value = null, EventCallback<ChangeEvent<string>> onValueChanged = null)
+        public static TextField CreateTextField(string value = null, string label = null, EventCallback<ChangeEvent<string>> onValueChanged = null)
         {
             TextField textField = new TextField()
             {
-                value = value
+                value = value,
+                label = label
             };
 
             if (onValueChanged != null)
@@ -20,9 +21,9 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Utilities
             return textField;
         }
 
-        public static TextField CreateTextArea(string value = null, EventCallback<ChangeEvent<string>> onValueChanged = null)
+        public static TextField CreateTextArea(string value = null, string label = null, EventCallback<ChangeEvent<string>> onValueChanged = null)
         {
-            TextField textArea = CreateTextField(value, onValueChanged);
+            TextField textArea = CreateTextField(value, label, onValueChanged);
             textArea.multiline = true;
 
             return textArea;
@@ -52,6 +53,7 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Utilities
         public static Port CreatePort(this DSNode node, string portName = "", Orientation orientation = Orientation.Horizontal, Direction direction = Direction.Output, Port.Capacity capacity = Port.Capacity.Single)
         {
             Port port = node.InstantiatePort(orientation, direction, capacity, typeof(bool));
+
             port.portName = portName;
 
             return port;
