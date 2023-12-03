@@ -35,9 +35,18 @@
             _dictionary = new List<SerializableKeyValuePair<TKey, TValue>>();
         }
 
-        public SerializableDictionary(List<SerializableKeyValuePair<TKey, TValue>> keyPairValues) : this()
+        public SerializableDictionary(Dictionary<TKey, TValue> dictionary)
         {
-            _dictionary = keyPairValues;
+            _dictionary = new List<SerializableKeyValuePair<TKey, TValue>>();
+
+            foreach (var kvp in dictionary)
+            {
+                _dictionary.Add(new SerializableKeyValuePair<TKey, TValue>
+                {
+                    Key = kvp.Key,
+                    Value = kvp.Value
+                });
+            }
         }
 
         private Dictionary<TKey, TValue> ToDictionary()

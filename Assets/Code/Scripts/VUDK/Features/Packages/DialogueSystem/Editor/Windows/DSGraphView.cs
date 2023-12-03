@@ -12,34 +12,35 @@
     using VUDK.Features.Packages.DialogueSystem.Editor.Elements;
     using VUDK.Features.Packages.DialogueSystem.Editor.Utilities;
     using VUDK.Features.Packages.DialogueSystem.Enums;
-    using static UnityEditor.Experimental.GraphView.GraphView;
+    using VUDK.Features.Packages.DialogueSystem.Utilities;
 
     public class DSGraphView : GraphView
     {
         private DSEditorWindow _editorWindow;
         private DSSearchWindow _searchWindow;
-        private int _repeatedNamesAmount;
+        private MiniMap _miniMap;
 
-        private Dictionary<string, DSNodeErrorData> _ungroupedNodes;
-        private Dictionary<string, DSGroupErrorData> _groups;
-        private Dictionary<Group, Dictionary<string, DSNodeErrorData>> _groupedNodes;
+        private SerializableDictionary<string, DSNodeErrorData> _ungroupedNodes;
+        private SerializableDictionary<string, DSGroupErrorData> _groups;
+        private SerializableDictionary<Group, Dictionary<string, DSNodeErrorData>> _groupedNodes;
+        private int _nameErrorsAmount;
 
-        public int RepeatedNamesAmount 
+        public int NameErrorsAmount 
         {
             get
             {
-                return _repeatedNamesAmount;
+                return _nameErrorsAmount;
             }
             set
             {
-                _repeatedNamesAmount = value;
+                _nameErrorsAmount = value;
                 
-                if(_repeatedNamesAmount == 0)
+                if(_nameErrorsAmount == 0)
                 {
                     _editorWindow.EnableSaving();
                 }
 
-                if(_repeatedNamesAmount == 1)
+                if(_nameErrorsAmount == 1)
                 {
                     _editorWindow.DisableSaving();
                 }
@@ -49,12 +50,13 @@
         public DSGraphView(DSEditorWindow editorWindow)
         {
             _editorWindow = editorWindow;
-            _groups = new Dictionary<string, DSGroupErrorData>();
-            _ungroupedNodes = new Dictionary<string, DSNodeErrorData>();
-            _groupedNodes = new Dictionary<Group, Dictionary<string, DSNodeErrorData>>();
+            _groups = new SerializableDictionary<string, DSGroupErrorData>();
+            _ungroupedNodes = new SerializableDictionary<string, DSNodeErrorData>();
+            _groupedNodes = new SerializableDictionary<Group, Dictionary<string, DSNodeErrorData>>();
 
             AddManipulators();
             AddSearchWindow();
+            AddMiniMap();
             AddGridBackground();
 
             OnElementsDeleted();
@@ -64,6 +66,7 @@
             OnGraphViewChanged();
 
             AddStyles();
+            AddMiniMapStyles();
         }
 
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
@@ -98,6 +101,24 @@
             return group;
         }
 
+        public void ClearGraph()
+        {
+            graphElements.ForEach(element =>
+            {
+                RemoveElement(element);
+            });
+
+            _groups.Clear();
+            _groupedNodes.Clear();
+            _ungroupedNodes.Clear();
+            NameErrorsAmount = 0;
+        }
+
+        public void ToggleMiniMap()
+        {
+            _miniMap.visible = !_miniMap.visible;
+        }
+
         public Vector2 GetLocalMousePosition(Vector2 mousePosition, bool isSearchWindow = false)
         {
             Vector2 worldMousePosition = mousePosition;
@@ -109,12 +130,17 @@
             return localMousePosition;
         }
 
-        public DSNode CreateNode(DSDialogueType dialogueType, Vector2 position)
+        public DSNode CreateNode(string nodeName, DSDialogueType dialogueType, Vector2 position, bool shouldDraw = true)
         {
             Type nodeType = Type.GetType($"VUDK.Features.Packages.DialogueSystem.Editor.Elements.DS{dialogueType}Node");
             DSNode node = Activator.CreateInstance(nodeType) as DSNode;
-            node.Init(position, this);
-            node.Draw();
+            node.Init(nodeName, position, this);
+
+            if (shouldDraw)
+            {
+                node.Draw();
+            }
+
             AddUngroupedNode(node);
             return node;
         }
@@ -139,7 +165,7 @@
 
             if (ungroupedList.Count > 1)
             {
-                RepeatedNamesAmount++;
+                NameErrorsAmount++;
                 ungroupedList[0].SetErrorStyle(errorColor);
             }
         }
@@ -154,7 +180,7 @@
 
             if (ungroupedNodesList.Count == 1)
             {
-                RepeatedNamesAmount--;
+                NameErrorsAmount--;
                 ungroupedNodesList[0].ResetStyle();
                 return;
             }
@@ -189,7 +215,7 @@
 
             if (groupedList.Count == 2)
             {
-                RepeatedNamesAmount++;
+                NameErrorsAmount++;
                 groupedList[0].SetErrorStyle(errorColor);
             }
         }
@@ -205,7 +231,7 @@
 
             if (groupedList.Count == 1)
             {
-                RepeatedNamesAmount--;
+                NameErrorsAmount--;
                 groupedList[0].ResetStyle();
                 return;
             }
@@ -240,7 +266,7 @@
 
             if (groupList.Count == 2)
             {
-                RepeatedNamesAmount++;
+                NameErrorsAmount++;
                 groupList[0].SetErrorStyle(errorColor);
             }
         }
@@ -255,7 +281,7 @@
 
             if (groupList.Count == 1)
             {
-                RepeatedNamesAmount--;
+                NameErrorsAmount--;
                 groupList[0].ResetStyle();
                 return;
             }
@@ -299,7 +325,7 @@
         {
             ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator(
                 menuEvent => menuEvent.menu.AppendAction(actionTitle,
-                    actionEvent => AddElement(CreateNode(dialogueType, GetLocalMousePosition(actionEvent.eventInfo.localMousePosition))))
+                    actionEvent => AddElement(CreateNode("DialogueName", dialogueType, GetLocalMousePosition(actionEvent.eventInfo.localMousePosition))))
                 );
             return contextualMenuManipulator;
         }
@@ -319,11 +345,34 @@
             styleSheets.Add(nodeStyle);
         }
 
+        private void AddMiniMapStyles()
+        {
+            StyleColor backgroundColor = new StyleColor(new Color32(29, 29, 30, 255));
+            StyleColor borderColor = new StyleColor(new Color32(51, 51, 51, 255));
+
+            _miniMap.style.backgroundColor = backgroundColor;
+            _miniMap.style.borderTopColor = borderColor;
+            _miniMap.style.borderBottomColor = borderColor;
+            _miniMap.style.borderLeftColor = borderColor;
+            _miniMap.style.borderRightColor = borderColor;
+        }
+
         private void AddGridBackground()
         {
             GridBackground gridBackground = new GridBackground();
             gridBackground.StretchToParentSize();
             Insert(0, gridBackground);
+        }
+
+        private void AddMiniMap()
+        {
+            _miniMap = new MiniMap()
+            {
+            };
+
+            _miniMap.SetPosition(new Rect(15, 50, 200, 180));
+            Add(_miniMap);
+            _miniMap.visible = false;
         }
 
         private void OnElementsDeleted()
@@ -432,6 +481,21 @@
             {
                 DSGroup dsGroup = (DSGroup)group;
                 dsGroup.title = newTitle.RemoveSpecialAndWhitespaces();
+
+                if (string.IsNullOrEmpty(dsGroup.title))
+                {
+                    if (!string.IsNullOrEmpty(dsGroup.OldTitle))
+                    {
+                        ++NameErrorsAmount;
+                    }
+                }
+                else
+                {
+                    if (string.IsNullOrEmpty(dsGroup.OldTitle))
+                    {
+                        --NameErrorsAmount;
+                    }
+                }
 
                 RemoveGroup(dsGroup);
                 dsGroup.OldTitle = dsGroup.title;

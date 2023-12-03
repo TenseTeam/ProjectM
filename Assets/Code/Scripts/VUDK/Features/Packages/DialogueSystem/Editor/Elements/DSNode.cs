@@ -2,6 +2,7 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using UnityEditor.Experimental.GraphView;
     using UnityEngine;
     using UnityEngine.UIElements;
@@ -23,19 +24,19 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
         protected DSGraphView GraphView;
         private Color _defaultBackgroundColor;
 
-        public virtual void Init(Vector2 position, DSGraphView graphView)
+        public virtual void Init(string nodeName, Vector2 position, DSGraphView graphView)
         {
             NodeID = Guid.NewGuid().ToString();
             Choices = new List<DSChoiceSaveData>();
             GraphView = graphView;
-            DialogueName = "DialogueName";
+            DialogueName = nodeName;
             DialogueText = "Dialogue text.";
             _defaultBackgroundColor = new Color(29f / 255f, 29f / 255f, 30f / 255f);
             SetPosition(new Rect(position, Vector2.zero));
             mainContainer.AddToClassList("ds-node__main-container");
             extensionContainer.AddToClassList("ds-node__extension-container");
         }
-
+        
         public virtual void Draw()
         {
             #region TITLE CONTAINER
@@ -44,6 +45,21 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
             {
                 TextField target = (TextField)callback.target;
                 target.value = callback.newValue.RemoveSpecialAndWhitespaces();
+
+                if (string.IsNullOrEmpty(target.value))
+                {
+                    if (!string.IsNullOrEmpty(DialogueName))
+                    {
+                        ++GraphView.NameErrorsAmount;
+                    }
+                }
+                else
+                {
+                    if(string.IsNullOrEmpty(DialogueName))
+                    {
+                        --GraphView.NameErrorsAmount;
+                    }
+                }
 
                 if (Group == null)
                 {
@@ -87,7 +103,10 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
             customDataContainer.AddToClassList("ds-node__custom-data-container");
 
             Foldout textFoldout = DSElementUtility.CreateFoldout("Dialogue Text", true);
-            TextField textTextField = DSElementUtility.CreateTextArea(DialogueText);
+            TextField textTextField = DSElementUtility.CreateTextArea(DialogueText, null, callback =>
+            {
+                DialogueText = callback.newValue;
+            });
 
             textTextField.AddClasses
             (
@@ -115,6 +134,13 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
             });
 
             base.BuildContextualMenu(evt);
+        }
+
+        public bool IsStartNode()
+        {
+            Port inputPort = inputContainer.Children().First() as Port;
+
+            return !inputPort.connected;
         }
 
         public void SetErrorStyle(Color color)

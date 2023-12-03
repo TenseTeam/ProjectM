@@ -1,7 +1,7 @@
 ﻿namespace VUDK.Features.Packages.DialogueSystem.Editor.Data.Save
 {
     using System.Collections.Generic;
-    using System.Numerics;
+    using UnityEngine;
     using VUDK.Features.Packages.DialogueSystem.Enums;
 
     [System.Serializable]

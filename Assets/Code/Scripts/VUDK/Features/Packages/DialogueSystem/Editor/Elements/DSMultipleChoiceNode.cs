@@ -11,9 +11,9 @@ namespace VUDK.Features.Packages.DialogueSystem.Editor.Elements
 
     public class DSMultipleChoiceNode : DSNode
     {
-        public override void Init(Vector2 position, DSGraphView graphView)
+        public override void Init(string nodeName, Vector2 position, DSGraphView graphView)
         {
-            base.Init(position, graphView);
+            base.Init(nodeName, position, graphView);
             DialogueType = DSDialogueType.MultipleChoice;
 
             DSChoiceSaveData dsChoiceData = new DSChoiceSaveData()

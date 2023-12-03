@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using UnityEngine;
+    using VUDK.Features.Packages.DialogueSystem.Utilities;
 
     public class DSGraphSaveData : ScriptableObject
     {
@@ -10,7 +11,7 @@
         public List<DSNodeSaveData> Nodes;
         public List<string> OldGroupNames;
         public List<string> OldUngroupedNodeNames;
-        public Dictionary<string, List<string>> OldGroupNodeNames;
+        public SerializableDictionary<string, List<string>> OldGroupedNodeNames;
 
         public void Init(string fileName)
         {
@@ -19,7 +20,7 @@
             Nodes = new List<DSNodeSaveData>();
             OldGroupNames = new List<string>();
             OldUngroupedNodeNames = new List<string>();
-            OldGroupNodeNames = new Dictionary<string, List<string>>();
+            OldGroupedNodeNames = new SerializableDictionary<string, List<string>>();
         }
     }
 }
