@@ -1,7 +1,9 @@
 ﻿namespace VUDK.Features.More.DialogueSystem.Editor.Utilities
 {
     using UnityEditor;
+    using UnityEngine;
     using UnityEngine.UIElements;
+    using VUDK.Features.More.DialogueSystem.Editor.Constants;
 
     public static class DSStyleUtility
     {
@@ -17,8 +19,15 @@
         {
             foreach (string styleSheetName in styleSheetNames)
             {
-                StyleSheet styleSheet = (StyleSheet)EditorGUIUtility.Load(styleSheetName);
-                element.styleSheets.Add(styleSheet);
+                try
+                {
+                    StyleSheet styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>($"{DSEditorPaths.StyleSheetsPath}/{styleSheetName}");
+                    element.styleSheets.Add(styleSheet);
+                }
+                catch
+                {
+                    Debug.LogError($"Failed to load style sheet: {styleSheetName}, check if all the needed folders exist.");
+                }
             }
 
             return element;

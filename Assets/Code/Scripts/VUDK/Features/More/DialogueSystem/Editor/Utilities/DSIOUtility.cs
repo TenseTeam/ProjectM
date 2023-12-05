@@ -7,21 +7,16 @@
     using UnityEditor.Experimental.GraphView;
     using UnityEngine;
     using VUDK.Extensions;
-    using VUDK.Features.More.DialogueSystem.Utilities;
     using VUDK.Features.More.DialogueSystem.Data;
     using VUDK.Features.More.DialogueSystem.Editor.Data.Save;
     using VUDK.Features.More.DialogueSystem.Editor.Elements;
     using VUDK.Features.More.DialogueSystem.Editor.Windows;
+    using VUDK.Features.More.DialogueSystem.Utilities;
     using VUDK.Generic.Serializable;
+    using static VUDK.Features.More.DialogueSystem.Editor.Constants.DSEditorPaths;
 
     public static class DSIOUtility
     {
-        public const string DialoguesEditorFolderPath = "Assets/Code/Scripts/VUDK/Features/More/DialogueSystem/Editor";
-        public const string DefaultDialoguesSaveParentFolderPath = "Assets/Code/Scripts/VUDK/Features/More/DialogueSystem";
-        public const string DialogueEditorIconsPath = "DialogueSystem/EditorIcons";
-        private const string DialogueAssetMainFolderName = "DialougeAssets";
-        public static string DialoguesSaveParentFolderPath = DefaultDialoguesSaveParentFolderPath;
-
         private static DSGraphView s_graphView;
         private static string s_graphFileName;
         private static string s_containerFolderPath;
@@ -34,10 +29,6 @@
 
         private static Dictionary<string, DSGroup> s_loadedGroups;
         private static Dictionary<string, DSNode> s_loadedNodes;
-
-        public static string DialoguesEditorAssetPath => $"{DialoguesEditorFolderPath}/Graphs";
-        public static string DialoguesAssetPath => $"{DialoguesSaveParentFolderPath}/{DialogueAssetMainFolderName}";
-        public static string DialoguesActorsAssetPath => $"{DialoguesAssetPath}/Actors";
 
         public static void Init(DSGraphView dsGraphView, string graphName)
         {
@@ -62,7 +53,7 @@
 
             GetElementsFromGraphView();
 
-            DSGraphEditorData graphData = CreateAsset<DSGraphEditorData>(DialoguesEditorAssetPath, $"{s_graphFileName}Graph");
+            DSGraphEditorData graphData = CreateAsset<DSGraphEditorData>(DialoguesGraphsAssetPath, $"{s_graphFileName}Graph");
 
             graphData.Init(s_graphFileName);
 
@@ -243,7 +234,7 @@
                         continue;
 
                     dialogue.Choices[choiceIndex].NextDialogue = s_createdDialogues[nodeChoice.NodeID];
-                    SaveAsset(dialogue); 
+                    SaveAsset(dialogue);
                 }
             }
         }
@@ -293,14 +284,14 @@
 
         public static void Load()
         {
-            DSGraphEditorData graphData = LoadAsset<DSGraphEditorData>(DialoguesEditorAssetPath, s_graphFileName);
+            DSGraphEditorData graphData = LoadAsset<DSGraphEditorData>(DialoguesGraphsAssetPath, s_graphFileName);
 
             if (graphData == null)
             {
                 EditorUtility.DisplayDialog(
                     "Could not find the file!",
                     "The file at the following path could not be found:\n\n" +
-                    $"\"{DialoguesEditorAssetPath}/{s_graphFileName}\".\n\n" +
+                    $"\"{DialoguesGraphsAssetPath}/{s_graphFileName}\".\n\n" +
                     "Make sure you chose the right file and it's placed at the folder path mentioned above.",
                     "Thanks!"
                 );
@@ -385,21 +376,6 @@
             }
         }
 
-        public static void CreateMainFolders()
-        {
-            CreateFolder(DialoguesEditorFolderPath, "Graphs");
-            CreateFolder(DialoguesSaveParentFolderPath, DialogueAssetMainFolderName);
-            CreateFolder($"{DialoguesSaveParentFolderPath}/{DialogueAssetMainFolderName}", "Actors");
-        }
-
-        private static void CreateFoldersForSingleDialogue()
-        {
-            CreateFolder(DialoguesAssetPath, s_graphFileName);
-            CreateFolder(s_containerFolderPath, "Global");
-            CreateFolder(s_containerFolderPath, "Groups");
-            CreateFolder($"{s_containerFolderPath}/Global", "Dialogues");
-        }
-
         private static void GetElementsFromGraphView()
         {
             s_graphView.graphElements.ForEach(graphElement =>
@@ -416,6 +392,21 @@
                     return;
                 }
             });
+        }
+
+        public static void CreateMainFolders()
+        {
+            CreateFolder(DialoguesEditorFolderPath, "Graphs");
+            CreateFolder(DialoguesSaveParentFolderPath, DialogueAssetMainFolderName);
+            CreateFolder($"{DialoguesSaveParentFolderPath}/{DialogueAssetMainFolderName}", "Actors");
+        }
+
+        private static void CreateFoldersForSingleDialogue()
+        {
+            CreateFolder(DialoguesAssetPath, s_graphFileName);
+            CreateFolder(s_containerFolderPath, "Global");
+            CreateFolder(s_containerFolderPath, "Groups");
+            CreateFolder($"{s_containerFolderPath}/Global", "Dialogues");
         }
 
         public static void CreateFolder(string parentFolderPath, string newFolderName)
@@ -492,11 +483,6 @@
             }
 
             return choices;
-        }
-
-        public static void ChangeDialoguesSavePath(string path)
-        {
-            DialoguesSaveParentFolderPath = path;
         }
     }
 }

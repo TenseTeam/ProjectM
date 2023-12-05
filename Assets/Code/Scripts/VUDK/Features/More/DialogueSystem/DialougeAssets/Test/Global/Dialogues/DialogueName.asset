@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: DialogueName
   m_EditorClassIdentifier: 
   DialogueName: DialogueName
-  DialogueText: Bella li
+  DialogueText: Dialogue text.
   ActorData: {fileID: 0}
   Choices:
   - Text: Next Dialogue
-    NextDialogue: {fileID: 11400000, guid: b66a763877e3bfa448d74ba479aa7f20, type: 2}
+    NextDialogue: {fileID: 0}
   DialogueType: 0
   IsStartDialogue: 0

@@ -5225,7 +5225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &250390108
 Transform:
   m_ObjectHideFlags: 0
@@ -10674,8 +10674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bae2f7f21f219046b826ad9c0b9fe50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueContainer: {fileID: 11400000, guid: 1c00a0cfe92c09d4792ef91627766fe5, type: 2}
-  StartDialogue: {fileID: 11400000, guid: ccb43ddb9c550e74ab02c00ad5bafb9e, type: 2}
+  DialogueContainer: {fileID: 11400000, guid: 14fe7aaf76866184ab9a54b44931ccbe, type: 2}
+  StartDialogue: {fileID: 11400000, guid: bf48661ab5113954cbc96f3e2f65ec6e, type: 2}
   RandomStartDialogue: 1
   IsInstantDialogue: 0
   IsRepeatable: 0
@@ -10683,7 +10683,7 @@ MonoBehaviour:
   _groupedDialogues: 0
   _startingDialoguesOnly: 0
   _selectedDialogueGroupIndex: 0
-  _selectedDialogueIndex: 1
+  _selectedDialogueIndex: 0
 --- !u!114 &969238503 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
@@ -16394,10 +16394,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bae2f7f21f219046b826ad9c0b9fe50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueContainer: {fileID: 11400000, guid: 1c00a0cfe92c09d4792ef91627766fe5, type: 2}
-  StartDialogue: {fileID: 11400000, guid: f6937a62e45126f4daf788f3e034ff1b, type: 2}
+  DialogueContainer: {fileID: 11400000, guid: 14fe7aaf76866184ab9a54b44931ccbe, type: 2}
+  StartDialogue: {fileID: 11400000, guid: bf48661ab5113954cbc96f3e2f65ec6e, type: 2}
   RandomStartDialogue: 1
-  IsInstantDialogue: 1
+  IsInstantDialogue: 0
   IsRepeatable: 0
   _dialogueGroup: {fileID: 11400000, guid: 01de217281b711c4fb6944d6be4d7707, type: 2}
   _groupedDialogues: 0

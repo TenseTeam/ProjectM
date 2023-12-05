@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64ae9591bb552794b8a43d0dc13a3d0f, type: 3}
-  m_Name: actor_SignorInfo_e18a
+  m_Name: actor_SignorInfo_f530
   m_EditorClassIdentifier: 
-  ActorIcon: {fileID: -1350603380, guid: 958a14e16bc02674ea4294d14fe18abf, type: 3}
+  ActorIcon: {fileID: 0}
   Name: Signor Info

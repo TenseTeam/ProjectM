@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   DialogueName: 1
-  DialogueText: Ciao
+  DialogueText: Dialogue text.
   ActorData: {fileID: 0}
   Choices:
   - Text: Next Dialogue

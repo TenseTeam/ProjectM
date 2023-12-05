@@ -2,44 +2,45 @@
 {
     using UnityEditor;
     using VUDK.Editor.Constants;
-    using VUDK.Features.More.DialogueSystem.Editor.Utilities;
+    using static VUDK.Features.More.DialogueSystem.Editor.Constants.DSEditorPaths;
 
     public class DSSettingsWindow
     {
-        private static string s_label = "Dialogue System";
-        private static bool useDefaultPath = true; // Aggiunto: Per tenere traccia di utilizzare il percorso predefinito o meno
-        private static string customDialoguesSavePath;
+        private const string Label = "Dialogue System";
+
+        private static bool s_useDefaultPath = true;
+        private static string s_customDialoguesSavePath;
 
         [SettingsProvider]
-        public static SettingsProvider MySettings()
+        public static SettingsProvider DialogueSystemSettings()
         {
-            var provider = new SettingsProvider($"{EditorConstants.VUDKPrefSettings}/{s_label}", SettingsScope.User)
+            var provider = new SettingsProvider($"{EditorConstants.VUDKPrefSettings}/{Label}", SettingsScope.User)
             {
-                label = s_label,
+                label = Label,
                 guiHandler = (searchContext) =>
                 {
                     EditorGUI.BeginChangeCheck();
-                    useDefaultPath = EditorGUILayout.Toggle("Use Default Save Path", useDefaultPath);
-                    customDialoguesSavePath = DSIOUtility.DialoguesSaveParentFolderPath;
+                    s_useDefaultPath = EditorGUILayout.Toggle("Use Default Save Path", s_useDefaultPath);
+                    s_customDialoguesSavePath = DialoguesSaveParentFolderPath;
 
-                    if (useDefaultPath)
+                    if (s_useDefaultPath)
                     {
                         EditorGUI.BeginDisabledGroup(true);
-                        EditorGUILayout.TextField("Dialogues Save Path", DSIOUtility.DefaultDialoguesSaveParentFolderPath);
+                        EditorGUILayout.TextField("Dialogues Save Path", DefaultDialoguesSaveParentFolderPath);
                         EditorGUI.EndDisabledGroup();
                     }
                     else
                     {
-                        customDialoguesSavePath = EditorGUILayout.TextField("Dialogues Save Path", customDialoguesSavePath);
+                        s_customDialoguesSavePath = EditorGUILayout.TextField("Dialogues Save Path", s_customDialoguesSavePath);
                     }
 
                     if (EditorGUI.EndChangeCheck())
                     {
-                        if (useDefaultPath)
-                            customDialoguesSavePath = DSIOUtility.DefaultDialoguesSaveParentFolderPath;
+                        if (s_useDefaultPath)
+                            s_customDialoguesSavePath = DefaultDialoguesSaveParentFolderPath;
 
-                        EditorPrefs.SetString(EditorConstants.VUDKPrefSettings, customDialoguesSavePath);
-                        DSIOUtility.ChangeDialoguesSavePath(customDialoguesSavePath);
+                        EditorPrefs.SetString(EditorConstants.VUDKPrefSettings, s_customDialoguesSavePath);
+                        ChangeDialoguesSavePath(s_customDialoguesSavePath);
                     }
                 },
                 keywords = new string[] { "Dialogues", "Save", "Path" }

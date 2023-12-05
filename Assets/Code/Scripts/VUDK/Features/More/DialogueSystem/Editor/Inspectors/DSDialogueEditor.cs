@@ -5,6 +5,8 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
     using VUDK.Features.More.DialogueSystem.Data;
     using VUDK.Features.More.DialogueSystem.Editor.Utilities;
     using static VUDK.Features.More.DialogueSystem.DSDialogueBase;
+    using static VUDK.Features.More.DialogueSystem.Editor.Constants.DSEditorPaths;
+    using static VUDK.Features.More.DialogueSystem.Editor.Utilities.DSIOUtility;
 
     [CustomEditor(typeof(DSDialogueBase), true)]
     public class DSDialogueEditor : Editor
@@ -54,7 +56,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
             bool currentStartingDialoguesOnlyFilter = _startingDialoguesOnlyProperty.boolValue;
 
             List<string> dialogueNames;
-            string dialogueFolderPath = $"{DSIOUtility.DialoguesAssetPath}/{_dialogueContainer.FileName}";
+            string dialogueFolderPath = $"{DialoguesAssetPath}/{_dialogueContainer.FileName}";
             string dialogueInfoMessage;
 
             if(_groupedDialoguesProperty.boolValue)
@@ -120,7 +122,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
             _selectedDialogueGroupIndexProperty.intValue = DSInspectorUtility.DrawPopup("Dialogue Group", _selectedDialogueGroupIndexProperty, dialogueGroupNames.ToArray());
 
             string selectedDialogueGroupName = dialogueGroupNames[_selectedDialogueGroupIndexProperty.intValue];
-            DSDialogueGroupData selectedDialogueGroup = DSIOUtility.LoadAsset<DSDialogueGroupData>($"{DSIOUtility.DialoguesAssetPath}/{dialogueContainer.FileName}/Groups/{selectedDialogueGroupName}", selectedDialogueGroupName);
+            DSDialogueGroupData selectedDialogueGroup = LoadAsset<DSDialogueGroupData>($"{DialoguesAssetPath}/{dialogueContainer.FileName}/Groups/{selectedDialogueGroupName}", selectedDialogueGroupName);
 
             _dialogueGroupProperty.objectReferenceValue = selectedDialogueGroup;
 
@@ -161,7 +163,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
 
             string selectedDialogueName = dialogueNames[_selectedDialogueIndexProperty.intValue];
 
-            DSDialogueData selectedDialogue = DSIOUtility.LoadAsset<DSDialogueData>(dialogueFolderPath, selectedDialogueName);
+            DSDialogueData selectedDialogue = LoadAsset<DSDialogueData>(dialogueFolderPath, selectedDialogueName);
             _dialogueProperty.objectReferenceValue = selectedDialogue;
 
             DSInspectorUtility.DrawDisabledFields(() =>

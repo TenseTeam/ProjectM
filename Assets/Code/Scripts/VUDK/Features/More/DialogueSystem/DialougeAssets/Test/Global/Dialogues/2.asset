@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 2
   m_EditorClassIdentifier: 
   DialogueName: 2
-  DialogueText: Ciao tizio
-  ActorData: {fileID: 0}
+  DialogueText: Dialogue text.
+  ActorData: {fileID: 11400000, guid: 74ab998dbbce66246866359f698175c2, type: 2}
   Choices:
   - Text: Next Dialogue
     NextDialogue: {fileID: 11400000, guid: c599a5f2de9eaef46bea1628ce56a265, type: 2}

@@ -6,6 +6,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Windows
     using UnityEngine;
     using UnityEngine.UIElements;
     using VUDK.Extensions;
+    using VUDK.Features.More.DialogueSystem.Editor.Constants;
     using VUDK.Features.More.DialogueSystem.Editor.Utilities;
 
     public class DSEditorWindow : EditorWindow
@@ -87,7 +88,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Windows
             toolbar.Add(resetButton);
             toolbar.Add(_miniMapButton);
             toolbar.Add(actorButton);
-            toolbar.AddStyleSheets("DialogueSystem/DSToolbarStyles.uss");
+            toolbar.AddStyleSheets("DSToolbarStyles.uss");
 
             rootVisualElement.Add(toolbar);
         }
@@ -105,7 +106,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Windows
 
         private void AddStyles()
         {
-            rootVisualElement.AddStyleSheets("DialogueSystem/DSVariables.uss");
+            rootVisualElement.AddStyleSheets("DSVariables.uss");
         }
 
         private void Save()
@@ -127,10 +128,9 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Windows
 
         private void Load()
         {
-            string filePath = EditorUtility.OpenFilePanel("Load Dialogue Graph", $"{DSIOUtility.DialoguesEditorAssetPath}", "asset");
+            string filePath = EditorUtility.OpenFilePanel("Load Dialogue Graph", $"{DSEditorPaths.DialoguesGraphsAssetPath}", "asset");
 
-            if(string.IsNullOrEmpty(filePath))
-                return;
+            if (string.IsNullOrEmpty(filePath)) return;
 
             Clear();
             DSIOUtility.Init(_graphView, Path.GetFileNameWithoutExtension(filePath));

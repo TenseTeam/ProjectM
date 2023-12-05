@@ -332,17 +332,10 @@
 
         private void AddStyles()
         {
-            this.AddStyleSheets
-            (
-                "DialogueSystem/DSGraphViewStyles.uss",
-                "DialogueSystem/DSNodeStyles.uss"
+            this.AddStyleSheets(
+                "DSGraphViewStyles.uss",
+                "DSNodeStyles.uss"
             );
-
-            StyleSheet graphStyle = (StyleSheet)EditorGUIUtility.Load("DialogueSystem/DSGraphViewStyles.uss");
-            StyleSheet nodeStyle = (StyleSheet)EditorGUIUtility.Load("DialogueSystem/DSNodeStyles.uss");
-
-            styleSheets.Add(graphStyle);
-            styleSheets.Add(nodeStyle);
         }
 
         private void AddMiniMapStyles()

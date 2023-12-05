@@ -17,9 +17,7 @@ MonoBehaviour:
     _dictionary: []
   UngroupedDialogues:
   - {fileID: 11400000, guid: bf48661ab5113954cbc96f3e2f65ec6e, type: 2}
-  - {fileID: 11400000, guid: 540ff7754c3de1047986066e0a6f5dd8, type: 2}
   - {fileID: 11400000, guid: c599a5f2de9eaef46bea1628ce56a265, type: 2}
-  - {fileID: 11400000, guid: 71ebef2ea393d8a4ba324b7bcc46aaa0, type: 2}
-  - {fileID: 11400000, guid: b66a763877e3bfa448d74ba479aa7f20, type: 2}
+  - {fileID: 11400000, guid: 540ff7754c3de1047986066e0a6f5dd8, type: 2}
   StartingDialogues:
   - {fileID: 11400000, guid: bf48661ab5113954cbc96f3e2f65ec6e, type: 2}

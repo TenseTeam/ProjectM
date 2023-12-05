@@ -15,64 +15,40 @@ MonoBehaviour:
   FileName: Test
   Groups: []
   Nodes:
-  - NodeID: b4c6ad74-e2bb-44da-b2a7-fd0da6c522b8
+  - NodeID: c5b5ede8-54a4-4923-a115-d3221e49be95
     GroupID: 
-    Position: {x: 219.2, y: 188.8}
+    Position: {x: 326.4, y: 130.40001}
     Name: 1
-    DialogueText: Ciao
+    DialogueText: Dialogue text.
     ActorData: {fileID: 0}
     DialogueType: 0
     Choices:
     - Text: Next Dialogue
-      NodeID: 8157b4e5-b5c5-4e15-81af-4302088fe099
-  - NodeID: 8157b4e5-b5c5-4e15-81af-4302088fe099
+      NodeID: 1bc5e9ce-b4d9-4065-aa30-3b5e58ea2828
+  - NodeID: 070b8265-de26-42a5-b480-7a814817318d
     GroupID: 
-    Position: {x: 676, y: 188.8}
-    Name: 2
-    DialogueText: Ciao tizio
-    ActorData: {fileID: 0}
-    DialogueType: 0
-    Choices:
-    - Text: Next Dialogue
-      NodeID: d43a08e0-2420-4fe0-9939-641c3e17ddc8
-  - NodeID: d43a08e0-2420-4fe0-9939-641c3e17ddc8
-    GroupID: 
-    Position: {x: 1127.2, y: 188.8}
+    Position: {x: 1112.8, y: 428.8}
     Name: DialogueName
-    DialogueText: Bella li
-    ActorData: {fileID: 0}
-    DialogueType: 0
-    Choices:
-    - Text: Next Dialogue
-      NodeID: 32be9397-fe9e-4777-95eb-918090e71e8f
-  - NodeID: ce339e10-0435-4253-bee4-8bba66070480
-    GroupID: 
-    Position: {x: 1584.8, y: 266.40002}
-    Name: 3
     DialogueText: Dialogue text.
     ActorData: {fileID: 0}
     DialogueType: 0
     Choices:
     - Text: Next Dialogue
       NodeID: 
-  - NodeID: 32be9397-fe9e-4777-95eb-918090e71e8f
+  - NodeID: 1bc5e9ce-b4d9-4065-aa30-3b5e58ea2828
     GroupID: 
-    Position: {x: 1264.8, y: 418.40002}
-    Name: oo
-    DialogueText: cchoice
-    ActorData: {fileID: 0}
-    DialogueType: 1
+    Position: {x: 704, y: 130.40001}
+    Name: 2
+    DialogueText: Dialogue text.
+    ActorData: {fileID: 11400000, guid: 74ab998dbbce66246866359f698175c2, type: 2}
+    DialogueType: 0
     Choices:
-    - Text: New Choice
-      NodeID: ce339e10-0435-4253-bee4-8bba66070480
-    - Text: New Choice
-      NodeID: 
+    - Text: Next Dialogue
+      NodeID: 070b8265-de26-42a5-b480-7a814817318d
   OldGroupNames: []
   OldUngroupedNodeNames:
   - 1
-  - 2
   - DialogueName
-  - 3
-  - oo
+  - 2
   OldGroupedNodeNames:
     _dictionary: []
