@@ -1,7 +1,7 @@
 ﻿namespace VUDK.Extensions
 {
     using System.Collections.Generic;
-    using VUDK.Features.Packages.DialogueSystem.Utilities;
+    using VUDK.Features.More.DialogueSystem.Utilities;
 
     public static class CollectionExtension
     {

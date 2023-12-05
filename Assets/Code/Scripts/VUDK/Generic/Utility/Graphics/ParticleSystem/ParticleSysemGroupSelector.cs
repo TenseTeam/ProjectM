@@ -21,7 +21,7 @@
 
         public void Stop()
         {
-            foreach (var particle in _particles.Dict.Values)
+            foreach (var particle in _particles.Values)
                 particle.Stop();
         }
     }

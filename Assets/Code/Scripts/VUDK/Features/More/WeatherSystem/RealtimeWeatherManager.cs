@@ -177,7 +177,7 @@
 
         private void TriggerSpecificWeatherEvent(WeatherConditionType weatherCondition)
         {
-            if (_weatherEvents.Dict.ContainsKey(weatherCondition))
+            if (_weatherEvents.ContainsKey(weatherCondition))
                 _weatherEvents[weatherCondition]?.Invoke();
         }
 

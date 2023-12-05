@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23c1a0601ef5c84d970a0256acb4dc5, type: 3}
+  m_Name: TestGraph
+  m_EditorClassIdentifier: 
+  FileName: Test
+  Groups: []
+  Nodes:
+  - NodeID: b4c6ad74-e2bb-44da-b2a7-fd0da6c522b8
+    GroupID: 
+    Position: {x: 219.2, y: 188.8}
+    Name: 1
+    DialogueText: Ciao
+    ActorData: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 8157b4e5-b5c5-4e15-81af-4302088fe099
+  - NodeID: 8157b4e5-b5c5-4e15-81af-4302088fe099
+    GroupID: 
+    Position: {x: 676, y: 188.8}
+    Name: 2
+    DialogueText: Ciao tizio
+    ActorData: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: d43a08e0-2420-4fe0-9939-641c3e17ddc8
+  - NodeID: d43a08e0-2420-4fe0-9939-641c3e17ddc8
+    GroupID: 
+    Position: {x: 1127.2, y: 188.8}
+    Name: DialogueName
+    DialogueText: Bella li
+    ActorData: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 32be9397-fe9e-4777-95eb-918090e71e8f
+  - NodeID: ce339e10-0435-4253-bee4-8bba66070480
+    GroupID: 
+    Position: {x: 1584.8, y: 266.40002}
+    Name: 3
+    DialogueText: Dialogue text.
+    ActorData: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 
+  - NodeID: 32be9397-fe9e-4777-95eb-918090e71e8f
+    GroupID: 
+    Position: {x: 1264.8, y: 418.40002}
+    Name: oo
+    DialogueText: cchoice
+    ActorData: {fileID: 0}
+    DialogueType: 1
+    Choices:
+    - Text: New Choice
+      NodeID: ce339e10-0435-4253-bee4-8bba66070480
+    - Text: New Choice
+      NodeID: 
+  OldGroupNames: []
+  OldUngroupedNodeNames:
+  - 1
+  - 2
+  - DialogueName
+  - 3
+  - oo
+  OldGroupedNodeNames:
+    _dictionary: []

@@ -4,7 +4,7 @@
     using VUDK.Features.Main.EntitySystem.Interfaces;
     using VUDK.Features.Main.TriggerSystem;
 
-    public abstract class Checkpoint<T> : TriggerEvent where T : IEntity
+    public abstract class Checkpoint<T> : PhysicTriggerEvent where T : IEntity
     {
         [SerializeField, Header("Offset")]
         private Vector3 _positionOffset;
