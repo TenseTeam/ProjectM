@@ -92,7 +92,8 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Elements
             );
 
             titleContainer.Insert(0, dialogueNameTextField);
-            titleContainer.Insert(0, DialogueImage);
+            contentContainer.Insert(0, DialogueImage);
+            //titleButtonContainer.Insert(1, DialogueImage);
 
             #endregion TITLE CONTAINER
 

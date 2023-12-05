@@ -16,6 +16,8 @@
         [Header("Dialogue Settings")]
         [SerializeField, Min(0.01f)]
         private float _displayLetterTime = 0.1f;
+        [SerializeField]
+        private bool _hasCloseButton;
 
         [Header("UI Dialogue")]
         [SerializeField]
@@ -126,13 +128,27 @@
 
         public void Enable()
         {
+            if (_hasCloseButton) EnableCloseButton();
+
             _dialoguePanel.gameObject.SetActive(true);
         }
 
         public void Disable()
         {
+            if (_hasCloseButton) DisableCloseButton();
+
             DisableChoices();
             _dialoguePanel.gameObject.SetActive(false);
+        }
+
+        public void EnableCloseButton()
+        {
+            _dialogueCloseButton.gameObject.SetActive(true);
+        }
+
+        public void DisableCloseButton()
+        {
+            _dialogueCloseButton.gameObject.SetActive(false);
         }
 
         public void EnableDialogueBox()

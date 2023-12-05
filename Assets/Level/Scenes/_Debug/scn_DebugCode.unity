@@ -22545,8 +22545,13 @@ PrefabInstance:
       objectReference: {fileID: 1323830823}
     - target: {fileID: 4344497575212149715, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
-      propertyPath: _hideDialogueBoxOnChoice
+      propertyPath: _hasCloseButton
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344497575212149715, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _hideDialogueBoxOnChoice
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5812637801896931851, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
