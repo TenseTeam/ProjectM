@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71793e812f3192d4c83152084082ded1, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: 
+  DialogueName: 2
+  DialogueText: Pasqualino
+  ActorData: {fileID: 11400000, guid: 48a1a3274e3f68147bb2988c1519a425, type: 2}
+  Choices:
+  - Text: Next Dialogue
+    NextDialogue: {fileID: 11400000, guid: 4a46da2f06ee19745975d9234d29fde0, type: 2}
+  DialogueType: 0
+  IsStartDialogue: 0

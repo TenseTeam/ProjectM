@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0080f16d9ccea4449a22882f65e42f60, type: 3}
+  m_Name: Test2
+  m_EditorClassIdentifier: 
+  FileName: Test2
+  DialogueGroups:
+    _dictionary:
+    - Key: {fileID: 11400000, guid: 01de217281b711c4fb6944d6be4d7707, type: 2}
+      Value:
+      - {fileID: 11400000, guid: c6d9c9bb96cd7424783f1f6442613a16, type: 2}
+      - {fileID: 11400000, guid: d8c866490eba62844a6a8bbcd004bf40, type: 2}
+      - {fileID: 11400000, guid: 231028c101e123e4698ac0a3bd64b0f0, type: 2}
+  UngroupedDialogues:
+  - {fileID: 11400000, guid: f6937a62e45126f4daf788f3e034ff1b, type: 2}
+  - {fileID: 11400000, guid: ccb43ddb9c550e74ab02c00ad5bafb9e, type: 2}
+  - {fileID: 11400000, guid: ddf362e0439ec2a409dd5f3492ec62a5, type: 2}
+  - {fileID: 11400000, guid: 4a46da2f06ee19745975d9234d29fde0, type: 2}
+  StartingDialogues:
+  - {fileID: 11400000, guid: ccb43ddb9c550e74ab02c00ad5bafb9e, type: 2}

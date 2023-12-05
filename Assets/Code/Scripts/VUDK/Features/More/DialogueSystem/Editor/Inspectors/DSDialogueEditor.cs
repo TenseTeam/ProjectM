@@ -4,6 +4,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
     using UnityEditor;
     using VUDK.Features.More.DialogueSystem.Data;
     using VUDK.Features.More.DialogueSystem.Editor.Utilities;
+    using static VUDK.Features.More.DialogueSystem.DSDialogueBase;
 
     [CustomEditor(typeof(DSDialogueBase), true)]
     public class DSDialogueEditor : Editor
@@ -12,6 +13,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
         private SerializedProperty _dialogueGroupProperty;
         private SerializedProperty _dialogueProperty;
         private SerializedProperty _randomFirstDialogueProperty;
+        private SerializedProperty _isInstantProperty;
 
         private SerializedProperty _groupedDialoguesProperty;
         private SerializedProperty _startingDialoguesOnlyProperty;
@@ -23,16 +25,15 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
 
         private void OnEnable()
         {
-            _dialogueContainerProperty = serializedObject.FindProperty("DialogueContainer");
-            _dialogueProperty = serializedObject.FindProperty("Dialogue");
-            _randomFirstDialogueProperty = serializedObject.FindProperty("RandomStartDialogue");
-            _dialogueGroupProperty = serializedObject.FindProperty("_dialogueGroup");
-
-            _groupedDialoguesProperty = serializedObject.FindProperty("_groupedDialogues");
-            _startingDialoguesOnlyProperty = serializedObject.FindProperty("_startingDialoguesOnly");
-
-            _selectedDialogueGroupIndexProperty = serializedObject.FindProperty("_selectedDialogueGroupIndex");
-            _selectedDialogueIndexProperty = serializedObject.FindProperty("_selectedDialogueIndex");
+            _dialogueContainerProperty = serializedObject.FindProperty(PropertyNames.DialogueContainerProperty);
+            _dialogueProperty = serializedObject.FindProperty(PropertyNames.DialogueProperty);
+            _randomFirstDialogueProperty = serializedObject.FindProperty(PropertyNames.RandomStartDialogueProperty);
+            _dialogueGroupProperty = serializedObject.FindProperty(PropertyNames.DialogueGroupProperty);
+            _isInstantProperty = serializedObject.FindProperty(PropertyNames.IsInstantDialogueProperty);
+            _groupedDialoguesProperty = serializedObject.FindProperty(PropertyNames.GroupedDialoguesProperty);
+            _startingDialoguesOnlyProperty = serializedObject.FindProperty(PropertyNames.StartingDialoguesOnlyProperty);
+            _selectedDialogueGroupIndexProperty = serializedObject.FindProperty(PropertyNames.SelectedDialogueGroupIndexProperty);
+            _selectedDialogueIndexProperty = serializedObject.FindProperty(PropertyNames.SelectedDialogueIndexProperty);
         }
 
         public override void OnInspectorGUI()
@@ -93,7 +94,6 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
         private void DrawDialogueContainerArea()
         {
             DSInspectorUtility.DrawHeader("Dialogue Container");
-
             _dialogueContainerProperty.DrawPropertyField();
             DSInspectorUtility.DrawSpace();
         }
@@ -136,6 +136,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
         {
             DSInspectorUtility.DrawHeader("First Dialogue");
 
+            _isInstantProperty.DrawPropertyField();
             _randomFirstDialogueProperty.DrawPropertyField();
 
             if (_randomFirstDialogueProperty.boolValue && _dialogueContainer.StartingDialogues.Count == 0 && _randomFirstDialogueProperty.boolValue)
@@ -166,6 +167,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
             {
                 _dialogueProperty.DrawPropertyField();
             });
+
             EditorGUI.EndDisabledGroup();
             DSInspectorUtility.DrawSpace();
         }

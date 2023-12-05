@@ -21,6 +21,8 @@
         [SerializeField]
         private RectTransform _dialoguePanel;
         [SerializeField]
+        private RectTransform _dialogueBox;
+        [SerializeField]
         private Image _actorIconImage;
         [SerializeField]
         private TMP_Text _actorNameText;
@@ -32,6 +34,8 @@
         [Header("UI Choices")]
         [SerializeField]
         private RectTransform _choicesPanel;
+        [SerializeField]
+        private bool _hideDialogueBoxOnChoice;
 
         [SerializeField]
         private List<DSChoiceButton> _choiceButtons;
@@ -42,6 +46,7 @@
         private bool _isWaitingForChoice;
         private bool _isSkipping;
         private bool _isDialogueEnded;
+        private bool _isInstant;
 
         public bool IsDialogueOpen => _dialoguePanel.gameObject.activeSelf;
         public bool IsTalking { get; private set; }
@@ -69,9 +74,13 @@
             _dialogueCloseButton.onClick.RemoveListener(EndDialogueAndDisable);
         }
 
-        public void StartDialogue(DSDialogueContainerData dialogueContainerData, DSDialogueData firstDialogue, bool randomStartDialogue)
+        public void StartDialogue(object sender, OnStartDialogueEventArgs args)
         {
-            _dialogueContainerData = dialogueContainerData;
+            bool randomStartDialogue = args.RandomStart;
+            DSDialogueData firstDialogue = args.DialogueData;
+
+            _dialogueContainerData = args.DialogueContainerData;
+            _isInstant = args.IsInstant;
 
             if(randomStartDialogue)
                 _currentDialogue = RandomStartDialogue();
@@ -85,13 +94,18 @@
 
         private void EndDialogue()
         {
+            _isInstant = false;
             _isDialogueEnded = true;
         }
 
         public void DisplayNextDialogue()
         {
             SetDialogueActor(_currentDialogue.ActorData);
-            StartPrintingDialogueText(_currentDialogue.DialogueText);
+
+            if (_isInstant)
+                PrintCompleteDialogueText(_currentDialogue.DialogueText);
+            else
+                StartPrintingDialogueText(_currentDialogue.DialogueText);
 
             if (!HasNextDialogue(_currentDialogue))
             {
@@ -108,7 +122,6 @@
                     WaitForChoice(_currentDialogue);
                     break;
             }
-
         }
 
         public void Enable()
@@ -122,6 +135,16 @@
             _dialoguePanel.gameObject.SetActive(false);
         }
 
+        public void EnableDialogueBox()
+        {
+            _dialogueBox.gameObject.SetActive(true);
+        }
+
+        public void DisableDialogueBox()
+        {
+            _dialogueBox.gameObject.SetActive(false);
+        }
+
         public void EndDialogueAndDisable()
         {
             StopAllCoroutines();
@@ -131,12 +154,18 @@
 
         private void EnableChoices()
         {
+            if (_hideDialogueBoxOnChoice)
+                DisableDialogueBox();
+
             _isWaitingForChoice = true;
             _choicesPanel.gameObject.SetActive(true);
         }
 
         private void DisableChoices()
         {
+            if (_hideDialogueBoxOnChoice)
+                EnableDialogueBox();
+
             _isWaitingForChoice = false;
             _choicesPanel.gameObject.SetActive(false);
         }

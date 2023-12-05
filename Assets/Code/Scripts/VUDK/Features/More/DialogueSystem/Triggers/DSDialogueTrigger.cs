@@ -3,6 +3,7 @@
     using UnityEngine;
     using VUDK.Features.Main.TriggerSystem;
     using VUDK.Features.More.DialogueSystem.Events;
+    using static VUDK.Features.More.DialogueSystem.Events.DSEvents;
 
     public class DSDialogueTrigger : DSDialogueBase, ITrigger
     {
@@ -14,7 +15,10 @@
             if (DialogueContainer == null
             || DialogueContainer.StartingDialogues.Count == 0) return;
 
-            DSEvents.OnStartDialogue?.Invoke(DialogueContainer, Dialogue, RandomStartDialogue);
+            OnStartDialogue?.Invoke(
+                this, 
+                new OnStartDialogueEventArgs(DialogueContainer, StartDialogue, RandomStartDialogue, IsInstantDialogue)
+                );
         }
     }
 }
