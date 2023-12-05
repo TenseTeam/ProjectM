@@ -8,7 +8,7 @@
 
     public class DSSearchWindow : ScriptableObject, ISearchWindowProvider
     {
-        private enum DSEntryType
+        private enum DSSearchEntryType
         {
             SingleChoiceDialogue,
             MultipleChoiceDialogue,
@@ -35,18 +35,18 @@
                 new SearchTreeEntry(new GUIContent("Single Choice", _indentationIcon))
                 {
                     level = 2,
-                    userData = DSEntryType.SingleChoiceDialogue
+                    userData = DSSearchEntryType.SingleChoiceDialogue
                 },
                 new SearchTreeEntry(new GUIContent("Multiple Choice", _indentationIcon))
                 {
                     level = 2,
-                    userData = DSEntryType.MultipleChoiceDialogue
+                    userData = DSSearchEntryType.MultipleChoiceDialogue
                 },
                 new SearchTreeGroupEntry(new GUIContent("Dialogue Group"), 1),
                 new SearchTreeEntry(new GUIContent("Group", _indentationIcon))
                 {
                     level = 2,
-                    userData = DSEntryType.DialogueGroup
+                    userData = DSSearchEntryType.DialogueGroup
                 },
             };
 
@@ -57,19 +57,19 @@
         {
             Vector2 localMousePosition = _graphView.GetLocalMousePosition(context.screenMousePosition, true);
 
-            switch ((DSEntryType)SearchTreeEntry.userData)
+            switch ((DSSearchEntryType)SearchTreeEntry.userData)
             {
-                case DSEntryType.SingleChoiceDialogue:
+                case DSSearchEntryType.SingleChoiceDialogue:
                     DSSingleChoiceNode singleChoiceNode = _graphView.CreateNode("DialogueName", DSDialogueType.SingleChoice, Vector2.zero) as DSSingleChoiceNode;
                     _graphView.AddElement(singleChoiceNode);
                     return true;
 
-                case DSEntryType.MultipleChoiceDialogue:
+                case DSSearchEntryType.MultipleChoiceDialogue:
                     DSMultipleChoiceNode multChoiceNode = _graphView.CreateNode("DialogueName", DSDialogueType.MultipleChoice, Vector2.zero) as DSMultipleChoiceNode;
                     _graphView.AddElement(multChoiceNode);
                     return true;
 
-                case DSEntryType.DialogueGroup:
+                case DSSearchEntryType.DialogueGroup:
                     _graphView.CreateGroup("DialogueGroup", localMousePosition);
                     return true;
 
