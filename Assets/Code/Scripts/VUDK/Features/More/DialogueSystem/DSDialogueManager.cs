@@ -36,7 +36,6 @@
         private RectTransform _choicesPanel;
         [SerializeField]
         private bool _hideDialogueBoxOnChoice;
-
         [SerializeField]
         private List<DSChoiceButton> _choiceButtons;
 
@@ -58,9 +57,9 @@
         {
             DSEvents.OnStartDialogue += StartDialogue;
             DSEvents.OnEndDialogue += EndDialogue;
-            DSEvents.OnSelectedChoice += SelectChoice;
-            DSEvents.OnInterrupt += EndDialogueAndDisable;
-            InputsManager.Inputs.Dialogue.SkipSentence.performed += InputNextDialogueText;
+            DSEvents.OnDialogueChoice += SelectChoice;
+            DSEvents.OnDialogueInterrupt += EndDialogueAndDisable;
+            InputsManager.Inputs.Dialogue.SkipSentence.canceled += InputNextDialogueText;
             _dialogueCloseButton.onClick.AddListener(EndDialogueAndDisable);
         }
 
@@ -68,9 +67,9 @@
         {
             DSEvents.OnStartDialogue -= StartDialogue;
             DSEvents.OnEndDialogue -= EndDialogue;
-            DSEvents.OnSelectedChoice -= SelectChoice;
-            DSEvents.OnInterrupt -= EndDialogueAndDisable;
-            InputsManager.Inputs.Dialogue.SkipSentence.performed -= InputNextDialogueText;
+            DSEvents.OnDialogueChoice -= SelectChoice;
+            DSEvents.OnDialogueInterrupt -= EndDialogueAndDisable;
+            InputsManager.Inputs.Dialogue.SkipSentence.canceled -= InputNextDialogueText;
             _dialogueCloseButton.onClick.RemoveListener(EndDialogueAndDisable);
         }
 
@@ -82,7 +81,7 @@
             _dialogueContainerData = args.DialogueContainerData;
             _isInstant = args.IsInstant;
 
-            if(randomStartDialogue)
+            if (randomStartDialogue)
                 _currentDialogue = RandomStartDialogue();
             else
                 _currentDialogue = firstDialogue;
@@ -118,6 +117,7 @@
                 case DSDialogueType.SingleChoice:
                     _currentDialogue = _currentDialogue.Choices[0].NextDialogue;
                     break;
+
                 case DSDialogueType.MultipleChoice:
                     WaitForChoice(_currentDialogue);
                     break;
@@ -206,8 +206,10 @@
             }
         }
 
-        private void SelectChoice(int choiceIndex)
+        private void SelectChoice(object sender, OnDialogueChoiceEventArgs args)
         {
+            int choiceIndex = args.ChoiceIndex;
+
             if (_currentDialogue.Choices[choiceIndex].NextDialogue == null)
             {
                 EndDialogueAndDisable();
@@ -228,7 +230,7 @@
 
         private void SetDialogueActor(DSActorData actorData)
         {
-            if(actorData == null)
+            if (actorData == null)
             {
                 _actorIconImage.sprite = null;
                 _actorNameText.text = "";

@@ -7,18 +7,30 @@
 
     public class DSDialogueTrigger : DSDialogueBase, ITrigger
     {
+        private bool _hasBeenTriggered;
+
 #if UNITY_EDITOR
-        [ContextMenu("Trigger this dialogue")]
+        [ContextMenu("Trigger Dialogue")]
 #endif
         public virtual void Trigger()
         {
-            if (DialogueContainer == null
-            || DialogueContainer.StartingDialogues.Count == 0) return;
+            if(!IsRepeatable && _hasBeenTriggered)
+                return;
+
+            _hasBeenTriggered = true;
+
+            if (DialogueContainer == null || DialogueContainer.StartingDialogues.Count == 0)
+                return;
 
             OnStartDialogue?.Invoke(
                 this, 
                 new OnStartDialogueEventArgs(DialogueContainer, StartDialogue, RandomStartDialogue, IsInstantDialogue)
                 );
+        }
+
+        public void Interrupt()
+        {
+            OnDialogueInterrupt?.Invoke();
         }
     }
 }

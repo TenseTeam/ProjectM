@@ -6,9 +6,9 @@
     public static class DSEvents
     {
         public static EventHandler<OnStartDialogueEventArgs> OnStartDialogue;
+        public static EventHandler<OnDialogueChoiceEventArgs> OnDialogueChoice;
         public static Action OnEndDialogue;
-        public static Action<int> OnSelectedChoice;
-        public static Action OnInterrupt;
+        public static Action OnDialogueInterrupt;
     }
 
     public class OnStartDialogueEventArgs : EventArgs
@@ -24,6 +24,16 @@
             DialogueData = dSDialogueData;
             RandomStart = randomStart;
             IsInstant = isInstant;
+        }
+    }
+
+    public class OnDialogueChoiceEventArgs : EventArgs
+    {
+        public int ChoiceIndex;
+
+        public OnDialogueChoiceEventArgs(int choiceIndex)
+        {
+            ChoiceIndex = choiceIndex;
         }
     }
 }

@@ -13,6 +13,8 @@
         protected bool RandomStartDialogue;
         [SerializeField]
         protected bool IsInstantDialogue;
+        [SerializeField]
+        protected bool IsRepeatable;
 
         [SerializeField]
         private DSDialogueGroupData _dialogueGroup;
@@ -34,6 +36,7 @@
             public static string DialogueProperty => nameof(StartDialogue);
             public static string RandomStartDialogueProperty => nameof(RandomStartDialogue);
             public static string IsInstantDialogueProperty => nameof(IsInstantDialogue);
+            public static string IsRepeatableProperty => nameof(IsRepeatable);
             public static string DialogueGroupProperty => nameof(_dialogueGroup);
             public static string GroupedDialoguesProperty => nameof(_groupedDialogues);
             public static string StartingDialoguesOnlyProperty => nameof(_startingDialoguesOnly);

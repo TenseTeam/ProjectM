@@ -14,10 +14,9 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
         private SerializedProperty _dialogueProperty;
         private SerializedProperty _randomFirstDialogueProperty;
         private SerializedProperty _isInstantProperty;
-
+        private SerializedProperty _isRepeatableProperty;
         private SerializedProperty _groupedDialoguesProperty;
         private SerializedProperty _startingDialoguesOnlyProperty;
-
         private SerializedProperty _selectedDialogueGroupIndexProperty;
         private SerializedProperty _selectedDialogueIndexProperty;
 
@@ -30,6 +29,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
             _randomFirstDialogueProperty = serializedObject.FindProperty(PropertyNames.RandomStartDialogueProperty);
             _dialogueGroupProperty = serializedObject.FindProperty(PropertyNames.DialogueGroupProperty);
             _isInstantProperty = serializedObject.FindProperty(PropertyNames.IsInstantDialogueProperty);
+            _isRepeatableProperty = serializedObject.FindProperty(PropertyNames.IsRepeatableProperty);
             _groupedDialoguesProperty = serializedObject.FindProperty(PropertyNames.GroupedDialoguesProperty);
             _startingDialoguesOnlyProperty = serializedObject.FindProperty(PropertyNames.StartingDialoguesOnlyProperty);
             _selectedDialogueGroupIndexProperty = serializedObject.FindProperty(PropertyNames.SelectedDialogueGroupIndexProperty);
@@ -134,8 +134,9 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
 
         private void DrawDialogueArea(List<string> dialogueNames, string dialogueFolderPath)
         {
-            DSInspectorUtility.DrawHeader("First Dialogue");
+            DSInspectorUtility.DrawHeader("Dialogue Selector");
 
+            _isRepeatableProperty.DrawPropertyField();
             _isInstantProperty.DrawPropertyField();
             _randomFirstDialogueProperty.DrawPropertyField();
 

@@ -40,7 +40,7 @@
 
         private void SelectChoice()
         {
-            DSEvents.OnSelectedChoice?.Invoke(_choiceIndex);
+            DSEvents.OnDialogueChoice?.Invoke(this, new OnDialogueChoiceEventArgs(_choiceIndex));
         }
     }
 }

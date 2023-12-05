@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2643264800921055952}
   - component: {fileID: 4207140177957347673}
   m_Layer: 0
-  m_Name: pf_Node
+  m_Name: pf_NodeWaypoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
