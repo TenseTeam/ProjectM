@@ -45,6 +45,12 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Elements
 
         public virtual void Draw()
         {
+            #region CONTENT CONTAINER
+
+            contentContainer.Insert(0, DialogueImage);
+
+            #endregion CONTENT CONTAINER
+
             #region TITLE CONTAINER
 
             TextField dialogueNameTextField = DSElementUtility.CreateTextField(DialogueName, null, callback =>
@@ -92,8 +98,6 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Elements
             );
 
             titleContainer.Insert(0, dialogueNameTextField);
-            contentContainer.Insert(0, DialogueImage);
-            //titleButtonContainer.Insert(1, DialogueImage);
 
             #endregion TITLE CONTAINER
 
