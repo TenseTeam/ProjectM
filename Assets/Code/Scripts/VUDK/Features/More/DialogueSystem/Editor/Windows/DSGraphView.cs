@@ -163,7 +163,7 @@
             Color errorColor = _ungroupedNodes[nodeName].ErrorData.Color;
             node.SetErrorStyle(errorColor);
 
-            if (ungroupedList.Count > 1)
+            if (ungroupedList.Count == 2)
             {
                 NameErrorsAmount++;
                 ungroupedList[0].SetErrorStyle(errorColor);

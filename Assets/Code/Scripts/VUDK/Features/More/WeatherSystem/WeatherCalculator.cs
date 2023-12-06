@@ -31,7 +31,7 @@ namespace VUDK.Features.More.WeatherSystem
 
             if (apikeys.Length == 0)
             {
-                Debug.LogWarning("No Valid API-KEYS found.");
+                UnityEngine.Debug.LogWarning("No Valid API-KEYS found.");
                 onFailedToReceivedWeatherData?.Invoke();
                 return;
             }
@@ -49,12 +49,12 @@ namespace VUDK.Features.More.WeatherSystem
                         request.responseCode == Errors.APIExceededCallsPerMonthQuota || 
                         request.responseCode == Errors.TooManyRequests)
                     {
-                        Debug.LogWarning($"Error with API-KEY {apikeys[0]}: {request.error}.\n Trying Next API-KEY.");
+                        UnityEngine.Debug.LogWarning($"Error with API-KEY {apikeys[0]}: {request.error}.\n Trying Next API-KEY.");
                         GetWeather(apikeys.Skip(1).ToArray(), query, onReceivedWeatherData, onFailedToReceivedWeatherData);
                         return;
                     }
 
-                    Debug.LogWarning($"Error: {request.error}");
+                    UnityEngine.Debug.LogWarning($"Error: {request.error}");
                     onFailedToReceivedWeatherData?.Invoke();
                 }
                 else

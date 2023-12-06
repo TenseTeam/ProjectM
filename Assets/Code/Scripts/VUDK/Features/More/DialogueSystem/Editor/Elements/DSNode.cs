@@ -20,6 +20,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Elements
         public string DialogueName;
         public string DialogueText;
         public DSActorData ActorData;
+        public AudioClip DialogueAudioClip;
         public List<DSChoiceEditorData> Choices;
         public DSDialogueType DialogueType;
         public DSGroup Group;
@@ -131,8 +132,14 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Elements
                 ActorData = callback.newValue as DSActorData;
             });
 
+            ObjectField audioClipObject = DSElementUtility.CreateObjectField<AudioClip>(DialogueAudioClip, "Audio Clip", callback =>
+            {
+                DialogueAudioClip = callback.newValue as AudioClip;
+            });
+
             textFoldout.Add(textTextField);
             customDataContainer.Add(actorObject);
+            customDataContainer.Add(audioClipObject);
             customDataContainer.Add(textFoldout);
             extensionContainer.Add(customDataContainer);
 

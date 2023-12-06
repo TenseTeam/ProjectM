@@ -12,19 +12,33 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Windows
     public class DSEditorWindow : EditorWindow
     {
         private readonly string _defaultFileName = "New Dialogue Graph";
+
         private static TextField s_fileNameTextField;
+        private static DSEditorWindow s_window;
 
         private DSGraphView _graphView;
         private Button _saveButton;
         private Button _loadButton;
         private Button _miniMapButton;
 
-        [MenuItem("VUDK/Editors/Dialogue Graph")]
-        public static void Open()
+        private void OnEnable()
         {
-            DSEditorWindow window = GetWindow<DSEditorWindow>();
-            SetTitleContent(window);
+            AddGraphView();
+            AddToolbar();
+            AddStyles();
+        }
+
+        [MenuItem("VUDK/Editors/Dialogue Graph")]
+        public static void OpenWindow()
+        {
+            s_window = GetWindow<DSEditorWindow>();
+            SetTitleContent(s_window);
             DSIOUtility.CreateMainFolders();
+        }
+
+        public static void CloseWindow()
+        {
+            s_window?.Close();
         }
 
         private static void SetTitleContent(DSEditorWindow window)
@@ -33,13 +47,6 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Windows
             if (text == null)
                 Debug.LogError("Icon not found");
             window.titleContent = new GUIContent("Dialogue Graph", text);
-        }
-
-        private void OnEnable()
-        {
-            AddGraphView();
-            AddToolbar();
-            AddStyles();
         }
 
         public static void UpdateFileName(string newFileName)

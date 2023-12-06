@@ -10,6 +10,7 @@
     using VUDK.Features.More.DialogueSystem.Data;
     using VUDK.Features.More.DialogueSystem.Enums;
     using VUDK.Features.More.DialogueSystem.Events;
+    using VUDK.Features.More.DialogueSystem.UI;
 
     public class DSDialogueManager : MonoBehaviour
     {
@@ -57,26 +58,25 @@
 
         private void OnEnable()
         {
-            DSEvents.OnStartDialogue += StartDialogue;
-            DSEvents.OnEndDialogue += EndDialogue;
-            DSEvents.OnDialogueChoice += SelectChoice;
-            DSEvents.OnDialogueInterrupt += EndDialogueAndDisable;
+            DSEvents.DialogueStartHandler += StartDialogue;
+            DSEvents.DialogueChoiceHandler += SelectChoice;
+            DSEvents.DialogueInterruptHandler += EndDialogueAndDisable;
             InputsManager.Inputs.Dialogue.SkipSentence.canceled += InputNextDialogueText;
             _dialogueCloseButton.onClick.AddListener(EndDialogueAndDisable);
         }
 
         private void OnDisable()
         {
-            DSEvents.OnStartDialogue -= StartDialogue;
-            DSEvents.OnEndDialogue -= EndDialogue;
-            DSEvents.OnDialogueChoice -= SelectChoice;
-            DSEvents.OnDialogueInterrupt -= EndDialogueAndDisable;
+            DSEvents.DialogueStartHandler -= StartDialogue;
+            DSEvents.DialogueChoiceHandler -= SelectChoice;
+            DSEvents.DialogueInterruptHandler -= EndDialogueAndDisable;
             InputsManager.Inputs.Dialogue.SkipSentence.canceled -= InputNextDialogueText;
             _dialogueCloseButton.onClick.RemoveListener(EndDialogueAndDisable);
         }
 
         public void StartDialogue(object sender, OnStartDialogueEventArgs args)
         {
+            DSEvents.OnDMStart?.Invoke();
             bool randomStartDialogue = args.RandomStart;
             DSDialogueData firstDialogue = args.DialogueData;
 
@@ -90,18 +90,21 @@
 
             _isDialogueEnded = false;
             Enable();
-            DisplayNextDialogue();
+            NextDialogue();
         }
 
         private void EndDialogue()
         {
+            DSEvents.OnDMEnd?.Invoke();
             _isInstant = false;
             _isDialogueEnded = true;
         }
 
-        public void DisplayNextDialogue()
+        public void NextDialogue()
         {
+            DSEvents.OnDMNext?.Invoke();
             SetDialogueActor(_currentDialogue.ActorData);
+            PlayDialogueAudio(_currentDialogue);
 
             if (_isInstant)
                 PrintCompleteDialogueText(_currentDialogue.DialogueText);
@@ -126,6 +129,13 @@
             }
         }
 
+        private void PlayDialogueAudio(DSDialogueData currentDialogue)
+        {
+            if (currentDialogue.DialogueAudioClip == null) return;
+
+            currentDialogue.ActorData.OnEmitDialogue?.Invoke(currentDialogue.DialogueAudioClip);
+        }
+
         public void Enable()
         {
             if (_hasCloseButton) EnableCloseButton();
@@ -138,6 +148,7 @@
             if (_hasCloseButton) DisableCloseButton();
 
             DisableChoices();
+            DSEvents.OnDMDisable?.Invoke();
             _dialoguePanel.gameObject.SetActive(false);
         }
 
@@ -203,7 +214,7 @@
                 }
 
                 if (!_isWaitingForChoice)
-                    DisplayNextDialogue();
+                    NextDialogue();
             }
         }
 
@@ -236,7 +247,7 @@
             {
                 _currentDialogue = _currentDialogue.Choices[choiceIndex].NextDialogue;
                 DisableChoices();
-                DisplayNextDialogue();
+                NextDialogue();
             }
             else
             {

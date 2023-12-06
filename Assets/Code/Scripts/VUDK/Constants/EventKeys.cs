@@ -1,6 +1,6 @@
 ﻿namespace VUDK.Constants
 {
-    public static class EventKeys
+    public static class EventKeys // TODO: Use EventHandlers for each specific feature to be more modular
     {
         public static class GameEvents
         {

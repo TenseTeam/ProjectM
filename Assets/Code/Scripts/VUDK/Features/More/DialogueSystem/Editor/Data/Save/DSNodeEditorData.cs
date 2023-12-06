@@ -14,6 +14,7 @@
         public string Name;
         public string DialogueText;
         public DSActorData ActorData;
+        public AudioClip DialogueAudioClip;
         public DSDialogueType DialogueType;
         public List<DSChoiceEditorData> Choices;
     }

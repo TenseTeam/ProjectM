@@ -39,7 +39,7 @@
         [Header("Time Update")]
         [Tooltip("Time in hours to update the weather.")]
         [SerializeField, Range(1, 10)]
-        private int _updateHours;
+        private int _requestUpdatePeriod;
 
         [Header("Major Weather Events")]
         public UnityEvent OnClear;
@@ -66,7 +66,7 @@
 
         private void Awake()
         {
-            _timeUpdateDelay = new TimeDelayTask(_updateHours * 3600f);
+            _timeUpdateDelay = new TimeDelayTask(_requestUpdatePeriod * 3600f);
             UpdateInGameWeather();
         }
 
@@ -97,7 +97,7 @@
         private void TriggerWeatherEvent(WeatherData weatherData)
         {
 #if UNITY_EDITOR
-            Debug.Log($"Triggering Weather: {weatherData}");
+            UnityEngine.Debug.Log($"Triggering Weather: {weatherData}");
 #endif
             EventManager.Ins.TriggerEvent(EventKeys.WeatherEvents.OnWeatherChanged, weatherData);
             WeatherConditionType condition = (WeatherConditionType)weatherData.current.condition.code;

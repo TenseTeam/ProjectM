@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23c1a0601ef5c84d970a0256acb4dc5, type: 3}
+  m_Name: TestDialogueElisaGiorgioGraph
+  m_EditorClassIdentifier: 
+  FileName: TestDialogueElisaGiorgio
+  Groups: []
+  Nodes:
+  - NodeID: b47d8ad2-e7f4-40dc-977c-378560ee80a8
+    GroupID: 
+    Position: {x: 28, y: 88.8}
+    Name: 1
+    DialogueText: Giorgio, our goldfish has been looking quite glum lately.
+    ActorData: {fileID: 11400000, guid: 668e15f5436ebf14cbb383ed010e8f27, type: 2}
+    DialogueAudioClip: {fileID: 8300000, guid: 8f7bbe6a2f9c1fa4ea76500e86ae212a, type: 3}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: cf6df5d9-093b-4348-aa50-3a862585ee57
+  - NodeID: cf6df5d9-093b-4348-aa50-3a862585ee57
+    GroupID: 
+    Position: {x: 467.2, y: 91.2}
+    Name: 2
+    DialogueText: Really? I hadn't noticed. I thought he was just embracing the laid-back
+      fish lifestyle.
+    ActorData: {fileID: 11400000, guid: 6a2f9a3d4b5287345bc0c42c97e60512, type: 2}
+    DialogueAudioClip: {fileID: 8300000, guid: 3d3f79f8ed6bdc445ae34fbd5b838255, type: 3}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: f3f06ef4-3c24-41e6-881c-0790795a7eab
+  - NodeID: f3f06ef4-3c24-41e6-881c-0790795a7eab
+    GroupID: 
+    Position: {x: 940, y: 91.2}
+    Name: 3
+    DialogueText: No, seriously. I caught him gazing out of the fishbowl with a lost
+      look, contemplating the meaninglessness of goldfish existence.
+    ActorData: {fileID: 11400000, guid: 668e15f5436ebf14cbb383ed010e8f27, type: 2}
+    DialogueAudioClip: {fileID: 8300000, guid: 369c052a78783fd4ba81d920862c9466, type: 3}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: f22d9f4f-3588-4d4e-8ab0-2467e742bdae
+  - NodeID: f22d9f4f-3588-4d4e-8ab0-2467e742bdae
+    GroupID: 
+    Position: {x: 28, y: 380.8}
+    Name: 4
+    DialogueText: Come on, Elisa, you're exaggerating. How can a goldfish be tragic?
+    ActorData: {fileID: 11400000, guid: 6a2f9a3d4b5287345bc0c42c97e60512, type: 2}
+    DialogueAudioClip: {fileID: 8300000, guid: 335421347dbabc147bb13cfbc0d13b69, type: 3}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: f5c2c447-7449-44f8-af25-9b0a5906b981
+  - NodeID: f5c2c447-7449-44f8-af25-9b0a5906b981
+    GroupID: 
+    Position: {x: 467.2, y: 378.4}
+    Name: 5
+    DialogueText: I don't know, maybe he's been reading too much fish philosophy.
+      He might be going through an identity crisis. Perhaps he wants to be a beta
+      fish!
+    ActorData: {fileID: 11400000, guid: 668e15f5436ebf14cbb383ed010e8f27, type: 2}
+    DialogueAudioClip: {fileID: 8300000, guid: 5f869105ecefcbb4fb0f41c0b7e289d6, type: 3}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 981fa271-4baf-40a0-9554-418c957c14a5
+  - NodeID: 981fa271-4baf-40a0-9554-418c957c14a5
+    GroupID: 
+    Position: {x: 940, y: 380.8}
+    Name: 6
+    DialogueText: A beta fish in a plastic bowl? That's insane!
+    ActorData: {fileID: 11400000, guid: 6a2f9a3d4b5287345bc0c42c97e60512, type: 2}
+    DialogueAudioClip: {fileID: 8300000, guid: 09e6dde33f8939a4f8922ca5c7d9cec1, type: 3}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 7f041386-e551-4d8d-8d67-f2d41ea39bc9
+  - NodeID: 7f041386-e551-4d8d-8d67-f2d41ea39bc9
+    GroupID: 
+    Position: {x: 28, y: 724}
+    Name: 7
+    DialogueText: Hey, life is a bowl of surprises. Anyway, I'm thinking of throwing
+      a themed party to lift his spirits.
+    ActorData: {fileID: 11400000, guid: 668e15f5436ebf14cbb383ed010e8f27, type: 2}
+    DialogueAudioClip: {fileID: 8300000, guid: 05f3554e762e03341b8a5e0b2cb2955c, type: 3}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 5b489be4-ebd4-4b07-ac40-de6b7070c3ba
+  - NodeID: 5b489be4-ebd4-4b07-ac40-de6b7070c3ba
+    GroupID: 
+    Position: {x: 467.2, y: 724}
+    Name: 8
+    DialogueText: A themed party for a goldfish? I bet that wasn't in his life plan.
+    ActorData: {fileID: 11400000, guid: 6a2f9a3d4b5287345bc0c42c97e60512, type: 2}
+    DialogueAudioClip: {fileID: 8300000, guid: 528eaca74f332ee4ea371862c1076872, type: 3}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 53868e7d-a1c8-4b44-ba74-0e35baa5a9fb
+  - NodeID: 53868e7d-a1c8-4b44-ba74-0e35baa5a9fb
+    GroupID: 
+    Position: {x: 940, y: 724}
+    Name: 9
+    DialogueText: Exactly! It's going to be epic. I've already bought mini party
+      hats for all the fish. It will be the talk of the tank!
+    ActorData: {fileID: 11400000, guid: 668e15f5436ebf14cbb383ed010e8f27, type: 2}
+    DialogueAudioClip: {fileID: 8300000, guid: 5d7fbfaeecd6164409b8d833eaa9e2e2, type: 3}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: ecd6c99b-28dd-40c0-92a4-8f4e5dc583f7
+  - NodeID: ecd6c99b-28dd-40c0-92a4-8f4e5dc583f7
+    GroupID: 
+    Position: {x: 16.8, y: 1044.8}
+    Name: 10
+    DialogueText: Let's call it "The Goldfish Renaissance Party." It's going to be
+      legendary.
+    ActorData: {fileID: 11400000, guid: 6a2f9a3d4b5287345bc0c42c97e60512, type: 2}
+    DialogueAudioClip: {fileID: 8300000, guid: 6a996848f815ed24eab524387adcade6, type: 3}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 5576a3b7-3db8-4586-b914-0a92108fb4d1
+  - NodeID: 5576a3b7-3db8-4586-b914-0a92108fb4d1
+    GroupID: 
+    Position: {x: 478.4, y: 1044.8}
+    Name: 11
+    DialogueText: Giorgio, you have a remarkable talent for turning an existential
+      crisis into a comedy event. You're officially my go-to guy for all future fish
+      crises!
+    ActorData: {fileID: 11400000, guid: 668e15f5436ebf14cbb383ed010e8f27, type: 2}
+    DialogueAudioClip: {fileID: 8300000, guid: 13708662b6ba834498faf4b099ef4efc, type: 3}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 33b39d13-8b0f-49f1-b46c-5b23bbc8c387
+  - NodeID: 33b39d13-8b0f-49f1-b46c-5b23bbc8c387
+    GroupID: 
+    Position: {x: 940, y: 1058.4}
+    Name: 12
+    DialogueText: Gladly, Elisa. The key is not taking goldfish life too seriously.
+      Maybe that's the secret to aquatic happiness!
+    ActorData: {fileID: 11400000, guid: 6a2f9a3d4b5287345bc0c42c97e60512, type: 2}
+    DialogueAudioClip: {fileID: 8300000, guid: 72c05b477e7646e46b573b14da52b6b7, type: 3}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 
+  OldGroupNames: []
+  OldUngroupedNodeNames:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  OldGroupedNodeNames:
+    _dictionary: []

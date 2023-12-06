@@ -36,6 +36,12 @@
             _isProcessing = true;
         }
 
+        public void Start(float changeDuration)
+        {
+            ChangeDuration(changeDuration);
+            Start();
+        }
+
         public void Stop() => _isProcessing = false;
         
         public void Resume() => _isProcessing = true;

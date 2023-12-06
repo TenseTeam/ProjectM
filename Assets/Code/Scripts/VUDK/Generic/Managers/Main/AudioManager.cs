@@ -8,16 +8,16 @@
     [DefaultExecutionOrder(-900)]
     public sealed class AudioManager : MonoBehaviour
     {
-        [SerializeField, Header("Uncuncurrent AudioSources")]
+        [SerializeField, Header("General")]
         [Tooltip("Unconcurrent audio source for music")]
         private AudioSource _music;
         [field: SerializeField]
         [Tooltip("Unconcurrent audio source for effects")]
-        private AudioSource _source;
+        private AudioSource _sourceSFX;
 
-        [SerializeField, Header("Concurrent AudioSources")]
+        [SerializeField, Header("Audio Queue")]
         [Tooltip("Concurrent audio sources for multiple effects")]
-        private List<AudioSource> _sources;
+        private List<AudioSource> _queueSources;
 
         public void PlaySpatialAudio(AudioClip clip, Vector3 position)
         {
@@ -40,8 +40,8 @@
                 audio = foundAudio;
             else
             {
-                audio = _sources[0].gameObject.AddComponent<AudioSource>();
-                _sources.Add(audio);
+                audio = _queueSources[0].gameObject.AddComponent<AudioSource>();
+                _queueSources.Add(audio);
             }
 
             PlayAudio(audio, clip);
@@ -49,7 +49,7 @@
 
         public void PlayUnconcurrentEffectAudio(AudioClip clip, Range<float> pitchVariation = null)
         {
-            PlayAudio(_source, clip, pitchVariation);
+            PlayAudio(_sourceSFX, clip, pitchVariation);
         }
 
         /// <summary>
@@ -75,7 +75,7 @@
         /// <returns>True if found, false otherwise.</returns>
         private bool TryFindFreeAudioSource(out AudioSource audio)
         {
-            foreach (AudioSource effect in _sources)
+            foreach (AudioSource effect in _queueSources)
             {
                 if (!effect.isPlaying)
                 {

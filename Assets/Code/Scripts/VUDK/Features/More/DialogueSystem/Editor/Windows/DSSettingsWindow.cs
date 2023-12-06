@@ -1,7 +1,8 @@
 ﻿namespace VUDK.Features.More.DialogueSystem.Editor.Windows
 {
     using UnityEditor;
-    using VUDK.Editor.Constants;
+    using UnityEngine.UIElements;
+    using VUDK.Features.More.DialogueSystem.Editor.Utilities;
     using static VUDK.Features.More.DialogueSystem.Editor.Constants.DSEditorPaths;
 
     public class DSSettingsWindow
@@ -14,7 +15,7 @@
         [SettingsProvider]
         public static SettingsProvider DialogueSystemSettings()
         {
-            var provider = new SettingsProvider($"{EditorConstants.VUDKPrefSettings}/{Label}", SettingsScope.User)
+            var provider = new SettingsProvider($"{DSPreferencesSettings}/{Label}", SettingsScope.User)
             {
                 label = Label,
                 guiHandler = (searchContext) =>
@@ -39,8 +40,9 @@
                         if (s_useDefaultPath)
                             s_customDialoguesSavePath = DefaultDialoguesSaveParentFolderPath;
 
-                        EditorPrefs.SetString(EditorConstants.VUDKPrefSettings, s_customDialoguesSavePath);
+                        EditorPrefs.SetString(DSPreferencesSettings, s_customDialoguesSavePath);
                         ChangeDialoguesSavePath(s_customDialoguesSavePath);
+                        DSEditorWindow.CloseWindow();
                     }
                 },
                 keywords = new string[] { "Dialogues", "Save", "Path" }

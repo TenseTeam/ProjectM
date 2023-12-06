@@ -5,10 +5,14 @@
 
     public static class DSEvents
     {
-        public static EventHandler<OnStartDialogueEventArgs> OnStartDialogue;
-        public static EventHandler<OnDialogueChoiceEventArgs> OnDialogueChoice;
-        public static Action OnEndDialogue;
-        public static Action OnDialogueInterrupt;
+        public static EventHandler<OnStartDialogueEventArgs> DialogueStartHandler;
+        public static EventHandler<OnDialogueChoiceEventArgs> DialogueChoiceHandler;
+        public static Action DialogueInterruptHandler;
+
+        public static Action OnDMNext;
+        public static Action OnDMStart;
+        public static Action OnDMEnd;
+        public static Action OnDMDisable;
     }
 
     public class OnStartDialogueEventArgs : EventArgs

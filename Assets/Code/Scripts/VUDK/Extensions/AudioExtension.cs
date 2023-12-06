@@ -10,9 +10,11 @@
         /// </summary>
         /// <param name="clip"><see cref="AudioClip"/> to play.</param>
         /// <param name="position">Position in space from where to play it.</param>
-        public static void PlayClipAtPoint(this AudioClip clip, Vector3 position)
+        public static AudioSFX PlayClipAtPoint(this AudioClip clip, Vector3 position)
         {
-            AudioSFX.Create(clip).PlayClipAtPoint(position);
+            AudioSFX sfx = AudioSFX.Create(clip);
+            sfx.PlayAtPosition(position);
+            return sfx;
         }
     }
 }

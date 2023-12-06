@@ -163,6 +163,7 @@
                 Choices = choices,
                 DialogueText = node.DialogueText,
                 ActorData = node.ActorData,
+                DialogueAudioClip = node.DialogueAudioClip,
                 GroupID = node.Group?.GroupID,
                 DialogueType = node.DialogueType,
                 Position = node.GetPosition().position
@@ -192,6 +193,7 @@
             dialogue.Init(
                 node.DialogueName,
                 node.ActorData,
+                node.DialogueAudioClip,
                 node.DialogueText,
                 ConvertNodeChoicesToDialogueChoices(node.Choices),
                 node.DialogueType,
@@ -330,7 +332,7 @@
                 node.Choices = choices;
                 node.DialogueText = nodeSaveData.DialogueText;
                 node.ActorData = nodeSaveData.ActorData;
-
+                node.DialogueAudioClip = nodeSaveData.DialogueAudioClip;
                 node.Draw();
 
                 s_graphView.AddElement(node);
