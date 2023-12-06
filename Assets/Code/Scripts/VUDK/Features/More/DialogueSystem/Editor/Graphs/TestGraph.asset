@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23c1a0601ef5c84d970a0256acb4dc5, type: 3}
+  m_Name: TestGraph
+  m_EditorClassIdentifier: 
+  FileName: Test
+  Groups: []
+  Nodes:
+  - NodeID: c5b5ede8-54a4-4923-a115-d3221e49be95
+    GroupID: 
+    Position: {x: 326.4, y: 130.40001}
+    Name: 1
+    DialogueText: Dialogue text.
+    ActorData: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 1bc5e9ce-b4d9-4065-aa30-3b5e58ea2828
+  - NodeID: 070b8265-de26-42a5-b480-7a814817318d
+    GroupID: 
+    Position: {x: 1112.8, y: 428.8}
+    Name: DialogueName
+    DialogueText: Dialogue text.
+    ActorData: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 
+  - NodeID: 1bc5e9ce-b4d9-4065-aa30-3b5e58ea2828
+    GroupID: 
+    Position: {x: 704, y: 130.40001}
+    Name: 2
+    DialogueText: Dialogue text.
+    ActorData: {fileID: 11400000, guid: 74ab998dbbce66246866359f698175c2, type: 2}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 070b8265-de26-42a5-b480-7a814817318d
+  OldGroupNames: []
+  OldUngroupedNodeNames:
+  - 1
+  - DialogueName
+  - 2
+  OldGroupedNodeNames:
+    _dictionary: []

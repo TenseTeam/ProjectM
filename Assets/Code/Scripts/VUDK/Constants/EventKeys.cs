@@ -39,7 +39,7 @@
         public static class DialogueEvents
         {
             public const string OnDialougeTypedLetter = "OnDialougeTypedLetter";
-            public const string OnTriggeredDialouge = "OnTriggeredDialouge";
+            public const string OnStartDialouge = "OnTriggeredDialouge";
             public const string OnInterruptDialogue = "OnInterruptDialogue";
             public const string OnStartDialogue = "OnStartDialogue";
             public const string OnEndDialogue = "OnEndDialogue";
