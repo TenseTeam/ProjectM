@@ -4,17 +4,18 @@
     using UnityEngine;
     using VUDK.Features.More.DialogueSystem.Components;
 
-    [RequireComponent(typeof(Animator))]
     [RequireComponent(typeof(DSDialogueEmitter))]
     public class PaintArtworkActor : PaintArtwork
     {
-        private DSDialogueEmitter _dialogueEmitter;
+        [Header("Artwork Animator")]
+        [SerializeField]
         private Animator _animator;
+
+        private DSDialogueEmitter _dialogueEmitter;
 
         protected override void Awake()
         {
             base.Awake();
-            TryGetComponent(out _animator);
             TryGetComponent(out _dialogueEmitter);
         }
 

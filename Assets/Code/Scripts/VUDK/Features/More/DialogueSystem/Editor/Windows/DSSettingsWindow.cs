@@ -9,13 +9,14 @@
     {
         private const string Label = "Dialogue System";
 
-        private static bool s_useDefaultPath = true;
         private static string s_customDialoguesSavePath;
+
+        private static bool s_useDefaultPath = !HasCustomDialoguesSavePath();
 
         [SettingsProvider]
         public static SettingsProvider DialogueSystemSettings()
         {
-            var provider = new SettingsProvider($"{DSPreferencesSettings}/{Label}", SettingsScope.User)
+            var provider = new SettingsProvider($"{DSSettings}/{Label}", SettingsScope.User)
             {
                 label = Label,
                 guiHandler = (searchContext) =>
@@ -27,7 +28,7 @@
                     if (s_useDefaultPath)
                     {
                         EditorGUI.BeginDisabledGroup(true);
-                        EditorGUILayout.TextField("Dialogues Save Path", DefaultDialoguesSaveParentFolderPath);
+                        EditorGUILayout.TextField("Dialogues Save Path", DefaultDialoguesDataFolderPath);
                         EditorGUI.EndDisabledGroup();
                     }
                     else
@@ -38,10 +39,9 @@
                     if (EditorGUI.EndChangeCheck())
                     {
                         if (s_useDefaultPath)
-                            s_customDialoguesSavePath = DefaultDialoguesSaveParentFolderPath;
+                            s_customDialoguesSavePath = DefaultDialoguesDataFolderPath;
 
-                        EditorPrefs.SetString(DSPreferencesSettings, s_customDialoguesSavePath);
-                        ChangeDialoguesSavePath(s_customDialoguesSavePath);
+                        SetDialoguesSavePath(s_customDialoguesSavePath);
                         DSEditorWindow.CloseWindow();
                     }
                 },

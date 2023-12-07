@@ -56,7 +56,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
             bool currentStartingDialoguesOnlyFilter = _startingDialoguesOnlyProperty.boolValue;
 
             List<string> dialogueNames;
-            string dialogueFolderPath = $"{DialoguesAssetPath}/{_dialogueContainer.FileName}";
+            string dialogueFolderPath = $"{DialoguesDataFolderPath}/{_dialogueContainer.FileName}";
             string dialogueInfoMessage;
 
             if(_groupedDialoguesProperty.boolValue)
@@ -122,7 +122,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Inspectors
             _selectedDialogueGroupIndexProperty.intValue = DSInspectorUtility.DrawPopup("Dialogue Group", _selectedDialogueGroupIndexProperty, dialogueGroupNames.ToArray());
 
             string selectedDialogueGroupName = dialogueGroupNames[_selectedDialogueGroupIndexProperty.intValue];
-            DSDialogueGroupData selectedDialogueGroup = LoadAsset<DSDialogueGroupData>($"{DialoguesAssetPath}/{dialogueContainer.FileName}/Groups/{selectedDialogueGroupName}", selectedDialogueGroupName);
+            DSDialogueGroupData selectedDialogueGroup = LoadAsset<DSDialogueGroupData>($"{DialoguesDataFolderPath}/{dialogueContainer.FileName}/Groups/{selectedDialogueGroupName}", selectedDialogueGroupName);
 
             _dialogueGroupProperty.objectReferenceValue = selectedDialogueGroup;
 

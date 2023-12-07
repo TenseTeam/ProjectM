@@ -35,7 +35,7 @@
             s_graphView = dsGraphView;
 
             s_graphFileName = graphName;
-            s_containerFolderPath = $"{DialoguesAssetPath}/{graphName}";
+            s_containerFolderPath = $"{DialoguesDataFolderPath}/{graphName}";
 
             s_nodes = new List<DSNode>();
             s_groups = new List<DSGroup>();
@@ -53,7 +53,7 @@
 
             GetElementsFromGraphView();
 
-            DSGraphEditorData graphData = CreateAsset<DSGraphEditorData>(DialoguesGraphsAssetPath, $"{s_graphFileName}Graph");
+            DSGraphEditorData graphData = CreateAsset<DSGraphEditorData>(GraphsAssetPath, $"{s_graphFileName}Graph");
 
             graphData.Init(s_graphFileName);
 
@@ -281,19 +281,19 @@
 
         public static Texture2D LoadIcon(string path)
         {
-            return EditorGUIUtility.Load($"{DialogueEditorIconsPath}/{path}") as Texture2D;
+            return EditorGUIUtility.Load($"{EditorIconsPath}/{path}") as Texture2D;
         }
 
         public static void Load()
         {
-            DSGraphEditorData graphData = LoadAsset<DSGraphEditorData>(DialoguesGraphsAssetPath, s_graphFileName);
+            DSGraphEditorData graphData = LoadAsset<DSGraphEditorData>(GraphsAssetPath, s_graphFileName);
 
             if (graphData == null)
             {
                 EditorUtility.DisplayDialog(
                     "Could not find the file!",
                     "The file at the following path could not be found:\n\n" +
-                    $"\"{DialoguesGraphsAssetPath}/{s_graphFileName}\".\n\n" +
+                    $"\"{GraphsAssetPath}/{s_graphFileName}\".\n\n" +
                     "Make sure you chose the right file and it's placed at the folder path mentioned above.",
                     "Thanks!"
                 );
@@ -398,14 +398,15 @@
 
         public static void CreateMainFolders()
         {
-            CreateFolder(DialoguesEditorFolderPath, "Graphs");
-            CreateFolder(DialoguesSaveParentFolderPath, DialogueAssetMainFolderName);
-            CreateFolder($"{DialoguesSaveParentFolderPath}/{DialogueAssetMainFolderName}", "Actors");
+            CreateFolder(EditorFolderPath, "Graphs");
+            CreateFolder(DialoguesSaveParentFolderPath, DialoguesDataFolderName);
+            CreateFolder($"{DialoguesSaveParentFolderPath}/{DialoguesDataFolderName}", "AllDialogues");
+            CreateFolder($"{DialoguesSaveParentFolderPath}/{DialoguesDataFolderName}", "Actors");
         }
 
         private static void CreateFoldersForSingleDialogue()
         {
-            CreateFolder(DialoguesAssetPath, s_graphFileName);
+            CreateFolder(DialoguesDataFolderPath, s_graphFileName);
             CreateFolder(s_containerFolderPath, "Global");
             CreateFolder(s_containerFolderPath, "Groups");
             CreateFolder($"{s_containerFolderPath}/Global", "Dialogues");

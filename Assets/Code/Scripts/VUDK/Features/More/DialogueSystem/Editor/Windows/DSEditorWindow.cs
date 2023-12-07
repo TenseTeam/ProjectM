@@ -135,7 +135,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Windows
 
         private void Load()
         {
-            string filePath = EditorUtility.OpenFilePanel("Load Dialogue Graph", $"{DSEditorPaths.DialoguesGraphsAssetPath}", "asset");
+            string filePath = EditorUtility.OpenFilePanel("Load Dialogue Graph", $"{DSEditorPaths.GraphsAssetPath}", "asset");
 
             if (string.IsNullOrEmpty(filePath)) return;
 
