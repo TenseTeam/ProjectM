@@ -3,7 +3,6 @@ namespace VUDK.UI.Menu
     using UnityEngine;
     using UnityEngine.InputSystem;
     using VUDK.Extensions;
-    using VUDK.Generic.Managers.Main;
     using VUDK.Features.Main.InputSystem;
     using VUDK.Constants;
     using VUDK.Features.Main.EventSystem;

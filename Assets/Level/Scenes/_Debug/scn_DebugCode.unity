@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18356898, g: 0.22771832, b: 0.29750535, a: 1}
+  m_IndirectSpecularColor: {r: 0.18388171, g: 0.2288404, b: 0.3020141, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5560,13 +5560,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290689345}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18501851, y: -0.2012624, z: 0.16272919, w: 0.94804054}
+  m_LocalRotation: {x: 0.22070466, y: -0.20726736, z: 0.15500933, w: 0.9403732}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 24.602, y: -20.7, z: 14.918}
+  m_LocalEulerAnglesHint: {x: 28.643, y: -21.482, z: 13.176}
 --- !u!114 &290689348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11356,7 +11356,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   InteractButton: {fileID: 1034476572}
-  _artwork: {fileID: 912149306}
+  _artworkInfo: {fileID: 0}
 --- !u!1 &962938085
 GameObject:
   m_ObjectHideFlags: 0
@@ -17520,6 +17520,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 662783104}
     m_Modifications:
+    - target: {fileID: 5639153247524558608, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: _artworkInfo
+      value: 
+      objectReference: {fileID: 1610191707}
     - target: {fileID: 7734599877621741691, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17575,7 +17580,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: pf_NodeArtwork
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4781142896245740779, guid: e264e7507fd34ec498c8cbd47f07b5b6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17596,6 +17602,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4d5dd3de5f72ec4c88aed4459907e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1610191707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7866917143441265843, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610191704}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 413cc010d3881bf46bd5623fab955e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1618666400
@@ -23356,6 +23374,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pf_NodeArtworkDialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 6220602286878251592, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      propertyPath: _artworkInfo
+      value: 
+      objectReference: {fileID: 8300174138922669328}
     - target: {fileID: 8773427739877666513, guid: 899d08854c2c5eb4a82a915936e617df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23406,11 +23429,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8254814174711728224, guid: 899d08854c2c5eb4a82a915936e617df, type: 3}
+    - {fileID: 3801946350046681074, guid: 899d08854c2c5eb4a82a915936e617df, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 899d08854c2c5eb4a82a915936e617df, type: 3}
+--- !u!114 &8300174138922669328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4844744798001524770, guid: 899d08854c2c5eb4a82a915936e617df,
+    type: 3}
+  m_PrefabInstance: {fileID: 8300174138922669327}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 413cc010d3881bf46bd5623fab955e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

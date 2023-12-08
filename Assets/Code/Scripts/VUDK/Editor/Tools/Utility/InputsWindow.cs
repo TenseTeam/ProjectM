@@ -1,4 +1,4 @@
-﻿namespace VUDK.Editor.Tools.Project
+﻿namespace VUDK.Editor.Tools.Utility
 {
     using UnityEngine.InputSystem;
     using UnityEditor;
@@ -8,7 +8,7 @@
     {
         private static InputActionAsset s_inputActionAsset;
 
-        [MenuItem("VUDK/Project/Inputs")]
+        [MenuItem("VUDK/Utility/Inputs")]
         public static void OpenInputsMap()
         {
             if(!s_inputActionAsset)

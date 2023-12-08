@@ -7,7 +7,7 @@
 
     public abstract class NodeInteractiveBase : NodeBase
     {
-        [Header("Node Interaction Settings")]
+        [Header("Node Interaction")]
         [SerializeField]
         protected Button InteractButton;
 

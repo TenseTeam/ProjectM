@@ -1,4 +1,4 @@
-namespace VUDK.Editor.Tools.Project
+namespace VUDK.Editor.Tools.Utility
 {
     using System.IO;
     using UnityEditor;
@@ -8,54 +8,55 @@ namespace VUDK.Editor.Tools.Project
     {
         private const string MainFolder = "Assets";
 
-        private string[] _mainFolders = new string[]
+        private readonly string[] _mainFolders = new string[]
         {
                 "Art",
                 "Audio",
                 "Code",
                 "Docs",
                 "Level",
-                "Resources",
+                "Resources"
         };
 
-        private string[] _artFolders = new string[]
+        private readonly string[] _artFolders = new string[]
         {
                 "Fonts",
+                "Animations",
                 "Materials",
                 "Models",
                 "Sprites",
                 "Textures"
         };
 
-        private string[] _audioFolders = new string[]
+        private readonly string[] _audioFolders = new string[]
         {
                 "Music",
                 "Mixers",
                 "SFX"
         };
 
-        private string[] _codeFolders = new string[]
+        private readonly string[] _codeFolders = new string[]
         {
                 "Scripts",
                 "Shaders",
         };
 
-        private string[] _levelFolders = new string[]
+        private readonly string[] _levelFolders = new string[]
         {
                 "Data",
                 "Prefabs",
                 "Scenes"
         };
 
-        private string[] _resourceFolders = new string[]
+        private readonly string[] _resourceFolders = new string[]
         {
                 "Settings",
                 "Volumes",
                 "Third Party"
         };
 
-        [MenuItem("VUDK/Project/Project Structurer")]
-        public static void ShowWindow()
+        [MenuItem("VUDK/Utility/Project Structurer")]
+        public static void OpenWindow()
         {
             GetWindow(typeof(ProjectStructurer), false, "Project Structurer");
         }
@@ -65,6 +66,9 @@ namespace VUDK.Editor.Tools.Project
             GUILayout.Label("Project Structurer", EditorStyles.boldLabel);
             if (GUILayout.Button("Create Folders"))
                 CreateFolders();
+
+            EditorGUILayout.Space();
+            EditorGUILayout.HelpBox("Tool that helps organize your Unity project by creating a predefined folder structure. Click 'Create Project Folders' to generate the specified folders in the 'Assets' directory.", MessageType.Info);
         }
 
         private void CreateFolders()

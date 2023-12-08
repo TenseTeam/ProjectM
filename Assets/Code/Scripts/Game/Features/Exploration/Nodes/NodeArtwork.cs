@@ -6,20 +6,20 @@ namespace ProjectM.Features.Exploration
 
     public class NodeArtwork : NodeView
     {
-        [Header("Node Artwork Settings")]
+        [Header("Artwork Info")]
         [SerializeField]
-        private ArtworkInfo _artwork;
+        private ArtworkInfo _artworkInfo;
 
         public override void OnNodeEnter()
         {
             base.OnNodeEnter();
-            _artwork.EnableCanvas();
+            _artworkInfo.EnableCanvas();
         }
 
         public override void OnNodeExit()
         {
             base.OnNodeExit();
-            _artwork.DisableAll();
+            _artworkInfo.DisableAll();
         }
 
 #if UNITY_EDITOR
