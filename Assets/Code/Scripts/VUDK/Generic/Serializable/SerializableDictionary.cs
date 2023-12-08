@@ -93,7 +93,9 @@ namespace VUDK.Generic.Serializable
         }
 
         public ICollection<TKey> Keys => _dictionary.Select(tuple => tuple.Key).ToArray();
+
         public ICollection<TValue> Values => _dictionary.Select(tuple => tuple.Value).ToArray();
+
         public bool ContainsKey(TKey key) => KeyPositions.ContainsKey(key);
 
         public void Add(TKey key, TValue value)

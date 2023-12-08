@@ -12,6 +12,7 @@
     using VUDK.Features.More.DialogueSystem.Events;
     using VUDK.Features.More.DialogueSystem.UI;
 
+    [RequireComponent(typeof(AudioSource))]
     public class DSDialogueManager : MonoBehaviour
     {
         [Header("Dialogue Settings")]
@@ -36,14 +37,17 @@
 
         [Header("UI Choices")]
         [SerializeField]
-        private RectTransform _choicesPanel;
+        private RectTransform _choicesBox;
         [SerializeField]
         private bool _hideDialogueBoxOnChoice;
         [SerializeField]
-        private List<DSChoiceButton> _choiceButtons;
+        private bool _hasChoicePrefix = true;
+        [SerializeField]
+        private List<UIDSChoiceButton> _choiceButtons;
 
         private DSDialogueContainerData _dialogueContainerData;
         private DSDialogueData _currentDialogue;
+        private AudioSource _audioSource;
 
         private bool _isWaitingForChoice;
         private bool _isSkipping;
@@ -52,26 +56,33 @@
 
         public bool IsDialogueOpen => _dialoguePanel.gameObject.activeSelf;
         public bool IsTalking { get; private set; }
+        private bool _hasActor => _currentDialogue.ActorData != null;
         private int _maxChoices => _choiceButtons.Count;
 
-        private void Awake() => Disable();
+
+        private void Awake()
+        {
+            TryGetComponent(out _audioSource);
+            _audioSource.playOnAwake = false;
+            Disable();
+        }
 
         private void OnEnable()
         {
             DSEvents.DialogueStartHandler += StartDialogue;
             DSEvents.DialogueChoiceHandler += SelectChoice;
-            DSEvents.DialogueInterruptHandler += EndDialogueAndDisable;
+            DSEvents.DialogueInterruptHandler += InterruptDialogue;
             InputsManager.Inputs.Dialogue.SkipSentence.canceled += InputNextDialogueText;
-            _dialogueCloseButton.onClick.AddListener(EndDialogueAndDisable);
+            _dialogueCloseButton.onClick.AddListener(InterruptDialogue);
         }
 
         private void OnDisable()
         {
             DSEvents.DialogueStartHandler -= StartDialogue;
             DSEvents.DialogueChoiceHandler -= SelectChoice;
-            DSEvents.DialogueInterruptHandler -= EndDialogueAndDisable;
+            DSEvents.DialogueInterruptHandler -= InterruptDialogue;
             InputsManager.Inputs.Dialogue.SkipSentence.canceled -= InputNextDialogueText;
-            _dialogueCloseButton.onClick.RemoveListener(EndDialogueAndDisable);
+            _dialogueCloseButton.onClick.RemoveListener(InterruptDialogue);
         }
 
         public void StartDialogue(object sender, OnStartDialogueEventArgs args)
@@ -103,11 +114,11 @@
         public void NextDialogue()
         {
             DSEvents.OnDMNext?.Invoke();
-            SetDialogueActor(_currentDialogue.ActorData);
-            PlayDialogueAudio(_currentDialogue);
+            DisplayActorInfo();
+            PlayDialogueAudio();
 
             if (_isInstant)
-                PrintCompleteDialogueText(_currentDialogue.DialogueText);
+                CompleteDialogueText(_currentDialogue.DialogueText);
             else
                 StartPrintingDialogueText(_currentDialogue.DialogueText);
 
@@ -124,16 +135,22 @@
                     break;
 
                 case DSDialogueType.MultipleChoice:
-                    WaitForChoice(_currentDialogue);
+                    BeginChoicePhase(_currentDialogue);
                     break;
             }
         }
 
-        private void PlayDialogueAudio(DSDialogueData currentDialogue)
+        private void PlayDialogueAudio()
         {
-            if (currentDialogue.DialogueAudioClip == null) return;
+            _audioSource.Stop();
 
-            currentDialogue.ActorData.OnEmitDialogue?.Invoke(currentDialogue.DialogueAudioClip);
+            if (!_hasActor)
+            {
+                if (_currentDialogue.DialogueAudioClip)
+                    _audioSource.PlayOneShot(_currentDialogue.DialogueAudioClip); // Doesn't use the AudioManager to be more modular
+            }
+            else
+                _currentDialogue.ActorData.OnEmitDialogue?.Invoke(_currentDialogue.DialogueAudioClip);
         }
 
         public void Enable()
@@ -147,9 +164,9 @@
         {
             if (_hasCloseButton) DisableCloseButton();
 
-            DisableChoices();
             DSEvents.OnDMDisable?.Invoke();
             _dialoguePanel.gameObject.SetActive(false);
+            DisableChoicesBox();
         }
 
         public void EnableCloseButton()
@@ -167,34 +184,58 @@
             _dialogueBox.gameObject.SetActive(true);
         }
 
-        public void DisableDialogueBox()
+        public void DisableDialoguePane()
         {
             _dialogueBox.gameObject.SetActive(false);
         }
 
-        public void EndDialogueAndDisable()
+        private void DisableChoicesBox()
+        {
+            _choicesBox.gameObject.SetActive(false);
+        }
+
+        private void EnableChoicesBox()
+        {
+            _choicesBox.gameObject.SetActive(true);
+        }
+
+        public void InterruptDialogue()
         {
             StopAllCoroutines();
             EndDialogue();
             Disable();
         }
 
-        private void EnableChoices()
+        private void BeginChoicePhase(DSDialogueData dialogueData)
         {
             if (_hideDialogueBoxOnChoice)
-                DisableDialogueBox();
+                DisableDialoguePane();
 
             _isWaitingForChoice = true;
-            _choicesPanel.gameObject.SetActive(true);
+            EnableChoicesBox();
+
+            int choicesCount = Mathf.Min(dialogueData.Choices.Count, _maxChoices);
+
+            Debug.Log($"Choices count: {choicesCount}");
+
+            foreach (UIDSChoiceButton choiceButton in _choiceButtons) // Disable all buttons
+                choiceButton.Disable();
+
+            for (int i = 0; i < choicesCount; i++) // Enable only the buttons that will be used
+            {
+                _choiceButtons[i].Inject(i);
+                _choiceButtons[i].Enable();
+                _choiceButtons[i].Text.text = _hasChoicePrefix ? $"{i+1}. {dialogueData.Choices[i].Text}" : dialogueData.Choices[i].Text;
+            }
         }
 
-        private void DisableChoices()
+        private void EndChoicePhase()
         {
             if (_hideDialogueBoxOnChoice)
                 EnableDialogueBox();
 
             _isWaitingForChoice = false;
-            _choicesPanel.gameObject.SetActive(false);
+            DisableChoicesBox();
         }
 
         private void InputNextDialogueText(InputAction.CallbackContext context)
@@ -218,35 +259,20 @@
             }
         }
 
-        private void WaitForChoice(DSDialogueData dialogueData)
-        {
-            EnableChoices();
-            DisplayChoices(dialogueData);
-        }
-
-        private void DisplayChoices(DSDialogueData dialogueData)
-        {
-            for (int i = 0; i < _maxChoices; i++)
-            {
-                _choiceButtons[i].Text.text = dialogueData.Choices[i].Text;
-                _choiceButtons[i].Inject(i);
-            }
-        }
-
         private void SelectChoice(object sender, OnDialogueChoiceEventArgs args)
         {
             int choiceIndex = args.ChoiceIndex;
 
             if (_currentDialogue.Choices[choiceIndex].NextDialogue == null)
             {
-                EndDialogueAndDisable();
+                InterruptDialogue();
                 return;
             }
 
             if (choiceIndex >= 0 && choiceIndex < _currentDialogue.Choices.Count)
             {
                 _currentDialogue = _currentDialogue.Choices[choiceIndex].NextDialogue;
-                DisableChoices();
+                EndChoicePhase();
                 NextDialogue();
             }
             else
@@ -255,17 +281,17 @@
             }
         }
 
-        private void SetDialogueActor(DSActorData actorData)
+        private void DisplayActorInfo()
         {
-            if (actorData == null)
+            if (!_hasActor)
             {
                 _actorIconImage.sprite = null;
                 _actorNameText.text = "";
                 return;
             }
 
-            _actorIconImage.sprite = actorData.ActorIcon;
-            _actorNameText.text = actorData.Name;
+            _actorIconImage.sprite = _currentDialogue.ActorData.ActorIcon;
+            _actorNameText.text = _currentDialogue.ActorData.Name;
         }
 
         private DSDialogueData RandomStartDialogue()
@@ -288,11 +314,12 @@
             StartCoroutine(PrintDialogueRoutine(dialogueText));
         }
 
-        private void PrintCompleteDialogueText(string dialogueText)
+        private void CompleteDialogueText(string dialogueText)
         {
             IsTalking = false;
             _isSkipping = false;
             _dialogueText.text = dialogueText;
+            DSEvents.OnDMCompletedSentence?.Invoke();
         }
 
         private IEnumerator PrintDialogueRoutine(string dialogueText)
@@ -309,7 +336,7 @@
                 yield return new WaitForSeconds(_displayLetterTime);
             }
 
-            PrintCompleteDialogueText(dialogueText);
+            CompleteDialogueText(dialogueText);
         }
     }
 }

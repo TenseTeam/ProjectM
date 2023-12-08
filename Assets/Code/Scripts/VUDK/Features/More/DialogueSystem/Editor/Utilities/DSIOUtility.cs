@@ -8,6 +8,7 @@
     using UnityEngine;
     using VUDK.Extensions;
     using VUDK.Features.More.DialogueSystem.Data;
+    using VUDK.Features.More.DialogueSystem.Editor.Constants;
     using VUDK.Features.More.DialogueSystem.Editor.Data.Save;
     using VUDK.Features.More.DialogueSystem.Editor.Elements;
     using VUDK.Features.More.DialogueSystem.Editor.Windows;
@@ -100,7 +101,7 @@
             string groupName = group.title;
 
             CreateFolder($"{s_containerFolderPath}/Groups", groupName);
-            CreateFolder($"{s_containerFolderPath}/Groups/{groupName}", "Dialogues");
+            CreateFolder($"{s_containerFolderPath}/Groups/{groupName}", DialoguesNodesFolderName);
 
             DSDialogueGroupData dialogueGroup = CreateAsset<DSDialogueGroupData>($"{s_containerFolderPath}/Groups/{groupName}", groupName);
 
@@ -178,12 +179,12 @@
 
             if (node.Group != null)
             {
-                dialogue = CreateAsset<DSDialogueData>($"{s_containerFolderPath}/Groups/{node.Group.title}/Dialogues", node.DialogueName);
+                dialogue = CreateAsset<DSDialogueData>($"{s_containerFolderPath}/Groups/{node.Group.title}/{DialoguesNodesFolderName}", node.DialogueName);
                 dialogueContainer.DialogueGroups.AddItem(s_createdDialogueGroups[node.Group.GroupID], dialogue);
             }
             else
             {
-                dialogue = CreateAsset<DSDialogueData>($"{s_containerFolderPath}/Global/Dialogues", node.DialogueName);
+                dialogue = CreateAsset<DSDialogueData>($"{s_containerFolderPath}/Global/{DialoguesNodesFolderName}", node.DialogueName);
                 dialogueContainer.UngroupedDialogues.Add(dialogue);
 
                 if (node.IsStartNode())
@@ -256,7 +257,7 @@
 
                     foreach (string nodeToRemove in nodesToRemove)
                     {
-                        RemoveAsset($"{s_containerFolderPath}/Groups/{oldGroupedNode.Key}/Dialogues", nodeToRemove);
+                        RemoveAsset($"{s_containerFolderPath}/Groups/{oldGroupedNode.Key}/{DialoguesNodesFolderName}", nodeToRemove);
                     }
                 }
             }
@@ -272,7 +273,7 @@
 
                 foreach (string nodeToRemove in nodesToRemove)
                 {
-                    RemoveAsset($"{s_containerFolderPath}/Global/Dialogues", nodeToRemove);
+                    RemoveAsset($"{s_containerFolderPath}/Global/{DialoguesNodesFolderName}", nodeToRemove);
                 }
             }
 
@@ -409,7 +410,7 @@
             CreateFolder(DialoguesDataFolderPath, s_graphFileName);
             CreateFolder(s_containerFolderPath, "Global");
             CreateFolder(s_containerFolderPath, "Groups");
-            CreateFolder($"{s_containerFolderPath}/Global", "Dialogues");
+            CreateFolder($"{s_containerFolderPath}/Global", DialoguesNodesFolderName);
         }
 
         public static void CreateFolder(string parentFolderPath, string newFolderName)

@@ -1,14 +1,14 @@
 namespace ProjectM.Features.Exploration
 {
     using UnityEngine;
-    using VUDK.Features.Packages.ExplorationSystem.Nodes;
+    using VUDK.Features.More.ExplorationSystem.Nodes;
     using ProjectM.Features.Artwork;
 
-    public class NodeArtwork : NodeObservation
+    public class NodeArtwork : NodeView
     {
         [Header("Node Artwork Settings")]
         [SerializeField]
-        private Artwork _artwork;
+        private ArtworkInfo _artwork;
 
         public override void OnNodeEnter()
         {

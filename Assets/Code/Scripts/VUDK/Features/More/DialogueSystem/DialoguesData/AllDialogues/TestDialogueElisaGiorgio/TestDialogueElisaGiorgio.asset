@@ -16,8 +16,6 @@ MonoBehaviour:
   DialogueGroups:
     _dictionary: []
   UngroupedDialogues:
-  - {fileID: 11400000, guid: 7f065329ca1e6154cbac876a69b1a643, type: 2}
-  - {fileID: 11400000, guid: d315127c036539e4486e7fe15b95eabb, type: 2}
   - {fileID: 11400000, guid: 154f0579df37c804ab9dbcf2c028be01, type: 2}
   - {fileID: 11400000, guid: 96861d27cbf704b45b1fede29892dd22, type: 2}
   - {fileID: 11400000, guid: 2a78345cf4b07004e81411962362e060, type: 2}
@@ -28,5 +26,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 344d1451649ebdd4584b9966ef9d320c, type: 2}
   - {fileID: 11400000, guid: 3c101d9ec4c7d8645bb0a720f1ca316d, type: 2}
   - {fileID: 11400000, guid: 3a85ee3d97001054f903d55af20f5eb1, type: 2}
+  - {fileID: 11400000, guid: d315127c036539e4486e7fe15b95eabb, type: 2}
+  - {fileID: 11400000, guid: 7f065329ca1e6154cbac876a69b1a643, type: 2}
   StartingDialogues:
   - {fileID: 11400000, guid: 7f065329ca1e6154cbac876a69b1a643, type: 2}

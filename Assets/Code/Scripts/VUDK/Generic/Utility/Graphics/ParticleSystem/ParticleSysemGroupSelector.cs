@@ -13,6 +13,8 @@
 
         public void Play(string particleKey)
         {
+            if (!_particles.ContainsKey(particleKey)) return;
+
             if (_shouldPlayIndividually)
                 Stop();
 

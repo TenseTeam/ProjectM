@@ -11,12 +11,12 @@
     public class AudioSFX : PooledObject, IInject<AudioClip>
     {
         private AudioSource _audioSource;
-        private TimeDelayTask _clipLenghtTask;
+        private TimerTask _clipLenghtTask;
 
         private void Awake()
         {
             TryGetComponent(out _audioSource);
-            _clipLenghtTask = new TimeDelayTask();
+            _clipLenghtTask = new TimerTask();
         }
 
         private void OnEnable()

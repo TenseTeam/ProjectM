@@ -3,26 +3,37 @@
     using UnityEngine;
     using VUDK.Features.Main.TriggerSystem;
     using VUDK.Features.More.DialogueSystem.Events;
-    using static VUDK.Features.More.DialogueSystem.Events.DSEvents;
 
     public class DSDialogueTrigger : DSDialogueSelectorBase, ITrigger
     {
         private bool _hasBeenTriggered;
+        private bool _isSpeaking;
+
+        private void OnEnable()
+        {
+            DSEvents.OnDMEnd += OnDialogueEnded;
+        }
+
+        private void OnDisable()
+        {
+            DSEvents.OnDMEnd -= OnDialogueEnded;
+        }
 
 #if UNITY_EDITOR
         [ContextMenu("Trigger Dialogue")]
 #endif
         public virtual void Trigger()
         {
-            if(!IsRepeatable && _hasBeenTriggered)
+            if( (!IsRepeatable && _hasBeenTriggered) || _isSpeaking)
                 return;
 
+            _isSpeaking = true;
             _hasBeenTriggered = true;
 
             if (DialogueContainer == null || DialogueContainer.StartingDialogues.Count == 0)
                 return;
 
-            DialogueStartHandler?.Invoke(
+            DSEvents.DialogueStartHandler?.Invoke(
                 this, 
                 new OnStartDialogueEventArgs(DialogueContainer, StartDialogue, RandomStartDialogue, IsInstantDialogue)
                 );
@@ -30,7 +41,12 @@
 
         public void Interrupt()
         {
-            DialogueInterruptHandler?.Invoke();
+            DSEvents.DialogueInterruptHandler?.Invoke();
+        }
+
+        private void OnDialogueEnded()
+        {
+            _isSpeaking = false;
         }
     }
 }

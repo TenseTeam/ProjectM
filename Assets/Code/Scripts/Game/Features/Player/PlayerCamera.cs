@@ -1,8 +1,8 @@
 ﻿namespace ProjectM.Features.Player
 {
-    using VUDK.Features.Packages.ExplorationSystem.Constants;
-    using VUDK.Features.Packages.ExplorationSystem.Managers;
-    using VUDK.Features.Packages.ExplorationSystem.Nodes;
+    using VUDK.Features.More.ExplorationSystem.Constants;
+    using VUDK.Features.More.ExplorationSystem.Managers;
+    using VUDK.Features.More.ExplorationSystem.Nodes;
     using VUDK.Features.Main.Camera.CameraViews;
     using VUDK.Features.Main.EventSystem;
     using VUDK.Extensions;
@@ -43,7 +43,7 @@
         private void OnEndTransition()
         {
             TargetRotation = _explorationManager.CurrentTargetNode.NodeRotation.SignedEulerAngles();
-            if (_explorationManager.CurrentTargetNode is not NodeObservation)
+            if (_explorationManager.CurrentTargetNode is not NodeView)
                 Enable();
         }
     }

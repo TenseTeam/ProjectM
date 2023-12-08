@@ -62,11 +62,11 @@
         [SerializeField]
         private bool _defaultIsDay;
 
-        private TimeDelayTask _timeUpdateDelay;
+        private TimerTask _timeUpdateDelay;
 
         private void Awake()
         {
-            _timeUpdateDelay = new TimeDelayTask(_requestUpdatePeriod * 3600f);
+            _timeUpdateDelay = new TimerTask(_requestUpdatePeriod * 3600f);
             UpdateInGameWeather();
         }
 

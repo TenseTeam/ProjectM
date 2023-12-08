@@ -10,6 +10,7 @@
         public static Action DialogueInterruptHandler;
 
         public static Action OnDMNext;
+        public static Action OnDMCompletedSentence;
         public static Action OnDMStart;
         public static Action OnDMEnd;
         public static Action OnDMDisable;

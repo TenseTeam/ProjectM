@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1449948875406792849}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 1.924, z: -0.33}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 5562804431464862250}
   - component: {fileID: 3165003562365278203}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: NodeInteractionCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,17 +190,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5792631154572574232}
-  m_LocalRotation: {x: -0, y: 0.6404407, z: -0, w: 0.7680076}
-  m_LocalPosition: {x: 0, y: 0, z: -1.02}
-  m_LocalScale: {x: 0.6724424, y: 0.6724424, z: 0.6724424}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3675591484457636975}
   m_Father: {fileID: 320379461823812902}
-  m_LocalEulerAnglesHint: {x: 0, y: 79.649, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 4.74, y: 3.02}
+  m_AnchoredPosition: {x: 0, y: 2}
   m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1215663456286954245
@@ -292,7 +292,7 @@ Transform:
   m_GameObject: {fileID: 6798439684404610008}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.53, y: 2.14, z: 51.56}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -309,17 +309,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6798439684404610008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb678843ad719d3419330e80fb9d0647, type: 3}
+  m_Script: {fileID: 11500000, guid: 189c0d4d0c437494ca1167dc6273934c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <NodeTarget>k__BackingField: {fileID: 4926347605663281857}
   <HasCustomTransition>k__BackingField: 0
   <CustomTransition>k__BackingField: 0
-  OnNodeEnter:
+  _onEnter:
     m_PersistentCalls:
       m_Calls: []
-  OnNodeExit:
+  _onExit:
     m_PersistentCalls:
       m_Calls: []
   InteractButton: {fileID: 4305248091099105456}
-  _backTargetNode: {fileID: 0}

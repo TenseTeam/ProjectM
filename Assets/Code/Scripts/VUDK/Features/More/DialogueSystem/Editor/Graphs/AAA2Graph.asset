@@ -15,9 +15,20 @@ MonoBehaviour:
   FileName: AAA2
   Groups: []
   Nodes:
+  - NodeID: 61cf587c-d618-4c07-a45e-9804eef6c799
+    GroupID: 
+    Position: {x: 1044.8, y: 203.2}
+    Name: Scelta
+    DialogueText: Scegli
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 1
+    Choices:
+    - Text: 1
+      NodeID: a5a90df9-ef81-415e-afa2-454a5bcbd698
   - NodeID: fb071eda-5db3-497d-aabf-83fac79817f7
     GroupID: 
-    Position: {x: 837.6, y: 344}
+    Position: {x: 616.8, y: 203.2}
     Name: 2
     DialogueText: Dialogue text.
     ActorData: {fileID: 0}
@@ -25,10 +36,10 @@ MonoBehaviour:
     DialogueType: 0
     Choices:
     - Text: Next Dialogue
-      NodeID: 
+      NodeID: 61cf587c-d618-4c07-a45e-9804eef6c799
   - NodeID: c83b09f3-616c-4edc-be0f-f559c8de3914
     GroupID: 
-    Position: {x: 214.4, y: 203.2}
+    Position: {x: 231.2, y: 203.2}
     Name: 1
     DialogueText: Dialogue text.
     ActorData: {fileID: 0}
@@ -37,9 +48,22 @@ MonoBehaviour:
     Choices:
     - Text: Next Dialogue
       NodeID: fb071eda-5db3-497d-aabf-83fac79817f7
+  - NodeID: a5a90df9-ef81-415e-afa2-454a5bcbd698
+    GroupID: 
+    Position: {x: 1456.8, y: 226.4}
+    Name: DialogueName
+    DialogueText: Scelto
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 
   OldGroupNames: []
   OldUngroupedNodeNames:
+  - Scelta
   - 2
   - 1
+  - DialogueName
   OldGroupedNodeNames:
     _dictionary: []

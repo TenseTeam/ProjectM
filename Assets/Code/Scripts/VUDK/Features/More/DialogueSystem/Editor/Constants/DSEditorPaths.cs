@@ -16,6 +16,7 @@
         #region FOLDER NAMES
 
         public const string DialoguesDataFolderName = "DialoguesData";
+        public const string DialoguesNodesFolderName = "DialogueNodes";
 
         #endregion FOLDER NAMES
 
