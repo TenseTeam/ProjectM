@@ -7,7 +7,6 @@
     {
         private Texture2D _texture;
         private MeshRenderer _planeMesh;
-        private MaterialPropertyBlock _materialPropertyBlock;
 
         [MenuItem("VUDK/Utility/Texture Plane Renderer")]
         public static void OpenWindow()
@@ -28,17 +27,16 @@
 
             GUI.enabled = true;
             EditorGUILayout.Space();
-            EditorGUILayout.HelpBox("Tool to seamlessly apply a texture image onto a mesh plane while maintaining its aspect ratio. This utility ensures that the texture is displayed proportionally on the plane, offering a convenient solution for texture mapping.", MessageType.Info);
+            EditorGUILayout.HelpBox("Tool to seamlessly apply a texture image onto a mesh plane while maintaining its aspect ratio. This utility ensures that the texture is displayed proportionally on the plane, creating a new instance of the plane mesh material.", MessageType.Info);
         }
 
         private void ApplyTextureToPlane()
         {
-            _materialPropertyBlock ??= new MaterialPropertyBlock();
-            _planeMesh.GetPropertyBlock(_materialPropertyBlock);
+            Material newMaterial = new Material(_planeMesh.sharedMaterial);
+            newMaterial.SetTexture("_BaseMap", _texture);
+            newMaterial.SetVector("_BaseMap_ST", new Vector4(1f, 1f, 0f, 0f));
 
-            _materialPropertyBlock.SetTexture("_BaseMap", _texture); // TODO: Check if it is URP or Built-in
-            _materialPropertyBlock.SetVector("_BaseMap_ST", new Vector4(1f, 1f, 0f, 0f));
-            _planeMesh.SetPropertyBlock(_materialPropertyBlock);
+            _planeMesh.material = newMaterial;
 
             float aspectRatio = (float)_texture.height / _texture.width;
             _planeMesh.transform.localScale = new Vector3(1f, 1f, aspectRatio);

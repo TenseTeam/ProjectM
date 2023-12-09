@@ -5,11 +5,11 @@
 
     public class TransitionLinear : TransitionBase
     {
-        protected TimerTask TimeProcess;
+        protected DelayTask TimeProcess;
         protected Vector3 StartPosition;
         protected Quaternion StartRotation;
 
-        public TransitionLinear(TransitionContext context, TimerTask timeProcess) : base(context)
+        public TransitionLinear(TransitionContext context, DelayTask timeProcess) : base(context)
         {
             TimeProcess = timeProcess;
         }

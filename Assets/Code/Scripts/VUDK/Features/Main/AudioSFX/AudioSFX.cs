@@ -8,15 +8,15 @@
     using VUDK.Generic.Serializable;
 
     [RequireComponent(typeof(AudioSource))]
-    public class AudioSFX : PooledObject, IInject<AudioClip>
+    public class AudioSFX : PooledObject, IInit<AudioClip>
     {
         private AudioSource _audioSource;
-        private TimerTask _clipLenghtTask;
+        private DelayTask _clipLenghtTask;
 
         private void Awake()
         {
             TryGetComponent(out _audioSource);
-            _clipLenghtTask = new TimerTask();
+            _clipLenghtTask = new DelayTask();
         }
 
         private void OnEnable()
@@ -35,12 +35,12 @@
         {
             GameObject goAud = MainManager.Ins.PoolsManager.Pools[PoolKeys.AudioSFX].Get();
             if (goAud.TryGetComponent(out AudioSFX audioSFX))
-                audioSFX.Inject(clip);
+                audioSFX.Init(clip);
 
             return audioSFX;
         }
 
-        public void Inject(AudioClip clip)
+        public void Init(AudioClip clip)
         {
             _audioSource.clip = clip;
         }

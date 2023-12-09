@@ -5,10 +5,12 @@
 
     public static class DSEvents
     {
+        // Dialogue Handler Events
         public static EventHandler<OnStartDialogueEventArgs> DialogueStartHandler;
         public static EventHandler<OnDialogueChoiceEventArgs> DialogueChoiceHandler;
         public static Action DialogueInterruptHandler;
 
+        // Dialogue Manager Events
         public static Action OnDMNext;
         public static Action OnDMCompletedSentence;
         public static Action OnDMStart;

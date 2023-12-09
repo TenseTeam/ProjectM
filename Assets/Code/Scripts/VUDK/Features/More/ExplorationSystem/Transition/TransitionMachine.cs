@@ -12,14 +12,14 @@
     using VUDK.Features.More.ExplorationSystem.Factory;
     using VUDK.Features.More.ExplorationSystem.Managers;
 
-    public class TransitionMachine : StateMachine, IInject<ExplorationManager>
+    public class TransitionMachine : StateMachine, IInit<ExplorationManager>
     {
         [Header("Transition Settings")]
         [SerializeField]
         private TransitionType _transitionType;
 
         [SerializeField]
-        private TimerTask _timeProcess;
+        private DelayTask _timeProcess;
         [SerializeField]
         private CameraFovChanger _fovChanger;
 
@@ -34,7 +34,7 @@
         private TransitionFov _transitionFov;
         #endregion
 
-        public virtual void Inject(ExplorationManager explorationManager)
+        public virtual void Init(ExplorationManager explorationManager)
         {
             _explorationManager = explorationManager;
             Init();

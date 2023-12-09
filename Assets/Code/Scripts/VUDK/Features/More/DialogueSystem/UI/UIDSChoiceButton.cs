@@ -7,7 +7,7 @@
     using VUDK.Patterns.Initialization.Interfaces;
 
     [RequireComponent(typeof(Button))]
-    public class UIDSChoiceButton : MonoBehaviour, IInject<int>
+    public class UIDSChoiceButton : MonoBehaviour, IInit<int>
     {
         [field: SerializeField]
         public Button Button { get; private set; }
@@ -34,9 +34,14 @@
             Button.onClick.RemoveListener(SelectChoice);
         }
 
-        public void Inject(int choiceIndex)
+        public void Init(int choiceIndex)
         {
             _choiceIndex = choiceIndex;
+        }
+
+        public bool Check()
+        {
+            return Button != null && Text != null;
         }
 
         public void Enable()

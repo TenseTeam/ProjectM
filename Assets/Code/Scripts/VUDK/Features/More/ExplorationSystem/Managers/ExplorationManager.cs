@@ -59,7 +59,7 @@
         public override void Init()
         {
             EventManager.Ins.TriggerEvent(ExplorationEventKeys.OnExplorationManagerInit, this);
-            PathExplorer.Inject(this);
+            PathExplorer.Init(this);
             InitFirstNode();
         }
 

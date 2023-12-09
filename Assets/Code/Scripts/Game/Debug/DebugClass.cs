@@ -1,11 +1,6 @@
 namespace ProjectM.Debug
 {
-    using System;
-    using System.IO;
-    using System.Reflection;
-    using UnityEditor;
     using UnityEngine;
-    using VUDK.Extensions;
 
     public class DebugClass : MonoBehaviour
     {

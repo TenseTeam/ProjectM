@@ -39,7 +39,7 @@
 
         public void Init(ExplorationManager explorationManager)
         {
-            PlayerCamera.Inject(explorationManager);
+            PlayerCamera.Init(explorationManager);
         }
     }
 }

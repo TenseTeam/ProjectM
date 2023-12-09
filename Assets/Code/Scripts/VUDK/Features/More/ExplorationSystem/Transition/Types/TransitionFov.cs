@@ -8,7 +8,7 @@
         private CameraFovChanger _fovChanger;
         private bool _hasReverted;
 
-        public TransitionFov(TransitionContext context, CameraFovChanger fovChanger, TimerTask timeProcess) : base(context, timeProcess)
+        public TransitionFov(TransitionContext context, CameraFovChanger fovChanger, DelayTask timeProcess) : base(context, timeProcess)
         {
             _fovChanger = fovChanger;
             _fovChanger.TimeProcess.ChangeDuration(TimeProcess.Duration / 2f);

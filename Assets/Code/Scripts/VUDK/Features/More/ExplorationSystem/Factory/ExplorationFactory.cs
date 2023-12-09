@@ -16,12 +16,12 @@
             return new TransitionInstant(context);
         }
 
-        public static TransitionLinear Create(TransitionContext context, TimerTask timeProcess)
+        public static TransitionLinear Create(TransitionContext context, DelayTask timeProcess)
         {
             return new TransitionLinear(context, timeProcess);
         }
 
-        public static TransitionFov Create(TransitionContext context, CameraFovChanger fovChanger, TimerTask timeProcess)
+        public static TransitionFov Create(TransitionContext context, CameraFovChanger fovChanger, DelayTask timeProcess)
         {
             return new TransitionFov(context, fovChanger, timeProcess);
         }

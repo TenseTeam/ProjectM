@@ -9,7 +9,7 @@
         [SerializeField]
         private float _targetFov;
         [field: SerializeField]
-        public TimerTask TimeProcess { get; private set; }
+        public DelayTask TimeProcess { get; private set; }
 
         private float _originalFov;
         private float _fromFov;

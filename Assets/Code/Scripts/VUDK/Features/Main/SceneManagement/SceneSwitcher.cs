@@ -7,7 +7,7 @@ namespace VUDK.Features.Main.SceneManagement
     public class SceneSwitcher : MonoBehaviour
     {
         [field: SerializeField]
-        protected TimerTask WaitLoadingSceneDelay { get; private set; }
+        protected DelayTask WaitLoadingSceneDelay { get; private set; }
 
         private int _sceneToWaitLoad;
 

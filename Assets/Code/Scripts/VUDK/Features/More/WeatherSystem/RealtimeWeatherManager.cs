@@ -8,6 +8,7 @@
     using VUDK.Features.More.WeatherSystem.Data;
     using VUDK.Features.More.WeatherSystem.Enums;
     using VUDK.Features.Main.EventSystem;
+    using VUDK.Features.More.WeatherSystem.Events;
 
     /// <summary>
     /// Manages real-time weather events in the game based on data retrieved from a weather API.
@@ -20,6 +21,8 @@
         [Tooltip("API-KEYS to get weather data.")]
         [SerializeField]
         private APIPackageData _APIPackage;
+
+        [Header("Query")]
         [Tooltip(
             "Query parameter based on which data is sent back.\n" +
             "It could be following:\r\n\r\n" +
@@ -62,11 +65,11 @@
         [SerializeField]
         private bool _defaultIsDay;
 
-        private TimerTask _timeUpdateDelay;
+        private DelayTask _timeUpdateDelay;
 
         private void Awake()
         {
-            _timeUpdateDelay = new TimerTask(_requestUpdatePeriod * 3600f);
+            _timeUpdateDelay = new DelayTask(_requestUpdatePeriod * 3600f);
             UpdateInGameWeather();
         }
 
@@ -99,7 +102,7 @@
 #if UNITY_EDITOR
             UnityEngine.Debug.Log($"Triggering Weather: {weatherData}");
 #endif
-            EventManager.Ins.TriggerEvent(EventKeys.WeatherEvents.OnWeatherChanged, weatherData);
+            WeatherEvents.OnWeatherChanged?.Invoke(weatherData);
             WeatherConditionType condition = (WeatherConditionType)weatherData.current.condition.code;
             TriggerDayNightEvent(weatherData.current.is_day == 1);
             TriggerMajorWeatherEvent(condition);

@@ -4,9 +4,7 @@
     using System.Collections.Generic;
     using TMPro;
     using UnityEngine;
-    using UnityEngine.InputSystem;
     using UnityEngine.UI;
-    using VUDK.Features.Main.InputSystem;
     using VUDK.Features.More.DialogueSystem.Data;
     using VUDK.Features.More.DialogueSystem.Enums;
     using VUDK.Features.More.DialogueSystem.Events;
@@ -32,6 +30,10 @@
         private TMP_Text _actorNameText;
         [SerializeField]
         private TMP_Text _dialogueText;
+
+        [Header("UI Buttons")]
+        [SerializeField]
+        private Button _skipButton;
         [SerializeField]
         private Button _dialogueCloseButton;
 
@@ -72,7 +74,7 @@
             DSEvents.DialogueStartHandler += StartDialogue;
             DSEvents.DialogueChoiceHandler += SelectChoice;
             DSEvents.DialogueInterruptHandler += InterruptDialogue;
-            InputsManager.Inputs.Dialogue.SkipSentence.canceled += InputNextDialogueText;
+            _skipButton.onClick.AddListener(NextDialogueInput);
             _dialogueCloseButton.onClick.AddListener(InterruptDialogue);
         }
 
@@ -81,7 +83,7 @@
             DSEvents.DialogueStartHandler -= StartDialogue;
             DSEvents.DialogueChoiceHandler -= SelectChoice;
             DSEvents.DialogueInterruptHandler -= InterruptDialogue;
-            InputsManager.Inputs.Dialogue.SkipSentence.canceled -= InputNextDialogueText;
+            _skipButton.onClick.RemoveListener(NextDialogueInput);
             _dialogueCloseButton.onClick.RemoveListener(InterruptDialogue);
         }
 
@@ -223,7 +225,7 @@
 
             for (int i = 0; i < choicesCount; i++) // Enable only the buttons that will be used
             {
-                _choiceButtons[i].Inject(i);
+                _choiceButtons[i].Init(i);
                 _choiceButtons[i].Enable();
                 _choiceButtons[i].Text.text = _hasChoicePrefix ? $"{i+1}. {dialogueData.Choices[i].Text}" : dialogueData.Choices[i].Text;
             }
@@ -238,7 +240,7 @@
             DisableChoicesBox();
         }
 
-        private void InputNextDialogueText(InputAction.CallbackContext context)
+        private void NextDialogueInput()
         {
             if (!IsDialogueOpen) return;
 

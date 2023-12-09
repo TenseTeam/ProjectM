@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2680218430063651744}
   - component: {fileID: 3438638364431667232}
   - component: {fileID: 1990072296104012749}
-  - component: {fileID: 8254814174711728224}
   m_Layer: 0
   m_Name: pf_SanGiovanni
   m_TagString: Untagged
@@ -176,20 +175,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _animator: {fileID: 2680218430063651744}
---- !u!114 &8254814174711728224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134219815890044550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55f8a63a960d8a04ba7293db3ecfd145, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _texture: {fileID: 2800000, guid: 80eea8f5c5a08fc4c9a06368a3703fc2, type: 3}
-  _plane: {fileID: 461699490287452948}
 --- !u!1 &348320274016368800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,7 +1948,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   InteractButton: {fileID: 320545232238931}
-  _artwork: {fileID: 4844744798001524770}
+  _artworkInfo: {fileID: 0}
 --- !u!1 &5745403077458944350
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,7 +1992,6 @@ GameObject:
   - component: {fileID: 1436245678816369557}
   - component: {fileID: 5306953119423851976}
   - component: {fileID: 5039422950905863650}
-  - component: {fileID: 3801946350046681074}
   m_Layer: 0
   m_Name: pf_SanGiovanni
   m_TagString: Untagged
@@ -2171,20 +2155,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _animator: {fileID: 1436245678816369557}
---- !u!114 &3801946350046681074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5886417478414989210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55f8a63a960d8a04ba7293db3ecfd145, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _texture: {fileID: 2800000, guid: 80eea8f5c5a08fc4c9a06368a3703fc2, type: 3}
-  _plane: {fileID: 3269825762107017589}
 --- !u!1 &5972476472824386626
 GameObject:
   m_ObjectHideFlags: 0

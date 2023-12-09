@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: Metro Settings
   m_EditorClassIdentifier: Unity.AdaptivePerformance:UnityEngine.AdaptivePerformance:AdaptivePerformanceGeneralSettings
   m_LoaderManagerInstance: {fileID: 5245015801058049316}
-  m_InitManagerOnStart: 1
+  m_InitManagerOnStart: 0
 --- !u!114 &-2606163238851885588
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Name: Standalone Settings
   m_EditorClassIdentifier: Unity.AdaptivePerformance:UnityEngine.AdaptivePerformance:AdaptivePerformanceGeneralSettings
   m_LoaderManagerInstance: {fileID: -8916077312055570560}
-  m_InitManagerOnStart: 1
+  m_InitManagerOnStart: 0

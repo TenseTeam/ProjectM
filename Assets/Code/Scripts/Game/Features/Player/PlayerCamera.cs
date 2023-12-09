@@ -8,7 +8,7 @@
     using VUDK.Extensions;
     using VUDK.Patterns.Initialization.Interfaces;
 
-    public class PlayerCamera : CameraFreeLook, IInject<ExplorationManager>
+    public class PlayerCamera : CameraFreeLook, IInit<ExplorationManager>
     {
         private ExplorationManager _explorationManager;
 
@@ -24,7 +24,7 @@
             EventManager.Ins.AddListener(ExplorationEventKeys.OnEndTransition, OnEndTransition);
         }
 
-        public void Inject(ExplorationManager eplorationManager)
+        public void Init(ExplorationManager eplorationManager)
         {
             if (Check()) return;
             _explorationManager = eplorationManager;

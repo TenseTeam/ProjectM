@@ -10,7 +10,7 @@
         [SerializeField]
         private Animator _animator;
 
-        private TimerTask _clipDelayTask = new TimerTask();
+        private DelayTask _clipDelayTask = new DelayTask();
 
         protected override void OnEnable()
         {
