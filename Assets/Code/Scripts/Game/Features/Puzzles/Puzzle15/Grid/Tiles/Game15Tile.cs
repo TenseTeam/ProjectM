@@ -8,8 +8,15 @@
     public class Game15Tile : GridTileBase
     {
         public Game15Piece InsertedPiece { get; private set; }
+        public int TileIndex { get; private set; }
 
         public bool IsOccupied => InsertedPiece != null;
+
+        public void Init(int tileIndex, Vector2Int position)
+        {
+            base.Init(position);
+            TileIndex = tileIndex;
+        }
 
         public void InsertPiece(Game15Piece piece)
         {

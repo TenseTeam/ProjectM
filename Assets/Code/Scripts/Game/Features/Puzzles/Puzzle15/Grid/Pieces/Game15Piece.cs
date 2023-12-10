@@ -2,27 +2,24 @@
 {
     using UnityEngine;
     using UnityEngine.UI;
-    using VUDK.Patterns.Initialization.Interfaces;
     using VUDK.Patterns.Pooling;
 
     [RequireComponent(typeof(Image))]
-    public class Game15Piece : PooledObject, IInit<Sprite>
+    public class Game15Piece : PooledObject
     {
         private Image _image;
+
+        public int PieceIndex { get; private set; }
 
         private void Awake()
         {
             TryGetComponent(out _image);
         }
 
-        public void Init(Sprite sprite)
+        public void Init(int pieceIndex, Sprite sprite)
         {
+            PieceIndex = pieceIndex;
             _image.sprite = sprite;
-        }
-
-        public bool Check()
-        {
-            return _image != null;
         }
     }
 }

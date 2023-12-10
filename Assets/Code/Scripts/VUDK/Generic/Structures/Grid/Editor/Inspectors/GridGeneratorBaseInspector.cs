@@ -18,11 +18,8 @@ namespace VUDK.Generic.Structures.Grid.Editor.Inspectors
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
-            if(GUILayout.Button("Generate Grid"))
-                _grid.GenerateGrid();
-            if(GUILayout.Button("Clear Grid"))
-                _grid.ClearGrid();
             GUILayout.Space(4);
+            if (GUILayout.Button("Clear Grid")) _grid.ClearGrid();
         }
     }
 }

@@ -5,15 +5,16 @@
 
     public static class TextureExtension
     {
-        public static List<Sprite> CreateSpriteSheet(Texture2D textureSpriteSheet, int columns, int rows)
+        public static Dictionary<int, Sprite> CreateSpriteSheet(Texture2D textureSpriteSheet, int columns, int rows)
         {
-            List<Sprite> sprites = new List<Sprite>();
+            Dictionary<int, Sprite> spriteDict = new Dictionary<int, Sprite>();
             int spriteWidth = textureSpriteSheet.width / columns;
             int spriteHeight = textureSpriteSheet.height / rows;
 
-            for (int col = 0; col < columns; col++)
+            int index = 0;
+            for (int row = rows - 1; row >= 0; row--)
             {
-                for (int row = 0; row < rows; row++)
+                for (int col = 0; col < columns; col++, index++)
                 {
                     Rect rect = new Rect(col * spriteWidth, row * spriteHeight, spriteWidth, spriteHeight);
 
@@ -22,11 +23,11 @@
                     spriteTexture.SetPixels(colors);
                     spriteTexture.Apply();
 
-                    sprites.Add(Sprite.Create(spriteTexture, new Rect(0, 0, spriteWidth, spriteHeight), new Vector2(0.5f, 0.5f)));
+                    spriteDict.Add(index, Sprite.Create(spriteTexture, new Rect(0, 0, spriteWidth, spriteHeight), new Vector2(0.5f, 0.5f)));
                 }
             }
 
-            return sprites;
+            return spriteDict;
         }
     }
 }
