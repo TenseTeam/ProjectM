@@ -6,6 +6,7 @@
     using VUDK.Generic.Managers.Main;
     using VUDK.Patterns.Initialization.Interfaces;
     using VUDK.Generic.Serializable;
+    using VUDK.Patterns.Pooling.Keys;
 
     [RequireComponent(typeof(AudioSource))]
     public class AudioSFX : PooledObject, IInit<AudioClip>

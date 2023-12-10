@@ -1,8 +1,10 @@
 ﻿namespace VUDK.Generic.Structures.Grid.Bases
 {
     using UnityEngine;
+    using VUDK.Generic.Structures.Grid.Interfaces;
+    using VUDK.Patterns.Initialization.Interfaces;
 
-    public abstract class GridBase<T> : GridGeneratorBase where T : GridTileBase
+    public abstract class GridBase<T> : MonoBehaviour, IGrid, IInit where T : GridTileBase
     {
         [Header("Tile")]
         [SerializeField]
@@ -13,11 +15,21 @@
 
         public T[,] GridTiles { get; private set; }
 
+        public virtual void Init()
+        {
+            if(Check()) GenerateGrid();
+        }
+
+        public virtual bool Check()
+        {
+            return _tilePrefab != null;
+        }
+
         /// <summary>
         /// Generates a grid of T components.
         /// </summary>
         /// <returns>Grid of T components.</returns>
-        public override void GenerateGrid()
+        public virtual void GenerateGrid()
         {
             ClearGrid();
 
@@ -34,7 +46,7 @@
             GridTiles = tiles;
         }
 
-        public override void ClearGrid()
+        public virtual void ClearGrid()
         {
             GridTiles = null;
 
@@ -45,6 +57,8 @@
                 DestroyImmediate(children[i].gameObject);
             }
         }
+
+        public virtual void FillGrid() { }
 
         /// <summary>
         /// Checks if two cells in the grid are vertically or horizontally adjacent.

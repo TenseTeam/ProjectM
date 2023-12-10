@@ -17,10 +17,10 @@
         [SerializeField]
         public UnityEvent OnPuzzleResolved;
 
-        public virtual bool BeginPuzzle()
+        public virtual void BeginPuzzle()
         {
-            if (IsSolved && !_isRepeatable) return false;
-            return true;
+            if (IsSolved && !_isRepeatable)
+                return;
         }
 
         public virtual void ResolvePuzzle()

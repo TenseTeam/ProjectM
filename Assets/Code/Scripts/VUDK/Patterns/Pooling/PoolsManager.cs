@@ -2,6 +2,7 @@
 {
     using UnityEngine;
     using VUDK.Generic.Serializable;
+    using VUDK.Patterns.Pooling.Keys;
 
     [DefaultExecutionOrder(-100)]
     public sealed class PoolsManager : MonoBehaviour

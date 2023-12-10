@@ -3,24 +3,25 @@ namespace VUDK.Generic.Structures.Grid.Editor.Inspectors
     using UnityEditor;
     using UnityEngine;
     using VUDK.Generic.Structures.Grid.Bases;
+    using VUDK.Generic.Structures.Grid.Interfaces;
 
-    [CustomEditor(typeof(GridGeneratorBase), true)]
+    [CustomEditor(typeof(GridBase<>), true)]
     public class GridGeneratorBaseInspector : Editor
     {
-        private GridGeneratorBase _gridGenerator;
+        private IGrid _grid;
 
         private void OnEnable()
         {
-            _gridGenerator = target as GridGeneratorBase;
+            _grid = target as IGrid;
         }
 
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
             if(GUILayout.Button("Generate Grid"))
-                _gridGenerator.GenerateGrid();
+                _grid.GenerateGrid();
             if(GUILayout.Button("Clear Grid"))
-                _gridGenerator.ClearGrid();
+                _grid.ClearGrid();
             GUILayout.Space(4);
         }
     }

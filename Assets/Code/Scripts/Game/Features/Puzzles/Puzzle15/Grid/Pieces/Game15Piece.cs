@@ -1,13 +1,14 @@
-﻿namespace VUDK.Features.More.PuzzleSystem.GenericPuzzles.Puzzle15.Grid.Pieces
+﻿namespace ProjectM.Features.Puzzles.Puzzle15.Grid.Pieces
 {
     using UnityEngine;
     using UnityEngine.UI;
     using VUDK.Patterns.Initialization.Interfaces;
+    using VUDK.Patterns.Pooling;
 
     [RequireComponent(typeof(Image))]
-    public class Game15Piece : MonoBehaviour, IInit<Sprite>
+    public class Game15Piece : PooledObject, IInit<Sprite>
     {
-        public Image _image;
+        private Image _image;
 
         private void Awake()
         {
