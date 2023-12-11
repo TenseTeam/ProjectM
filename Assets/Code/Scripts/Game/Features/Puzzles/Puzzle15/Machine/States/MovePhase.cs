@@ -11,10 +11,12 @@
 
         public override void Enter()
         {
+            Context.Puzzle.OnMovedPiece += OnMovedPiece;
         }
 
         public override void Exit()
         {
+            Context.Puzzle.OnMovedPiece -= OnMovedPiece;
         }
 
         public override void FixedProcess()
@@ -24,5 +26,11 @@
         public override void Process()
         {
         }
+
+        private void OnMovedPiece()
+        {
+            ChangeState(Game15PhaseKey.CheckPhase);
+        }
+
     }
 }

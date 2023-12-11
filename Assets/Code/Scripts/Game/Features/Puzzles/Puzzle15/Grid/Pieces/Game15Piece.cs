@@ -1,5 +1,6 @@
 ﻿namespace ProjectM.Features.Puzzles.Puzzle15.Grid.Pieces
 {
+    using System;
     using UnityEngine;
     using UnityEngine.UI;
     using VUDK.Patterns.Pooling;
@@ -14,6 +15,7 @@
         private void Awake()
         {
             TryGetComponent(out _image);
+
         }
 
         public void Init(int pieceIndex, Sprite sprite)

@@ -1,56 +1,111 @@
 ﻿namespace ProjectM.Features.Puzzles.Puzzle15.Grid
 {
     using System.Collections.Generic;
+    using System.Linq;
     using UnityEngine;
     using VUDK.Extensions;
     using VUDK.Generic.Structures.Grid;
-    using VUDK.Patterns.Initialization.Interfaces;
     using ProjectM.Features.Puzzles.Puzzle15.Grid.Pieces;
     using ProjectM.Features.Puzzles.Puzzle15.Grid.Tiles;
     using ProjectM.Patterns.Factories;
 
-    public class Game15Grid : LayoutGrid<Game15Tile>, IInit<Texture2D>
+    public class Game15Grid : LayoutGrid<Game15Tile>
     {
         private Texture2D _textureSpriteSheet;
-        private Dictionary<int, Sprite> _pieceSprites;
+        private Dictionary<int, Sprite> _piecesSprites;
+        private Game15Puzzle _puzzle;
         private int _tileIndex;
 
-        public void Init(Texture2D spriteSheet)
+        private void OnValidate()
+        {
+            RectTransform.sizeDelta = new Vector2(Size.x, Size.y);
+        }
+
+        public void Init(Game15Puzzle puzzle, Texture2D spriteSheet)
         {
             _textureSpriteSheet = spriteSheet;
-            _pieceSprites = TextureExtension.CreateSpriteSheet(_textureSpriteSheet, Size.x, Size.y);
+            _puzzle = puzzle;
+            _piecesSprites = TextureExtension.CreateSpriteSheet(_textureSpriteSheet, Size.x, Size.y);
             GenerateGrid();
-            FillGrid();
+            Shuffle();
         }
 
         protected override void InitTile(Game15Tile tile, Vector2Int gridPosition)
         {
             base.InitTile(tile, gridPosition);
-            tile.Init(_tileIndex++, gridPosition);
+            tile.Init(_puzzle, _tileIndex++, gridPosition);
         }
 
         public override void FillGrid()
         {
-            Dictionary<int, Sprite> spritesPool = new Dictionary<int, Sprite>(_pieceSprites);
-            int lastPieceIndex = _pieceSprites.Count - 1;
+            ClearPieces();
 
-            GameObject go = new GameObject("LastPiece");
-            SpriteRenderer im = go.AddComponent<SpriteRenderer>();
-            im.sprite = spritesPool[lastPieceIndex];
-
-            spritesPool.Remove(lastPieceIndex);
-
-            for (int r = 0; r < Size.x; r++)
+            for (int y = 0; y < Size.y; y++)
             {
-                for (int c = 0; c < Size.y; c++)
+                for (int x = 0; x < Size.x; x++)
                 {
-                    if (r == Size.x - 1 && c == Size.y - 1) break; // Skip last piece
+                    if (x == Size.x - 1 && y == Size.y - 1) break; // Skip last piece
 
-                    var randomElement = spritesPool.GetRandomElementAndRemove();
-                    Game15Piece piece = GameFactory.Create(randomElement.Key, randomElement.Value);
-                    GridTiles[r, c].InsertPiece(piece);
+                    int index = x + y * Size.x;
+                    var element = _piecesSprites.ElementAt(index);
+                    Game15Piece piece = GameFactory.Create(element.Key, element.Value);
+                    GridTiles[x, y].InsertPiece(piece);
                 }
             }
+        }
+
+        public void ClearPieces()
+        {
+            foreach (var tile in GridTiles)
+            {
+                if (tile.IsOccupied)
+                  tile.RemovePiece();
+            }
+        }
+
+        public void Shuffle()
+        {
+            FillGrid(); // To make sure is in order
+
+            int maxSize = Mathf.Max(Size.x, Size.y);
+            int shuffleCount = maxSize % 2 == 0 && (Size.x != Size.y) ? 15 : 30;
+
+            for(int i = 0; i < shuffleCount; i++)
+            {
+                Game15Tile tileA;
+                Game15Tile tileB;
+
+                do
+                {
+                    tileA = GetRandomTile();
+                    tileB = GetRandomTile();
+                } while (tileA.TileIndex == tileB.TileIndex);
+
+                tileA.SwitchPiece(tileB, this);
+            }
+        }
+
+        public Game15Tile GetEmptyTile()
+        {
+            foreach (var tile in GridTiles)
+            {
+                if (!tile.IsOccupied) return tile;
+            }
+
+            return null;
+        }
+
+        private Game15Tile GetRandomTile()
+        {
+            int x, y;
+
+            do
+            {
+                x = Random.Range(0, Size.x);
+                y = Random.Range(0, Size.y);
+            } while ( (x == Size.x - 1 && y == Size.y - 1)); // Do not touch the empty tile
+
+            return GridTiles[x, y];
         }
     }
 }

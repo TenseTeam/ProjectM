@@ -7,9 +7,10 @@
     {
         [Header("Puzzle Settings")]
         [SerializeField]
-        private bool _isRepeatable;
+        protected bool IsRepeatable;
 
         public bool IsSolved { get; private set;  }
+        public bool IsInProgress { get; private set; }
 
         [Header("Puzzle Events")]
         [SerializeField]
@@ -19,13 +20,23 @@
 
         public virtual void BeginPuzzle()
         {
-            if (IsSolved && !_isRepeatable)
-                return;
+            ResolvePuzzle();
+        }
+
+        public virtual void ResumePuzzle()
+        {
+            IsInProgress = true;
+        }
+
+        public virtual void InterruptPuzzle()
+        {
+            IsInProgress = false;
         }
 
         public virtual void ResolvePuzzle()
         {
             IsSolved = true;
+            IsInProgress = false;
         }
     }
 }

@@ -7,12 +7,12 @@
     [RequireComponent(typeof(GridLayoutGroup))]
     public abstract class LayoutGrid<T> : GridBase<T> where T : GridTileBase
     {
-        private RectTransform rectTransform => transform as RectTransform;
+        protected RectTransform RectTransform => transform as RectTransform;
 
         public override void GenerateGrid()
         {
             base.GenerateGrid();
-            rectTransform.sizeDelta = new Vector2(Size.x, Size.y);
+            RectTransform.sizeDelta = new Vector2(Size.x, Size.y);
         }
     }
 }
