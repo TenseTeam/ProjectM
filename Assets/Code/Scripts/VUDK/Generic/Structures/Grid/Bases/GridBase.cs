@@ -1,6 +1,7 @@
 ﻿namespace VUDK.Generic.Structures.Grid.Bases
 {
     using UnityEngine;
+    using VUDK.Extensions;
     using VUDK.Generic.Structures.Grid.Interfaces;
     using VUDK.Patterns.Initialization.Interfaces;
 
@@ -150,5 +151,14 @@
 
             return p1 - p2 == 1 && positionTileB.x - positionTileA.x == 0;
         }
+
+#if UNITY_EDITOR
+        protected virtual void OnDrawGizmos()
+        {
+            DrawBounds();
+        }
+
+        protected virtual void DrawBounds() { }
+#endif
     }
 }

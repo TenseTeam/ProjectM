@@ -1,8 +1,8 @@
 ﻿namespace ProjectM.Features.Puzzles.Puzzle15.Grid.Pieces
 {
-    using System;
     using UnityEngine;
     using UnityEngine.UI;
+    using VUDK.Extensions;
     using VUDK.Patterns.Pooling;
 
     [RequireComponent(typeof(Image))]
@@ -15,13 +15,32 @@
         private void Awake()
         {
             TryGetComponent(out _image);
-
         }
 
         public void Init(int pieceIndex, Sprite sprite)
         {
             PieceIndex = pieceIndex;
+            transform.name = $"Game15Piece {pieceIndex}";
             _image.sprite = sprite;
         }
+
+#if UNITY_EDITOR
+        private void OnDrawGizmos()
+        {
+            DrawPieceIndex();
+        }
+
+        private void DrawPieceIndex()
+        {
+            GUIStyle style = new GUIStyle()
+            {
+                wordWrap = true,
+                alignment = TextAnchor.MiddleCenter,
+                fontSize = 20,
+                fontStyle = FontStyle.Bold,
+            };
+            UnityEditor.Handles.Label(transform.position, PieceIndex.ToString(), style);
+        }
+#endif
     }
 }

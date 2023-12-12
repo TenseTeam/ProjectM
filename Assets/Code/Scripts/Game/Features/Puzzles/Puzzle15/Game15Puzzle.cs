@@ -21,7 +21,7 @@
 
         public Game15Tile[,] Tiles => _grid.GridTiles;
 
-        public Game15Tile EmptyTile => _grid.GetEmptyTile();
+        public Game15Tile EmptyTile => _grid.EmptyTile;
 
         public event Action OnMovedPiece;
 

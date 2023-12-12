@@ -1,6 +1,7 @@
 ﻿namespace VUDK.Generic.Structures.Grid
 {
     using UnityEngine;
+    using VUDK.Extensions;
     using VUDK.Generic.Structures.Grid.Bases;
 
     public abstract class WorldGrid<T> : GridBase<T> where T : GridTileBase
@@ -24,5 +25,13 @@
             Vector3 gridPos = new Vector3(gridPosition.x, gridPosition.y, 0f);
             tile.transform.position = transform.position + gridPos;
         }
+
+#if UNITY_EDITOR
+        protected override void DrawBounds()
+        {
+            Gizmos.color = Color.yellow;
+            GizmosExtension.DrawWireCube(transform.position, new Vector3(Size.x, Size.y, 0), transform.rotation);
+        }
+#endif
     }
 }

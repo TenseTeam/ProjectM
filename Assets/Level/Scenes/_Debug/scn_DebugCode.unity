@@ -5763,6 +5763,7 @@ MonoBehaviour:
   _tilePrefab: {fileID: 8262517567112971594, guid: 99b1f254770503a42b1fd33c74b5142a,
     type: 3}
   <Size>k__BackingField: {x: 3, y: 3}
+  shuffleCount: 5
 --- !u!114 &318163499
 MonoBehaviour:
   m_ObjectHideFlags: 0
