@@ -261,10 +261,8 @@
             }
         }
 
-        private void SelectChoice(object sender, OnDialogueChoiceEventArgs args)
+        private void SelectChoice(int choiceIndex)
         {
-            int choiceIndex = args.ChoiceIndex;
-
             if (_currentDialogue.Choices[choiceIndex].NextDialogue == null)
             {
                 InterruptDialogue();

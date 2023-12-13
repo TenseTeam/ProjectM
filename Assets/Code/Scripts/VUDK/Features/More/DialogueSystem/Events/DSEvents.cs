@@ -7,7 +7,7 @@
     {
         // Dialogue Handler Events
         public static EventHandler<OnStartDialogueEventArgs> DialogueStartHandler;
-        public static EventHandler<OnDialogueChoiceEventArgs> DialogueChoiceHandler;
+        public static Action<int> DialogueChoiceHandler;
         public static Action DialogueInterruptHandler;
 
         // Dialogue Manager Events
@@ -35,16 +35,6 @@
             DialogueData = dSDialogueData;
             RandomStart = randomStart;
             IsInstant = isInstant;
-        }
-    }
-
-    public class OnDialogueChoiceEventArgs : EventArgs
-    {
-        public int ChoiceIndex;
-
-        public OnDialogueChoiceEventArgs(int choiceIndex)
-        {
-            ChoiceIndex = choiceIndex;
         }
     }
 }

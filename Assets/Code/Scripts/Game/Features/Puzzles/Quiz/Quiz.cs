@@ -73,8 +73,7 @@
 
         private void StartQuiz(DSDialogueData fromDialogue, bool randomStartDialogue)
         {
-            OnStartDialogueEventArgs args = new OnStartDialogueEventArgs(_quizDialogueData, fromDialogue, randomStartDialogue, _isInstant);
-            DSEvents.DialogueStartHandler?.Invoke(this, args);
+            DSEventsHandler.StartDialogue(this, _quizDialogueData, fromDialogue, randomStartDialogue, _isInstant);
         }
 
         private void CompleteQuiz(DSDialogueContainerData container)

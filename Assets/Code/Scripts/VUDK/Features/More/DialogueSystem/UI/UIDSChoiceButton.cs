@@ -56,7 +56,7 @@
 
         private void SelectChoice()
         {
-            DSEvents.DialogueChoiceHandler?.Invoke(this, new OnDialogueChoiceEventArgs(_choiceIndex));
+            DSEventsHandler.SendDialogueChoice(_choiceIndex);
         }
     }
 }

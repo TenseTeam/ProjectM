@@ -16,12 +16,12 @@ MonoBehaviour:
   DialogueGroups:
     _dictionary: []
   UngroupedDialogues:
-  - {fileID: 11400000, guid: 4939738da67405844a2c1897ac670d32, type: 2}
   - {fileID: 11400000, guid: 01e879b346e155a469e2b48457ca632e, type: 2}
-  - {fileID: 11400000, guid: 708c2fad6f5063848bad2ee22610f5c7, type: 2}
   - {fileID: 11400000, guid: 211a9f0c2febe014d8fbeb67b0ba839b, type: 2}
-  - {fileID: 11400000, guid: f553122bf00c35742b14b97e457ed3b9, type: 2}
+  - {fileID: 11400000, guid: 708c2fad6f5063848bad2ee22610f5c7, type: 2}
+  - {fileID: 11400000, guid: 4939738da67405844a2c1897ac670d32, type: 2}
   - {fileID: 11400000, guid: 81925211d36a6614e84c7052855c6aad, type: 2}
+  - {fileID: 11400000, guid: f553122bf00c35742b14b97e457ed3b9, type: 2}
   - {fileID: 11400000, guid: be07a53f25f15cd4494de0bb8450eaa9, type: 2}
   StartingDialogues:
   - {fileID: 11400000, guid: 4939738da67405844a2c1897ac670d32, type: 2}

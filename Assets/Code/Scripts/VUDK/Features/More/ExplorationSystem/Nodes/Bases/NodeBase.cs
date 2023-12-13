@@ -46,6 +46,11 @@ namespace VUDK.Features.More.ExplorationSystem.Nodes
             }
         }
 
+        protected virtual void Awake()
+        {
+            Disable();
+        }
+
         protected virtual void OnEnable()
         {
             EventManager.Ins.AddListener<ExplorationManager>(ExplorationEventKeys.OnExplorationManagerInit, Init);

@@ -5842,7 +5842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tilePrefab: {fileID: 8262517567112971594, guid: 99b1f254770503a42b1fd33c74b5142a,
     type: 3}
-  <Size>k__BackingField: {x: 2, y: 2}
+  <Size>k__BackingField: {x: 3, y: 3}
 --- !u!114 &318163499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6290,8 +6290,8 @@ Transform:
   - {fileID: 1133907395}
   - {fileID: 68569432}
   - {fileID: 1321525002}
-  - {fileID: 8495801338322684690}
   - {fileID: 7734599877129923527}
+  - {fileID: 8495801338322684690}
   - {fileID: 2004214141}
   - {fileID: 938748456}
   m_Father: {fileID: 0}
@@ -17495,6 +17495,7 @@ MonoBehaviour:
     OnAnswer:
       m_PersistentCalls:
         m_Calls: []
+  _isInstant: 0
   OnAnyCorrectAnswer:
     m_PersistentCalls:
       m_Calls: []
@@ -25812,6 +25813,16 @@ PrefabInstance:
       propertyPath: _firstNode
       value: 
       objectReference: {fileID: 604115577}
+    - target: {fileID: 703476227981562141, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 703476227981562141, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _hasCustomFirstTransition
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3728949088606423929, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_Name

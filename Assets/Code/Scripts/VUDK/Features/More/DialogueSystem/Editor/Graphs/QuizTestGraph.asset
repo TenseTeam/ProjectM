@@ -15,17 +15,6 @@ MonoBehaviour:
   FileName: QuizTest
   Groups: []
   Nodes:
-  - NodeID: 09458896-cf43-43d8-9eb0-e86ecdcda81a
-    GroupID: 
-    Position: {x: 342.4, y: 158.4}
-    Name: Intro
-    DialogueText: Welcome to the quiz.
-    ActorData: {fileID: 0}
-    DialogueAudioClip: {fileID: 0}
-    DialogueType: 0
-    Choices:
-    - Text: Next Dialogue
-      NodeID: 291b2243-ce21-4d4f-a022-b99bd8869966
   - NodeID: 291b2243-ce21-4d4f-a022-b99bd8869966
     GroupID: 
     Position: {x: 858.4, y: 158.4}
@@ -39,20 +28,9 @@ MonoBehaviour:
       NodeID: b35c6016-a004-4e94-892b-6b1850254313
     - Text: 4
       NodeID: f5a7c445-8d1d-4c8c-9c53-6829edf250ff
-  - NodeID: b35c6016-a004-4e94-892b-6b1850254313
-    GroupID: 
-    Position: {x: 1136, y: -100.8}
-    Name: TryAgain
-    DialogueText: Try Again
-    ActorData: {fileID: 0}
-    DialogueAudioClip: {fileID: 0}
-    DialogueType: 0
-    Choices:
-    - Text: Next Dialogue
-      NodeID: 291b2243-ce21-4d4f-a022-b99bd8869966
   - NodeID: f5a7c445-8d1d-4c8c-9c53-6829edf250ff
     GroupID: 
-    Position: {x: 1355.2, y: 205.59999}
+    Position: {x: 1312.8, y: 205.59999}
     Name: CorrectAnswer4
     DialogueText: Correct
     ActorData: {fileID: 0}
@@ -61,9 +39,42 @@ MonoBehaviour:
     Choices:
     - Text: Next Dialogue
       NodeID: 86a71df5-081d-40dd-80c5-048271300648
+  - NodeID: b35c6016-a004-4e94-892b-6b1850254313
+    GroupID: 
+    Position: {x: 858.4, y: -118.399994}
+    Name: TryAgain
+    DialogueText: Try Again
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 291b2243-ce21-4d4f-a022-b99bd8869966
+  - NodeID: 09458896-cf43-43d8-9eb0-e86ecdcda81a
+    GroupID: 
+    Position: {x: 445.6, y: 205.59999}
+    Name: Intro
+    DialogueText: Welcome to the quiz.
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 291b2243-ce21-4d4f-a022-b99bd8869966
+  - NodeID: 7c951d6d-7bea-4416-9844-0906fb5f2797
+    GroupID: 
+    Position: {x: 1760.8, y: -118.399994}
+    Name: TryAgain2
+    DialogueText: Try Again2
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 86a71df5-081d-40dd-80c5-048271300648
   - NodeID: 86a71df5-081d-40dd-80c5-048271300648
     GroupID: 
-    Position: {x: 1813.6, y: 205.59999}
+    Position: {x: 1760.8, y: 205.59999}
     Name: DialogueName
     DialogueText: 1+1?
     ActorData: {fileID: 0}
@@ -74,20 +85,9 @@ MonoBehaviour:
       NodeID: 80989ab4-41d9-4677-8e6d-9c29d2435312
     - Text: 1
       NodeID: 7c951d6d-7bea-4416-9844-0906fb5f2797
-  - NodeID: 7c951d6d-7bea-4416-9844-0906fb5f2797
-    GroupID: 
-    Position: {x: 1813.6, y: -77.6}
-    Name: TryAgain2
-    DialogueText: Try Again2
-    ActorData: {fileID: 0}
-    DialogueAudioClip: {fileID: 0}
-    DialogueType: 0
-    Choices:
-    - Text: Next Dialogue
-      NodeID: 86a71df5-081d-40dd-80c5-048271300648
   - NodeID: 80989ab4-41d9-4677-8e6d-9c29d2435312
     GroupID: 
-    Position: {x: 2244.8, y: 252.8}
+    Position: {x: 2205.6, y: 205.59999}
     Name: CorrectAnswer5
     DialogueText: Correct.
     ActorData: {fileID: 0}
@@ -98,12 +98,12 @@ MonoBehaviour:
       NodeID: 
   OldGroupNames: []
   OldUngroupedNodeNames:
-  - Intro
   - Question1
-  - TryAgain
   - CorrectAnswer4
-  - DialogueName
+  - TryAgain
+  - Intro
   - TryAgain2
+  - DialogueName
   - CorrectAnswer5
   OldGroupedNodeNames:
     _dictionary: []

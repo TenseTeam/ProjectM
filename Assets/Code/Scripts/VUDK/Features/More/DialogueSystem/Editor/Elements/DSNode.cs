@@ -142,7 +142,7 @@ namespace VUDK.Features.More.DialogueSystem.Editor.Elements
             customDataContainer.Add(audioClipObject);
             customDataContainer.Add(textFoldout);
             extensionContainer.Add(customDataContainer);
-
+            
             #endregion EXTENSIONS CONTAINER
         }
 

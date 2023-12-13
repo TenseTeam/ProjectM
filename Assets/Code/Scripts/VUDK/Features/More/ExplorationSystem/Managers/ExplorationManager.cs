@@ -56,6 +56,14 @@
             Init();
         }
 
+#if DEBUG
+        [ContextMenu("Begin")]
+#endif
+        public void Begin()
+        {
+            CurrentTargetNode.OnFirstNode(_hasCustomFirstTransition, _firstTransitionType);
+        }
+
         public override void Init()
         {
             EventManager.Ins.TriggerEvent(ExplorationEventKeys.OnExplorationManagerInit, this);
@@ -94,8 +102,7 @@
             CurrentTargetNode = _firstNode;
             PreviousTargetNode = CurrentTargetNode;
 
-            if (_playOnAwake)
-                CurrentTargetNode.OnFirstNode(_hasCustomFirstTransition, _firstTransitionType);
+            if (_playOnAwake) Begin();
         }
 
 #if UNITY_EDITOR
