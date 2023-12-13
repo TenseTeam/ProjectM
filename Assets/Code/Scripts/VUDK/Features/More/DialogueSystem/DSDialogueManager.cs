@@ -89,17 +89,15 @@
 
         public void StartDialogue(object sender, OnStartDialogueEventArgs args)
         {
-            DSEvents.OnDMStart?.Invoke();
-            bool randomStartDialogue = args.RandomStart;
-            DSDialogueData firstDialogue = args.DialogueData;
-
+            DSEvents.OnDMStart?.Invoke(_dialogueContainerData);
+            DSEvents.OnDMAnyStart?.Invoke();
             _dialogueContainerData = args.DialogueContainerData;
             _isInstant = args.IsInstant;
 
-            if (randomStartDialogue)
+            if (args.RandomStart || !args.DialogueData)
                 _currentDialogue = RandomStartDialogue();
             else
-                _currentDialogue = firstDialogue;
+                _currentDialogue = args.DialogueData;
 
             _isDialogueEnded = false;
             Enable();
@@ -108,15 +106,16 @@
 
         private void EndDialogue()
         {
-            DSEvents.OnDMEnd?.Invoke();
+            DSEvents.OnDMEnd?.Invoke(_dialogueContainerData);
+            DSEvents.OnDMAnyEnd?.Invoke();
             _isInstant = false;
             _isDialogueEnded = true;
         }
 
         public void NextDialogue()
         {
-            DSEvents.OnDMNext?.Invoke();
-            DSEvents.OnDMDialogue?.Invoke(_currentDialogue);
+            DSEvents.OnDMAnyNext?.Invoke();
+            DSEvents.OnDMNext?.Invoke(_currentDialogue);
             DisplayActorInfo();
             PlayDialogueAudio();
 
@@ -194,6 +193,7 @@
 
         private void DisableChoicesBox()
         {
+            _isWaitingForChoice = false;
             _choicesBox.gameObject.SetActive(false);
         }
 
@@ -204,8 +204,8 @@
 
         public void InterruptDialogue()
         {
+            DSEvents.OnDMInterrupt?.Invoke(_currentDialogue);
             StopAllCoroutines();
-            EndDialogue();
             Disable();
         }
 
@@ -237,7 +237,6 @@
             if (_hideDialogueBoxOnChoice)
                 EnableDialogueBox();
 
-            _isWaitingForChoice = false;
             DisableChoicesBox();
         }
 

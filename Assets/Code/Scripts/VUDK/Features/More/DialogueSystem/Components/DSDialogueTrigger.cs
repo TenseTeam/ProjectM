@@ -11,12 +11,12 @@
 
         private void OnEnable()
         {
-            DSEvents.OnDMEnd += OnDialogueEnded;
+            DSEvents.OnDMAnyEnd += OnDialogueEnded;
         }
 
         private void OnDisable()
         {
-            DSEvents.OnDMEnd -= OnDialogueEnded;
+            DSEvents.OnDMAnyEnd -= OnDialogueEnded;
         }
 
 #if UNITY_EDITOR

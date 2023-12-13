@@ -10,6 +10,7 @@
         protected bool IsRepeatable;
 
         public bool IsSolved { get; private set;  }
+        public bool IsFocused { get; private set; }
         public bool IsInProgress { get; private set; }
 
         [Header("Puzzle Events")]
@@ -21,23 +22,25 @@
         public virtual void BeginPuzzle()
         {
             OnPuzzleBegin?.Invoke();
-            ResolvePuzzle();
+            IsFocused = true;
+            IsInProgress = true;
         }
 
         public virtual void ResumePuzzle()
         {
-            IsInProgress = true;
+            IsFocused = true;
         }
 
         public virtual void InterruptPuzzle()
         {
-            IsInProgress = false;
+            IsFocused = false;
         }
 
         public virtual void ResolvePuzzle()
         {
             OnPuzzleResolved?.Invoke();
             IsSolved = true;
+            IsFocused = false;
             IsInProgress = false;
         }
     }

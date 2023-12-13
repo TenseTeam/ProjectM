@@ -30,14 +30,14 @@
         protected virtual void OnEnable()
         {
             ActorData.OnEmitDialogue += OnEmission;
-            DSEvents.OnDMNext += OnStop;
+            DSEvents.OnDMAnyNext += OnStop;
             DSEvents.OnDMDisable += OnStop;
         }
 
         protected virtual void OnDisable()
         {
             ActorData.OnEmitDialogue -= OnEmission;
-            DSEvents.OnDMNext -= OnStop;
+            DSEvents.OnDMAnyNext -= OnStop;
             DSEvents.OnDMDisable -= OnStop;
         }
 

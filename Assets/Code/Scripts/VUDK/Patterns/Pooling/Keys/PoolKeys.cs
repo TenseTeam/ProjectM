@@ -1,11 +1,12 @@
 ﻿namespace VUDK.Patterns.Pooling.Keys
 {
+    // TODO: Find a better way to manage pool keys.
     public enum PoolKeys
     {
         // VUDK
         AudioSFX,
 
-        // Game
+        // Puzzles
         Game15Piece
     }
 }
