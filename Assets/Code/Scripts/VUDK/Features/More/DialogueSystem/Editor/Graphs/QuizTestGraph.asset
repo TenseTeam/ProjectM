@@ -15,9 +15,42 @@ MonoBehaviour:
   FileName: QuizTest
   Groups: []
   Nodes:
+  - NodeID: 7c951d6d-7bea-4416-9844-0906fb5f2797
+    GroupID: 
+    Position: {x: 1761, y: -118}
+    Name: TryAgain2
+    DialogueText: Try Again2
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 86a71df5-081d-40dd-80c5-048271300648
+  - NodeID: 09458896-cf43-43d8-9eb0-e86ecdcda81a
+    GroupID: 
+    Position: {x: 300, y: 184}
+    Name: Intro
+    DialogueText: Welcome to the quiz.
+    ActorData: {fileID: 11400000, guid: 3d9ee5f3a9f19784b937adfe67f2e6aa, type: 2}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 291b2243-ce21-4d4f-a022-b99bd8869966
+  - NodeID: b35c6016-a004-4e94-892b-6b1850254313
+    GroupID: 
+    Position: {x: 858, y: -203}
+    Name: TryAgain
+    DialogueText: Try Again
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 291b2243-ce21-4d4f-a022-b99bd8869966
   - NodeID: 291b2243-ce21-4d4f-a022-b99bd8869966
     GroupID: 
-    Position: {x: 858.4, y: 158.4}
+    Position: {x: 858, y: 158}
     Name: Question1
     DialogueText: 2 + 2?
     ActorData: {fileID: 0}
@@ -27,57 +60,13 @@ MonoBehaviour:
     - Text: 3
       NodeID: b35c6016-a004-4e94-892b-6b1850254313
     - Text: 4
-      NodeID: f5a7c445-8d1d-4c8c-9c53-6829edf250ff
-  - NodeID: f5a7c445-8d1d-4c8c-9c53-6829edf250ff
-    GroupID: 
-    Position: {x: 1312.8, y: 205.59999}
-    Name: CorrectAnswer4
-    DialogueText: Correct
-    ActorData: {fileID: 0}
-    DialogueAudioClip: {fileID: 0}
-    DialogueType: 0
-    Choices:
-    - Text: Next Dialogue
-      NodeID: 86a71df5-081d-40dd-80c5-048271300648
-  - NodeID: b35c6016-a004-4e94-892b-6b1850254313
-    GroupID: 
-    Position: {x: 858.4, y: -118.399994}
-    Name: TryAgain
-    DialogueText: Try Again
-    ActorData: {fileID: 0}
-    DialogueAudioClip: {fileID: 0}
-    DialogueType: 0
-    Choices:
-    - Text: Next Dialogue
-      NodeID: 291b2243-ce21-4d4f-a022-b99bd8869966
-  - NodeID: 09458896-cf43-43d8-9eb0-e86ecdcda81a
-    GroupID: 
-    Position: {x: 445.6, y: 205.59999}
-    Name: Intro
-    DialogueText: Welcome to the quiz.
-    ActorData: {fileID: 0}
-    DialogueAudioClip: {fileID: 0}
-    DialogueType: 0
-    Choices:
-    - Text: Next Dialogue
-      NodeID: 291b2243-ce21-4d4f-a022-b99bd8869966
-  - NodeID: 7c951d6d-7bea-4416-9844-0906fb5f2797
-    GroupID: 
-    Position: {x: 1760.8, y: -118.399994}
-    Name: TryAgain2
-    DialogueText: Try Again2
-    ActorData: {fileID: 0}
-    DialogueAudioClip: {fileID: 0}
-    DialogueType: 0
-    Choices:
-    - Text: Next Dialogue
-      NodeID: 86a71df5-081d-40dd-80c5-048271300648
+      NodeID: 6a70fd40-b108-4a90-969d-b4a252064639
   - NodeID: 86a71df5-081d-40dd-80c5-048271300648
     GroupID: 
-    Position: {x: 1760.8, y: 205.59999}
+    Position: {x: 1761, y: 206}
     Name: DialogueName
     DialogueText: 1+1?
-    ActorData: {fileID: 0}
+    ActorData: {fileID: 11400000, guid: 4fec460a183fbb740a0d575e361de15a, type: 2}
     DialogueAudioClip: {fileID: 0}
     DialogueType: 1
     Choices:
@@ -87,23 +76,34 @@ MonoBehaviour:
       NodeID: 7c951d6d-7bea-4416-9844-0906fb5f2797
   - NodeID: 80989ab4-41d9-4677-8e6d-9c29d2435312
     GroupID: 
-    Position: {x: 2205.6, y: 205.59999}
+    Position: {x: 2308, y: 227}
     Name: CorrectAnswer5
     DialogueText: Correct.
-    ActorData: {fileID: 0}
+    ActorData: {fileID: 11400000, guid: 3d9ee5f3a9f19784b937adfe67f2e6aa, type: 2}
     DialogueAudioClip: {fileID: 0}
     DialogueType: 0
     Choices:
     - Text: Next Dialogue
       NodeID: 
+  - NodeID: 6a70fd40-b108-4a90-969d-b4a252064639
+    GroupID: 
+    Position: {x: 1330, y: 206}
+    Name: Correct1
+    DialogueText: Dialogue text.
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 86a71df5-081d-40dd-80c5-048271300648
   OldGroupNames: []
   OldUngroupedNodeNames:
-  - Question1
-  - CorrectAnswer4
-  - TryAgain
-  - Intro
   - TryAgain2
+  - Intro
+  - TryAgain
+  - Question1
   - DialogueName
   - CorrectAnswer5
+  - Correct1
   OldGroupedNodeNames:
     _dictionary: []

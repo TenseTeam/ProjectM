@@ -20,6 +20,6 @@ MonoBehaviour:
   - Text: 3
     NextDialogue: {fileID: 11400000, guid: 708c2fad6f5063848bad2ee22610f5c7, type: 2}
   - Text: 4
-    NextDialogue: {fileID: 11400000, guid: 211a9f0c2febe014d8fbeb67b0ba839b, type: 2}
+    NextDialogue: {fileID: 11400000, guid: 3cd2fd34590aee54fb970f8fc18a4f73, type: 2}
   DialogueType: 1
   IsStartDialogue: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueName: DialogueName
   DialogueText: 1+1?
-  ActorData: {fileID: 0}
+  ActorData: {fileID: 11400000, guid: 4fec460a183fbb740a0d575e361de15a, type: 2}
   DialogueAudioClip: {fileID: 0}
   Choices:
   - Text: 2

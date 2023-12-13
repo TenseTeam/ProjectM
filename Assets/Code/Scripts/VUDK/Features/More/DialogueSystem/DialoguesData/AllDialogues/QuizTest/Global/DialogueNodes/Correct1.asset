@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71793e812f3192d4c83152084082ded1, type: 3}
-  m_Name: CorrectAnswer5
+  m_Name: Correct1
   m_EditorClassIdentifier: 
-  DialogueName: CorrectAnswer5
-  DialogueText: Correct.
-  ActorData: {fileID: 11400000, guid: 3d9ee5f3a9f19784b937adfe67f2e6aa, type: 2}
+  DialogueName: Correct1
+  DialogueText: Dialogue text.
+  ActorData: {fileID: 0}
   DialogueAudioClip: {fileID: 0}
   Choices:
   - Text: Next Dialogue
-    NextDialogue: {fileID: 0}
+    NextDialogue: {fileID: 11400000, guid: f553122bf00c35742b14b97e457ed3b9, type: 2}
   DialogueType: 0
   IsStartDialogue: 0

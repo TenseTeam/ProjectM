@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueName: Intro
   DialogueText: Welcome to the quiz.
-  ActorData: {fileID: 0}
+  ActorData: {fileID: 11400000, guid: 3d9ee5f3a9f19784b937adfe67f2e6aa, type: 2}
   DialogueAudioClip: {fileID: 0}
   Choices:
   - Text: Next Dialogue
