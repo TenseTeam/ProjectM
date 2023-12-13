@@ -9,9 +9,9 @@
     /// </summary>
     public abstract class PooledObject : MonoBehaviour, IPooledObject
     {
-        public Pool RelatedPool { get; private set; }
+        public GameObjectPool RelatedPool { get; private set; }
 
-        public void AssociatePool(Pool associatedPool)
+        public void AssociatePool(GameObjectPool associatedPool)
         {
             RelatedPool = associatedPool;
         }

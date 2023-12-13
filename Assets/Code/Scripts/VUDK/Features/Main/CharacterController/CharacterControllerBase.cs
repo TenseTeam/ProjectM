@@ -2,6 +2,7 @@
 {
     using System;
     using UnityEngine;
+    using VUDK.Generic.Serializable;
 
     public abstract class CharacterControllerBase : MonoBehaviour
     {
@@ -13,8 +14,8 @@
 
         [SerializeField, Header("Ground")]
         protected Vector3 GroundedOffset;
-        //[SerializeField]
-        //protected LayerMask GroundLayers;
+        [SerializeField]
+        protected LayerMask GroundLayers;
         [SerializeField]
         protected float GroundedRadius;
 
@@ -23,6 +24,7 @@
 
         public Vector2 InputMove { get; private set; }
         public abstract bool IsGrounded { get; }
+
         protected bool CanJump => IsGrounded;
 
         public event Action<Vector2> OnMovement;
@@ -54,9 +56,9 @@
         }
 
         /// <summary>
-        /// Stops the character movement.
+        /// Resets to zero its input movement.
         /// </summary>
-        public void StopCharacter()
+        public void StopInputMovementCharacter()
         {
             InputMove = Vector2.zero;
             StopSprint();
@@ -66,19 +68,20 @@
         /// <summary>
         /// Immediately stops the character on its current position.
         /// </summary>
-        public virtual void StopCharacterOnPosition()
-        {
-            StopCharacter();
-        }
+        public abstract void StopCharacterOnPosition();
 
-        public virtual void StopCharacterOnXPosition()
-        {
-            StopCharacter();
-        }
+        public abstract void StopCharacterOnXPosition();
 
-        public virtual void StopCharacterOnYPosition()
+        public abstract void StopCharacterOnYPosition();
+
+        public abstract void StopCharacterOnZPosition();
+
+        public void StopCharacterPositionOnAxes(XYZBools axes)
         {
-            StopCharacter();
+            StopInputMovementCharacter();
+            if(axes.X) StopCharacterOnXPosition();
+            if(axes.Y) StopCharacterOnYPosition();
+            if(axes.Z) StopCharacterOnZPosition();
         }
 
         public void Sprint()
@@ -96,7 +99,7 @@
             CurrentSpeed = IsGrounded ? (IsRunning ? SprintSpeed : MoveSpeed) : AirSpeed;
         }
 
-#if DEBUG
+#if UNITY_EDITOR
         protected virtual void OnDrawGizmos()
         {
             DrawCheckGroundSphere();

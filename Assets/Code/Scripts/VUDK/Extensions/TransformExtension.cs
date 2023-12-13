@@ -1,4 +1,4 @@
-﻿namespace VUDK.Extensions.Transform
+﻿namespace VUDK.Extensions
 {
     using System.Collections;
     using UnityEngine;
@@ -94,6 +94,16 @@
             transform.parent = null;
             transform.localScale = scale;
             transform.parent = oldParent;
+        }
+
+        public static Vector3[] GetPositions(this Transform[] transforms)
+        {
+            Vector3[] positions = new Vector3[transforms.Length];
+            for (int i = 0; i < transforms.Length; i++)
+            {
+                positions[i] = transforms[i].position;
+            }
+           return positions;
         }
     }
 }
