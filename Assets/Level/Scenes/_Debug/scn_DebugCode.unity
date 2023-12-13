@@ -18639,12 +18639,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1321525001}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1333430348 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5051130897048081764, guid: 9afb9c7727edad1499706ea643d557bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 5831704144917349835}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1342928477 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
@@ -24941,54 +24935,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 32550171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2060512454
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2060512455}
-  - component: {fileID: 2060512456}
-  m_Layer: 0
-  m_Name: PoolGame15Piece
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2060512455
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060512454}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1333430348}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2060512456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060512454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b2f9fd176ad9e4da329e5424fe1837, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pooledObject: {fileID: 3566739702116957155, guid: db3ac97c07ba3f542bd20d79f898a251,
-    type: 3}
-  _instancesAtStart: 15
-  _isCapped: 0
 --- !u!1 &2077751249
 GameObject:
   m_ObjectHideFlags: 0
@@ -25803,50 +25749,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 372854578499059709, guid: 9afb9c7727edad1499706ea643d557bd,
-        type: 3}
-      propertyPath: m_Name
-      value: PoolAudioSFX
-      objectReference: {fileID: 0}
     - target: {fileID: 703476227981562141, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: _firstNode
       value: 
       objectReference: {fileID: 604115577}
-    - target: {fileID: 703476227981562141, guid: 9afb9c7727edad1499706ea643d557bd,
-        type: 3}
-      propertyPath: _playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 703476227981562141, guid: 9afb9c7727edad1499706ea643d557bd,
-        type: 3}
-      propertyPath: _hasCustomFirstTransition
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3728949088606423929, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_Name
       value: pf_MainManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976672739619753845, guid: 9afb9c7727edad1499706ea643d557bd,
-        type: 3}
-      propertyPath: <Pools>k__BackingField._dictionary.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976672739619753845, guid: 9afb9c7727edad1499706ea643d557bd,
-        type: 3}
-      propertyPath: <Pools>k__BackingField._dictionary.Array.data[1].Key
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976672739619753845, guid: 9afb9c7727edad1499706ea643d557bd,
-        type: 3}
-      propertyPath: <Pools>k__BackingField._dictionary.Array.data[1].Value
-      value: 
-      objectReference: {fileID: 2060512456}
-    - target: {fileID: 4283165262056835698, guid: 9afb9c7727edad1499706ea643d557bd,
-        type: 3}
-      propertyPath: _enableOnAwake
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5812637801896931851, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
@@ -25898,11 +25809,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6245586051205342743, guid: 9afb9c7727edad1499706ea643d557bd,
-        type: 3}
-      propertyPath: m_Name
-      value: UIPoints
-      objectReference: {fileID: 0}
     - target: {fileID: 6899193427566014676, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: OnDay.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -25933,11 +25839,6 @@ PrefabInstance:
       propertyPath: OnCloudy.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 695298821}
-    - target: {fileID: 7540401309361811135, guid: 9afb9c7727edad1499706ea643d557bd,
-        type: 3}
-      propertyPath: _pointsLimits.<Max>k__BackingField
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 7571364931165014669, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: <PlayerCamera>k__BackingField
@@ -25945,11 +25846,7 @@ PrefabInstance:
       objectReference: {fileID: 1089120462}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5051130897048081764, guid: 9afb9c7727edad1499706ea643d557bd,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2060512455}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9afb9c7727edad1499706ea643d557bd, type: 3}
 --- !u!4 &6472100813092114487

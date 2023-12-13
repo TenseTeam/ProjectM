@@ -1327,6 +1327,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initOnAwake: 1
   _initPoints: 0
+  _pointsLimits:
+    <Min>k__BackingField: 0
+    <Max>k__BackingField: 50
 --- !u!1 &3728949088606423929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1640,8 +1643,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _firstNode: {fileID: 0}
-  _playOnAwake: 1
-  _hasCustomFirstTransition: 1
+  _playOnAwake: 0
+  _hasCustomFirstTransition: 0
   _firstTransitionType: 0
   <PathExplorer>k__BackingField: {fileID: 0}
 --- !u!1 &4339226715303913619
@@ -2236,6 +2239,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Button>k__BackingField: {fileID: 1835426878050933958}
   <Text>k__BackingField: {fileID: 572364884643320301}
+--- !u!1 &5843555152789925253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2928143884707410457}
+  - component: {fileID: 8173637422476743171}
+  m_Layer: 0
+  m_Name: PoolGame15Piece
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2928143884707410457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5843555152789925253}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5051130897048081764}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8173637422476743171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5843555152789925253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b2f9fd176ad9e4da329e5424fe1837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pooledObject: {fileID: 3566739702116957155, guid: db3ac97c07ba3f542bd20d79f898a251,
+    type: 3}
+  _instancesAtStart: 15
+  _isCapped: 0
 --- !u!1 &6027239755425227337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,7 +2523,7 @@ GameObject:
   - component: {fileID: 5361825366321031384}
   - component: {fileID: 4283165262056835698}
   m_Layer: 5
-  m_Name: PointsUI
+  m_Name: UIPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2511,6 +2562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pointsPanel: {fileID: 6092306827666393969}
+  _enableOnAwake: 1
   _pointsText: {fileID: 8411016604005279339}
 --- !u!1 &6261777077548114815
 GameObject:
@@ -3016,6 +3068,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6888125885463920972}
+  - {fileID: 2928143884707410457}
   m_Father: {fileID: 5812637801896931851}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3976672739619753845
@@ -3034,6 +3087,8 @@ MonoBehaviour:
     _dictionary:
     - Key: 0
       Value: {fileID: 5081007504756725488}
+    - Key: 1
+      Value: {fileID: 8173637422476743171}
 --- !u!1 &7624309853585717803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3647,7 +3702,7 @@ PrefabInstance:
     - target: {fileID: 8150542714575881650, guid: cecdcba212206dc4ebdc32ec8eb25e26,
         type: 3}
       propertyPath: m_Name
-      value: AudioSFX
+      value: PoolAudioSFX
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
