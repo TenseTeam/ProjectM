@@ -5639,6 +5639,7 @@ GameObject:
   - component: {fileID: 318163498}
   - component: {fileID: 318163500}
   - component: {fileID: 318163497}
+  - component: {fileID: 318163501}
   m_Layer: 0
   m_Name: Puzzle15Game
   m_TagString: Untagged
@@ -5654,15 +5655,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318163492}
   m_LocalRotation: {x: 0, y: 0.70710677, z: -0.70710677, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -0.00000019868214}
-  m_LocalScale: {x: 3.333332, y: 3.3333323, z: 3.3333318}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6472100813092114487}
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.04050375, y: -1.7364104}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 3, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &318163494
@@ -5746,7 +5747,20 @@ MonoBehaviour:
       m_Calls: []
   OnPuzzleResolved:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 318163501}
+        m_TargetAssemblyTypeName: VUDK.Features.Main.PointsSystem.Reward.RewardTrigger,
+          Assembly-CSharp
+        m_MethodName: TriggerReward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _game15Texture: {fileID: 2800000, guid: b0f0eaf45c7113d48b2ff6fe13e046ff, type: 3}
 --- !u!114 &318163498
 MonoBehaviour:
@@ -5762,8 +5776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tilePrefab: {fileID: 8262517567112971594, guid: 99b1f254770503a42b1fd33c74b5142a,
     type: 3}
-  <Size>k__BackingField: {x: 3, y: 3}
-  shuffleCount: 5
+  <Size>k__BackingField: {x: 2, y: 2}
 --- !u!114 &318163499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5800,6 +5813,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f0ba0ff7ec9f254b915d38dd190b418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &318163501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318163492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0298489cdb1a1345bc4638804ff180d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isOnce: 1
+  _rewardPoints: 20
 --- !u!1 &366159364
 GameObject:
   m_ObjectHideFlags: 0
@@ -17758,6 +17785,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350b12ec444f2c644a5323ba1dc63ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1358849125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5603692948532261892, guid: 899d08854c2c5eb4a82a915936e617df,
+    type: 3}
+  m_PrefabInstance: {fileID: 8300174138922669327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1393554081
 GameObject:
   m_ObjectHideFlags: 0
@@ -23989,7 +24022,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 8300174138922669327}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1358849125}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4d5dd3de5f72ec4c88aed4459907e2a, type: 3}
@@ -24196,6 +24229,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8300174138922669327}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7734599877129923528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358849125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0298489cdb1a1345bc4638804ff180d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isOnce: 1
+  _rewardPoints: 0
+--- !u!114 &7734599877129923529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358849125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0863f62f11bd4ce43a52e680b6b659af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _correctAnswers:
+  - {fileID: 11400000, guid: 154f0579df37c804ab9dbcf2c028be01, type: 2}
+  OnCorrectAnswer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7734599877129923528}
+        m_TargetAssemblyTypeName: VUDK.Features.Main.PointsSystem.Reward.RewardTrigger,
+          Assembly-CSharp
+        m_MethodName: TriggerReward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnIncorrectAnswer:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7870998714014579846
 GameObject:
   m_ObjectHideFlags: 0
@@ -24296,7 +24376,15 @@ PrefabInstance:
     - {fileID: 3801946350046681074, guid: 899d08854c2c5eb4a82a915936e617df, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5603692948532261892, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7734599877129923529}
+    - targetCorrespondingSourceObject: {fileID: 5603692948532261892, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7734599877129923528}
   m_SourcePrefab: {fileID: 100100000, guid: 899d08854c2c5eb4a82a915936e617df, type: 3}
 --- !u!114 &8300174138922669328 stripped
 MonoBehaviour:

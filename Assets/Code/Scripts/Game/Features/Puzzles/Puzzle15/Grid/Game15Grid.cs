@@ -33,6 +33,7 @@
 
         public void Init(Game15Puzzle puzzle, Texture2D spriteSheet)
         {
+            puzzle.OnPuzzleResolved.AddListener(FillLastTile);
             _textureSpriteSheet = spriteSheet;
             _puzzle = puzzle;
             _piecesSprites = TextureExtension.CreateSpriteSheet(_textureSpriteSheet, Size.x, Size.y);
@@ -119,6 +120,11 @@
                 isSolvable = InversionsCount % 2 != 0 && EmptyTile.GridPosition.y % 2 != 0;
 
             return isSolvable;
+        }
+
+        private void FillLastTile()
+        {
+            GridTiles[Size.x - 1, Size.y - 1].InsertPiece(GameFactory.Create(0, _piecesSprites[_piecesSprites.Count - 1]));
         }
     }
 }

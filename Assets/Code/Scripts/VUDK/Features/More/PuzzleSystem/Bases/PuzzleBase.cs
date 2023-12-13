@@ -20,6 +20,7 @@
 
         public virtual void BeginPuzzle()
         {
+            OnPuzzleBegin?.Invoke();
             ResolvePuzzle();
         }
 
@@ -35,6 +36,7 @@
 
         public virtual void ResolvePuzzle()
         {
+            OnPuzzleResolved?.Invoke();
             IsSolved = true;
             IsInProgress = false;
         }

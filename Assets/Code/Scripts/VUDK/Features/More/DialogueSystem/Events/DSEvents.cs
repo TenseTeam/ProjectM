@@ -12,6 +12,7 @@
 
         // Dialogue Manager Events
         public static Action OnDMNext;
+        public static Action<DSDialogueData> OnDMDialogue;
         public static Action OnDMCompletedSentence;
         public static Action OnDMStart;
         public static Action OnDMEnd;

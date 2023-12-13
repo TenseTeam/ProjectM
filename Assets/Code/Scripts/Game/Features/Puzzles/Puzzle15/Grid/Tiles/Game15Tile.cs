@@ -63,25 +63,5 @@
         {
             _puzzle.MovePieceInEmptyTile(this);
         }
-
-#if UNITY_EDITOR
-        private void OnDrawGizmos()
-        {
-            DrawBorders();
-            DrawOccupancy();
-        }
-
-        private void DrawOccupancy()
-        {
-            Gizmos.color = IsOccupied ? new Color(1, 0, 0, .5f) : new Color(0, 1, 0, .5f);
-            GizmosExtension.DrawCube(transform.position, (Vector2)transform.localScale, transform.rotation);
-        }
-
-        private void DrawBorders() 
-        {
-            Gizmos.color = Color.black;
-            GizmosExtension.DrawWireCube(transform.position, (Vector2)transform.localScale, transform.rotation);
-        }
-#endif
     }
 }

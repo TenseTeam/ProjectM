@@ -116,6 +116,7 @@
         public void NextDialogue()
         {
             DSEvents.OnDMNext?.Invoke();
+            DSEvents.OnDMDialogue?.Invoke(_currentDialogue);
             DisplayActorInfo();
             PlayDialogueAudio();
 
