@@ -8,7 +8,7 @@ namespace VUDK.Editor.Tools.Debug
         private int _targetFPS = 60;
         private float _targetTimeScale = 1f;
 
-        [MenuItem("Tools/VUDK/Debug/Time Settings")]
+        [MenuItem("VUDK/Debug/Time Settings")]
         public static void ShowWindow()
         {
             GetWindow(typeof(TimeSettings), false, "Time Settings");
@@ -31,6 +31,9 @@ namespace VUDK.Editor.Tools.Debug
                 SetTimeScale(_targetTimeScale);
             if (GUILayout.Button("Reset"))
                 SetTimeScale(1f);
+
+            EditorGUILayout.Space();
+            EditorGUILayout.HelpBox("Debug tool that allows you to control the frame rate and time scale of the game in play mode. Lock or unlock the frame rate, and set or reset the time scale as needed.", MessageType.Info);
         }
 
         private void SetFPS(int fps)

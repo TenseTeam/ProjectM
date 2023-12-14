@@ -5,18 +5,10 @@ namespace VUDK.Features.Main.InteractSystem
 
     public abstract class InteractableBase : MonoBehaviour, IInteractable
     {
-        public abstract void Interact(InteractorBase interactor);
+        public abstract void Disable();
 
-        protected virtual void OnTriggerEnter(Collider other)
-        {
-            if (other.TryGetComponent(out InteractorBase interactor))
-                interactor.SetIneractable(this);
-        }
+        public abstract void Enable();
 
-        protected virtual void OnTriggerExit(Collider other)
-        {
-            if (other.TryGetComponent(out InteractorBase interactor))
-                interactor.SetIneractable(null);
-        }
+        public abstract void Interact();
     }
 }

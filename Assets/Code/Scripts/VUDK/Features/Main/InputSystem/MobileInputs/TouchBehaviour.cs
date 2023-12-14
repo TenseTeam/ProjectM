@@ -1,6 +1,5 @@
 ﻿namespace VUDK.Features.Main.Inputs.MobileInputs
 {
-    using System;
     using UnityEngine;
     using UnityEngine.InputSystem;
     using VUDK.Features.Main.InputSystem;
@@ -12,7 +11,10 @@
 
         private bool _isTouchDown;
 
-        protected abstract void Init(MobileInputsManager inputsManager);
+        protected void Init(MobileInputsManager inputsManager)
+        {
+            MobileInputsManager = inputsManager;
+        }
 
         protected virtual void OnEnable()
         {
@@ -38,7 +40,7 @@
             if(_isTouchDown) return;
             _isTouchDown = true;
 
-            RaycastHit2D hit = MobileInputsManager.RaycastFromTouch2D(1 << gameObject.layer);
+            RaycastHit2D hit = MobileInputsManager.RaycastFromTouch2D(~0);
 
             if (hit && hit.transform.TryGetComponent(out TouchBehaviour touch))
             {

@@ -1,14 +1,15 @@
 namespace VUDK.UI.Menu
 {
     using UnityEngine;
-    using VUDK.Config;
+    using VUDK.Constants;
+    using VUDK.Features.Main.EventSystem;
     using VUDK.Generic.Managers.Main;
 
     public class UIMenuActions : MonoBehaviour
     {
         private void Start()
         {
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.SceneEvents.OnMainMenuLoaded);
+            EventManager.Ins.TriggerEvent(EventKeys.SceneEvents.OnMainMenuLoaded);
         }
 
         public void WaitChangeScene(int sceneIndex)
@@ -25,7 +26,7 @@ namespace VUDK.UI.Menu
 
         public void ClickButton()
         {
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.UIEvents.OnButtonPressed);
+            EventManager.Ins.TriggerEvent(EventKeys.UIEvents.OnButtonPressed);
         }
     }
 }

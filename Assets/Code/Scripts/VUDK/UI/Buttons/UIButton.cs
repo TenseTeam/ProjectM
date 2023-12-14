@@ -3,8 +3,8 @@
     using UnityEngine;
     using UnityEngine.Events;
     using UnityEngine.UI;
-    using VUDK.Generic.Managers.Main;
-    using VUDK.Config;
+    using VUDK.Constants;
+    using VUDK.Features.Main.EventSystem;
 
     [RequireComponent(typeof(Button))]
     public class UIButton : MonoBehaviour
@@ -36,7 +36,7 @@
         /// </summary>
         protected virtual void Press()
         {
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.UIEvents.OnButtonPressed);
+            EventManager.Ins.TriggerEvent(EventKeys.UIEvents.OnButtonPressed);
             OnButtonPressedSuccess?.Invoke();
         }
 

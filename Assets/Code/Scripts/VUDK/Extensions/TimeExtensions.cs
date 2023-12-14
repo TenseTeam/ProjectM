@@ -1,4 +1,4 @@
-﻿namespace VUDK.Extensions.Time
+﻿namespace VUDK.Extensions
 {
     using UnityEngine;
 

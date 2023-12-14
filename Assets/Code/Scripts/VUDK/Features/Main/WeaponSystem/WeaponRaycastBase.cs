@@ -18,7 +18,7 @@
             base.OnBulletGeneration();
             foreach (Transform barrel in BarrelsPoints)
             {
-#if DEBUG
+#if UNITY_EDITOR
                 Debug.DrawRay(barrel.position, barrel.forward * RaycastShootRange);
 #endif
                 if (Physics.Raycast(barrel.position, barrel.forward, out RaycastHit hit, RaycastShootRange, _rayShootableMask))

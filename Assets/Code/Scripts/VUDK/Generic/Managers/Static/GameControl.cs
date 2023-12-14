@@ -1,7 +1,8 @@
 ﻿namespace VUDK.Generic.Managers.Static
 {
     using UnityEngine;
-    using VUDK.Config;
+    using VUDK.Constants;
+    using VUDK.Features.Main.EventSystem;
     using VUDK.Generic.Managers.Main;
 
     public static class GameControl
@@ -26,7 +27,9 @@
         private static void GameOpen()
         {
             HasBeenStarted = true;
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.GameEvents.OnGameOpened);
+
+            if(MainManager.Ins)
+                EventManager.Ins.TriggerEvent(EventKeys.GameEvents.OnGameOpened);
         }
 
         private static void FirstLaunch()
@@ -37,7 +40,8 @@
             {
                 PlayerPrefs.SetInt(Constants.Prefs.FirstLaunch, 0); // 0 = false
                 PlayerPrefs.Save();
-                MainManager.Ins.EventManager.TriggerEvent(EventKeys.GameEvents.OnFirstLaunch);
+                if (MainManager.Ins)
+                    EventManager.Ins.TriggerEvent(EventKeys.GameEvents.OnFirstLaunch);
             }
         }
     }
