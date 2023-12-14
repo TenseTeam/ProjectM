@@ -1,13 +1,10 @@
 namespace VUDK.Features.Main.InputSystem
 {
-    using UnityEngine;
-
     public class InputsManager
     {
-        public static InputsMap Inputs;
+        public static InputsMap Inputs { get; private set; }
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
-        private static void LoadInputs()
+        static InputsManager()
         {
             Inputs = new InputsMap();
             Inputs.Enable();

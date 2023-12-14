@@ -2,8 +2,8 @@ namespace VUDK.Features.Main.Timer
 {
     using System.Collections;
     using UnityEngine;
-    using VUDK.Config;
-    using VUDK.Generic.Managers.Main;
+    using VUDK.Constants;
+    using VUDK.Features.Main.EventSystem;
 
     public class CountdownTimer : MonoBehaviour
     {
@@ -21,13 +21,13 @@ namespace VUDK.Features.Main.Timer
         {
             do
             {
-                MainManager.Ins.EventManager.TriggerEvent(EventKeys.CountdownEvents.OnCountdownCount, time);
+                EventManager.Ins.TriggerEvent(EventKeys.CountdownEvents.OnCountdownCount, time);
                 yield return new WaitForSeconds(1);
                 time--;
             } while (time > 0);
 
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.CountdownEvents.OnCountdownCount, time);
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.CountdownEvents.OnCountdownTimesUp);
+            EventManager.Ins.TriggerEvent(EventKeys.CountdownEvents.OnCountdownCount, time);
+            EventManager.Ins.TriggerEvent(EventKeys.CountdownEvents.OnCountdownTimesUp);
         }
     }
 }

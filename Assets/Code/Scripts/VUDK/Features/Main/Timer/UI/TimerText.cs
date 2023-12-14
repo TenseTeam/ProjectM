@@ -2,8 +2,8 @@
 {
     using UnityEngine;
     using TMPro;
-    using VUDK.Generic.Managers.Main;
-    using VUDK.Config;
+    using VUDK.Constants;
+    using VUDK.Features.Main.EventSystem;
 
     public class TimerText : MonoBehaviour
     {
@@ -15,12 +15,12 @@
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener<int>(EventKeys.CountdownEvents.OnCountdownCount, UpdateTimerText);
+            EventManager.Ins.AddListener<int>(EventKeys.CountdownEvents.OnCountdownCount, UpdateTimerText);
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener<int>(EventKeys.CountdownEvents.OnCountdownCount, UpdateTimerText);
+            EventManager.Ins.RemoveListener<int>(EventKeys.CountdownEvents.OnCountdownCount, UpdateTimerText);
         }
 
         private void UpdateTimerText(int time)
