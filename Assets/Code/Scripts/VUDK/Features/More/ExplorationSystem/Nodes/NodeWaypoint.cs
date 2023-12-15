@@ -17,9 +17,9 @@
             LinkedNodes.RemoveAll(node => !node);
         }
 
-        public override void OnFirstNode(bool hasCustomFirstTransition, TransitionType transitionType)
+        public override void OnFirstNode(TransitionType transitionType)
         {
-            base.OnFirstNode(hasCustomFirstTransition, transitionType);
+            base.OnFirstNode(transitionType);
             EnableLinkedNodes();
         }
 

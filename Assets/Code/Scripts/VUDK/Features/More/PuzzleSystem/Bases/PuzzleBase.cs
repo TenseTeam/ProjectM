@@ -10,8 +10,8 @@
         protected bool IsRepeatable;
 
         public bool IsSolved { get; private set;  }
-        public bool IsFocused { get; private set; }
         public bool IsInProgress { get; private set; }
+        public bool IsFocused { get; protected set; }
 
         [Header("Puzzle Events")]
         [SerializeField]

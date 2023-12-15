@@ -20781,6 +20781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1615137219}
   - component: {fileID: 1615137220}
+  - component: {fileID: 1615137221}
   m_Layer: 5
   m_Name: QuizManager
   m_TagString: Untagged
@@ -20820,7 +20821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a326d69b3a41b44891f2d99f02d83a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsRepeatable: 1
+  IsRepeatable: 0
   OnPuzzleBegin:
     m_PersistentCalls:
       m_Calls: []
@@ -20839,6 +20840,24 @@ MonoBehaviour:
   - {fileID: 1219182019}
   - {fileID: 1123649604}
   - {fileID: 1260903882}
+  OnCorrectAnswer:
+    m_PersistentCalls:
+      m_Calls: []
+  OnWrongAnswer:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1615137221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615137218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d56be020010dc42a402680866b0c2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1618666400
 GameObject:
   m_ObjectHideFlags: 0
@@ -27939,6 +27958,11 @@ PrefabInstance:
       propertyPath: _firstNode
       value: 
       objectReference: {fileID: 604115577}
+    - target: {fileID: 703476227981562141, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3728949088606423929, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_Name

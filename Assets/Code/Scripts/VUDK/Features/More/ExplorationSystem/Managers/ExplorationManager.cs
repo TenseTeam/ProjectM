@@ -19,8 +19,6 @@
         [SerializeField]
         private bool _playOnAwake;
         [SerializeField]
-        private bool _hasCustomFirstTransition;
-        [SerializeField]
         private TransitionType _firstTransitionType;
 
         [field: Header("Path Explorer")]
@@ -56,12 +54,10 @@
             Init();
         }
 
-#if DEBUG
-        [ContextMenu("Begin")]
-#endif
         public void Begin()
         {
-            CurrentTargetNode.OnFirstNode(_hasCustomFirstTransition, _firstTransitionType);
+            Debug.Log("Begin First Node");
+            CurrentTargetNode.OnFirstNode(_firstTransitionType);
         }
 
         public override void Init()

@@ -1,30 +1,36 @@
 ﻿namespace ProjectM.Puzzles.Quiz
 {
     using System.Collections.Generic;
-    using TMPro;
     using UnityEngine;
+    using UnityEngine.Events;
+    using UnityEngine.InputSystem;
+    using UnityEngine.UI;
+    using TMPro;
     using VUDK.Features.Main.EventSystem;
+    using VUDK.Features.Main.InputSystem;
+    using VUDK.Features.Main.PointsSystem.Rewards;
     using VUDK.Features.More.PuzzleSystem.Bases;
     using ProjectM.Constants;
     using ProjectM.Features.Puzzles.Quiz.Data;
     using ProjectM.Features.Puzzles.Quiz.UI;
-    using VUDK.Features.Main.InputSystem;
-    using UnityEngine.InputSystem;
-    using UnityEngine.UI;
 
+    [RequireComponent(typeof(Rewarder))]
     public class QuizManager : PuzzleBase
     {
         [Header("Quiz Messages")]
         [SerializeField]
         private string _correctAnswerMessage;
+
         [SerializeField]
         private string _wrongAnswerMessage;
+
         [SerializeField]
         private string _quizCompletedMessage;
 
         [Header("UI Quiz Panel")]
         [SerializeField]
         private RectTransform _quizPanel;
+
         [SerializeField]
         private TMP_Text _questionText;
 
@@ -35,18 +41,25 @@
         [Header("UI Answers")]
         [SerializeField]
         private RectTransform _answersBox;
+
         [SerializeField]
         private List<UIQuizAnswerButton> _answersButtons;
 
         private QuizData _currentQuizData;
         private int _currentQuestionIndex;
         private bool _isWaitingAnswer;
+        private Rewarder _rewarder;
 
         private QuizQuestionData CurrentQuestion => _currentQuizData.Questions[_currentQuestionIndex];
         private int MaxChoices => _answersButtons.Count;
 
+        [Header("Quiz Events")]
+        public UnityEvent OnCorrectAnswer;
+        public UnityEvent OnWrongAnswer;
+
         private void Awake()
         {
+            TryGetComponent(out _rewarder);
             Disable();
         }
 
@@ -70,18 +83,29 @@
         {
             if (!IsInProgress)
             {
-                _currentQuizData = quizData;
-                BeginPuzzle();
-                return;
-            }
+                if (IsSolved && !IsRepeatable)
+                {
+                    Enable();
+                    return;
+                }
 
-            Enable();
+                BeginQuiz(quizData);
+            }
+            else
+            {
+                ResumePuzzle();
+            }
+        }
+
+        public void BeginQuiz(QuizData quizData)
+        {
+            _currentQuizData = quizData;
+            BeginPuzzle();
         }
 
         public override void BeginPuzzle()
         {
             if (_currentQuizData == null) return;
-            if (IsSolved && !IsRepeatable) return;
             base.BeginPuzzle();
 
             _currentQuestionIndex = 0;
@@ -101,13 +125,21 @@
             Disable();
         }
 
+        public override void ResumePuzzle()
+        {
+            base.ResumePuzzle();
+            Enable();
+        }
+
         public void Enable()
         {
+            EventManager.Ins.TriggerEvent(GameEventKeys.OnEnterQuiz);
             _quizPanel.gameObject.SetActive(true);
         }
 
         public void Disable()
         {
+            EventManager.Ins.TriggerEvent(GameEventKeys.OnExitQuiz);
             _quizPanel.gameObject.SetActive(false);
         }
 
@@ -166,15 +198,18 @@
 
         private void CorrectAnswer()
         {
+            OnCorrectAnswer?.Invoke();
             PrintMessage(_correctAnswerMessage);
-            _currentQuestionIndex++;
+            _rewarder.SendReward(CurrentQuestion.PointsReward);
 
-            if(_currentQuestionIndex > _currentQuizData.Questions.Count - 1)
+            _currentQuestionIndex++;
+            if (_currentQuestionIndex > _currentQuizData.Questions.Count - 1)
                 ResolvePuzzle();
         }
 
         private void WrongAnswer()
         {
+            OnWrongAnswer?.Invoke();
             PrintMessage(_wrongAnswerMessage);
         }
 
