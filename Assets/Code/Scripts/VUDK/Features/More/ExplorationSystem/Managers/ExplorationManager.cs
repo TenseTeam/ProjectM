@@ -56,7 +56,6 @@
 
         public void Begin()
         {
-            Debug.Log("Begin First Node");
             CurrentTargetNode.OnFirstNode(_firstTransitionType);
         }
 

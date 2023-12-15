@@ -31,14 +31,23 @@
             }
         }
 
-        public void Init(Game15Puzzle puzzle, Texture2D spriteSheet)
+        public void Init(Game15Puzzle puzzle, Texture2D spriteSheet, bool isSolved)
         {
             puzzle.OnPuzzleResolved.AddListener(FillLastTile);
             _textureSpriteSheet = spriteSheet;
             _puzzle = puzzle;
             _piecesSprites = TextureExtension.CreateSpriteSheet(_textureSpriteSheet, Size.x, Size.y);
             GenerateGrid();
-            Shuffle();
+
+            if (!isSolved)
+            {
+                Shuffle();
+            }
+            else
+            {
+                FillGrid();
+                FillLastTile();
+            }
         }
 
         protected override void InitTile(Game15Tile tile, Vector2Int gridPosition)

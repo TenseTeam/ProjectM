@@ -10,7 +10,7 @@
 
     [RequireComponent(typeof(Game15Grid))]
     [RequireComponent(typeof(Game15Machine))]
-    public class Game15Puzzle : PuzzleBase
+    public class Game15Puzzle : DatePuzzleBase
     {
         [Header("Puzzle Pieces")]
         [SerializeField]
@@ -25,16 +25,18 @@
 
         public event Action OnMovedPiece;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             TryGetComponent(out _grid);
             TryGetComponent(out _machine);
         }
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             _machine.Init(this);
-            _grid.Init(this, _game15Texture);
+            _grid.Init(this, _game15Texture, IsSolved);
         }
 
         public override void BeginPuzzle()

@@ -1,25 +1,25 @@
 ﻿namespace VUDK.Features.Main.PointsSystem
 {
     using UnityEngine;
+    using VUDK.Features.Main.PointsSystem.Data;
     using VUDK.Features.Main.PointsSystem.Events;
+    using VUDK.Features.Main.SaveSystem.Bases;
+    using VUDK.Features.More.DateTaskSystem;
     using VUDK.Generic.Serializable;
 
-    public class PointsManager : MonoBehaviour
+    public class PointsManager : BinarySaverBase<PointsSaveData>
     {
         [Header("Points Settings")]
-        [SerializeField]
-        private bool _initOnAwake;
-        [SerializeField]
+        [SerializeField, Min(0)]
         private int _initPoints;
         [SerializeField]
         private Range<int> _pointsLimits;
 
         public int Points { get; private set; }
 
-        private void Awake()
+        private void Start()
         {
-            if (_initOnAwake)
-                Init(_initPoints);
+            Load(nameof(PointsManager) + GetInstanceID(), ".save");
         }
 
         private void OnEnable()
@@ -32,7 +32,7 @@
             PointsEvents.ModifyPointsHandler -= ModifyPoints;
         }
 
-        public void Init(int startingPoints) // TODO: Use this method then to manage different saving systems
+        public void Init(int startingPoints)
         {
             Points = startingPoints;
             PointsEvents.OnPointsInit?.Invoke(Points);
@@ -44,6 +44,20 @@
 
             Points += modifiedPoints;
             PointsEvents.OnPointsChanged?.Invoke(this, modifiedPoints);
+
+            SaveData.Points = Points;
+            Save(nameof(PointsManager) + GetInstanceID(), ".save");
+        }
+
+        protected override void OnLoadSuccess(PointsSaveData saveData)
+        {
+            Init(saveData.Points);
+        }
+
+        protected override void OnLoadFail()
+        {
+            SaveData = new PointsSaveData(_initPoints); // if it fails it means there is no save data
+            Init(_initPoints);
         }
     }
 }

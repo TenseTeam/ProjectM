@@ -2,6 +2,6 @@
 {
     public interface ILoader
     {
-        public void Load();
+        public void Load(string fileName, string extension);
     }
 }

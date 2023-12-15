@@ -327,6 +327,7 @@ Transform:
   - {fileID: 250390108}
   - {fileID: 1467939739}
   - {fileID: 814414636}
+  - {fileID: 1821199740}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &66711778
@@ -5949,6 +5950,7 @@ GameObject:
   - component: {fileID: 318163500}
   - component: {fileID: 318163497}
   - component: {fileID: 318163501}
+  - component: {fileID: 318163502}
   m_Layer: 0
   m_Name: Puzzle15Game
   m_TagString: Untagged
@@ -6136,6 +6138,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isOnce: 1
   _rewardPoints: 20
+--- !u!114 &318163502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318163492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a6a18d595b8024abab29741e8b532f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _taskCycle: 0
 --- !u!1 &366159364
 GameObject:
   m_ObjectHideFlags: 0
@@ -18343,6 +18358,7 @@ GameObject:
   - component: {fileID: 1096388053}
   - component: {fileID: 1096388055}
   - component: {fileID: 1096388054}
+  - component: {fileID: 1096388056}
   m_Layer: 0
   m_Name: QuizDialogueTrigger
   m_TagString: Untagged
@@ -18410,6 +18426,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d56be020010dc42a402680866b0c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1096388056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096388052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a6a18d595b8024abab29741e8b532f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _taskCycle: 0
 --- !u!1 &1116170562
 GameObject:
   m_ObjectHideFlags: 0
@@ -20781,6 +20810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1615137219}
   - component: {fileID: 1615137220}
+  - component: {fileID: 1615137222}
   - component: {fileID: 1615137221}
   m_Layer: 5
   m_Name: QuizManager
@@ -20858,6 +20888,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d56be020010dc42a402680866b0c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1615137222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615137218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a6a18d595b8024abab29741e8b532f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _taskCycle: 0
 --- !u!1 &1618666400
 GameObject:
   m_ObjectHideFlags: 0
@@ -26189,6 +26232,51 @@ Transform:
   - {fileID: 1618666401}
   m_Father: {fileID: 439524012}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1821199739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1821199740}
+  - component: {fileID: 1821199741}
+  m_Layer: 0
+  m_Name: DateTaskTesting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1821199740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821199739}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 57190354}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1821199741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821199739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a6a18d595b8024abab29741e8b532f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _taskCycle: 0
 --- !u!1 &1831375687
 GameObject:
   m_ObjectHideFlags: 0
@@ -27963,6 +28051,11 @@ PrefabInstance:
       propertyPath: _playOnAwake
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 703476227981562141, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _firstTransitionType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3728949088606423929, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_Name
@@ -28048,6 +28141,11 @@ PrefabInstance:
       propertyPath: OnCloudy.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 695298821}
+    - target: {fileID: 7540401309361811135, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _initPoints
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7571364931165014669, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: <PlayerCamera>k__BackingField

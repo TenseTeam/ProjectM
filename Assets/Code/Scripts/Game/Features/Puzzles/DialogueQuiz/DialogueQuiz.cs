@@ -10,7 +10,7 @@
     using ProjectM.Features.Puzzles.DialogueQuiz.Data;
 
     [RequireComponent(typeof(Rewarder))]
-    public class DialogueQuiz : PuzzleBase
+    public class DialogueQuiz : DatePuzzleBase
     {
         [Header("Quiz Settings")]
         [SerializeField]
@@ -27,8 +27,9 @@
         private Rewarder _rewarder;
         private DSDialogueData _lastDialogue;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             TryGetComponent(out _rewarder);
         }
 

@@ -43,7 +43,6 @@
 
         private void OnBeginTransition()
         {
-            Debug.Log("OnBeginTransition");
             Disable();
         }
 

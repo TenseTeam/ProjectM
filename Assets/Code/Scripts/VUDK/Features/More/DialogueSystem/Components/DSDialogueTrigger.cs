@@ -1,6 +1,5 @@
 ﻿namespace VUDK.Features.More.DialogueSystem.Components
 {
-    using UnityEngine;
     using VUDK.Features.Main.TriggerSystem;
     using VUDK.Features.More.DialogueSystem.Events;
 
@@ -19,9 +18,6 @@
             DSEvents.OnDMAnyEnd -= OnDialogueEnded;
         }
 
-#if UNITY_EDITOR
-        [ContextMenu("Trigger Dialogue")]
-#endif
         public virtual void Trigger()
         {
             if( (!IsRepeatable && _hasBeenTriggered) || _isSpeaking)
@@ -42,6 +38,7 @@
         public void Interrupt()
         {
             DSEvents.DialogueInterruptHandler?.Invoke();
+            _isSpeaking = false;
         }
 
         private void OnDialogueEnded()

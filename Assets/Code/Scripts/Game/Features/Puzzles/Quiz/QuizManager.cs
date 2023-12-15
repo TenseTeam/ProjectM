@@ -15,22 +15,19 @@
     using ProjectM.Features.Puzzles.Quiz.UI;
 
     [RequireComponent(typeof(Rewarder))]
-    public class QuizManager : PuzzleBase
+    public class QuizManager : DatePuzzleBase
     {
         [Header("Quiz Messages")]
         [SerializeField]
         private string _correctAnswerMessage;
-
         [SerializeField]
         private string _wrongAnswerMessage;
-
         [SerializeField]
         private string _quizCompletedMessage;
 
         [Header("UI Quiz Panel")]
         [SerializeField]
         private RectTransform _quizPanel;
-
         [SerializeField]
         private TMP_Text _questionText;
 
@@ -41,7 +38,6 @@
         [Header("UI Answers")]
         [SerializeField]
         private RectTransform _answersBox;
-
         [SerializeField]
         private List<UIQuizAnswerButton> _answersButtons;
 
@@ -57,8 +53,9 @@
         public UnityEvent OnCorrectAnswer;
         public UnityEvent OnWrongAnswer;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             TryGetComponent(out _rewarder);
             Disable();
         }
@@ -85,7 +82,7 @@
             {
                 if (IsSolved && !IsRepeatable)
                 {
-                    Enable();
+                    DisplayCompletedQuiz();
                     return;
                 }
 
@@ -122,6 +119,7 @@
         public override void InterruptPuzzle()
         {
             base.InterruptPuzzle();
+            ResolvePuzzle();
             Disable();
         }
 
@@ -153,7 +151,6 @@
 
         private void NextQuestion(InputAction.CallbackContext ctx)
         {
-            Debug.Log("NextQuestion Input");
             NextQuestion();
         }
 
@@ -221,6 +218,13 @@
         private void PrintQuestion()
         {
             _questionText.text = CurrentQuestion.QuestionText;
+        }
+
+        private void DisplayCompletedQuiz()
+        {
+            Enable();
+            PrintMessage(_quizCompletedMessage);
+            DisableAnswersBox();
         }
     }
 }
