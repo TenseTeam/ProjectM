@@ -10,6 +10,7 @@
     using ProjectM.Features.Puzzles.Quiz.UI;
     using VUDK.Features.Main.InputSystem;
     using UnityEngine.InputSystem;
+    using UnityEngine.UI;
 
     public class QuizManager : PuzzleBase
     {
@@ -24,9 +25,12 @@
         [Header("UI Quiz Panel")]
         [SerializeField]
         private RectTransform _quizPanel;
-
-        [Header("UI Quiz Texts")]
+        [SerializeField]
         private TMP_Text _questionText;
+
+        [Header("UI Buttons")]
+        [SerializeField]
+        private Button _closeButton;
 
         [Header("UI Answers")]
         [SerializeField]
@@ -48,27 +52,35 @@
 
         private void OnEnable()
         {
-            EventManager.Ins.AddListener<QuizData>(GameEventKeys.OnQuizTrigger, BeginQuiz);
+            _closeButton.onClick.AddListener(InterruptPuzzle);
+            EventManager.Ins.AddListener<QuizData>(GameEventKeys.OnQuizTrigger, OnQuizTrigger);
             EventManager.Ins.AddListener<int>(GameEventKeys.OnSelectQuizAnswer, ReceiveAnswer);
-            InputsManager.Inputs.Interaction.Interact.performed += NextQuestion;
+            InputsManager.Inputs.Interaction.Interact.canceled += NextQuestion;
         }
 
         private void OnDisable()
         {
-            EventManager.Ins.RemoveListener<QuizData>(GameEventKeys.OnQuizTrigger, BeginQuiz);
+            _closeButton.onClick.RemoveListener(InterruptPuzzle);
+            EventManager.Ins.RemoveListener<QuizData>(GameEventKeys.OnQuizTrigger, OnQuizTrigger);
             EventManager.Ins.RemoveListener<int>(GameEventKeys.OnSelectQuizAnswer, ReceiveAnswer);
-            InputsManager.Inputs.Interaction.Interact.performed -= NextQuestion;
+            InputsManager.Inputs.Interaction.Interact.canceled -= NextQuestion;
         }
 
-        private void BeginQuiz(QuizData quizData)
+        public void OnQuizTrigger(QuizData quizData)
         {
-            _currentQuizData = quizData;
-            BeginPuzzle();
+            if (!IsInProgress)
+            {
+                _currentQuizData = quizData;
+                BeginPuzzle();
+                return;
+            }
+
+            Enable();
         }
 
         public override void BeginPuzzle()
         {
-            if (_currentQuizData == null || IsInProgress) return;
+            if (_currentQuizData == null) return;
             if (IsSolved && !IsRepeatable) return;
             base.BeginPuzzle();
 
@@ -109,6 +121,7 @@
 
         private void NextQuestion(InputAction.CallbackContext ctx)
         {
+            Debug.Log("NextQuestion Input");
             NextQuestion();
         }
 
@@ -172,7 +185,7 @@
 
         private void PrintQuestion()
         {
-            _questionText.text = _currentQuizData.Questions[_currentQuestionIndex].QuestionText;
+            _questionText.text = CurrentQuestion.QuestionText;
         }
     }
 }
