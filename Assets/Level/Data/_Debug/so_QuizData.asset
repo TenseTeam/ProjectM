@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596eaf741eddb124d99ea97e530dadbd, type: 3}
+  m_Name: so_QuizData
+  m_EditorClassIdentifier: 
+  Questions:
+  - QuestionText: 2+2?
+    Answers:
+    - AnswerText: 5
+      IsCorrect: 0
+    - AnswerText: 6
+      IsCorrect: 0
+    - AnswerText: 4
+      IsCorrect: 1
+    - AnswerText: 3
+      IsCorrect: 0
+  - QuestionText: 1+1?
+    Answers:
+    - AnswerText: 2
+      IsCorrect: 1
+    - AnswerText: 3
+      IsCorrect: 0
+    - AnswerText: 4
+      IsCorrect: 0
+    - AnswerText: 5
+      IsCorrect: 0
+  - QuestionText: "x^6  \u221215x^5  +85x^4  \u2212225x^3  +274x^2  \u2212120x+12=0;
+      x = ?"
+    Answers:
+    - AnswerText: 2
+      IsCorrect: 1
+    - AnswerText: 3
+      IsCorrect: 0
+    - AnswerText: 4
+      IsCorrect: 0
+    - AnswerText: 5
+      IsCorrect: 0

@@ -1,4 +1,4 @@
-﻿namespace ProjectM.Features.Puzzles.Quiz
+﻿namespace ProjectM.Features.Puzzles.DialogueQuiz
 {
     using System.Collections.Generic;
     using UnityEngine;
@@ -7,16 +7,16 @@
     using VUDK.Features.More.DialogueSystem.Data;
     using VUDK.Features.More.DialogueSystem.Events;
     using VUDK.Features.More.PuzzleSystem.Bases;
-    using ProjectM.Features.Puzzles.Quiz.Data;
+    using ProjectM.Features.Puzzles.DialogueQuiz.Data;
 
     [RequireComponent(typeof(Rewarder))]
-    public class Quiz : PuzzleBase
+    public class DialogueQuiz : PuzzleBase
     {
         [Header("Quiz Settings")]
         [SerializeField]
         private DSDialogueContainerData _quizDialogueData;
         [SerializeField]
-        private List<QuizAnswerData> _quizAnswers;
+        private List<DialogueQuizAnswerData> _quizAnswers;
         [SerializeField]
         private bool _isInstant;
 
@@ -91,7 +91,7 @@
 
         private void CheckDialogue(DSDialogueData dialogueData)
         {
-            if (TryGetAnswer(dialogueData, out QuizAnswerData answerData))
+            if (TryGetAnswer(dialogueData, out DialogueQuizAnswerData answerData))
             {
                 _rewarder.SendReward(answerData.PointsReward);
                 OnAnyCorrectAnswer?.Invoke();
@@ -101,9 +101,9 @@
                 OnIncorrectAnswer?.Invoke();
         }
 
-        private bool TryGetAnswer(DSDialogueData dialogueData, out QuizAnswerData answerData)
+        private bool TryGetAnswer(DSDialogueData dialogueData, out DialogueQuizAnswerData answerData)
         {
-            foreach(QuizAnswerData quizAnswer in _quizAnswers)
+            foreach(DialogueQuizAnswerData quizAnswer in _quizAnswers)
             {
                 if (quizAnswer.Answer == dialogueData)
                 {

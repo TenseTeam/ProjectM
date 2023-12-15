@@ -2,7 +2,7 @@
 {
     using UnityEngine;
 
-    [CreateAssetMenu(fileName = nameof(ArtworkInfoData), menuName = "GameData/Artwork Info", order = 1)]
+    [CreateAssetMenu(fileName = nameof(ArtworkInfoData), menuName = "Project/Artwork")]
     public sealed class ArtworkInfoData : ScriptableObject
     {
         public string Name;

@@ -58,8 +58,8 @@
 
         public bool IsDialogueOpen => _dialoguePanel.gameObject.activeSelf;
         public bool IsTalking { get; private set; }
-        private bool _hasActor => _currentDialogue.ActorData != null;
-        private int _maxChoices => _choiceButtons.Count;
+        private bool HasActor => _currentDialogue.ActorData != null;
+        private int MaxChoices => _choiceButtons.Count;
 
 
         private void Awake()
@@ -146,7 +146,7 @@
         {
             _audioSource.Stop();
 
-            if (!_hasActor)
+            if (!HasActor)
             {
                 if (_currentDialogue.DialogueAudioClip)
                     _audioSource.PlayOneShot(_currentDialogue.DialogueAudioClip); // Doesn't use the AudioManager to be more modular
@@ -217,9 +217,7 @@
             _isWaitingForChoice = true;
             EnableChoicesBox();
 
-            int choicesCount = Mathf.Min(dialogueData.Choices.Count, _maxChoices);
-
-            Debug.Log($"Choices count: {choicesCount}");
+            int choicesCount = Mathf.Min(dialogueData.Choices.Count, MaxChoices);
 
             foreach (UIDSChoiceButton choiceButton in _choiceButtons) // Disable all buttons
                 choiceButton.Disable();
@@ -283,7 +281,7 @@
 
         private void DisplayActorInfo()
         {
-            if (!_hasActor)
+            if (!HasActor)
             {
                 _actorIconImage.sprite = null;
                 _actorNameText.text = "";
