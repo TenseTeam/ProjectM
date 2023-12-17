@@ -1,5 +1,6 @@
 ﻿namespace VUDK.Features.More.DialogueSystem.Data
 {
+    using System;
     using System.Collections.Generic;
     using UnityEngine;
     using VUDK.Generic.Serializable;
@@ -10,6 +11,11 @@
         public SerializableDictionary<DSDialogueGroupData, List<DSDialogueData>> DialogueGroups;
         public List<DSDialogueData> UngroupedDialogues;
         public List<DSDialogueData> StartingDialogues;
+        
+        public Action OnStart;
+        public Action OnEnd;
+        public Action OnNext;
+        public Action OnInterrupt;
 
         public void Init(string fileName)
         {

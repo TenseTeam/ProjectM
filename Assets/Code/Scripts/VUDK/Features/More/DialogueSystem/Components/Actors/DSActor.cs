@@ -29,12 +29,12 @@
         protected override void OnEmission(AudioClip clip)
         {
             base.OnEmission(clip);
-            DSEvents.OnDMCompletedSentence -= OnStop;
+            DSEvents.OnCompletedSentence -= OnStop;
 
             if(!IsMute)
                 _clipDelayTask.Start(clip.length);
             else
-                DSEvents.OnDMCompletedSentence += OnStop;
+                DSEvents.OnCompletedSentence += OnStop;
 
             _animator.SetBool("IsSpeaking", true);
         }

@@ -17642,7 +17642,7 @@ GameObject:
   - component: {fileID: 1096388055}
   - component: {fileID: 1096388054}
   m_Layer: 0
-  m_Name: QuizDialogueTrigger
+  m_Name: Diaogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17683,18 +17683,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _hoursToReset: 24
-  _quizDialogueData: {fileID: 11400000, guid: 9f523b5c640b3c2459a6871c8c53dc53, type: 2}
-  _quizAnswers:
-  - Answer: {fileID: 11400000, guid: 211a9f0c2febe014d8fbeb67b0ba839b, type: 2}
-    PointsReward: 10
-    OnAnswer:
-      m_PersistentCalls:
-        m_Calls: []
+  _possibleDialogues:
+  - {fileID: 11400000, guid: 485e8ed7fd435d1428e8cb3e93ec8295, type: 2}
   _isInstant: 0
-  OnAnyCorrectAnswer:
+  OnStart:
     m_PersistentCalls:
       m_Calls: []
-  OnIncorrectAnswer:
+  OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  OnNext:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInterrupt:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &1096388055
@@ -17706,9 +17707,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1096388052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d56be020010dc42a402680866b0c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: f0298489cdb1a1345bc4638804ff180d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isOnce: 1
+  _rewardPoints: 40
 --- !u!1 &1127309705
 GameObject:
   m_ObjectHideFlags: 0
@@ -25152,7 +25155,7 @@ GameObject:
   - component: {fileID: 2004214141}
   - component: {fileID: 2004214142}
   m_Layer: 0
-  m_Name: pf_NodeArtworkQuiz
+  m_Name: pf_NodeDialogueReward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25196,7 +25199,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1096388054}
-        m_TargetAssemblyTypeName: ProjectM.Features.Quiz.Quiz, Assembly-CSharp
+        m_TargetAssemblyTypeName: ProjectM.Features.Puzzles.DialogueRewarder.DialogueRewarder,
+          Assembly-CSharp
         m_MethodName: BeginPuzzle
         m_Mode: 1
         m_Arguments:
@@ -25211,7 +25215,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1096388054}
-        m_TargetAssemblyTypeName: ProjectM.Features.Quiz.Quiz, Assembly-CSharp
+        m_TargetAssemblyTypeName: ProjectM.Features.Puzzles.DialogueRewarder.DialogueRewarder,
+          Assembly-CSharp
         m_MethodName: InterruptPuzzle
         m_Mode: 1
         m_Arguments:
@@ -26376,10 +26381,30 @@ PrefabInstance:
       propertyPath: _firstNode
       value: 
       objectReference: {fileID: 604115577}
+    - target: {fileID: 1278289672800764098, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418996727072841670, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _sources.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418996727072841670, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _sources.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3728949088606423929, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_Name
       value: pf_MainManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344497575212149715, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _dialoguesPool.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5812637801896931851, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
@@ -26431,25 +26456,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6359863772598711053, guid: 9afb9c7727edad1499706ea643d557bd,
+    - target: {fileID: 6070626047771227507, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
-      propertyPath: _queueSources.Array.size
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6359863772598711053, guid: 9afb9c7727edad1499706ea643d557bd,
+    - target: {fileID: 6245586051205342743, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
-      propertyPath: _queueSources.Array.data[0]
-      value: 
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6359863772598711053, guid: 9afb9c7727edad1499706ea643d557bd,
+    - target: {fileID: 6891426229348799076, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
-      propertyPath: _queueSources.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6359863772598711053, guid: 9afb9c7727edad1499706ea643d557bd,
-        type: 3}
-      propertyPath: _queueSources.Array.data[2]
-      value: 
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6899193427566014676, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
@@ -26481,6 +26501,16 @@ PrefabInstance:
       propertyPath: OnCloudy.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 695298821}
+    - target: {fileID: 7127252268608744238, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540401309361811135, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _pointsLimits.<Max>k__BackingField
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7571364931165014669, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: <PlayerCamera>k__BackingField

@@ -1,21 +1,21 @@
 ﻿namespace VUDK.Features.More.DialogueSystem.Components
 {
-    using VUDK.Features.Main.TriggerSystem;
+    using VUDK.Features.More.DialogueSystem.Components.Interfaces;
     using VUDK.Features.More.DialogueSystem.Events;
 
-    public class DSDialogueTrigger : DSDialogueSelectorBase, ITrigger
+    public class DSDialogueTrigger : DSDialogueSelectorBase, IDialogueTrigger
     {
         private bool _hasBeenTriggered;
         private bool _isSpeaking;
 
         private void OnEnable()
         {
-            DSEvents.OnDMAnyEnd += OnDialogueEnded;
+            DialogueContainer.OnEnd += OnDialogueEnded;
         }
 
         private void OnDisable()
         {
-            DSEvents.OnDMAnyEnd -= OnDialogueEnded;
+            DialogueContainer.OnEnd -= OnDialogueEnded;
         }
 
         public virtual void Trigger()
@@ -37,7 +37,7 @@
 
         public void Interrupt()
         {
-            DSEvents.DialogueInterruptHandler?.Invoke();
+            DSEventsHandler.InterruptDialogue();
             _isSpeaking = false;
         }
 

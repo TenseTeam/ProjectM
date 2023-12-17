@@ -10,16 +10,14 @@
         public static Action<int> DialogueChoiceHandler;
         public static Action DialogueInterruptHandler;
 
-        // Dialogue Manager Events
-        public static Action OnDMAnyNext;
-        public static Action<DSDialogueData> OnDMNext;
-        public static Action OnDMCompletedSentence;
-        public static Action OnDMDisable;
-        public static Action<DSDialogueData> OnDMInterrupt;
-        public static Action<DSDialogueContainerData> OnDMStart;
-        public static Action<DSDialogueContainerData> OnDMEnd;
-        public static Action OnDMAnyStart;
-        public static Action OnDMAnyEnd;
+        // Dialogue Generic Events
+        public static Action OnStart;
+        public static Action OnEnd;
+        public static Action OnNext;
+        public static Action OnInterrupt;
+        public static Action OnCompletedSentence;
+        public static Action OnEnable;
+        public static Action OnDisable;
     }
 
     public class OnStartDialogueEventArgs : EventArgs

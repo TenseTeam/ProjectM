@@ -30,15 +30,15 @@
         protected virtual void OnEnable()
         {
             ActorData.OnEmitDialogue += OnEmission;
-            DSEvents.OnDMAnyNext += OnStop;
-            DSEvents.OnDMDisable += OnStop;
+            DSEvents.OnNext += OnStop;
+            DSEvents.OnDisable += OnStop;
         }
 
         protected virtual void OnDisable()
         {
             ActorData.OnEmitDialogue -= OnEmission;
-            DSEvents.OnDMAnyNext -= OnStop;
-            DSEvents.OnDMDisable -= OnStop;
+            DSEvents.OnNext -= OnStop;
+            DSEvents.OnDisable -= OnStop;
         }
 
         protected virtual void OnEmission(AudioClip clip)
