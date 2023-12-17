@@ -18,6 +18,8 @@
         private float _displayLetterTime = 0.1f;
         [SerializeField]
         private bool _hasCloseButton;
+        [SerializeField]
+        private List<DSDialogueContainerData> _dialoguesPool;
 
         [Header("UI Dialogue")]
         [SerializeField]

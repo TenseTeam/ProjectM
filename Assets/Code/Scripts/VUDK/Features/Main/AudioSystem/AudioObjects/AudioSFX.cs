@@ -1,15 +1,15 @@
-﻿namespace VUDK.Features.AudioSFX
+﻿namespace VUDK.Features.Main.AudioSystem.AudioObjects
 {
     using UnityEngine;
     using VUDK.Patterns.Pooling;
     using VUDK.Extensions;
     using VUDK.Generic.Managers.Main;
-    using VUDK.Patterns.Initialization.Interfaces;
     using VUDK.Generic.Serializable;
     using VUDK.Patterns.Pooling.Keys;
+    using VUDK.Features.Main.AudioSystem.AudioObjects.Interfaces;
 
     [RequireComponent(typeof(AudioSource))]
-    public class AudioSFX : PooledObject, IInit<AudioClip>
+    public class AudioSFX : PooledObject, IAudioObject
     {
         private AudioSource _audioSource;
         private DelayTask _clipLenghtTask;
@@ -36,21 +36,27 @@
         {
             GameObject goAud = MainManager.Ins.PoolsManager.Pools[PoolKeys.AudioSFX].Get();
             if (goAud.TryGetComponent(out AudioSFX audioSFX))
-                audioSFX.Init(clip);
+                audioSFX.SetClip(clip);
 
             return audioSFX;
         }
 
-        public void Init(AudioClip clip)
+        /// <inheritdoc/>
+        public void SetClip(AudioClip clip)
         {
             _audioSource.clip = clip;
         }
 
+        /// <inheritdoc/>
         public void Play()
         {
             PlayAtPosition(transform.position);
         }
 
+        /// <summary>
+        /// Plays the audio clip at the specified position.
+        /// </summary>
+        /// <param name="position">The position in the scene where the audio should be played.</param>
         public void PlayAtPosition(Vector3 position)
         {
             _audioSource.Play();
@@ -58,20 +64,17 @@
             transform.SetPosition(position);
         }
 
+        /// <inheritdoc/>
         public void Stop()
         {
             Dispose();
         }
 
+        /// <inheritdoc/>
         public override void Clear()
         {
             _audioSource.Stop();
             _audioSource.clip = null;
-        }
-
-        public bool Check()
-        {
-            return _audioSource.clip != null;
         }
     }
 }

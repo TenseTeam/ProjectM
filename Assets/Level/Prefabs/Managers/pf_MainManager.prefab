@@ -80,10 +80,10 @@ RectTransform:
   - {fileID: 3413898528220445556}
   m_Father: {fileID: 7384545409079098807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 864, y: -1194.6666}
-  m_SizeDelta: {x: 1728, y: 341.3333}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2718207253710627025
 CanvasRenderer:
@@ -374,12 +374,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562776305583685200}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7662096091253471952}
+  m_Father: {fileID: 598409653899543985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &8089780921974254661
 AudioSource:
@@ -621,6 +621,7 @@ GameObject:
   m_Component:
   - component: {fileID: 598409653899543985}
   - component: {fileID: 6359863772598711053}
+  - component: {fileID: 2418996727072841670}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -641,7 +642,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7662096091253471952}
+  - {fileID: 3862575608326756500}
+  - {fileID: 1161566728487375691}
   m_Father: {fileID: 5812637801896931851}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6359863772598711053
@@ -656,9 +658,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430b2640c57b07e46b96c5c9311a211c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _music: {fileID: 8089780921974254661}
-  _sourceSFX: {fileID: 2509970210445865155}
-  _queueSources: []
+  _mainMusic: {fileID: 8089780921974254661}
+  _mainEffect: {fileID: 2509970210445865155}
+--- !u!114 &2418996727072841670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088147620588368446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1392068a76716dd47a0c65e973de90f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sources: []
 --- !u!1 &1182556851376971454
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +804,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8941325113254181669}
   - component: {fileID: 5053585302363551768}
-  - component: {fileID: 7384630182357641151}
   - component: {fileID: 5255171974673808748}
   m_Layer: 5
   m_Name: QuizManager
@@ -838,6 +851,7 @@ MonoBehaviour:
   OnPuzzleResolved:
     m_PersistentCalls:
       m_Calls: []
+  _hoursToReset: 24
   _correctAnswerMessage: Correct!
   _wrongAnswerMessage: Try Again.
   _quizCompletedMessage: Quiz Completed!
@@ -850,25 +864,15 @@ MonoBehaviour:
   - {fileID: 3014111723830898185}
   - {fileID: 4362475066492876724}
   - {fileID: 7723024286832057539}
+  _quizDatas:
+  - {fileID: 11400000, guid: 4c3b49c259d4dd847b6143879af2f92b, type: 2}
+  - {fileID: 11400000, guid: 4c3b49c259d4dd847b6143879af2f92b, type: 2}
   OnCorrectAnswer:
     m_PersistentCalls:
       m_Calls: []
   OnWrongAnswer:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7384630182357641151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278289672800764098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0a6a18d595b8024abab29741e8b532f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _taskCycle: 0
 --- !u!114 &5255171974673808748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1095,10 +1099,10 @@ RectTransform:
   - {fileID: 7585414853584709589}
   m_Father: {fileID: 7384545409079098807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 864, y: -853.33325}
-  m_SizeDelta: {x: 1728, y: 341.3333}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4455787161358815798
 CanvasRenderer:
@@ -1404,10 +1408,10 @@ RectTransform:
   - {fileID: 4228781432032669876}
   m_Father: {fileID: 7384545409079098807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 864, y: -511.99997}
-  m_SizeDelta: {x: 1728, y: 341.3333}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5100161547716721124
 CanvasRenderer:
@@ -1837,7 +1841,7 @@ MonoBehaviour:
   _initPoints: 0
   _pointsLimits:
     <Min>k__BackingField: 0
-    <Max>k__BackingField: 100
+    <Max>k__BackingField: 190
 --- !u!1 &3728949088606423929
 GameObject:
   m_ObjectHideFlags: 0
@@ -3014,10 +3018,10 @@ RectTransform:
   - {fileID: 7189467329812264957}
   m_Father: {fileID: 7384545409079098807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 864, y: -170.66666}
-  m_SizeDelta: {x: 1728, y: 341.3333}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8823250393634921384
 CanvasRenderer:
@@ -3183,10 +3187,10 @@ RectTransform:
   - {fileID: 4109310244387721263}
   m_Father: {fileID: 8693318448479824915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 864, y: -128}
-  m_SizeDelta: {x: 1728, y: 256}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -170.66666}
+  m_SizeDelta: {x: 0, y: 341.3333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5029433938768117396
 CanvasRenderer:
@@ -4252,7 +4256,6 @@ GameObject:
   - component: {fileID: 2226451521669489869}
   - component: {fileID: 4831939805489745296}
   - component: {fileID: 3716374678935451431}
-  - component: {fileID: 4501226887554170258}
   m_Layer: 5
   m_Name: QuizButton
   m_TagString: Untagged
@@ -4362,9 +4365,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4501226887554170258}
-        m_TargetAssemblyTypeName: ProjectM.Features.Puzzles.Quiz.QuizTrigger, Assembly-CSharp
-        m_MethodName: Trigger
+      - m_Target: {fileID: 5053585302363551768}
+        m_TargetAssemblyTypeName: ProjectM.Puzzles.Quiz.QuizManager, Assembly-CSharp
+        m_MethodName: BeginQuiz
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4386,19 +4389,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4501226887554170258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6733220291566349270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75bb523d49d04964e886b287fe712b24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _quizData: {fileID: 11400000, guid: 4c3b49c259d4dd847b6143879af2f92b, type: 2}
 --- !u!1 &6742961905869010930
 GameObject:
   m_ObjectHideFlags: 0
@@ -4630,6 +4620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _displayLetterTime: 0.05
   _hasCloseButton: 1
+  _dialoguesPool: []
   _dialoguePanel: {fileID: 4071213621931446996}
   _dialogueBox: {fileID: 4404774448922970794}
   _actorIconImage: {fileID: 6941567407979561998}
@@ -5030,10 +5021,10 @@ RectTransform:
   - {fileID: 5901751768319310519}
   m_Father: {fileID: 8693318448479824915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 864, y: -384}
-  m_SizeDelta: {x: 1728, y: 256}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -511.99997}
+  m_SizeDelta: {x: 0, y: 341.3333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2545497515277104931
 CanvasRenderer:
@@ -5503,7 +5494,7 @@ GameObject:
   - component: {fileID: 1161566728487375691}
   - component: {fileID: 2509970210445865155}
   m_Layer: 0
-  m_Name: SFX
+  m_Name: Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5517,12 +5508,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8465566773518285091}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7662096091253471952}
+  m_Father: {fileID: 598409653899543985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2509970210445865155
 AudioSource:
@@ -5620,39 +5611,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &8474381961403211992
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7662096091253471952}
-  m_Layer: 0
-  m_Name: Unconccurrent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7662096091253471952
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8474381961403211992}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3862575608326756500}
-  - {fileID: 1161566728487375691}
-  m_Father: {fileID: 598409653899543985}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8798544382069651380
 GameObject:
   m_ObjectHideFlags: 0

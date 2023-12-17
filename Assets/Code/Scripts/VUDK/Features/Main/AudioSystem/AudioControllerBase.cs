@@ -1,9 +1,9 @@
-﻿namespace VUDK.Features.Main.AudioSFX
+﻿namespace VUDK.Features.Main.AudioSystem.AudioObjects
 {
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
 
-    public abstract class AudioEventsControllerBase : MonoBehaviour
+    public abstract class AudioControllerBase : MonoBehaviour
     {
         protected AudioManager AudioManager => MainManager.Ins.AudioManager;
 
