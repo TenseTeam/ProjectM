@@ -3,7 +3,7 @@
     using VUDK.Features.Main.SaveSystem.Data;
 
     [System.Serializable]
-    public class PointsSaveData : SaveDataBase
+    public class PointsSaveData : SaveData
     {
         public int Points;
 

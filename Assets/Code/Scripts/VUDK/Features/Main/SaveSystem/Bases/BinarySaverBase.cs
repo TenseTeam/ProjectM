@@ -4,7 +4,7 @@
     using VUDK.Features.Main.SaveSystem.Data;
     using UnityEngine;
 
-    public abstract class BinarySaverBase<T> : MonoBehaviour, ISaverLoader where T : SaveDataBase
+    public abstract class BinarySaverBase<T> : MonoBehaviour, ISaverLoader where T : SaveData
     {
         protected T SaveData;
 

@@ -134,7 +134,6 @@ namespace VUDK.Features.More.ExplorationSystem.Nodes
                 UnityEditor.Selection.activeGameObject == gameObject ||
                 UnityEditor.Selection.activeObject == NodeTarget.gameObject;
         }
-
 #endif
     }
 }

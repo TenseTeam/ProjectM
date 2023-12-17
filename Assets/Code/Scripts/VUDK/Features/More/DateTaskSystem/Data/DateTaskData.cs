@@ -4,7 +4,7 @@
     using VUDK.Features.Main.SaveSystem.Data;
 
     [Serializable]
-    public class DateTaskData : SaveDataBase
+    public class DateTaskData : SaveData
     {
         public DateTime? LastDataCompleted;
 

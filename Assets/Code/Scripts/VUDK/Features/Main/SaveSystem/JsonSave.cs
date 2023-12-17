@@ -1,13 +1,13 @@
 ﻿namespace VUDK.Features.Main.SaveSystem
 {
     using System.IO;
-    using System.Runtime.Serialization.Formatters.Binary;
+    using Newtonsoft.Json;
     using UnityEngine;
     using VUDK.Features.Main.SaveSystem.Data;
 
-    public static class BinarySave
+    public static class JsonSave
     {
-        private const string s_DefaultExtension = ".save";
+        private const string s_DefaultExtension = ".json";
 
         public static void Save<T>(T data) where T : SaveData
         {
@@ -16,12 +16,12 @@
 
         public static void Save<T>(T data, string fileName, string extension = s_DefaultExtension) where T : SaveData
         {
-            BinaryFormatter formatter = new BinaryFormatter();
             string path = Path.Combine(Application.persistentDataPath, fileName + extension.ToLower());
+            string jsonData = JsonConvert.SerializeObject(data, Formatting.Indented);
 
-            using (FileStream stream = new FileStream(path, FileMode.Create))
+            using (StreamWriter streamWriter = File.CreateText(path))
             {
-                formatter.Serialize(stream, data);
+                streamWriter.Write(jsonData);
             }
         }
 
@@ -40,12 +40,9 @@
                 return false;
             }
 
-            BinaryFormatter formatter = new BinaryFormatter();
-            using (FileStream stream = new FileStream(path, FileMode.Open))
-            {
-                data = (T)formatter.Deserialize(stream);
-                return true;
-            }
+            string jsonData = File.ReadAllText(path);
+            data = JsonConvert.DeserializeObject<T>(jsonData);
+            return true;
         }
 
         public static bool DeleteSave(string fileName, string extension = s_DefaultExtension)

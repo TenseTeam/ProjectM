@@ -6,11 +6,12 @@
     using VUDK.Features.Main.PointsSystem.Rewards;
     using VUDK.Features.More.DialogueSystem.Data;
     using VUDK.Features.More.DialogueSystem.Events;
-    using VUDK.Features.More.PuzzleSystem.Bases;
     using ProjectM.Features.Puzzles.DialogueQuiz.Data;
+    using VUDK.Features.More.PuzzleSystem.Saving;
+    using VUDK.Features.More.PuzzleSystem.Saving.SaveData;
 
     [RequireComponent(typeof(Rewarder))]
-    public class DialogueQuiz : DatePuzzleBase
+    public class DialogueQuiz : SavedPuzzleBase
     {
         [Header("Quiz Settings")]
         [SerializeField]
