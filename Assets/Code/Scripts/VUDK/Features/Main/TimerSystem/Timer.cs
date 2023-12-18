@@ -1,7 +1,6 @@
 namespace VUDK.Features.Main.TimerSystem
 {
     using System.Collections;
-    using UnityEditor.Localization.Plugins.XLIFF.V12;
     using UnityEngine;
     using VUDK.Features.Main.TimerSystem.Events;
 
@@ -32,7 +31,6 @@ namespace VUDK.Features.Main.TimerSystem
         public void StartTimer(int time)
         {
             if (time < 0) return;
-            _time = time;
 
             TimerEvents.OnTimerStart?.Invoke();
             StartCoroutine(CountdownRoutine(time));
