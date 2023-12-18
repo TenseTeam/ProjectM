@@ -9,17 +9,15 @@
     using VUDK.Features.Main.EventSystem;
     using VUDK.Features.Main.InputSystem;
     using VUDK.Features.Main.PointsSystem.Rewards;
-    using VUDK.Features.More.PuzzleSystem.Saving;
-    using VUDK.Features.More.PuzzleSystem.Saving.SaveData;
+    using VUDK.Extensions;
+    using VUDK.Features.More.GameTaskSystem;
     using ProjectM.Constants;
     using ProjectM.Features.Puzzles.Quiz.Data;
     using ProjectM.Features.Puzzles.Quiz.UI;
-    using System;
     using ProjectM.Features.Puzzles.Quiz.Data.SaveData;
-    using VUDK.Extensions;
 
     [RequireComponent(typeof(Rewarder))]
-    public class QuizManager : SavedPuzzleBase
+    public class QuizManager : GameTaskSaverBase<QuizSaveValue>
     {
         [Header("Quiz Messages")]
         [SerializeField]
@@ -64,7 +62,6 @@
 
         [Header("Quiz Events")]
         public UnityEvent OnCorrectAnswer;
-
         public UnityEvent OnWrongAnswer;
 
         protected override void Awake()
@@ -76,27 +73,25 @@
 
         private void OnEnable()
         {
-            _closeButton.onClick.AddListener(InterruptPuzzle);
+            _closeButton.onClick.AddListener(InterruptTask);
             EventManager.Ins.AddListener<int>(GameEventKeys.OnSelectQuizAnswer, ReceiveAnswer);
             InputsManager.Inputs.Interaction.Interact.canceled += DisplayQuestion;
         }
 
         private void OnDisable()
         {
-            _closeButton.onClick.RemoveListener(InterruptPuzzle);
+            _closeButton.onClick.RemoveListener(InterruptTask);
             EventManager.Ins.RemoveListener<int>(GameEventKeys.OnSelectQuizAnswer, ReceiveAnswer);
             InputsManager.Inputs.Interaction.Interact.canceled -= DisplayQuestion;
         }
 
-        public override void Init(PuzzleSaveData data)
+        public override void Init()
         {
-            base.Init(data);
-
-            if (IsInProgress)
+            base.Init();
+            if (IsInProgress) // If puzzle is in progress, load the saved data
             {
-                QuizSaveData quizSaveData = data.AdditionalSaveValue as QuizSaveData;
-                _currentQuizIndex = quizSaveData.QuizIndex;
-                _currentQuestionIndex = quizSaveData.QuestionIndex;
+                _currentQuizIndex = SaveValue.QuizIndex;
+                _currentQuestionIndex = SaveValue.QuestionIndex;
             }
         }
 
@@ -111,39 +106,39 @@
                 }
 
                 _currentQuizIndex = _quizDatas.IndexOf(_quizDatas.GetRandomElement());
-                BeginPuzzle();
+                BeginTask();
             }
             else
             {
-                ResumePuzzle();
+                ResumeTask();
             }
         }
 
-        public override void BeginPuzzle()
+        public override void BeginTask()
         {
             if (CurrentQuizData == null) return;
-            base.BeginPuzzle();
+            base.BeginTask();
 
             _currentQuestionIndex = 0;
             Enable();
             DisplayQuestion();
         }
 
-        public override void ResolvePuzzle()
+        public override void ResolveTask()
         {
-            base.ResolvePuzzle();
+            base.ResolveTask();
             PrintMessage(_quizCompletedMessage);
         }
 
-        public override void InterruptPuzzle()
+        public override void InterruptTask()
         {
-            base.InterruptPuzzle();
+            base.InterruptTask();
             Disable();
         }
 
-        public override void ResumePuzzle()
+        public override void ResumeTask()
         {
-            base.ResumePuzzle();
+            base.ResumeTask();
             DisplayQuestion();
             Enable();
         }
@@ -176,9 +171,9 @@
         {
             _currentQuestionIndex++;
             if (_currentQuestionIndex > CurrentQuizData.Questions.Count - 1)
-                ResolvePuzzle();
+                ResolveTask();
             else
-                SaveQuizState();
+                SaveQuizState(); // Saving at every question to prevent data loss in case of crash
         }
 
         private void EnableChoicesBox()
@@ -257,9 +252,10 @@
 
         private void SaveQuizState()
         {
-            SaveData.IsInProgress = IsInProgress;
-            SaveData.AdditionalSaveValue = new QuizSaveData(_currentQuizIndex, _currentQuestionIndex);
-            Save();
+            SaveValue.IsInProgress = IsInProgress;
+            SaveValue.QuizIndex = _currentQuizIndex;
+            SaveValue.QuestionIndex = _currentQuestionIndex;
+            Push();
         }
     }
 }

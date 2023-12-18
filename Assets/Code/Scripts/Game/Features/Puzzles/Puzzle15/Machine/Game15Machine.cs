@@ -1,9 +1,7 @@
 ﻿namespace ProjectM.Features.Puzzles.Machine
 {
-    using ProjectM.Features.Puzzles.Machine.States;
-    using ProjectM.Patterns.Factories;
     using VUDK.Patterns.StateMachine;
-    using ProjectM.Features.Puzzles.Puzzle15;
+    using ProjectM.Features.Puzzles.Machine.States;
     using ProjectM.Features.Puzzles.Puzzle15.Factories;
 
     public class Game15Machine : StateMachine

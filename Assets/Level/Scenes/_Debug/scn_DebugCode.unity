@@ -5750,7 +5750,6 @@ GameObject:
   - component: {fileID: 318163500}
   - component: {fileID: 318163497}
   - component: {fileID: 318163501}
-  - component: {fileID: 318163502}
   m_Layer: 0
   m_Name: Puzzle15Game
   m_TagString: Untagged
@@ -5853,25 +5852,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsRepeatable: 0
-  OnPuzzleBegin:
+  OnTaskBegin:
     m_PersistentCalls:
       m_Calls: []
-  OnPuzzleResolved:
+  OnTaskResolved:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 318163501}
-        m_TargetAssemblyTypeName: VUDK.Features.Main.PointsSystem.Reward.RewardTrigger,
-          Assembly-CSharp
-        m_MethodName: TriggerReward
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _hoursToReset: 24
   _game15Texture: {fileID: 2800000, guid: b0f0eaf45c7113d48b2ff6fe13e046ff, type: 3}
 --- !u!114 &318163498
@@ -5939,19 +5925,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isOnce: 1
   _rewardPoints: 20
---- !u!114 &318163502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318163492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0a6a18d595b8024abab29741e8b532f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _taskCycle: 0
 --- !u!1 &320697473
 GameObject:
   m_ObjectHideFlags: 0
@@ -17676,10 +17649,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsRepeatable: 0
-  OnPuzzleBegin:
+  OnTaskBegin:
     m_PersistentCalls:
       m_Calls: []
-  OnPuzzleResolved:
+  OnTaskResolved:
     m_PersistentCalls:
       m_Calls: []
   _hoursToReset: 24
@@ -19224,10 +19197,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueContainer: {fileID: 11400000, guid: 485e8ed7fd435d1428e8cb3e93ec8295, type: 2}
   StartDialogue: {fileID: 0}
+  _dialogueGroup: {fileID: 11400000, guid: 01de217281b711c4fb6944d6be4d7707, type: 2}
   RandomStartDialogue: 1
   IsInstantDialogue: 0
   IsRepeatable: 0
-  _dialogueGroup: {fileID: 11400000, guid: 01de217281b711c4fb6944d6be4d7707, type: 2}
   _groupedDialogues: 0
   _startingDialoguesOnly: 0
   _selectedDialogueGroupIndex: 0
@@ -25201,7 +25174,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1096388054}
         m_TargetAssemblyTypeName: ProjectM.Features.Puzzles.DialogueRewarder.DialogueRewarder,
           Assembly-CSharp
-        m_MethodName: BeginPuzzle
+        m_MethodName: BeginTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25217,7 +25190,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1096388054}
         m_TargetAssemblyTypeName: ProjectM.Features.Puzzles.DialogueRewarder.DialogueRewarder,
           Assembly-CSharp
-        m_MethodName: InterruptPuzzle
+        m_MethodName: InterruptTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25283,9 +25256,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2037956098}
-        m_TargetAssemblyTypeName: ProjectM.Features.Puzzles.Puzzle15.Game15Puzzle,
-          Assembly-CSharp
-        m_MethodName: BeginPuzzle
+        m_TargetAssemblyTypeName: ProjectM.Features.Puzzles.Game15Puzzle, Assembly-CSharp
+        m_MethodName: BeginTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25299,9 +25271,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2037956098}
-        m_TargetAssemblyTypeName: VUDK.Features.More.PuzzleSystem.Bases.PuzzleBase,
+        m_TargetAssemblyTypeName: VUDK.Features.More.GameTaskSystem.Bases.GameTaskBase,
           Assembly-CSharp
-        m_MethodName: InterruptPuzzle
+        m_MethodName: InterruptTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25360,7 +25332,6 @@ GameObject:
   - component: {fileID: 2037956099}
   - component: {fileID: 2037956098}
   - component: {fileID: 2037956097}
-  - component: {fileID: 2037956096}
   m_Layer: 0
   m_Name: Puzzle15Game
   m_TagString: Untagged
@@ -25387,19 +25358,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 3, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2037956096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037956094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0a6a18d595b8024abab29741e8b532f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _taskCycle: 0
 --- !u!114 &2037956097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25427,25 +25385,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsRepeatable: 0
-  OnPuzzleBegin:
+  OnTaskBegin:
     m_PersistentCalls:
       m_Calls: []
-  OnPuzzleResolved:
+  OnTaskResolved:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2037956097}
-        m_TargetAssemblyTypeName: VUDK.Features.Main.PointsSystem.Reward.RewardTrigger,
-          Assembly-CSharp
-        m_MethodName: TriggerReward
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _hoursToReset: 24
   _game15Texture: {fileID: 2800000, guid: b0f0eaf45c7113d48b2ff6fe13e046ff, type: 3}
 --- !u!114 &2037956099
@@ -26749,9 +26694,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 318163497}
-        m_TargetAssemblyTypeName: ProjectM.Features.Puzzles.Puzzle15.Game15Puzzle,
-          Assembly-CSharp
-        m_MethodName: BeginPuzzle
+        m_TargetAssemblyTypeName: ProjectM.Features.Puzzles.Game15Puzzle, Assembly-CSharp
+        m_MethodName: BeginTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26765,9 +26709,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 318163497}
-        m_TargetAssemblyTypeName: VUDK.Features.More.PuzzleSystem.Bases.PuzzleBase,
+        m_TargetAssemblyTypeName: VUDK.Features.More.GameTaskSystem.Bases.GameTaskBase,
           Assembly-CSharp
-        m_MethodName: InterruptPuzzle
+        m_MethodName: InterruptTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

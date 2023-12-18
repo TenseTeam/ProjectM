@@ -6,10 +6,10 @@
     using VUDK.Features.Main.PointsSystem.Rewards;
     using VUDK.Features.More.DialogueSystem.Data;
     using VUDK.Features.More.DialogueSystem.Events;
-    using VUDK.Features.More.PuzzleSystem.Saving;
+    using VUDK.Features.More.GameTaskSystem;
 
     [RequireComponent(typeof(RewardTrigger))]
-    public class DialogueRewarder : SavedPuzzleBase
+    public class DialogueRewarder : GameTaskSaverBase
     {
         [Header("Dialogue Listener Settings")]
         [SerializeField]
@@ -50,25 +50,25 @@
             _dialogueContainerData.OnInterrupt -= OnDialogueInterrupt;
         }
 
-        public override void BeginPuzzle()
+        public override void BeginTask()
         {
-            base.BeginPuzzle();
+            base.BeginTask();
             if(IsSolved && !IsRepeatable) return;
             _dialogueContainerData = _possibleDialogues[Random.Range(0, _possibleDialogues.Count)];
             DSEventsHandler.StartDialogue(this, _dialogueContainerData, null, true, _isInstant);
             SubscribeEvents();
         }
 
-        public override void InterruptPuzzle()
+        public override void InterruptTask()
         {
-            base.InterruptPuzzle();
+            base.InterruptTask();
             DSEventsHandler.InterruptDialogue();
             UnsubscribeEvents();
         }
 
-        public override void ResolvePuzzle()
+        public override void ResolveTask()
         {
-            base.ResolvePuzzle();
+            base.ResolveTask();
             _rewarder.TriggerReward();
         }
 
@@ -90,7 +90,7 @@
         protected virtual void OnDialogueEnd()
         {
             OnEnd?.Invoke();
-            ResolvePuzzle();
+            ResolveTask();
             UnsubscribeEvents();
         }
     }

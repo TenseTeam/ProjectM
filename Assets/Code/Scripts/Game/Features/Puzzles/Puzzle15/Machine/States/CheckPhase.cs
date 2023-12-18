@@ -14,7 +14,7 @@
         public override void Enter()
         {
             if (CheckPiecesOrder())
-                Context.Puzzle.ResolvePuzzle();
+                Context.Puzzle.ResolveTask();
             else
                 ChangeState(Game15PhaseKey.MovePhase);
         }

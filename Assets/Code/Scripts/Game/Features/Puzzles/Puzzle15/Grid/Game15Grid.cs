@@ -33,7 +33,7 @@
 
         public void Init(Game15Puzzle puzzle, Texture2D spriteSheet, bool isSolved)
         {
-            puzzle.OnPuzzleResolved.AddListener(FillLastTile);
+            puzzle.OnTaskResolved.AddListener(FillLastTile);
             _textureSpriteSheet = spriteSheet;
             _puzzle = puzzle;
             _piecesSprites = TextureExtension.CreateSpriteSheet(_textureSpriteSheet, Size.x, Size.y);

@@ -4,10 +4,9 @@
     using VUDK.Features.Main.PointsSystem.Data;
     using VUDK.Features.Main.PointsSystem.Events;
     using VUDK.Features.Main.SaveSystem.Bases;
-    using VUDK.Features.More.DateTaskSystem;
     using VUDK.Generic.Serializable;
 
-    public class PointsManager : BinarySaverBase<PointsSaveData>
+    public class PointsManager : SaverBase<PointsSaveValue>
     {
         [Header("Points Settings")]
         [SerializeField, Min(0)]
@@ -15,11 +14,16 @@
         [SerializeField]
         private Range<int> _pointsLimits;
 
-        public int Points { get; private set; }
-
-        private void Start()
+        public int Points
         {
-            Load(nameof(PointsManager) + GetInstanceID(), ".save");
+            get
+            {
+                return SaveValue.Points;
+            }
+            set
+            {
+                SaveValue.Points = value;
+            }
         }
 
         private void OnEnable()
@@ -32,9 +36,8 @@
             PointsEvents.ModifyPointsHandler -= ModifyPoints;
         }
 
-        public void Init(int startingPoints)
+        public override void Init()
         {
-            Points = startingPoints;
             PointsEvents.OnPointsInit?.Invoke(Points);
         }
 
@@ -44,20 +47,12 @@
 
             Points += modifiedPoints;
             PointsEvents.OnPointsChanged?.Invoke(this, modifiedPoints);
-
-            SaveData.Points = Points;
-            Save(nameof(PointsManager) + GetInstanceID(), ".save");
+            Push();
         }
 
-        protected override void OnLoadSuccess(PointsSaveData saveData)
+        public override string GetSaveName()
         {
-            Init(saveData.Points);
-        }
-
-        protected override void OnLoadFail()
-        {
-            SaveData = new PointsSaveData(_initPoints); // if it fails it means there is no save data
-            Init(_initPoints);
+            return "Points";
         }
     }
 }

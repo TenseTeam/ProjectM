@@ -2,15 +2,15 @@
 {
     using System;
     using UnityEngine;
+    using VUDK.Features.More.GameTaskSystem;
     using ProjectM.Features.Puzzles.Grid;
     using ProjectM.Features.Puzzles.Machine;
     using ProjectM.Features.Puzzles.Grid.Tiles;
     using ProjectM.Features.Puzzles.Machine.States;
-    using VUDK.Features.More.PuzzleSystem.Saving;
 
     [RequireComponent(typeof(Game15Grid))]
     [RequireComponent(typeof(Game15Machine))]
-    public class Game15Puzzle : SavedPuzzleBase
+    public class Game15Puzzle : GameTaskSaverBase
     {
         [Header("Puzzle Pieces")]
         [SerializeField]
@@ -33,18 +33,13 @@
 
         private void Start()
         {
-            Init();
-        }
-
-        public void Init()
-        {
             Machine.Init(this);
             Grid.Init(this, _game15Texture, IsSolved);
         }
 
-        public override void BeginPuzzle()
+        public override void BeginTask()
         {
-            base.BeginPuzzle();
+            base.BeginTask();
             if (IsSolved)
             {
                 if (IsRepeatable)
