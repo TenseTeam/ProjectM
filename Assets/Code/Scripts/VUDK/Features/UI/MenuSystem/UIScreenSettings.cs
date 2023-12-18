@@ -1,11 +1,11 @@
-namespace VUDK.UI.Menu
+namespace VUDK.Features.UI.MenuSystem
 {
     using System.Collections.Generic;
     using System.Linq;
     using UnityEngine;
     using UnityEngine.UI;
     using TMPro;
-    using VUDK.UI.Menu.MenuPreferences;
+    using VUDK.Features.UI.MenuSystem.MenuPreferences;
 
     public class UIScreenSettings : MonoBehaviour
     {

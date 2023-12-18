@@ -1,9 +1,9 @@
-namespace VUDK.UI.Menu
+namespace VUDK.Features.UI.MenuSystem
 {
     using UnityEngine;
     using UnityEngine.Audio;
     using UnityEngine.UI;
-    using VUDK.UI.Menu.MenuPreferences;
+    using VUDK.Features.UI.MenuSystem.MenuPreferences;
 
     public class UIVolumeSettings : MonoBehaviour
     {

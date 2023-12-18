@@ -1,4 +1,4 @@
-﻿namespace VUDK.UI.Buttons
+﻿namespace VUDK.Features.UI.ButtonsSystem
 {
     using UnityEngine;
     using UnityEngine.Events;

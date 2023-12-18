@@ -11,9 +11,9 @@
 
     public abstract class GameTaskSaverBase<T> : GameTaskBase, ISavable, IInit where T : TaskSaveValue, new()
     {
-        [Header("Saved Puzzle Settings")]
+        [Header("Task Settings")]
         [SerializeField]
-        private int _hoursToReset = 24;
+        private int _taskPeriod = 24;
 
         protected T SaveValue;
         public int SaveID => GetInstanceID();
@@ -37,7 +37,7 @@
 
         private bool IsTimePassed()
         {
-            return DateTime.Now > SaveValue.LastCompletedTime.AddHours(_hoursToReset);
+            return DateTime.Now > SaveValue.LastCompletedTime.AddHours(_taskPeriod);
         }
 
         public override void BeginTask()
@@ -46,7 +46,6 @@
             Push(); // Push to save task is in progress
         }
 
-        [ContextMenu("Resolve Puzzle")]
         public override void ResolveTask()
         {
             base.ResolveTask();

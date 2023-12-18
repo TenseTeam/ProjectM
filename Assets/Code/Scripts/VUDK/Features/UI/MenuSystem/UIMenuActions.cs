@@ -1,4 +1,4 @@
-namespace VUDK.UI.Menu
+namespace VUDK.Features.UI.MenuSystem
 {
     using UnityEngine;
     using VUDK.Constants;

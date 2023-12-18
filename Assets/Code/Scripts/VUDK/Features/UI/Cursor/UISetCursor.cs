@@ -1,4 +1,4 @@
-namespace VUDK.UI
+namespace VUDK.Features.UI.Cursor
 {
     using UnityEngine;
 
