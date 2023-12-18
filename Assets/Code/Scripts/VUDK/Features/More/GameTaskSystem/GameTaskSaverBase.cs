@@ -8,6 +8,7 @@
     using VUDK.Features.More.GameTaskSystem.Bases;
     using VUDK.Features.More.GameTaskSystem.SaveData;
     using VUDK.Patterns.Initialization.Interfaces;
+    using VUDK.Features.Main.TimerSystem.Events;
 
     public abstract class GameTaskSaverBase<T> : GameTaskBase, ISavable, IInit where T : TaskSaveValue, new()
     {
@@ -17,6 +18,7 @@
 
         protected T SaveValue;
         public int SaveID => GetInstanceID();
+        public DateTime AchieveDate => SaveValue.LastCompletedTime.AddHours(_taskPeriod);
 
         protected virtual void Awake()
         {
@@ -37,12 +39,15 @@
 
         private bool IsTimePassed()
         {
-            return DateTime.Now > SaveValue.LastCompletedTime.AddHours(_taskPeriod);
+            return DateTime.Now > AchieveDate;
         }
 
         public override void BeginTask()
         {
             base.BeginTask();
+            IsSolved = !IsTimePassed();
+            if (IsSolved && !IsRepeatable)
+                TimerEventsHandler.StartTimerHandler(GetSecondsToWait());
             Push(); // Push to save task is in progress
         }
 
@@ -52,6 +57,12 @@
             SaveValue.IsInProgress = IsInProgress;
             SaveValue.LastCompletedTime = DateTime.Now;
             Push(); // Push to save task is solved
+        }
+
+        public override void OnExitFocus()
+        {
+            base.OnExitFocus();
+            TimerEventsHandler.StopTimerHandler();
         }
 
         public void Push()
@@ -73,6 +84,13 @@
         }
 
         public string GetSaveName() => "Tasks";
+
+        protected int GetSecondsToWait()
+        {
+            TimeSpan timeDifference = AchieveDate - DateTime.Now;
+            int secondsToWait = (int)timeDifference.TotalSeconds;
+            return secondsToWait;
+        }
     }
 
     public abstract class GameTaskSaverBase : GameTaskSaverBase<TaskSaveValue>

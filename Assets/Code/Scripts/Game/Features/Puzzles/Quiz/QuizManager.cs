@@ -15,6 +15,7 @@
     using ProjectM.Features.Puzzles.Quiz.Data;
     using ProjectM.Features.Puzzles.Quiz.UI;
     using ProjectM.Features.Puzzles.Quiz.Data.SaveData;
+    using VUDK.Features.Main.TimerSystem.Events;
 
     [RequireComponent(typeof(Rewarder))]
     public class QuizManager : GameTaskSaverBase<QuizSaveValue>
@@ -97,6 +98,9 @@
 
         public void BeginQuiz()
         {
+            if(IsSolved && !IsRepeatable)
+                TimerEventsHandler.StartTimerHandler(GetSecondsToWait());
+
             if (!IsInProgress)
             {
                 if (IsSolved && !IsRepeatable)
