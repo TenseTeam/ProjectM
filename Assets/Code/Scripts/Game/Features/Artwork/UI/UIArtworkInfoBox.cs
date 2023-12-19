@@ -24,12 +24,17 @@
 
         private void OnValidate()
         {
-            if (Check()) Init();
+            if (Check())
+            {
+                _artworkInfoData.AssetChanged += LoadArtworkInfo;
+            }else
+            {
+                _artworkInfoData.AssetChanged -= LoadArtworkInfo;
+            }
         }
 
         private void OnEnable()
         {
-            _artworkInfoData.AssetChanged += LoadArtworkInfo;
         }
 
         private void OnDisable()

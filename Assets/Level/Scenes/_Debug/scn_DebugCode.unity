@@ -535,6 +535,7 @@ Transform:
   - {fileID: 250390108}
   - {fileID: 1467939739}
   - {fileID: 602547117}
+  - {fileID: 160997852}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &66711778
@@ -5761,6 +5762,50 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &160997851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 160997852}
+  - component: {fileID: 160997853}
+  m_Layer: 0
+  m_Name: LocalizationTesting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &160997852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160997851}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 57190354}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160997853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160997851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa4fc3cbfe0ff14f8ad6f65c1ee723b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &250390107
 GameObject:
   m_ObjectHideFlags: 0
@@ -7194,7 +7239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIp
+  m_text: "Guarda che bello \xE8 san giovannino."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13100,7 +13145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIp
+  m_text: "Guarda che bello \xE8 san giovannino."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19031,7 +19076,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SanGiuvan
+  m_text: San Giovannino
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19058,7 +19103,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 3
+  m_fontSize: 2.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -19420,7 +19465,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SanGiuvan
+  m_text: San Giovannino
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19447,7 +19492,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 3
+  m_fontSize: 2.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -27988,11 +28033,31 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 984255093}
+    - target: {fileID: 2060751968082481795, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      propertyPath: m_text
+      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058790801971204166, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      propertyPath: m_text
+      value: Saint Jonh
+      objectReference: {fileID: 0}
     - target: {fileID: 3269825762107017589, guid: 899d08854c2c5eb4a82a915936e617df,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 1852130358}
+    - target: {fileID: 3566019949375145119, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      propertyPath: m_text
+      value: Saint Jonh
+      objectReference: {fileID: 0}
+    - target: {fileID: 3640126809158147943, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      propertyPath: m_text
+      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      objectReference: {fileID: 0}
     - target: {fileID: 4205144827694616015, guid: 899d08854c2c5eb4a82a915936e617df,
         type: 3}
       propertyPath: _artworkInfoData.m_TableEntryReference.m_KeyId
