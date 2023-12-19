@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596eaf741eddb124d99ea97e530dadbd, type: 3}
+  m_Name: so_Quiz_1a
+  m_EditorClassIdentifier: 
+  Questions:
+  - QuestionText: ' Who is the Italian Renaissance artist known for the painting
+      "The School of Athens," and what similar works are present at the Brera Museum?'
+    PointsReward: 10
+    Answers:
+    - AnswerText: Michelangelo
+      IsCorrect: 0
+    - AnswerText: Leonardo da Vinci
+      IsCorrect: 0
+    - AnswerText: Raphael Sanzio
+      IsCorrect: 1
+    - AnswerText: Caravaggio
+      IsCorrect: 0
+  - QuestionText: ' What is the predominant theme in the paintings of the Lombard
+      school, as highlighted in the works exhibited at Brera?'
+    PointsReward: 10
+    Answers:
+    - AnswerText: Still life
+      IsCorrect: 0
+    - AnswerText: Marine landscapes
+      IsCorrect: 0
+    - AnswerText: Court portraits
+      IsCorrect: 0
+    - AnswerText: Religious representations
+      IsCorrect: 1
+  - QuestionText: ' Who is the artist behind the masterpiece "The Kiss," and which
+      artistic movement does it represent?'
+    PointsReward: 10
+    Answers:
+    - AnswerText: Titian - Mannerism
+      IsCorrect: 0
+    - AnswerText: Leonardo da Vinci - Renaissance
+      IsCorrect: 0
+    - AnswerText: Antonio Canova - Neoclassicism
+      IsCorrect: 0
+    - AnswerText: Francesco Hayez - Romanticism
+      IsCorrect: 1
+  - QuestionText: Which famous Italian painter is known for his frescoes in the Scrovegni
+      Chapel in Padua, and which of his works are present at the Brera Museum?
+    PointsReward: 10
+    Answers:
+    - AnswerText: Sandro Botticelli
+      IsCorrect: 0
+    - AnswerText: Giotto di Bondone
+      IsCorrect: 1
+    - AnswerText: Andrea Mantegna
+      IsCorrect: 0
+    - AnswerText: Piero della Francesca
+      IsCorrect: 0
+  - QuestionText: In which historical period were many of the artworks exhibited
+      at Brera created?
+    PointsReward: 10
+    Answers:
+    - AnswerText: Baroque
+      IsCorrect: 0
+    - AnswerText: Middle Ages
+      IsCorrect: 0
+    - AnswerText: Renaissance
+      IsCorrect: 1
+    - AnswerText: Rococo
+      IsCorrect: 0
