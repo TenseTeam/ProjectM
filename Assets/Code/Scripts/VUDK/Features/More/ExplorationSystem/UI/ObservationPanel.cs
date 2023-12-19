@@ -2,7 +2,6 @@ namespace ProjectM.Features.UI.UIExploration
 {
     using UnityEngine;
     using UnityEngine.UI;
-    using VUDK.Generic.Managers.Main;
     using VUDK.Features.More.ExplorationSystem.Constants;
     using VUDK.Features.Main.EventSystem;
 

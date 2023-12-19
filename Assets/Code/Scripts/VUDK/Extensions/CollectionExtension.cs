@@ -14,12 +14,10 @@
             return randomElement;
         }
 
-        public static T GetRandomElementAndRemove<T>(this List<T> list)
+        public static T GetRandomElement<T>(this List<T> list)
         {
             int randomIndex = Random.Range(0, list.Count);
-            Debug.Log($"Random index: {randomIndex}");
             T randomElement = list[randomIndex];
-            list.Remove(randomElement);
             return randomElement;
         }
     }

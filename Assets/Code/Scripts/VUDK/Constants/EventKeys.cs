@@ -10,10 +10,11 @@
             public const string OnFirstLaunch = "OnFirstLaunch";
         }
 
-        public static class CountdownEvents
+        public static class TimerEvents
         {
-            public const string OnCountdownTimesUp = "OnCountdownTimesUp";
-            public const string OnCountdownCount = "OnCountDownCount";
+            public const string OnTimerStart = "OnTimerStart";
+            public const string OnTimerEnd = "OnTimerEnd";
+            public const string OnTimerCount = "OnTimerCount";
         }
 
         public static class ScoreEvents

@@ -19,6 +19,9 @@
         [SerializeField]
         private bool _hasCloseButton;
 
+        //[SerializeField]
+        //private List<DSDialogueContainerData> _dialoguesPool; // TODO: Implement a pool of dialogues to avoid references with scriptable objects that will cause problems when saving
+
         [Header("UI Dialogue")]
         [SerializeField]
         private RectTransform _dialoguePanel;
@@ -58,9 +61,8 @@
 
         public bool IsDialogueOpen => _dialoguePanel.gameObject.activeSelf;
         public bool IsTalking { get; private set; }
-        private bool _hasActor => _currentDialogue.ActorData != null;
-        private int _maxChoices => _choiceButtons.Count;
-
+        private bool HasActor => _currentDialogue.ActorData != null;
+        private int MaxChoices => _choiceButtons.Count;
 
         private void Awake()
         {
@@ -89,10 +91,11 @@
 
         public void StartDialogue(object sender, OnStartDialogueEventArgs args)
         {
-            DSEvents.OnDMStart?.Invoke(_dialogueContainerData);
-            DSEvents.OnDMAnyStart?.Invoke();
             _dialogueContainerData = args.DialogueContainerData;
             _isInstant = args.IsInstant;
+
+            DSEvents.OnStart?.Invoke();
+            _dialogueContainerData.OnStart?.Invoke();
 
             if (args.RandomStart || !args.DialogueData)
                 _currentDialogue = RandomStartDialogue();
@@ -106,16 +109,18 @@
 
         private void EndDialogue()
         {
-            DSEvents.OnDMEnd?.Invoke(_dialogueContainerData);
-            DSEvents.OnDMAnyEnd?.Invoke();
+            DSEvents.OnEnd?.Invoke();
+
+            _dialogueContainerData.OnEnd?.Invoke();
             _isInstant = false;
             _isDialogueEnded = true;
         }
 
         public void NextDialogue()
         {
-            DSEvents.OnDMAnyNext?.Invoke();
-            DSEvents.OnDMNext?.Invoke(_currentDialogue);
+            DSEvents.OnNext?.Invoke();
+            _dialogueContainerData.OnNext?.Invoke();
+
             DisplayActorInfo();
             PlayDialogueAudio();
 
@@ -146,7 +151,7 @@
         {
             _audioSource.Stop();
 
-            if (!_hasActor)
+            if (!HasActor)
             {
                 if (_currentDialogue.DialogueAudioClip)
                     _audioSource.PlayOneShot(_currentDialogue.DialogueAudioClip); // Doesn't use the AudioManager to be more modular
@@ -157,16 +162,19 @@
 
         public void Enable()
         {
-            if (_hasCloseButton) EnableCloseButton();
+            DSEvents.OnEnable?.Invoke();
 
+            if (_hasCloseButton)
+                EnableCloseButton();
             _dialoguePanel.gameObject.SetActive(true);
         }
 
         public void Disable()
         {
-            if (_hasCloseButton) DisableCloseButton();
+            DSEvents.OnDisable?.Invoke();
 
-            DSEvents.OnDMDisable?.Invoke();
+            if (_hasCloseButton)
+                DisableCloseButton();
             _dialoguePanel.gameObject.SetActive(false);
             DisableChoicesBox();
         }
@@ -204,7 +212,11 @@
 
         public void InterruptDialogue()
         {
-            DSEvents.OnDMInterrupt?.Invoke(_currentDialogue);
+            DSEvents.OnInterrupt?.Invoke();
+
+            if(_dialogueContainerData)
+                _dialogueContainerData.OnInterrupt?.Invoke();
+
             StopAllCoroutines();
             Disable();
         }
@@ -217,9 +229,7 @@
             _isWaitingForChoice = true;
             EnableChoicesBox();
 
-            int choicesCount = Mathf.Min(dialogueData.Choices.Count, _maxChoices);
-
-            Debug.Log($"Choices count: {choicesCount}");
+            int choicesCount = Mathf.Min(dialogueData.Choices.Count, MaxChoices);
 
             foreach (UIDSChoiceButton choiceButton in _choiceButtons) // Disable all buttons
                 choiceButton.Disable();
@@ -283,7 +293,7 @@
 
         private void DisplayActorInfo()
         {
-            if (!_hasActor)
+            if (!HasActor)
             {
                 _actorIconImage.sprite = null;
                 _actorNameText.text = "";
@@ -319,7 +329,7 @@
             IsTalking = false;
             _isSkipping = false;
             _dialogueText.text = dialogueText;
-            DSEvents.OnDMCompletedSentence?.Invoke();
+            DSEvents.OnCompletedSentence?.Invoke();
         }
 
         private IEnumerator PrintDialogueRoutine(string dialogueText)

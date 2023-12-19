@@ -10,20 +10,17 @@
         [SerializeField]
         protected DSDialogueData StartDialogue;
         [SerializeField]
+        private DSDialogueGroupData _dialogueGroup;
+        [SerializeField]
         protected bool RandomStartDialogue;
         [SerializeField]
         protected bool IsInstantDialogue;
         [SerializeField]
         protected bool IsRepeatable;
-
-        [SerializeField]
-        private DSDialogueGroupData _dialogueGroup;
-
         [SerializeField]
         private bool _groupedDialogues;
         [SerializeField]
         private bool _startingDialoguesOnly;
-
         [SerializeField]
         private int _selectedDialogueGroupIndex;
         [SerializeField]

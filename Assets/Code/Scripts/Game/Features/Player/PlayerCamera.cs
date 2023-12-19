@@ -1,12 +1,14 @@
 ﻿namespace ProjectM.Features.Player
 {
+    using VUDK.Extensions;
+    using VUDK.Patterns.Initialization.Interfaces;
     using VUDK.Features.More.ExplorationSystem.Constants;
     using VUDK.Features.More.ExplorationSystem.Managers;
     using VUDK.Features.More.ExplorationSystem.Nodes;
     using VUDK.Features.Main.Camera.CameraViews;
     using VUDK.Features.Main.EventSystem;
-    using VUDK.Extensions;
-    using VUDK.Patterns.Initialization.Interfaces;
+    using ProjectM.Constants;
+    using UnityEngine;
 
     public class PlayerCamera : CameraFreeLook, IInit<ExplorationManager>
     {
@@ -14,12 +16,16 @@
 
         private void OnEnable()
         {
+            EventManager.Ins.AddListener(GameEventKeys.OnEnterQuiz, Disable);
+            EventManager.Ins.AddListener(GameEventKeys.OnExitQuiz, Enable);
             EventManager.Ins.AddListener(ExplorationEventKeys.OnBeginTransition, OnBeginTransition);
             EventManager.Ins.AddListener(ExplorationEventKeys.OnEndTransition, OnEndTransition);
         }
 
         private void OnDisable()
         {
+            EventManager.Ins.RemoveListener(GameEventKeys.OnEnterQuiz, Disable);
+            EventManager.Ins.RemoveListener(GameEventKeys.OnExitQuiz, Enable);
             EventManager.Ins.RemoveListener(ExplorationEventKeys.OnBeginTransition, OnBeginTransition);
             EventManager.Ins.AddListener(ExplorationEventKeys.OnEndTransition, OnEndTransition);
         }

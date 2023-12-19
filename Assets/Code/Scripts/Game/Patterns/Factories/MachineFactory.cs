@@ -5,8 +5,8 @@
     using VUDK.Features.More.ExplorationSystem.Transition.Phases;
     using VUDK.Features.More.ExplorationSystem.Transition.Phases.Keys;
     using VUDK.Features.More.ExplorationSystem;
-    using VUDK.Features.More.PuzzleSystem.Puzzles.Machine;
-    using VUDK.Features.More.PuzzleSystem.Puzzles.Machine.States;
+    using ProjectM.Features.Puzzles.Machine;
+    using ProjectM.Features.Puzzles.Machine.States;
 
     /// <summary>
     /// Factory responsible for creating game-related state-machine states and contexts.

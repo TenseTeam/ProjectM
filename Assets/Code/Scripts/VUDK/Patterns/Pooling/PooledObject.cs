@@ -11,16 +11,19 @@
     {
         public GameObjectPool RelatedPool { get; private set; }
 
+        /// <inheritdoc/>
         public void AssociatePool(GameObjectPool associatedPool)
         {
             RelatedPool = associatedPool;
         }
 
+        /// <inheritdoc/>
         public void Dispose()
         {
             RelatedPool.Dispose(gameObject);
         }
 
+        /// <inheritdoc/>
         public virtual void Clear()
         {
         }

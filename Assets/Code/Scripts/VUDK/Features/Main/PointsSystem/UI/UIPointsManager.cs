@@ -8,7 +8,7 @@
     {
         [Header("UI Points Panel")]
         [SerializeField]
-        private RectTransform _pointsPanel;
+        private RectTransform _pointsBox;
         [SerializeField]
         private bool _enableOnAwake;
 
@@ -38,12 +38,12 @@
 
         public void Enable()
         {
-            _pointsPanel.gameObject.SetActive(true);
+            _pointsBox.gameObject.SetActive(true);
         }
 
         public void Disable()
         {
-            _pointsPanel.gameObject.SetActive(false);
+            _pointsBox.gameObject.SetActive(false);
         }
 
         private void OnPointsChanged(object sender, int pointsChange)

@@ -1,6 +1,7 @@
 ﻿namespace VUDK.Generic.Managers.Main
 {
     using UnityEngine;
+    using VUDK.Features.Main.AudioSystem;
     using VUDK.Generic.Managers.Main.Bases;
     using VUDK.Patterns.Pooling;
     using VUDK.Patterns.Singleton;

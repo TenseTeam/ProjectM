@@ -15,7 +15,7 @@ MonoBehaviour:
   DialogueName: 1
   DialogueText: Dialogue text.
   ActorData: {fileID: 0}
-  DialogueAudioClip: {fileID: 8300000, guid: 8f7bbe6a2f9c1fa4ea76500e86ae212a, type: 3}
+  DialogueAudioClip: {fileID: 0}
   Choices:
   - Text: Next Dialogue
     NextDialogue: {fileID: 11400000, guid: ba6217f0c7d8dfc4e873a657c5785d63, type: 2}

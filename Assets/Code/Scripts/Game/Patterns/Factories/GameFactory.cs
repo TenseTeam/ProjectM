@@ -3,7 +3,7 @@
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
     using VUDK.Patterns.Pooling.Keys;
-    using VUDK.Features.More.PuzzleSystem.Puzzles.Grid.Pieces;
+    using ProjectM.Features.Puzzles.Grid.Pieces;
 
     /// <summary>
     /// Factory responsible for creating game-related objects.

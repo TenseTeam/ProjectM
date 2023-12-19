@@ -1,25 +1,29 @@
 ﻿namespace VUDK.Features.Main.PointsSystem
 {
     using UnityEngine;
+    using VUDK.Features.Main.PointsSystem.Data;
     using VUDK.Features.Main.PointsSystem.Events;
+    using VUDK.Features.Main.SaveSystem.Bases;
     using VUDK.Generic.Serializable;
 
-    public class PointsManager : MonoBehaviour
+    public class PointsManager : SaverBase<PointsSaveValue>
     {
         [Header("Points Settings")]
-        [SerializeField]
-        private bool _initOnAwake;
-        [SerializeField]
+        [SerializeField, Min(0)]
         private int _initPoints;
         [SerializeField]
         private Range<int> _pointsLimits;
 
-        public int Points { get; private set; }
-
-        private void Awake()
+        public int Points
         {
-            if (_initOnAwake)
-                Init(_initPoints);
+            get
+            {
+                return SaveValue.Points;
+            }
+            set
+            {
+                SaveValue.Points = value;
+            }
         }
 
         private void OnEnable()
@@ -32,9 +36,8 @@
             PointsEvents.ModifyPointsHandler -= ModifyPoints;
         }
 
-        public void Init(int startingPoints) // TODO: Use this method then to manage different saving systems
+        public override void Init()
         {
-            Points = startingPoints;
             PointsEvents.OnPointsInit?.Invoke(Points);
         }
 
@@ -44,6 +47,12 @@
 
             Points += modifiedPoints;
             PointsEvents.OnPointsChanged?.Invoke(this, modifiedPoints);
+            Push();
+        }
+
+        public override string GetSaveName()
+        {
+            return "Points";
         }
     }
 }

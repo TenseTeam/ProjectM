@@ -75,10 +75,9 @@ namespace VUDK.Features.More.ExplorationSystem.Nodes
             Disable();
         }
 
-        public virtual void OnFirstNode(bool hasCustomFirstTransition, TransitionType transitionType)
+        public virtual void OnFirstNode(TransitionType transitionType)
         {
-            if (hasCustomFirstTransition)
-                PathExplorer.ChangeTransitionType(transitionType);
+            PathExplorer.ChangeTransitionType(transitionType);
             GoToThisNode();
             OnNodeChangedHandler();
             Disable();
@@ -135,7 +134,6 @@ namespace VUDK.Features.More.ExplorationSystem.Nodes
                 UnityEditor.Selection.activeGameObject == gameObject ||
                 UnityEditor.Selection.activeObject == NodeTarget.gameObject;
         }
-
 #endif
     }
 }

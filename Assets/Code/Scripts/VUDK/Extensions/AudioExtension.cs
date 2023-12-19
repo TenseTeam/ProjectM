@@ -1,7 +1,7 @@
 ﻿namespace VUDK.Extensions
 {
     using UnityEngine;
-    using VUDK.Features.AudioSFX;
+    using VUDK.Features.Main.AudioSystem.AudioObjects;
 
     public static class AudioExtension
     {
