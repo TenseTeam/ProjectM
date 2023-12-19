@@ -15,16 +15,16 @@ MonoBehaviour:
   m_TableCollectionName: QuizMessages
   m_TableCollectionNameGuidString: bd6fb25240c321548b7318cf3ac038be
   m_Entries:
+  - m_Id: 273178497024
+    m_Key: str_Completed
+    m_Metadata:
+      m_Items: []
   - m_Id: 9734262784
     m_Key: str_Correct
     m_Metadata:
       m_Items: []
   - m_Id: 12045324288
     m_Key: str_Error
-    m_Metadata:
-      m_Items: []
-  - m_Id: 273178497024
-    m_Key: str_Completed
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4562622c293c8d548acf82f6a3c0ab41, type: 3}
+  m_Name: so_pt_QuizPool_0a
+  m_EditorClassIdentifier: 
+  Pool:
+  - {fileID: 11400000, guid: f0ced23b490f2c04ba491edbc4181877, type: 2}
+  - {fileID: 11400000, guid: 93806d14e289baf48a79230f02ad4255, type: 2}

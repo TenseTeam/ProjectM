@@ -17,8 +17,8 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 0a0fdbd8753e73e4da49bec28d5511dd
   m_SerializeEntries:
-  - m_GUID: f2b9107e632292c49a83b87fd69ebcfc
-    m_Address: so_it_DebugQuizzPool
+  - m_GUID: 043002782095327488c87e36b4f7fb1e
+    m_Address: so_it_QuizPool_0a
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-it

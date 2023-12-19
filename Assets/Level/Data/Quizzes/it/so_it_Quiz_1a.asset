@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596eaf741eddb124d99ea97e530dadbd, type: 3}
+  m_Name: so_it_Quiz_1a
+  m_EditorClassIdentifier: 
+  Questions:
+  - QuestionText: "Chi \xE8 l'artista rinascimentale noto per la sua opera \u201CPiet\xE0
+      Rondanini\u201D, e quale altro capolavoro di questo artista \xE8 presente a
+      Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Donatello - "Davide"
+      IsCorrect: 0
+    - AnswerText: Michelangelo Buonarroti - "La Creazione di Adamo"
+      IsCorrect: 1
+    - AnswerText: "Leonardo da Vinci \u2013 \u201CLa Dama con l\u2019ermellino\u201D"
+      IsCorrect: 0
+    - AnswerText: Raffaello Sanzio - "La Madonna del Cardellino"
+      IsCorrect: 0
+  - QuestionText: "Qual \xE8 il significato simbolico dell'opera di Hayez \u201CIl
+      bacio\u201D in relazione al contesto storico dell'epoca in cui \xE8 stata realizzata?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Espressione della lotta per l'indipendenza italiana
+      IsCorrect: 1
+    - AnswerText: "Rappresentazione della nobilt\xE0 rinascimentale"
+      IsCorrect: 0
+    - AnswerText: Simbolo dell'amore romantico
+      IsCorrect: 0
+    - AnswerText: Allegoria della vanitas
+      IsCorrect: 0
+  - QuestionText: "Chi \xE8 l'artista rinascimentale italiano noto per il \u201CPolittico
+      di San Vincenzo Ferrer\u201D esposto a Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Paolo Veronese
+      IsCorrect: 1
+    - AnswerText: Giovanni Bellini
+      IsCorrect: 0
+    - AnswerText: Andrea Mantegna
+      IsCorrect: 0
+    - AnswerText: Titian
+      IsCorrect: 0
+  - QuestionText: "Quale movimento artistico si caratterizza per la ricerca della
+      purezza delle forme e per l'ispirazione all'antichit\xE0 classica, rappresentata
+      dalle opere del Museo di Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Rinascimento
+      IsCorrect: 0
+    - AnswerText: Manierismo
+      IsCorrect: 0
+    - AnswerText: Neoclassicismo
+      IsCorrect: 1
+    - AnswerText: Barocco
+      IsCorrect: 0
+  - QuestionText: "Chi \xE8 l'artista nota per le sue rappresentazioni realistiche
+      e intense di scene bibliche, e quali delle sue opere sono esposte a Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Caravaggio
+      IsCorrect: 0
+    - AnswerText: Artemisia Gentileschi
+      IsCorrect: 1
+    - AnswerText: Guido Reni
+      IsCorrect: 0
+    - AnswerText: Orazio Gentileschi
+      IsCorrect: 0
