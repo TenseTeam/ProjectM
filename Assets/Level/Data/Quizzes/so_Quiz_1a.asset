@@ -13,63 +13,64 @@ MonoBehaviour:
   m_Name: so_Quiz_1a
   m_EditorClassIdentifier: 
   Questions:
-  - QuestionText: ' Who is the Italian Renaissance artist known for the painting
-      "The School of Athens," and what similar works are present at the Brera Museum?'
+  - QuestionText: " Who is the Renaissance artist known for his work \"Piet\xE0 Rondanini,\"
+      and what other masterpiece of this artist is present at Brera?"
     PointsReward: 10
     Answers:
-    - AnswerText: Michelangelo
+    - AnswerText: Donatello - "David"
       IsCorrect: 0
-    - AnswerText: Leonardo da Vinci
-      IsCorrect: 0
-    - AnswerText: Raphael Sanzio
+    - AnswerText: Michelangelo Buonarroti - "The Creation of Adam"
       IsCorrect: 1
-    - AnswerText: Caravaggio
+    - AnswerText: Leonardo da Vinci - "Lady with an Ermine"
       IsCorrect: 0
-  - QuestionText: ' What is the predominant theme in the paintings of the Lombard
-      school, as highlighted in the works exhibited at Brera?'
+    - AnswerText: Raphael Sanzio - "The Madonna of the Goldfinch"
+      IsCorrect: 0
+  - QuestionText: What is the symbolic meaning of Hayez's work "The Kiss" in relation
+      to the historical context of the time it was created?
     PointsReward: 10
     Answers:
-    - AnswerText: Still life
-      IsCorrect: 0
-    - AnswerText: Marine landscapes
-      IsCorrect: 0
-    - AnswerText: Court portraits
-      IsCorrect: 0
-    - AnswerText: Religious representations
+    - AnswerText: Expression of the struggle for Italian independence
       IsCorrect: 1
-  - QuestionText: ' Who is the artist behind the masterpiece "The Kiss," and which
-      artistic movement does it represent?'
+    - AnswerText: Representation of Renaissance nobility
+      IsCorrect: 0
+    - AnswerText: Symbol of romantic love
+      IsCorrect: 0
+    - AnswerText: Allegory of vanitas
+      IsCorrect: 0
+  - QuestionText: Who is the Italian Renaissance artist known for the "Polyptych
+      of San Vincenzo Ferrer" displayed at Brera?
     PointsReward: 10
     Answers:
-    - AnswerText: Titian - Mannerism
-      IsCorrect: 0
-    - AnswerText: Leonardo da Vinci - Renaissance
-      IsCorrect: 0
-    - AnswerText: Antonio Canova - Neoclassicism
-      IsCorrect: 0
-    - AnswerText: Francesco Hayez - Romanticism
+    - AnswerText: Paolo Veronese
       IsCorrect: 1
-  - QuestionText: Which famous Italian painter is known for his frescoes in the Scrovegni
-      Chapel in Padua, and which of his works are present at the Brera Museum?
-    PointsReward: 10
-    Answers:
-    - AnswerText: Sandro Botticelli
+    - AnswerText: Giovanni Bellini
       IsCorrect: 0
-    - AnswerText: Giotto di Bondone
-      IsCorrect: 1
     - AnswerText: Andrea Mantegna
       IsCorrect: 0
-    - AnswerText: Piero della Francesca
+    - AnswerText: Titian
       IsCorrect: 0
-  - QuestionText: In which historical period were many of the artworks exhibited
-      at Brera created?
+  - QuestionText: What artistic movement is characterized by the pursuit of purity
+      of forms and inspiration from classical antiquity, represented by works in
+      the Brera Museum?
     PointsReward: 10
     Answers:
+    - AnswerText: Renaissance
+      IsCorrect: 0
+    - AnswerText: Mannerism
+      IsCorrect: 0
+    - AnswerText: Neoclassicism
+      IsCorrect: 1
     - AnswerText: Baroque
       IsCorrect: 0
-    - AnswerText: Middle Ages
+  - QuestionText: Who is the artist known for her realistic and intense representations
+      of biblical scenes, and which of her works is displayed at Brera?
+    PointsReward: 10
+    Answers:
+    - AnswerText: Caravaggio
       IsCorrect: 0
-    - AnswerText: Renaissance
+    - AnswerText: Artemisia Gentileschi
       IsCorrect: 1
-    - AnswerText: Rococo
+    - AnswerText: Guido Reni
+      IsCorrect: 0
+    - AnswerText: Orazio Gentileschi
       IsCorrect: 0
