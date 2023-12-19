@@ -11,29 +11,27 @@
     using VUDK.Features.Main.PointsSystem.Rewards;
     using VUDK.Extensions;
     using VUDK.Features.More.GameTaskSystem;
+    using VUDK.Features.Main.TimerSystem.Events;
     using ProjectM.Constants;
     using ProjectM.Features.Puzzles.Quiz.Data;
     using ProjectM.Features.Puzzles.Quiz.UI;
     using ProjectM.Features.Puzzles.Quiz.Data.SaveData;
-    using VUDK.Features.Main.TimerSystem.Events;
+    using UnityEngine.Localization;
 
     [RequireComponent(typeof(Rewarder))]
     public class QuizManager : GameTaskSaverBase<QuizSaveValue>
     {
         [Header("Quiz Messages")]
         [SerializeField]
-        private string _correctAnswerMessage;
-
+        private LocalizedString _correctAnswerMessage;
         [SerializeField]
-        private string _wrongAnswerMessage;
-
+        private LocalizedString _wrongAnswerMessage;
         [SerializeField]
-        private string _quizCompletedMessage;
+        private LocalizedString _quizCompletedMessage;
 
         [Header("UI Quiz Panel")]
         [SerializeField]
         private RectTransform _quizPanel;
-
         [SerializeField]
         private TMP_Text _questionText;
 
@@ -50,14 +48,15 @@
 
         [Header("Quiz Data")]
         [SerializeField]
-        private List<QuizData> _quizDatas;
+        private LocalizedAsset<QuizPoolData> _quizPool;
 
+        private QuizPoolData _loadedQuizPool;
         private int _currentQuestionIndex;
         private int _currentQuizIndex;
         private bool _isWaitingAnswer;
         private Rewarder _rewarder;
 
-        private QuizData CurrentQuizData => _quizDatas[_currentQuizIndex];
+        private QuizData CurrentQuizData => _loadedQuizPool.Pool[_currentQuizIndex];
         private QuizQuestionData CurrentQuestion => CurrentQuizData.Questions[_currentQuestionIndex];
         private int MaxChoices => _answersButtons.Count;
 
@@ -74,6 +73,7 @@
 
         private void OnEnable()
         {
+            _quizPool.AssetChanged += LoadQuizData;
             _closeButton.onClick.AddListener(InterruptTask);
             EventManager.Ins.AddListener<int>(GameEventKeys.OnSelectQuizAnswer, ReceiveAnswer);
             InputsManager.Inputs.Interaction.Interact.canceled += DisplayQuestion;
@@ -81,6 +81,7 @@
 
         private void OnDisable()
         {
+            _quizPool.AssetChanged -= LoadQuizData;
             _closeButton.onClick.RemoveListener(InterruptTask);
             EventManager.Ins.RemoveListener<int>(GameEventKeys.OnSelectQuizAnswer, ReceiveAnswer);
             InputsManager.Inputs.Interaction.Interact.canceled -= DisplayQuestion;
@@ -109,7 +110,7 @@
                     return;
                 }
 
-                _currentQuizIndex = _quizDatas.IndexOf(_quizDatas.GetRandomElement());
+                _currentQuizIndex = _loadedQuizPool.Pool.IndexOf(_loadedQuizPool.Pool.GetRandomElement());
                 BeginTask();
             }
             else
@@ -131,7 +132,7 @@
         public override void ResolveTask()
         {
             base.ResolveTask();
-            PrintMessage(_quizCompletedMessage);
+            PrintMessage(_quizCompletedMessage.GetLocalizedString());
         }
 
         public override void InterruptTask()
@@ -225,7 +226,7 @@
         private void CorrectAnswer()
         {
             OnCorrectAnswer?.Invoke();
-            PrintMessage(_correctAnswerMessage);
+            PrintMessage(_correctAnswerMessage.GetLocalizedString());
 
             if(!IsSolved)
                 _rewarder.SendReward(CurrentQuestion.PointsReward);
@@ -234,7 +235,7 @@
         private void WrongAnswer()
         {
             OnWrongAnswer?.Invoke();
-            PrintMessage(_wrongAnswerMessage);
+            PrintMessage(_wrongAnswerMessage.GetLocalizedString());
         }
 
         private void PrintMessage(string message)
@@ -250,7 +251,7 @@
         private void DisplayCompletedQuiz()
         {
             Enable();
-            PrintMessage(_quizCompletedMessage);
+            PrintMessage(_quizCompletedMessage.GetLocalizedString());
             DisableAnswersBox();
         }
 
@@ -260,6 +261,11 @@
             SaveValue.QuizIndex = _currentQuizIndex;
             SaveValue.QuestionIndex = _currentQuestionIndex;
             Push();
+        }
+
+        private void LoadQuizData(QuizPoolData asset)
+        {
+            _loadedQuizPool = asset;
         }
     }
 }

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23c1a0601ef5c84d970a0256acb4dc5, type: 3}
+  m_Name: itaDebugDialogueGraph
+  m_EditorClassIdentifier: 
+  FileName: itaDebugDialogue
+  Groups: []
+  Nodes:
+  - NodeID: 83279722-f9e3-427f-bbca-1f47c13fd5e3
+    GroupID: 
+    Position: {x: 6.4, y: 79.2}
+    Name: 1
+    DialogueText: "Questo \xE8 italiano"
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: dd60f6dc-7b66-4298-9da1-0053864e9e23
+  - NodeID: dd60f6dc-7b66-4298-9da1-0053864e9e23
+    GroupID: 
+    Position: {x: 369.6, y: 79.2}
+    Name: 2
+    DialogueText: Bello l'italiano
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 
+  OldGroupNames: []
+  OldUngroupedNodeNames:
+  - 1
+  - 2
+  OldGroupedNodeNames:
+    _dictionary: []

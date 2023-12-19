@@ -22,6 +22,30 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd6fb25240c321548b7318cf3ac038be
+    m_Address: Assets/Resources/Settings/Localization/Tables/Quizzes/Strings/QuizMessages
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7de7cdd7373549f49bee17c2cfa549d3
+    m_Address: Assets/Resources/Settings/Localization/Tables/Dialogues/Dialogues
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 400ab8d03fd45754ca9fe9c8cd28967f
+    m_Address: Assets/Resources/Settings/Localization/Tables/UI/Texts/UITexts Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4813ff77051470244810bfde20ac159a
+    m_Address: Assets/Resources/Settings/Localization/Tables/Artworks/Artworks Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 2551f65ca7c642a41a3f638520c6e766, type: 2}
   m_SchemaSet:
