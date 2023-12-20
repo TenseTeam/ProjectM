@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
   m_Name: so_pt_SaintPeter
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
+  Name: "S\xE3o Pedro"
+  Description: "\rA figura do santo emerge com a solidez de uma escultura policromada,
+    apoiada em um terreno fraturado que a isola como um pedestal. Al\xE9m disso,
+    abre-se uma paisagem fant\xE1stica com arcos prec\xE1rios que enquadram plan\xEDcies
+    atravessadas por rios e pontilhadas por constru\xE7\xF5es. Essa representa\xE7\xE3o
+    paisag\xEDstica confere \xE0 pintura um car\xE1ter sugestivo e contribui para
+    sua import\xE2ncia no contexto art\xEDstico do Renascimento ferrarese."

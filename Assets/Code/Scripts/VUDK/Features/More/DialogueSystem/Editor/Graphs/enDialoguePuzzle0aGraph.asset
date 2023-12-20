@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23c1a0601ef5c84d970a0256acb4dc5, type: 3}
+  m_Name: enDialoguePuzzle0aGraph
+  m_EditorClassIdentifier: 
+  FileName: enDialoguePuzzle0a
+  Groups: []
+  Nodes:
+  - NodeID: 8eced77f-9b76-4c83-84c5-87ac07be0861
+    GroupID: 
+    Position: {x: 0, y: 0}
+    Name: Test
+    DialogueText: Dialogue text.
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 8d29a62d-8c45-4fe4-85de-4a192002d2cc
+  - NodeID: 8d29a62d-8c45-4fe4-85de-4a192002d2cc
+    GroupID: 
+    Position: {x: 412, y: 0}
+    Name: test2
+    DialogueText: Dialogue text.
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 
+  OldGroupNames: []
+  OldUngroupedNodeNames:
+  - Test
+  - test2
+  OldGroupedNodeNames:
+    _dictionary: []
