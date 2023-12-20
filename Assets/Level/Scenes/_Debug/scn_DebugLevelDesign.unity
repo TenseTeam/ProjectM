@@ -38891,7 +38891,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5220625656905720678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0000008091303}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38899,8 +38899,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000008583069, y: 0}
-  m_SizeDelta: {x: 16.30514, y: 24.875906}
+  m_AnchoredPosition: {x: 0.024, y: 2.356}
+  m_SizeDelta: {x: 16.352, y: 22.52}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &919132147765694498
 GameObject:
@@ -39312,8 +39312,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: LeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIp
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3d7d6a08dde859e429bb587ffb92a63e, type: 2}
+  m_sharedMaterial: {fileID: 8881984902152613597, guid: 3d7d6a08dde859e429bb587ffb92a63e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -39881,8 +39882,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: SanGiuvan
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3d7d6a08dde859e429bb587ffb92a63e, type: 2}
+  m_sharedMaterial: {fileID: 8881984902152613597, guid: 3d7d6a08dde859e429bb587ffb92a63e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -39906,7 +39908,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 3
+  m_fontSize: 2.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -41718,8 +41720,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.00000047684, y: 0}
-  m_SizeDelta: {x: 15, y: 6.32}
+  m_AnchoredPosition: {x: 0.00000047684, y: 3.98}
+  m_SizeDelta: {x: 15, y: 3.859}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!4 &8700545105180444219
 Transform:
