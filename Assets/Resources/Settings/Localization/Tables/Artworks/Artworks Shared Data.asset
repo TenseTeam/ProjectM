@@ -19,6 +19,14 @@ MonoBehaviour:
     m_Key: so_DebugArtworkInfo_0a
     m_Metadata:
       m_Items: []
+  - m_Id: 482782781906944
+    m_Key: so_SaintJohn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482938730323968
+    m_Key: so_SaintPeter
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 1982515565045743634
@@ -40,5 +48,15 @@ MonoBehaviour:
           m_TableCodes:
           - it
           - en
+        - m_KeyId: 482782781906944
+          m_TableCodes:
+          - en
+          - it
+          - pt
+        - m_KeyId: 482938730323968
+          m_TableCodes:
+          - en
+          - it
+          - pt
         m_TypeString: ProjectM.Features.Artwork.Data.ArtworkInfoData, Assembly-CSharp,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
