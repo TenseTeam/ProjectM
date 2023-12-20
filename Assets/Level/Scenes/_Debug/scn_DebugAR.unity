@@ -773,14 +773,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: EmojiOne
+  mTrackableName: spr_AR_SanPietro
   mInitializedInEditor: 1
-  mDataSetPath: 
-  mAspectRatio: 1
-  mImageTargetType: 3
-  mWidth: 0.2
-  mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
+  mDataSetPath: Vuforia/ProjectM.xml
+  mAspectRatio: 2.065
+  mImageTargetType: 0
+  mWidth: 0.55
+  mHeight: 1.13575
+  mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -794,7 +794,7 @@ Transform:
   m_GameObject: {fileID: 1384028047}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.42000002, y: 0, z: 0}
+  m_LocalPosition: {x: 0.98, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -815,8 +815,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1384028050}
   mHiddenRoot: {fileID: 0}
-  mTargetName: EmojiOne
-  mDatasetName: 
+  mTargetName: spr_AR_SanPietro
+  mDatasetName: Vuforia/ProjectM.xml
   mCastedBehaviour: {fileID: 1384028050}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
