@@ -13410,7 +13410,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _taskPeriod: 24
-  _game15Texture: {fileID: 2800000, guid: b0f0eaf45c7113d48b2ff6fe13e046ff, type: 3}
+  _game15Texture: {fileID: 2800000, guid: 7a7577475cc68274585df25f5480b14e, type: 3}
 --- !u!114 &783911017
 MonoBehaviour:
   m_ObjectHideFlags: 0
