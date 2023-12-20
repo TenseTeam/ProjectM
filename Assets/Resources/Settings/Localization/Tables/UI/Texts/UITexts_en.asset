@@ -17,7 +17,67 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 400ab8d03fd45754ca9fe9c8cd28967f, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 413987308376064
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414169215340544
+    m_Localized: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414277810065408
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414442700738560
+    m_Localized: Shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 415096332685312
+    m_Localized: Insights
+    m_Metadata:
+      m_Items: []
+  - m_Id: 415193737007104
+    m_Localized: Artworks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 417980420001792
+    m_Localized: Regular Tickets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 418107792625664
+    m_Localized: Event Tickets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 418792579862528
+    m_Localized: Touch to start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 419794712334336
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 420231008030720
+    m_Localized: Sound Effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 420457995374592
+    m_Localized: Mute
+    m_Metadata:
+      m_Items: []
+  - m_Id: 421003527524352
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 421178077679616
+    m_Localized: Italian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 421272759898112
+    m_Localized: Portuguese
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

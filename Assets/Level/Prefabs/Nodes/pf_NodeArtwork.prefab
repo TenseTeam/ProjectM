@@ -540,7 +540,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIp
+  m_text: HELO HELO HELO HELLO THIS IS ENGLISH
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -701,8 +701,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: {fileID: 3653208679339991947}
   _description: {fileID: 1348015481507294496}
-  <ArtworkInfoData>k__BackingField: {fileID: 11400000, guid: 8d071291c540703448f374a4a61296c5,
-    type: 2}
+  _artworkInfoData:
+    m_TableReference:
+      m_TableCollectionName: GUID:4813ff77051470244810bfde20ac159a
+    m_TableEntryReference:
+      m_KeyId: 5669982208
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
 --- !u!1 &6001533922555619307
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,7 +976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SanGiuvan
+  m_text: Saint Jonh
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -997,7 +1003,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 3
+  m_fontSize: 3.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

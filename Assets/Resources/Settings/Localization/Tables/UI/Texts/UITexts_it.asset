@@ -17,7 +17,67 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 400ab8d03fd45754ca9fe9c8cd28967f, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 413987308376064
+    m_Localized: Opzioni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414169215340544
+    m_Localized: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414277810065408
+    m_Localized: Lingua
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414442700738560
+    m_Localized: Negozio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 415096332685312
+    m_Localized: Approfondimenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 415193737007104
+    m_Localized: Opere d'arte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 417980420001792
+    m_Localized: Biglietti Regolari
+    m_Metadata:
+      m_Items: []
+  - m_Id: 418107792625664
+    m_Localized: Biglietti Evento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 418792579862528
+    m_Localized: Tocca per iniziare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 419794712334336
+    m_Localized: Musica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 420231008030720
+    m_Localized: Effetti Sonori
+    m_Metadata:
+      m_Items: []
+  - m_Id: 420457995374592
+    m_Localized: Muto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 421003527524352
+    m_Localized: Inglese
+    m_Metadata:
+      m_Items: []
+  - m_Id: 421178077679616
+    m_Localized: Italiano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 421272759898112
+    m_Localized: Portoghese
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

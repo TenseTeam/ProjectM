@@ -14,7 +14,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: UITexts
   m_TableCollectionNameGuidString: 400ab8d03fd45754ca9fe9c8cd28967f
-  m_Entries: []
+  m_Entries:
+  - m_Id: 413987308376064
+    m_Key: str_Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414169215340544
+    m_Key: str_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414277810065408
+    m_Key: str_Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414442700738560
+    m_Key: str_Shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 415096332685312
+    m_Key: str_Insights
+    m_Metadata:
+      m_Items: []
+  - m_Id: 415193737007104
+    m_Key: str_Artworks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 417980420001792
+    m_Key: str_RegularTickets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 418107792625664
+    m_Key: str_EventTickets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 418792579862528
+    m_Key: str_TouchToStart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 419794712334336
+    m_Key: str_Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 420231008030720
+    m_Key: str_SoundEffects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 420457995374592
+    m_Key: str_Mute
+    m_Metadata:
+      m_Items: []
+  - m_Id: 421003527524352
+    m_Key: str_English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 421178077679616
+    m_Key: str_Italian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 421272759898112
+    m_Key: str_Portuguese
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

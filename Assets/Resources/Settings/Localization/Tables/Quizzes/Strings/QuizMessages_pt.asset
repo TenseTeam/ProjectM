@@ -19,15 +19,15 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 9734262784
-    m_Localized: On dos tres!
+    m_Localized: Bom menino!
     m_Metadata:
       m_Items: []
   - m_Id: 12045324288
-    m_Localized: Errorito!
+    m_Localized: Errado!
     m_Metadata:
       m_Items: []
   - m_Id: 273178497024
-    m_Localized: Quiz combledido
+    m_Localized: "Question\xE1rio conclu\xEDdo!"
     m_Metadata:
       m_Items: []
   references:

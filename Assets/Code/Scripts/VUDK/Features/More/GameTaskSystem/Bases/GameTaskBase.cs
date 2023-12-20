@@ -18,6 +18,8 @@
         public UnityEvent OnTaskBegin;
         [SerializeField]
         public UnityEvent OnTaskResolved;
+        [SerializeField]
+        public UnityEvent OnTaskInterrupted;
 
         public virtual void BeginTask()
         {
@@ -38,6 +40,7 @@
         public virtual void InterruptTask()
         {
             OnExitFocus();
+            OnTaskInterrupted?.Invoke();
         }
 
         public virtual void ResolveTask()
