@@ -3,12 +3,12 @@
     using System;
     using UnityEngine;
     using VUDK.Features.Main.SaveSystem;
-    using VUDK.Features.Main.SaveSystem.SaveData;
     using VUDK.Features.Main.SaveSystem.Interfaces;
+    using VUDK.Features.Main.SaveSystem.SaveData;
+    using VUDK.Features.Main.TimerSystem.Events;
     using VUDK.Features.More.GameTaskSystem.Bases;
     using VUDK.Features.More.GameTaskSystem.SaveData;
     using VUDK.Patterns.Initialization.Interfaces;
-    using VUDK.Features.Main.TimerSystem.Events;
 
     public abstract class GameTaskSaverBase<T> : GameTaskBase, ISavable, IInit where T : TaskSaveValue, new()
     {
@@ -37,6 +37,8 @@
             return SaveValue != null;
         }
 
+        public virtual string GetSaveName() => "Tasks";
+
         private bool IsTimePassed()
         {
             return DateTime.Now > AchieveDate;
@@ -45,9 +47,6 @@
         public override void BeginTask()
         {
             base.BeginTask();
-            IsSolved = !IsTimePassed();
-            if (IsSolved && !IsRepeatable)
-                TimerEventsHandler.StartTimerHandler(GetSecondsToWait());
             Push(); // Push to save task is in progress
         }
 
@@ -56,13 +55,8 @@
             base.ResolveTask();
             SaveValue.IsInProgress = IsInProgress;
             SaveValue.LastCompletedTime = DateTime.Now;
+            DisplayTimer(true);
             Push(); // Push to save task is solved
-        }
-
-        public override void OnExitFocus()
-        {
-            base.OnExitFocus();
-            TimerEventsHandler.StopTimerHandler();
         }
 
         public void Push()
@@ -75,7 +69,7 @@
         {
             if (SaveManager.TryPull<T>(GetSaveName(), SaveID, out SavePacketData _saveData))
             {
-                SaveValue =  _saveData.Value as T;
+                SaveValue = _saveData.Value as T;
             }
             else
             {
@@ -83,13 +77,36 @@
             }
         }
 
-        public string GetSaveName() => "Tasks";
+        protected override void OnEnterFocus()
+        {
+            IsSolved = !IsTimePassed();
+            base.OnEnterFocus();
+        }
+
+        protected override void OnExitFocus()
+        {
+            base.OnExitFocus();
+            DisplayTimer(false);
+        }
 
         protected int GetSecondsToWait()
         {
             TimeSpan timeDifference = AchieveDate - DateTime.Now;
             int secondsToWait = (int)timeDifference.TotalSeconds;
             return secondsToWait;
+        }
+
+        protected void DisplayTimer(bool isEnabled)
+        {
+            if (isEnabled)
+                TimerEventsHandler.StartTimerHandler(GetSecondsToWait());
+            else
+                TimerEventsHandler.StopTimerHandler();
+        }
+
+        protected override void OnEnterFocusIsSolved()
+        {
+            DisplayTimer(true);
         }
     }
 

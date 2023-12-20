@@ -1,6 +1,7 @@
 ﻿namespace VUDK.Features.Main.SaveSystem
 {
     using System.Collections.Generic;
+    using System.IO;
     using UnityEngine;
     using VUDK.Features.Main.SaveSystem.SaveData;
     using VUDK.Features.Main.SaveSystem.Serializers;
@@ -24,7 +25,7 @@
         public static void Save(string groupName)
         {
             SavePacketData dataToSave = new SavePacketData(s_fileSaves[groupName]);
-            BinarySave.Save(dataToSave, groupName, ".bin");
+            BinarySave.Save(dataToSave, groupName);
         }
 
         public static void Load()
@@ -33,7 +34,7 @@
 
             foreach (string fileName in files)
             {
-                if (BinarySave.TryLoad(out SavePacketData saveData, fileName, ".bin"))
+                if (BinarySave.TryLoad(out SavePacketData saveData, fileName))
                 {
                     SaveDict saveDict = saveData.Value as SaveDict;
                     s_fileSaves.Add(fileName, saveDict);
@@ -68,6 +69,29 @@
 
             saveData = null;
             return false;
+        }
+
+        public static bool DeleteSave(string fileName)
+        {
+            string path = Path.Combine(Application.persistentDataPath, fileName + ".bin");
+
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool DeleteAllSaves()
+        {
+            string[] files = SaveUtility.GetFileNames(".bin");
+
+            foreach (string fileName in files)
+                DeleteSave(fileName);
+
+            return true;
         }
     }
 }

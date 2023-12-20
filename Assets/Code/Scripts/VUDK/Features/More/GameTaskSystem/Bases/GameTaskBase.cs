@@ -21,10 +21,13 @@
 
         public virtual void BeginTask()
         {
-            if(!IsSolved || IsRepeatable)
-                OnTaskBegin?.Invoke();
             OnEnterFocus();
-            IsInProgress = true;
+
+            if (!IsSolved || IsRepeatable)
+            {
+                OnTaskBegin?.Invoke();
+                IsInProgress = true;
+            }
         }
 
         public virtual void ResumeTask()
@@ -45,14 +48,17 @@
             OnEnterFocus();
         }
 
-        public virtual void OnEnterFocus()
+        protected virtual void OnEnterFocus()
         {
             IsFocused = true;
+            if (IsSolved && !IsRepeatable) OnEnterFocusIsSolved();
         }
 
-        public virtual void OnExitFocus()
+        protected virtual void OnExitFocus()
         {
             IsFocused = false;
         }
+
+        protected abstract void OnEnterFocusIsSolved();
     }
 }

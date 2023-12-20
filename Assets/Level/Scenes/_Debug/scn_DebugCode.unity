@@ -6086,7 +6086,20 @@ MonoBehaviour:
       m_Calls: []
   OnTaskResolved:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 318163501}
+        m_TargetAssemblyTypeName: VUDK.Features.Main.PointsSystem.Rewards.RewardTrigger,
+          Assembly-CSharp
+        m_MethodName: TriggerReward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _taskPeriod: 24
   _game15Texture: {fileID: 2800000, guid: b0f0eaf45c7113d48b2ff6fe13e046ff, type: 3}
 --- !u!114 &318163498
@@ -26473,7 +26486,20 @@ MonoBehaviour:
       m_Calls: []
   OnTaskResolved:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2037956097}
+        m_TargetAssemblyTypeName: VUDK.Features.Main.PointsSystem.Rewards.RewardTrigger,
+          Assembly-CSharp
+        m_MethodName: TriggerReward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _taskPeriod: 24
   _game15Texture: {fileID: 2800000, guid: b0f0eaf45c7113d48b2ff6fe13e046ff, type: 3}
 --- !u!114 &2037956099
@@ -27623,6 +27649,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _playOnAwake
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716374678935451431, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BeginTask
       objectReference: {fileID: 0}
     - target: {fileID: 3728949088606423929, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}

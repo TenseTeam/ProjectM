@@ -17,11 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 00304e70405301e4581784f146305231
   m_SerializeEntries:
-  - m_GUID: 88e0c2f8f6dc72a4ea856cc80159115b
-    m_Address: Assets/Resources/Settings/Localization/Tables/ProjectM Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bd6fb25240c321548b7318cf3ac038be
     m_Address: Assets/Resources/Settings/Localization/Tables/Quizzes/Strings/QuizMessages
       Shared Data.asset
@@ -43,6 +38,12 @@ MonoBehaviour:
   - m_GUID: 4813ff77051470244810bfde20ac159a
     m_Address: Assets/Resources/Settings/Localization/Tables/Artworks/Artworks Shared
       Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f237c80aa0f7a8f4d8f7fd993a9e47da
+    m_Address: Assets/Resources/Settings/Localization/Tables/Quizzes/Assets/Quizzes
+      Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

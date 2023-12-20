@@ -56,8 +56,8 @@
         private bool _isWaitingAnswer;
         private Rewarder _rewarder;
 
-        private QuizData CurrentQuizData => _loadedQuizPool.Pool[_currentQuizIndex];
-        private QuizQuestionData CurrentQuestion => CurrentQuizData.Questions[_currentQuestionIndex];
+        private QuizData _currentQuizData;
+        private QuizQuestionData CurrentQuestion => _currentQuizData.Questions[_currentQuestionIndex];
         private int MaxChoices => _answersButtons.Count;
 
         [Header("Quiz Events")]
@@ -69,11 +69,12 @@
             base.Awake();
             TryGetComponent(out _rewarder);
             Disable();
+            LoadQuizPoolData(_quizPool.LoadAsset());
         }
 
         private void OnEnable()
         {
-            _quizPool.AssetChanged += LoadQuizData;
+            _quizPool.AssetChanged += LoadQuizPoolData;
             _closeButton.onClick.AddListener(InterruptTask);
             EventManager.Ins.AddListener<int>(GameEventKeys.OnSelectQuizAnswer, ReceiveAnswer);
             InputsManager.Inputs.Interaction.Interact.canceled += DisplayQuestion;
@@ -81,7 +82,7 @@
 
         private void OnDisable()
         {
-            _quizPool.AssetChanged -= LoadQuizData;
+            _quizPool.AssetChanged -= LoadQuizPoolData;
             _closeButton.onClick.RemoveListener(InterruptTask);
             EventManager.Ins.RemoveListener<int>(GameEventKeys.OnSelectQuizAnswer, ReceiveAnswer);
             InputsManager.Inputs.Interaction.Interact.canceled -= DisplayQuestion;
@@ -97,32 +98,43 @@
             }
         }
 
-        public void BeginQuiz()
-        {
-            if(IsSolved && !IsRepeatable)
-                TimerEventsHandler.StartTimerHandler(GetSecondsToWait());
+        //public void BeginQuiz()
+        //{
+        //    if(IsSolved && !IsRepeatable)
+        //        TimerEventsHandler.StartTimerHandler(GetSecondsToWait());
 
-            if (!IsInProgress)
-            {
-                if (IsSolved && !IsRepeatable)
-                {
-                    DisplayCompletedQuiz();
-                    return;
-                }
+        //    if (!IsInProgress)
+        //    {
+        //        if (IsSolved && !IsRepeatable)
+        //        {
+        //            DisplayCompletedQuiz();
+        //            return;
+        //        }
 
-                _currentQuizIndex = _loadedQuizPool.Pool.IndexOf(_loadedQuizPool.Pool.GetRandomElement());
-                BeginTask();
-            }
-            else
-            {
-                ResumeTask();
-            }
-        }
+        //        _currentQuizData = _loadedQuizPool.Pool.GetRandomElement();
+        //        BeginTask();
+        //    }
+        //    else
+        //    {
+        //        ResumeTask();
+        //    }
+        //}
+
+        //public override void BeginTask()
+        //{
+        //    if (_currentQuizData == null) return;
+        //    base.BeginTask();
+
+        //    _currentQuestionIndex = 0;
+        //    Enable();
+        //    DisplayQuestion();
+        //}
 
         public override void BeginTask()
         {
-            if (CurrentQuizData == null) return;
             base.BeginTask();
+            _currentQuizData = _loadedQuizPool.Pool.GetRandomElement();
+            if (_currentQuizData == null) return;
 
             _currentQuestionIndex = 0;
             Enable();
@@ -146,6 +158,12 @@
             base.ResumeTask();
             DisplayQuestion();
             Enable();
+        }
+
+        protected override void OnEnterFocusIsSolved()
+        {
+            base.OnEnterFocusIsSolved();
+            DisplayCompletedQuiz();
         }
 
         public void Enable()
@@ -175,7 +193,7 @@
         private void NextQuestion()
         {
             _currentQuestionIndex++;
-            if (_currentQuestionIndex > CurrentQuizData.Questions.Count - 1)
+            if (_currentQuestionIndex > _currentQuizData.Questions.Count - 1)
                 ResolveTask();
             else
                 SaveQuizState(); // Saving at every question to prevent data loss in case of crash
@@ -263,7 +281,7 @@
             Push();
         }
 
-        private void LoadQuizData(QuizPoolData asset)
+        private void LoadQuizPoolData(QuizPoolData asset)
         {
             _loadedQuizPool = asset;
         }

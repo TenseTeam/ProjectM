@@ -17,8 +17,7 @@
         public static T GetRandomElement<T>(this List<T> list)
         {
             int randomIndex = Random.Range(0, list.Count);
-            T randomElement = list[randomIndex];
-            return randomElement;
+            return list[randomIndex];
         }
     }
 }
