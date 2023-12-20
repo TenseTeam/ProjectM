@@ -32,7 +32,7 @@
         [ContextMenu("Trigger")]
         public void Trigger()
         {
-            _seekPuzzle.Found(_seekGroupIndex, this);
+            _seekPuzzle.Found(_seekGroupIndex);
             EnableTarget();
         }
 

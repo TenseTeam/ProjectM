@@ -25,7 +25,7 @@
             }
         }
 
-        public void Found(int seekGroupIndex, SeekFindable seekTarget)
+        public void Found(int seekGroupIndex)
         {
             if (RandomGroupIndex != seekGroupIndex) return;
 

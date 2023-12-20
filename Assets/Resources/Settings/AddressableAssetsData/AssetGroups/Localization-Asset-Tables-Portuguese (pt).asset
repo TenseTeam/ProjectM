@@ -23,12 +23,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-pt
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2630134092e39c64cad8e4e2990cd713
-    m_Address: Artworks_pt
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-pt
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 02abaa3c445e17f40a5c61b201e4259b
     m_Address: Quizzes_pt
     m_ReadOnly: 1

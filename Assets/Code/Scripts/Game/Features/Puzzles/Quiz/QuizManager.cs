@@ -3,20 +3,19 @@
     using System.Collections.Generic;
     using TMPro;
     using UnityEngine;
-    using UnityEngine.Events;
-    using UnityEngine.InputSystem;
     using UnityEngine.UI;
+    using UnityEngine.Events;
+    using UnityEngine.Localization;
+    using UnityEngine.InputSystem;
     using VUDK.Features.Main.EventSystem;
     using VUDK.Features.Main.InputSystem;
     using VUDK.Features.Main.PointsSystem.Rewards;
     using VUDK.Extensions;
     using VUDK.Features.More.GameTaskSystem;
-    using VUDK.Features.Main.TimerSystem.Events;
     using ProjectM.Constants;
     using ProjectM.Features.Puzzles.Quiz.Data;
     using ProjectM.Features.Puzzles.Quiz.UI;
     using ProjectM.Features.Puzzles.Quiz.Data.SaveData;
-    using UnityEngine.Localization;
 
     [RequireComponent(typeof(Rewarder))]
     public class QuizManager : GameTaskSaverBase<QuizSaveValue>
@@ -42,7 +41,6 @@
         [Header("UI Answers")]
         [SerializeField]
         private RectTransform _answersBox;
-
         [SerializeField]
         private List<UIQuizAnswerButton> _answersButtons;
 
@@ -97,38 +95,6 @@
                 _currentQuestionIndex = SaveValue.QuestionIndex;
             }
         }
-
-        //public void BeginQuiz()
-        //{
-        //    if(IsSolved && !IsRepeatable)
-        //        TimerEventsHandler.StartTimerHandler(GetSecondsToWait());
-
-        //    if (!IsInProgress)
-        //    {
-        //        if (IsSolved && !IsRepeatable)
-        //        {
-        //            DisplayCompletedQuiz();
-        //            return;
-        //        }
-
-        //        _currentQuizData = _loadedQuizPool.Pool.GetRandomElement();
-        //        BeginTask();
-        //    }
-        //    else
-        //    {
-        //        ResumeTask();
-        //    }
-        //}
-
-        //public override void BeginTask()
-        //{
-        //    if (_currentQuizData == null) return;
-        //    base.BeginTask();
-
-        //    _currentQuestionIndex = 0;
-        //    Enable();
-        //    DisplayQuestion();
-        //}
 
         public override void BeginTask()
         {
