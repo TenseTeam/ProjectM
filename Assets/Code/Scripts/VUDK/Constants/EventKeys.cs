@@ -1,6 +1,7 @@
 ﻿namespace VUDK.Constants
 {
-    public static class EventKeys // TODO: Use EventHandlers for each specific feature to be more modular
+    // TODO: Use a static class containing events for each specific feature to be more modular, this class should be used only for generic events
+    public static class EventKeys
     {
         public static class GameEvents
         {
@@ -9,25 +10,11 @@
             public const string OnFirstLaunch = "OnFirstLaunch";
         }
 
-        public static class CameraEvents
+        public static class TimerEvents
         {
-            public const string OnCameraViewChanged = "OnCameraViewChanged";
-        }
-
-        public static class WeatherEvents
-        {
-            public static string OnWeatherChanged = "OnWeatherChanged";
-        }
-
-        public static class CountdownEvents
-        {
-            public const string OnCountdownTimesUp = "OnCountdownTimesUp";
-            public const string OnCountdownCount = "OnCountDownCount";
-        }
-
-        public static class InteractEvents
-        {
-            public const string OnPickup = "OnPickup";
+            public const string OnTimerStart = "OnTimerStart";
+            public const string OnTimerEnd = "OnTimerEnd";
+            public const string OnTimerCount = "OnTimerCount";
         }
 
         public static class ScoreEvents

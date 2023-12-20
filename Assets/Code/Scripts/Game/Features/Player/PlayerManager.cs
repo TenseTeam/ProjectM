@@ -2,9 +2,9 @@
 {
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
-    using VUDK.Features.Packages.ExplorationSystem.Managers;
-    using VUDK.Features.Packages.ExplorationSystem.Constants;
-    using VUDK.Features.Packages.ExplorationSystem.Explorers;
+    using VUDK.Features.More.ExplorationSystem.Managers;
+    using VUDK.Features.More.ExplorationSystem.Constants;
+    using VUDK.Features.More.ExplorationSystem.Explorers;
     using VUDK.Features.Main.EventSystem;
 
     [DisallowMultipleComponent]
@@ -39,7 +39,7 @@
 
         public void Init(ExplorationManager explorationManager)
         {
-            PlayerCamera.Inject(explorationManager);
+            PlayerCamera.Init(explorationManager);
         }
     }
 }

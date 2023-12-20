@@ -1,5 +1,6 @@
 {
-  "dependencies": {
+    "dependencies": {
+    "com.ptc.vuforia.engine": "file:com.ptc.vuforia.engine-10.19.3.tgz",
     "com.unity.2d.psdimporter": "8.0.2",
     "com.unity.2d.spriteshape": "9.0.2",
     "com.unity.adaptiveperformance": "4.0.1",

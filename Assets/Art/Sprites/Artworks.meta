@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Art/Sprites/Artworks.meta
 guid: 2471f89f6c9ce0744832e402387fa2c6
+========
+guid: bcc2b1926c75ae242ae509f149be00be
+>>>>>>>> feature/design:Assets/AddressableAssetsData.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

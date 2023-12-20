@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596eaf741eddb124d99ea97e530dadbd, type: 3}
+  m_Name: so_pt_Quiz_0a
+  m_EditorClassIdentifier: 
+  Questions:
+  - QuestionText: "Quem \xE9 o artista renascentista italiano conhecido pela pintura
+      \u201CA Escola de Atenas\u201D e que obras semelhantes est\xE3o presentes no
+      Museu de Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Michelangelo
+      IsCorrect: 0
+    - AnswerText: Leonardo da Vinci
+      IsCorrect: 0
+    - AnswerText: Raphael Sanzio
+      IsCorrect: 1
+    - AnswerText: Caravaggio
+      IsCorrect: 0
+  - QuestionText: "Qual \xE9 o tema predominante nas pinturas da escola lombarda,
+      destacadas nas obras expostas em Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Natureza morta
+      IsCorrect: 0
+    - AnswerText: Paisagens marinhas
+      IsCorrect: 0
+    - AnswerText: Retratos da corte
+      IsCorrect: 0
+    - AnswerText: "Representa\xE7\xF5es religiosas"
+      IsCorrect: 1
+  - QuestionText: "Quem \xE9 o artista por tr\xE1s da obra-prima \u201CO Beijo\u201D
+      e que movimento art\xEDstico ela representa?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Ticiano - Maneirismo
+      IsCorrect: 0
+    - AnswerText: "Leonardo da Vinci - Renascen\xE7a"
+      IsCorrect: 0
+    - AnswerText: Antonio Canova - Neoclassicismo
+      IsCorrect: 0
+    - AnswerText: Francesco Hayez - Romantismo
+      IsCorrect: 1
+  - QuestionText: "Qual famoso pintor italiano \xE9 conhecido por seus afrescos na
+      Capela Scrovegni, em P\xE1dua, e quais de suas obras est\xE3o presentes no
+      Museu de Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Sandro Botticelli
+      IsCorrect: 0
+    - AnswerText: Giotto di Bondone
+      IsCorrect: 1
+    - AnswerText: Andrea Mantegna
+      IsCorrect: 0
+    - AnswerText: Piero della Francesca
+      IsCorrect: 0
+  - QuestionText: "Em que per\xEDodo hist\xF3rico foram criadas muitas das obras
+      expostas em Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Barroca
+      IsCorrect: 0
+    - AnswerText: "Idade M\xE9dia"
+      IsCorrect: 0
+    - AnswerText: Renascimento
+      IsCorrect: 1
+    - AnswerText: "Rococ\xF3"
+      IsCorrect: 0

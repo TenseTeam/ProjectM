@@ -1,28 +1,35 @@
 ﻿namespace VUDK.Features.More.DialogueSystem.Components
 {
-    using UnityEngine;
-    using VUDK.Features.Main.TriggerSystem;
+    using VUDK.Features.More.DialogueSystem.Components.Interfaces;
     using VUDK.Features.More.DialogueSystem.Events;
-    using static VUDK.Features.More.DialogueSystem.Events.DSEvents;
 
-    public class DSDialogueTrigger : DSDialogueSelectorBase, ITrigger
+    public class DSDialogueTrigger : DSDialogueSelectorBase, IDialogueTrigger
     {
         private bool _hasBeenTriggered;
+        private bool _isSpeaking;
 
-#if UNITY_EDITOR
-        [ContextMenu("Trigger Dialogue")]
-#endif
+        private void OnEnable()
+        {
+            DialogueContainer.OnEnd += OnDialogueEnded;
+        }
+
+        private void OnDisable()
+        {
+            DialogueContainer.OnEnd -= OnDialogueEnded;
+        }
+
         public virtual void Trigger()
         {
-            if(!IsRepeatable && _hasBeenTriggered)
+            if( (!IsRepeatable && _hasBeenTriggered) || _isSpeaking)
                 return;
 
+            _isSpeaking = true;
             _hasBeenTriggered = true;
 
             if (DialogueContainer == null || DialogueContainer.StartingDialogues.Count == 0)
                 return;
 
-            DialogueStartHandler?.Invoke(
+            DSEvents.DialogueStartHandler?.Invoke(
                 this, 
                 new OnStartDialogueEventArgs(DialogueContainer, StartDialogue, RandomStartDialogue, IsInstantDialogue)
                 );
@@ -30,7 +37,13 @@
 
         public void Interrupt()
         {
-            DialogueInterruptHandler?.Invoke();
+            DSEventsHandler.InterruptDialogue();
+            _isSpeaking = false;
+        }
+
+        private void OnDialogueEnded()
+        {
+            _isSpeaking = false;
         }
     }
 }

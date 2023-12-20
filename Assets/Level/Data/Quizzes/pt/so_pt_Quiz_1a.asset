@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596eaf741eddb124d99ea97e530dadbd, type: 3}
+  m_Name: so_pt_Quiz_1a
+  m_EditorClassIdentifier: 
+  Questions:
+  - QuestionText: "Quem \xE9 o artista renascentista conhecido pela sua obra \u201CPiet\xE0
+      Rondanini\u201D e que outra obra-prima deste artista est\xE1 presente em Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Donatello - "Davi"
+      IsCorrect: 0
+    - AnswerText: "Michelangelo Buonarroti - \"A Cria\xE7\xE3o de Ad\xE3o\""
+      IsCorrect: 1
+    - AnswerText: Leonardo da Vinci - "A Dama com Arminho"
+      IsCorrect: 0
+    - AnswerText: Raphael Sanzio - "A Madona do Pintassilgo"
+      IsCorrect: 0
+  - QuestionText: "Qual o significado simb\xF3lico da obra \u201CO Beijo\u201D de
+      Hayez em rela\xE7\xE3o ao contexto hist\xF3rico da \xE9poca em que foi criada?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: "Express\xE3o da luta pela independ\xEAncia italiana"
+      IsCorrect: 1
+    - AnswerText: "Representa\xE7\xE3o da nobreza renascentista"
+      IsCorrect: 0
+    - AnswerText: "S\xEDmbolo do amor rom\xE2ntico"
+      IsCorrect: 0
+    - AnswerText: Alegoria da vanitas
+      IsCorrect: 0
+  - QuestionText: "Quem \xE9 o artista renascentista italiano conhecido pelo \"Pol\xEDptico
+      de San Vincenzo Ferrer\" exibido em Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Paolo Veronese
+      IsCorrect: 1
+    - AnswerText: Giovanni Bellini
+      IsCorrect: 0
+    - AnswerText: Andrea Mantegna
+      IsCorrect: 0
+    - AnswerText: Titian
+      IsCorrect: 0
+  - QuestionText: "Que movimento art\xEDstico se caracteriza pela busca pela pureza
+      das formas e pela inspira\xE7\xE3o na antiguidade cl\xE1ssica, representada
+      pelas obras do Museu de Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Renascimento
+      IsCorrect: 0
+    - AnswerText: Maneirismo
+      IsCorrect: 0
+    - AnswerText: Neoclassicismo
+      IsCorrect: 1
+    - AnswerText: Barroca
+      IsCorrect: 0
+  - QuestionText: "Quem \xE9 a artista conhecida por suas representa\xE7\xF5es realistas
+      e intensas de cenas b\xEDblicas e quais de suas obras est\xE3o expostas em
+      Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Caravaggio
+      IsCorrect: 0
+    - AnswerText: Artemisia Gentileschi
+      IsCorrect: 1
+    - AnswerText: Guido Reni
+      IsCorrect: 0
+    - AnswerText: Orazio Gentileschi
+      IsCorrect: 0

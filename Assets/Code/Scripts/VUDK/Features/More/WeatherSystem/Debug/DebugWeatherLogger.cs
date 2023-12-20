@@ -2,9 +2,8 @@ namespace VUDK.Features.More.WeatherSystem.Debug
 {
     using TMPro;
     using UnityEngine;
-    using VUDK.Constants;
-    using VUDK.Features.Main.EventSystem;
     using VUDK.Features.More.WeatherSystem.Data;
+    using VUDK.Features.More.WeatherSystem.Events;
 
     [RequireComponent(typeof(TMP_Text))]
     public class DebugWeatherLogger : MonoBehaviour
@@ -18,7 +17,12 @@ namespace VUDK.Features.More.WeatherSystem.Debug
 
         private void OnEnable()
         {
-            EventManager.Ins.AddListener<WeatherData>(EventKeys.WeatherEvents.OnWeatherChanged, OnWeatherChanged);
+            WeatherEvents.OnWeatherChanged += OnWeatherChanged;
+        }
+
+        private void OnDisable()
+        {
+            WeatherEvents.OnWeatherChanged -= OnWeatherChanged;
         }
 
         private void OnWeatherChanged(WeatherData data)

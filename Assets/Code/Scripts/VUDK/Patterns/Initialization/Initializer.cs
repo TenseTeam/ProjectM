@@ -10,18 +10,18 @@
         public abstract bool Check();
     }
 
-    public abstract class Initializer<T> : MonoBehaviour, IInitPackage<T> where T : IDependencyPackage
+    public abstract class Initializer<T> : MonoBehaviour, IInit<T> where T : IInjectArgs
     {
-        protected T Dependency;
+        protected T Args;
 
-        public void Inject(T dependency)
+        public void Init(T args)
         {
-            Dependency = dependency;
+            Args = args;
         }
 
         public virtual bool Check()
         {
-            return Dependency != null;
+            return Args != null;
         }
     }
 }

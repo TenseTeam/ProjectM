@@ -36,10 +36,26 @@
 		public static void DrawWireCube(Vector3 center, Vector3 size, Quaternion rotation = default)
         {
             var old = Gizmos.matrix;
-            if (rotation.Equals(default(Quaternion)))
+            if (rotation.Equals(default))
                 rotation = Quaternion.identity;
             Gizmos.matrix = Matrix4x4.TRS(center, rotation, size);
             Gizmos.DrawWireCube(Vector3.zero, Vector3.one);
+            Gizmos.matrix = old;
+        }
+
+        /// <summary>
+        /// Draws a cube with a given rotation
+        /// </summary>
+        /// <param name="center"></param>
+        /// <param name="size"></param>
+        /// <param name="rotation"></param>
+        public static void DrawCube(Vector3 center, Vector3 size, Quaternion rotation = default)
+        {
+            var old = Gizmos.matrix;
+            if (rotation.Equals(default))
+                rotation = Quaternion.identity;
+            Gizmos.matrix = Matrix4x4.TRS(center, rotation, size);
+            Gizmos.DrawCube(Vector3.zero, Vector3.one);
             Gizmos.matrix = old;
         }
 

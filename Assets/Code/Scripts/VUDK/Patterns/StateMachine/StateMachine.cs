@@ -4,9 +4,9 @@ namespace VUDK.Patterns.StateMachine
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
-    using VUDK.Patterns.Initialization.Interfaces;
+    using VUDK.Patterns.Initialization;
 
-    public abstract class StateMachine : MonoBehaviour, IInit
+    public abstract class StateMachine : Initializer
     {
         private bool _isChangingState;
 
@@ -32,13 +32,13 @@ namespace VUDK.Patterns.StateMachine
         /// <summary>
         /// Initializes the <see cref="StateMachine"/> and its states.
         /// </summary>
-        public abstract void Init();
+        public override abstract void Init();
 
         /// <summary>
         /// Checks if the <see cref="StateMachine"/> is initialized.
         /// </summary>
         /// <returns>True if it is initialized, False if not.</returns>
-        public abstract bool Check();
+        public override abstract bool Check();
 
         /// <summary>
         /// Changes the current state to a state in the dictionary by its key.

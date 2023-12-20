@@ -29,7 +29,7 @@
             bool isActorNameEmpty = string.IsNullOrEmpty(_actorName) || _actorName.RemoveWhitespaces() == "";
             GUI.enabled = !isActorNameEmpty;
 
-            if (GUILayout.Button("Create"))
+            if (GUILayout.Button("Create Actor"))
                 DSIOUtility.CreateActorAsset(_actorIcon, _actorName);
 
             GUI.enabled = true;

@@ -1,11 +1,11 @@
-﻿using System;
-using UnityEditor.Experimental.GraphView;
-using UnityEditor.UIElements;
-using UnityEngine.UIElements;
-using VUDK.Features.More.DialogueSystem.Editor.Elements;
-
-namespace VUDK.Features.More.DialogueSystem.Editor.Utilities
+﻿namespace VUDK.Features.More.DialogueSystem.Editor.Utilities
 {
+    using System;
+    using UnityEditor.Experimental.GraphView;
+    using UnityEditor.UIElements;
+    using UnityEngine.UIElements;
+    using VUDK.Features.More.DialogueSystem.Editor.Elements;
+
     public static class DSElementUtility
     {
         public static TextField CreateTextField(string value = null, string label = null, EventCallback<ChangeEvent<string>> onValueChanged = null)

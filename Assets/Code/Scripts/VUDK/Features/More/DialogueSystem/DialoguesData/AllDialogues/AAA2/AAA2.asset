@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0080f16d9ccea4449a22882f65e42f60, type: 3}
+  m_Name: AAA2
+  m_EditorClassIdentifier: 
+  FileName: AAA2
+  DialogueGroups:
+    _dictionary: []
+  UngroupedDialogues:
+  - {fileID: 11400000, guid: 143c64d39320ede40a55e5782f46d91b, type: 2}
+  - {fileID: 11400000, guid: ba6217f0c7d8dfc4e873a657c5785d63, type: 2}
+  - {fileID: 11400000, guid: e2fd41209b573ad44a9b61797ba02a48, type: 2}
+  - {fileID: 11400000, guid: 1a98b3c3be8937e439f5d34b22e96d34, type: 2}
+  StartingDialogues:
+  - {fileID: 11400000, guid: 1a98b3c3be8937e439f5d34b22e96d34, type: 2}

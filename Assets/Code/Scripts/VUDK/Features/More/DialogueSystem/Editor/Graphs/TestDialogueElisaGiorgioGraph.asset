@@ -15,29 +15,6 @@ MonoBehaviour:
   FileName: TestDialogueElisaGiorgio
   Groups: []
   Nodes:
-  - NodeID: b47d8ad2-e7f4-40dc-977c-378560ee80a8
-    GroupID: 
-    Position: {x: 28, y: 88.8}
-    Name: 1
-    DialogueText: Giorgio, our goldfish has been looking quite glum lately.
-    ActorData: {fileID: 11400000, guid: 668e15f5436ebf14cbb383ed010e8f27, type: 2}
-    DialogueAudioClip: {fileID: 8300000, guid: 8f7bbe6a2f9c1fa4ea76500e86ae212a, type: 3}
-    DialogueType: 0
-    Choices:
-    - Text: Next Dialogue
-      NodeID: cf6df5d9-093b-4348-aa50-3a862585ee57
-  - NodeID: cf6df5d9-093b-4348-aa50-3a862585ee57
-    GroupID: 
-    Position: {x: 467.2, y: 91.2}
-    Name: 2
-    DialogueText: Really? I hadn't noticed. I thought he was just embracing the laid-back
-      fish lifestyle.
-    ActorData: {fileID: 11400000, guid: 6a2f9a3d4b5287345bc0c42c97e60512, type: 2}
-    DialogueAudioClip: {fileID: 8300000, guid: 3d3f79f8ed6bdc445ae34fbd5b838255, type: 3}
-    DialogueType: 0
-    Choices:
-    - Text: Next Dialogue
-      NodeID: f3f06ef4-3c24-41e6-881c-0790795a7eab
   - NodeID: f3f06ef4-3c24-41e6-881c-0790795a7eab
     GroupID: 
     Position: {x: 940, y: 91.2}
@@ -157,10 +134,31 @@ MonoBehaviour:
     Choices:
     - Text: Next Dialogue
       NodeID: 
+  - NodeID: cf6df5d9-093b-4348-aa50-3a862585ee57
+    GroupID: 
+    Position: {x: 467.2, y: 91.2}
+    Name: 2
+    DialogueText: Really? I hadn't noticed. I thought he was just embracing the laid-back
+      fish lifestyle.
+    ActorData: {fileID: 11400000, guid: 6a2f9a3d4b5287345bc0c42c97e60512, type: 2}
+    DialogueAudioClip: {fileID: 8300000, guid: 3d3f79f8ed6bdc445ae34fbd5b838255, type: 3}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: f3f06ef4-3c24-41e6-881c-0790795a7eab
+  - NodeID: b47d8ad2-e7f4-40dc-977c-378560ee80a8
+    GroupID: 
+    Position: {x: 28, y: 88.8}
+    Name: 1
+    DialogueText: Giorgio, our goldfish has been looking quite glum lately.
+    ActorData: {fileID: 11400000, guid: 668e15f5436ebf14cbb383ed010e8f27, type: 2}
+    DialogueAudioClip: {fileID: 8300000, guid: 8f7bbe6a2f9c1fa4ea76500e86ae212a, type: 3}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: cf6df5d9-093b-4348-aa50-3a862585ee57
   OldGroupNames: []
   OldUngroupedNodeNames:
-  - 1
-  - 2
   - 3
   - 4
   - 5
@@ -171,5 +169,7 @@ MonoBehaviour:
   - 10
   - 11
   - 12
+  - 2
+  - 1
   OldGroupedNodeNames:
     _dictionary: []

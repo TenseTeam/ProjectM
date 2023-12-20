@@ -1,25 +1,25 @@
 namespace ProjectM.Features.Exploration
 {
     using UnityEngine;
-    using VUDK.Features.Packages.ExplorationSystem.Nodes;
+    using VUDK.Features.More.ExplorationSystem.Nodes;
     using ProjectM.Features.Artwork;
 
-    public class NodeArtwork : NodeObservation
+    public class NodeArtwork : NodeView
     {
-        [Header("Node Artwork Settings")]
+        [Header("Artwork Info")]
         [SerializeField]
-        private Artwork _artwork;
+        private ArtworkInfo _artworkInfo;
 
         public override void OnNodeEnter()
         {
             base.OnNodeEnter();
-            _artwork.EnableCanvas();
+            _artworkInfo.EnableCanvas();
         }
 
         public override void OnNodeExit()
         {
             base.OnNodeExit();
-            _artwork.DisableAll();
+            _artworkInfo.DisableAll();
         }
 
 #if UNITY_EDITOR

@@ -8,6 +8,7 @@
     using UnityEngine;
     using VUDK.Extensions;
     using VUDK.Features.More.DialogueSystem.Data;
+    using VUDK.Features.More.DialogueSystem.Editor.Constants;
     using VUDK.Features.More.DialogueSystem.Editor.Data.Save;
     using VUDK.Features.More.DialogueSystem.Editor.Elements;
     using VUDK.Features.More.DialogueSystem.Editor.Windows;
@@ -35,7 +36,7 @@
             s_graphView = dsGraphView;
 
             s_graphFileName = graphName;
-            s_containerFolderPath = $"{DialoguesAssetPath}/{graphName}";
+            s_containerFolderPath = $"{DialoguesDataFolderPath}/{graphName}";
 
             s_nodes = new List<DSNode>();
             s_groups = new List<DSGroup>();
@@ -53,7 +54,7 @@
 
             GetElementsFromGraphView();
 
-            DSGraphEditorData graphData = CreateAsset<DSGraphEditorData>(DialoguesGraphsAssetPath, $"{s_graphFileName}Graph");
+            DSGraphEditorData graphData = CreateAsset<DSGraphEditorData>(GraphsAssetPath, $"{s_graphFileName}Graph");
 
             graphData.Init(s_graphFileName);
 
@@ -100,7 +101,7 @@
             string groupName = group.title;
 
             CreateFolder($"{s_containerFolderPath}/Groups", groupName);
-            CreateFolder($"{s_containerFolderPath}/Groups/{groupName}", "Dialogues");
+            CreateFolder($"{s_containerFolderPath}/Groups/{groupName}", DialoguesNodesFolderName);
 
             DSDialogueGroupData dialogueGroup = CreateAsset<DSDialogueGroupData>($"{s_containerFolderPath}/Groups/{groupName}", groupName);
 
@@ -178,12 +179,12 @@
 
             if (node.Group != null)
             {
-                dialogue = CreateAsset<DSDialogueData>($"{s_containerFolderPath}/Groups/{node.Group.title}/Dialogues", node.DialogueName);
+                dialogue = CreateAsset<DSDialogueData>($"{s_containerFolderPath}/Groups/{node.Group.title}/{DialoguesNodesFolderName}", node.DialogueName);
                 dialogueContainer.DialogueGroups.AddItem(s_createdDialogueGroups[node.Group.GroupID], dialogue);
             }
             else
             {
-                dialogue = CreateAsset<DSDialogueData>($"{s_containerFolderPath}/Global/Dialogues", node.DialogueName);
+                dialogue = CreateAsset<DSDialogueData>($"{s_containerFolderPath}/Global/{DialoguesNodesFolderName}", node.DialogueName);
                 dialogueContainer.UngroupedDialogues.Add(dialogue);
 
                 if (node.IsStartNode())
@@ -256,7 +257,7 @@
 
                     foreach (string nodeToRemove in nodesToRemove)
                     {
-                        RemoveAsset($"{s_containerFolderPath}/Groups/{oldGroupedNode.Key}/Dialogues", nodeToRemove);
+                        RemoveAsset($"{s_containerFolderPath}/Groups/{oldGroupedNode.Key}/{DialoguesNodesFolderName}", nodeToRemove);
                     }
                 }
             }
@@ -272,7 +273,7 @@
 
                 foreach (string nodeToRemove in nodesToRemove)
                 {
-                    RemoveAsset($"{s_containerFolderPath}/Global/Dialogues", nodeToRemove);
+                    RemoveAsset($"{s_containerFolderPath}/Global/{DialoguesNodesFolderName}", nodeToRemove);
                 }
             }
 
@@ -281,19 +282,19 @@
 
         public static Texture2D LoadIcon(string path)
         {
-            return EditorGUIUtility.Load($"{DialogueEditorIconsPath}/{path}") as Texture2D;
+            return EditorGUIUtility.Load($"{EditorIconsPath}/{path}") as Texture2D;
         }
 
         public static void Load()
         {
-            DSGraphEditorData graphData = LoadAsset<DSGraphEditorData>(DialoguesGraphsAssetPath, s_graphFileName);
+            DSGraphEditorData graphData = LoadAsset<DSGraphEditorData>(GraphsAssetPath, s_graphFileName);
 
             if (graphData == null)
             {
                 EditorUtility.DisplayDialog(
                     "Could not find the file!",
                     "The file at the following path could not be found:\n\n" +
-                    $"\"{DialoguesGraphsAssetPath}/{s_graphFileName}\".\n\n" +
+                    $"\"{GraphsAssetPath}/{s_graphFileName}\".\n\n" +
                     "Make sure you chose the right file and it's placed at the folder path mentioned above.",
                     "Thanks!"
                 );
@@ -398,17 +399,18 @@
 
         public static void CreateMainFolders()
         {
-            CreateFolder(DialoguesEditorFolderPath, "Graphs");
-            CreateFolder(DialoguesSaveParentFolderPath, DialogueAssetMainFolderName);
-            CreateFolder($"{DialoguesSaveParentFolderPath}/{DialogueAssetMainFolderName}", "Actors");
+            CreateFolder(EditorFolderPath, "Graphs");
+            CreateFolder(DialoguesSaveParentFolderPath, DialoguesDataFolderName);
+            CreateFolder($"{DialoguesSaveParentFolderPath}/{DialoguesDataFolderName}", "AllDialogues");
+            CreateFolder($"{DialoguesSaveParentFolderPath}/{DialoguesDataFolderName}", "Actors");
         }
 
         private static void CreateFoldersForSingleDialogue()
         {
-            CreateFolder(DialoguesAssetPath, s_graphFileName);
+            CreateFolder(DialoguesDataFolderPath, s_graphFileName);
             CreateFolder(s_containerFolderPath, "Global");
             CreateFolder(s_containerFolderPath, "Groups");
-            CreateFolder($"{s_containerFolderPath}/Global", "Dialogues");
+            CreateFolder($"{s_containerFolderPath}/Global", DialoguesNodesFolderName);
         }
 
         public static void CreateFolder(string parentFolderPath, string newFolderName)
