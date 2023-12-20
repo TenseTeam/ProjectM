@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using UnityEngine;
 
-    [CreateAssetMenu(fileName = nameof(QuizData), menuName = "Project/Quiz")]
+    [CreateAssetMenu(fileName = nameof(QuizData), menuName = "Project/Quizzes/Quiz")]
     public class QuizData : ScriptableObject
     {
         public List<QuizQuestionData> Questions;

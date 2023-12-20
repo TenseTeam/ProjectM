@@ -360,6 +360,7 @@ Transform:
   - {fileID: 250390108}
   - {fileID: 1467939739}
   - {fileID: 602547117}
+  - {fileID: 160997852}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &66711778
@@ -5586,6 +5587,50 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &160997851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 160997852}
+  - component: {fileID: 160997853}
+  m_Layer: 0
+  m_Name: LocalizationTesting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &160997852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160997851}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 57190354}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160997853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160997851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa4fc3cbfe0ff14f8ad6f65c1ee723b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &250390107
 GameObject:
   m_ObjectHideFlags: 0
@@ -6041,7 +6086,20 @@ MonoBehaviour:
       m_Calls: []
   OnTaskResolved:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 318163501}
+        m_TargetAssemblyTypeName: VUDK.Features.Main.PointsSystem.Rewards.RewardTrigger,
+          Assembly-CSharp
+        m_MethodName: TriggerReward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _taskPeriod: 24
   _game15Texture: {fileID: 2800000, guid: b0f0eaf45c7113d48b2ff6fe13e046ff, type: 3}
 --- !u!114 &318163498
@@ -7019,7 +7077,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIp
+  m_text: "Guarda che bello \xE8 san giovannino."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12925,7 +12983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIp
+  m_text: "Guarda che bello \xE8 san giovannino."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18327,7 +18385,7 @@ GameObject:
   - component: {fileID: 1096388055}
   - component: {fileID: 1096388054}
   m_Layer: 0
-  m_Name: Diaogue
+  m_Name: DiaogueRewarder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18368,8 +18426,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _taskPeriod: 24
-  _possibleDialogues:
-  - {fileID: 11400000, guid: 485e8ed7fd435d1428e8cb3e93ec8295, type: 2}
+  _dialoguesPool:
+    m_TableReference:
+      m_TableCollectionName: GUID:7de7cdd7373549f49bee17c2cfa549d3
+    m_TableEntryReference:
+      m_KeyId: 5011476480
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
   _isInstant: 0
   OnStart:
     m_PersistentCalls:
@@ -18741,8 +18805,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: {fileID: 1228574023}
   _description: {fileID: 976057781}
-  <ArtworkInfoData>k__BackingField: {fileID: 11400000, guid: 8d071291c540703448f374a4a61296c5,
-    type: 2}
+  _artworkInfoData:
+    m_TableReference:
+      m_TableCollectionName: GUID:4813ff77051470244810bfde20ac159a
+    m_TableEntryReference:
+      m_KeyId: 5669982208
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
 --- !u!114 &1163107922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18838,7 +18908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SanGiuvan
+  m_text: San Giovannino
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18865,7 +18935,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 3
+  m_fontSize: 2.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -19227,7 +19297,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SanGiuvan
+  m_text: San Giovannino
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19254,7 +19324,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 3
+  m_fontSize: 2.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -19358,8 +19428,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: {fileID: 1163515031}
   _description: {fileID: 692347641}
-  <ArtworkInfoData>k__BackingField: {fileID: 11400000, guid: 8d071291c540703448f374a4a61296c5,
-    type: 2}
+  _artworkInfoData:
+    m_TableReference:
+      m_TableCollectionName: GUID:4813ff77051470244810bfde20ac159a
+    m_TableEntryReference:
+      m_KeyId: 5669982208
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
 --- !u!114 &1261496666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26410,7 +26486,20 @@ MonoBehaviour:
       m_Calls: []
   OnTaskResolved:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2037956097}
+        m_TargetAssemblyTypeName: VUDK.Features.Main.PointsSystem.Rewards.RewardTrigger,
+          Assembly-CSharp
+        m_MethodName: TriggerReward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _taskPeriod: 24
   _game15Texture: {fileID: 2800000, guid: b0f0eaf45c7113d48b2ff6fe13e046ff, type: 3}
 --- !u!114 &2037956099
@@ -27556,10 +27645,65 @@ PrefabInstance:
       propertyPath: _firstNode
       value: 
       objectReference: {fileID: 604115577}
+    - target: {fileID: 703476227981562141, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716374678935451431, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BeginTask
+      objectReference: {fileID: 0}
     - target: {fileID: 3728949088606423929, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_Name
       value: pf_MainManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053585302363551768, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _quizDatas.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053585302363551768, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _quizPool.m_TableEntryReference.m_KeyId
+      value: 6251819110400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053585302363551768, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _quizPool.m_TableReference.m_TableCollectionName
+      value: GUID:f237c80aa0f7a8f4d8f7fd993a9e47da
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053585302363551768, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _wrongAnswerMessage.m_TableEntryReference.m_KeyId
+      value: 12045324288
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053585302363551768, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _correctAnswerMessage.m_TableEntryReference.m_KeyId
+      value: 9734262784
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053585302363551768, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _quizCompletedMessage.m_TableEntryReference.m_KeyId
+      value: 273178497024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053585302363551768, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _wrongAnswerMessage.m_TableReference.m_TableCollectionName
+      value: GUID:bd6fb25240c321548b7318cf3ac038be
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053585302363551768, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _correctAnswerMessage.m_TableReference.m_TableCollectionName
+      value: GUID:bd6fb25240c321548b7318cf3ac038be
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053585302363551768, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: _quizCompletedMessage.m_TableReference.m_TableCollectionName
+      value: GUID:bd6fb25240c321548b7318cf3ac038be
       objectReference: {fileID: 0}
     - target: {fileID: 5812637801896931851, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
@@ -27735,11 +27879,51 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 984255093}
+    - target: {fileID: 2060751968082481795, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      propertyPath: m_text
+      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058790801971204166, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      propertyPath: m_text
+      value: Saint Jonh
+      objectReference: {fileID: 0}
     - target: {fileID: 3269825762107017589, guid: 899d08854c2c5eb4a82a915936e617df,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 1852130358}
+    - target: {fileID: 3566019949375145119, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      propertyPath: m_text
+      value: Saint Jonh
+      objectReference: {fileID: 0}
+    - target: {fileID: 3640126809158147943, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      propertyPath: m_text
+      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205144827694616015, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      propertyPath: _artworkInfoData.m_TableEntryReference.m_KeyId
+      value: 5669982208
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205144827694616015, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      propertyPath: _artworkInfoData.m_TableReference.m_TableCollectionName
+      value: GUID:4813ff77051470244810bfde20ac159a
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464541121548792626, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      propertyPath: _artworkInfoData.m_TableEntryReference.m_KeyId
+      value: 5669982208
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464541121548792626, guid: 899d08854c2c5eb4a82a915936e617df,
+        type: 3}
+      propertyPath: _artworkInfoData.m_TableReference.m_TableCollectionName
+      value: GUID:4813ff77051470244810bfde20ac159a
+      objectReference: {fileID: 0}
     - target: {fileID: 5603692948532261892, guid: 899d08854c2c5eb4a82a915936e617df,
         type: 3}
       propertyPath: m_Name

@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using UnityEngine;
     using UnityEngine.Events;
+    using UnityEngine.Localization;
     using VUDK.Features.Main.PointsSystem.Rewards;
     using VUDK.Features.More.DialogueSystem.Data;
     using VUDK.Features.More.DialogueSystem.Events;
@@ -13,11 +14,12 @@
     {
         [Header("Dialogue Listener Settings")]
         [SerializeField]
-        private List<DSDialogueContainerData> _possibleDialogues;
+        private LocalizedAsset<DSDialoguesPool> _dialoguesPool;
         [SerializeField]
         private bool _isInstant;
 
-        private DSDialogueContainerData _dialogueContainerData;
+        private DSDialoguesPool _loadedDialogues;
+        private DSDialogueContainerData _currentDialogueContainerData;
         private RewardTrigger _rewarder;
 
         [Header("Dialogue Events")]
@@ -32,30 +34,40 @@
             TryGetComponent(out _rewarder);
         }
 
+        private void OnEnable()
+        {
+            _dialoguesPool.AssetChanged += LoadDialoguesPool;
+        }
+
+        private void OnDisable()
+        {
+            _dialoguesPool.AssetChanged -= LoadDialoguesPool;
+        }
+
         public void SubscribeEvents()
         {
-            if (_dialogueContainerData == null) return;
-            _dialogueContainerData.OnStart += OnDialogueStart;
-            _dialogueContainerData.OnEnd += OnDialogueEnd;
-            _dialogueContainerData.OnNext += OnDialogueNext;
-            _dialogueContainerData.OnInterrupt += OnDialogueInterrupt;
+            if (_currentDialogueContainerData == null) return;
+            _currentDialogueContainerData.OnStart += OnDialogueStart;
+            _currentDialogueContainerData.OnEnd += OnDialogueEnd;
+            _currentDialogueContainerData.OnNext += OnDialogueNext;
+            _currentDialogueContainerData.OnInterrupt += OnDialogueInterrupt;
         }
 
         public void UnsubscribeEvents()
         {
-            if(_dialogueContainerData == null) return;
-            _dialogueContainerData.OnStart -= OnDialogueStart;
-            _dialogueContainerData.OnEnd -= OnDialogueEnd;
-            _dialogueContainerData.OnNext -= OnDialogueNext;
-            _dialogueContainerData.OnInterrupt -= OnDialogueInterrupt;
+            if(_currentDialogueContainerData == null) return;
+            _currentDialogueContainerData.OnStart -= OnDialogueStart;
+            _currentDialogueContainerData.OnEnd -= OnDialogueEnd;
+            _currentDialogueContainerData.OnNext -= OnDialogueNext;
+            _currentDialogueContainerData.OnInterrupt -= OnDialogueInterrupt;
         }
 
         public override void BeginTask()
         {
             base.BeginTask();
             if(IsSolved && !IsRepeatable) return;
-            _dialogueContainerData = _possibleDialogues[Random.Range(0, _possibleDialogues.Count)];
-            DSEventsHandler.StartDialogue(this, _dialogueContainerData, null, true, _isInstant);
+            _currentDialogueContainerData = _loadedDialogues.Pool[Random.Range(0, _loadedDialogues.Pool.Count)];
+            DSEventsHandler.StartDialogue(this, _currentDialogueContainerData, null, true, _isInstant);
             SubscribeEvents();
         }
 
@@ -92,6 +104,11 @@
             OnEnd?.Invoke();
             ResolveTask();
             UnsubscribeEvents();
+        }
+
+        private void LoadDialoguesPool(DSDialoguesPool asset)
+        {
+            _loadedDialogues = asset;
         }
     }
 }

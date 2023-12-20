@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596eaf741eddb124d99ea97e530dadbd, type: 3}
+  m_Name: so_en_Quiz_1a
+  m_EditorClassIdentifier: 
+  Questions:
+  - QuestionText: "Who is the Renaissance artist known for his work \"Piet\xE0 Rondanini,\"
+      and what other masterpiece of this artist is present at Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Donatello - "David"
+      IsCorrect: 0
+    - AnswerText: Michelangelo Buonarroti - "The Creation of Adam"
+      IsCorrect: 1
+    - AnswerText: Leonardo da Vinci - "Lady with an Ermine"
+      IsCorrect: 0
+    - AnswerText: Raphael Sanzio - "The Madonna of the Goldfinch"
+      IsCorrect: 0
+  - QuestionText: What is the symbolic meaning of Hayez's work "The Kiss" in relation
+      to the historical context of the time it was created?
+    PointsReward: 10
+    Answers:
+    - AnswerText: Expression of the struggle for Italian independence
+      IsCorrect: 1
+    - AnswerText: Representation of Renaissance nobility
+      IsCorrect: 0
+    - AnswerText: Symbol of romantic love
+      IsCorrect: 0
+    - AnswerText: Allegory of vanitas
+      IsCorrect: 0
+  - QuestionText: Who is the Italian Renaissance artist known for the "Polyptych
+      of San Vincenzo Ferrer" displayed at Brera?
+    PointsReward: 10
+    Answers:
+    - AnswerText: Paolo Veronese
+      IsCorrect: 1
+    - AnswerText: Giovanni Bellini
+      IsCorrect: 0
+    - AnswerText: Andrea Mantegna
+      IsCorrect: 0
+    - AnswerText: Titian
+      IsCorrect: 0
+  - QuestionText: What artistic movement is characterized by the pursuit of purity
+      of forms and inspiration from classical antiquity, represented by works in
+      the Brera Museum?
+    PointsReward: 10
+    Answers:
+    - AnswerText: Renaissance
+      IsCorrect: 0
+    - AnswerText: Mannerism
+      IsCorrect: 0
+    - AnswerText: Neoclassicism
+      IsCorrect: 1
+    - AnswerText: Baroque
+      IsCorrect: 0
+  - QuestionText: Who is the artist known for her realistic and intense representations
+      of biblical scenes, and which of her works is displayed at Brera?
+    PointsReward: 10
+    Answers:
+    - AnswerText: Caravaggio
+      IsCorrect: 0
+    - AnswerText: Artemisia Gentileschi
+      IsCorrect: 1
+    - AnswerText: Guido Reni
+      IsCorrect: 0
+    - AnswerText: Orazio Gentileschi
+      IsCorrect: 0

@@ -7,9 +7,9 @@
 
     public static class BinarySave
     {
-        private const string s_DefaultExtension = ".bin";
+        private const string DefaultExtension = ".bin";
 
-        public static void Save(SavePacketData data, string fileName, string extension = s_DefaultExtension)
+        public static void Save(SavePacketData data, string fileName, string extension = DefaultExtension)
         {
             BinaryFormatter formatter = new BinaryFormatter();
             string path = Path.Combine(Application.persistentDataPath, fileName + extension.ToLower());
@@ -20,7 +20,7 @@
             }
         }
 
-        public static bool TryLoad(out SavePacketData data, string fileName, string extension = s_DefaultExtension)
+        public static bool TryLoad(out SavePacketData data, string fileName, string extension = DefaultExtension)
         {
             string path = Path.Combine(Application.persistentDataPath, fileName + extension.ToLower());
 
@@ -36,19 +36,6 @@
                 data = (SavePacketData)formatter.Deserialize(stream);
                 return true;
             }
-        }
-
-        public static bool DeleteSave(string fileName, string extension = s_DefaultExtension)
-        {
-            string path = Path.Combine(Application.persistentDataPath, fileName + extension);
-
-            if (File.Exists(path))
-            {
-                File.Delete(path);
-                return true;
-            }
-
-            return false;
         }
     }
 }

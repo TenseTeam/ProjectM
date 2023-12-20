@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Italian (it)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Italian (it)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 0a0fdbd8753e73e4da49bec28d5511dd
+  m_SerializeEntries:
+  - m_GUID: 043002782095327488c87e36b4f7fb1e
+    m_Address: so_it_QuizPool_0a
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-it
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 13611b38a40cefa438f1dd54bc774d92
+    m_Address: so_it_DebugDialoguesPool
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-it
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5002ef3010ef1e49b458016f1c8e82f
+    m_Address: so_it_DebugInfo_0a
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-it
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 2551f65ca7c642a41a3f638520c6e766, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b9aeb16f0208cec4ba6725f2601454fd, type: 2}
+    - {fileID: 11400000, guid: 74a2961f3441a6947b25583b6485910f, type: 2}

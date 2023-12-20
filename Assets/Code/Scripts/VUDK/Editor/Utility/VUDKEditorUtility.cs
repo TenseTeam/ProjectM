@@ -37,5 +37,17 @@
         {
             EditorGUILayout.LabelField(label, EditorStyles.boldLabel);
         }
+
+        public static void DrawSpace(int space = 4)
+        {
+            EditorGUILayout.Space(space);
+        }
+
+        public static void DrawIndented(int indentLevel, Action callback)
+        {
+            EditorGUI.indentLevel+=indentLevel;
+            callback?.Invoke();
+            EditorGUI.indentLevel-=indentLevel;
+        }
     }
 }

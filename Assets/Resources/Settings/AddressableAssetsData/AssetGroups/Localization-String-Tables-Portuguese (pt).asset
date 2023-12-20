@@ -17,8 +17,14 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 525b9f3fb93621b48b9d1ca66677fc7b
   m_SerializeEntries:
-  - m_GUID: bc63322face931f468b6be2369e97da5
-    m_Address: ProjectM_pt
+  - m_GUID: c77815f33dab9944fa28381071e9baa8
+    m_Address: UITexts_pt
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1a5709bbc1cd63349a6de95471180f41
+    m_Address: QuizMessages_pt
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-pt

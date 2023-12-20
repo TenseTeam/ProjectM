@@ -11,11 +11,11 @@
             return files;
         }
 
-        public static string[] GetFileNames(string extension)
+        public static string[] GetFileNames(string extension, bool hasExtension = false)
         {
             string[] files = GetFilePaths(extension);
             for (int i = 0; i < files.Length; i++)
-                files[i] = Path.GetFileNameWithoutExtension(files[i]);
+                files[i] = hasExtension ? Path.GetFileName(files[i]) : Path.GetFileNameWithoutExtension(files[i]);
 
             return files;
         }

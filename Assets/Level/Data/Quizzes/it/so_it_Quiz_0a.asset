@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596eaf741eddb124d99ea97e530dadbd, type: 3}
+  m_Name: so_it_Quiz_0a
+  m_EditorClassIdentifier: 
+  Questions:
+  - QuestionText: "Chi \xE8 l'artista italiano del Rinascimento noto per il dipinto
+      \u201CLa Scuola di Atene\u201D e quali opere simili sono presenti al Museo
+      di Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Michelangelo
+      IsCorrect: 0
+    - AnswerText: Leonardo da Vinci
+      IsCorrect: 0
+    - AnswerText: Raphael Sanzio
+      IsCorrect: 1
+    - AnswerText: Caravaggio
+      IsCorrect: 0
+  - QuestionText: "Qual \xE8 il tema predominante nei dipinti di scuola lombarda,
+      come evidenziato nelle opere esposte a Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Natura morta
+      IsCorrect: 0
+    - AnswerText: Paesaggi marini
+      IsCorrect: 0
+    - AnswerText: Ritratti di corte
+      IsCorrect: 0
+    - AnswerText: Rappresentazioni religiose
+      IsCorrect: 1
+  - QuestionText: "Chi \xE8 l'artista dietro il capolavoro \"Il bacio\" e quale movimento
+      artistico rappresenta?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Tiziano - Manierismo
+      IsCorrect: 0
+    - AnswerText: "Leonardo da Vinci \u2013 Rinascimento"
+      IsCorrect: 0
+    - AnswerText: Antonio Canova - Neoclassicismo
+      IsCorrect: 0
+    - AnswerText: "Francesco Hayez \u2013 Romanticismo"
+      IsCorrect: 1
+  - QuestionText: "Quale famoso pittore italiano \xE8 noto per i suoi affreschi nella
+      Cappella degli Scrovegni a Padova, e quali sue opere sono presenti al Museo
+      di Brera?"
+    PointsReward: 10
+    Answers:
+    - AnswerText: Sandro Botticelli
+      IsCorrect: 0
+    - AnswerText: Giotto di Bondone
+      IsCorrect: 1
+    - AnswerText: Andrea Mantegna
+      IsCorrect: 0
+    - AnswerText: Piero della Francesca
+      IsCorrect: 0
+  - QuestionText: In quale periodo storico sono state realizzate molte delle opere
+      esposte a Brera?
+    PointsReward: 10
+    Answers:
+    - AnswerText: Barocco
+      IsCorrect: 0
+    - AnswerText: Medioevo
+      IsCorrect: 0
+    - AnswerText: Rinascimento
+      IsCorrect: 1
+    - AnswerText: "Rococ\xF2"
+      IsCorrect: 0

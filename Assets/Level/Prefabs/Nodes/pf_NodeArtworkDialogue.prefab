@@ -267,8 +267,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: {fileID: 3566019949375145119}
   _description: {fileID: 2060751968082481795}
-  <ArtworkInfoData>k__BackingField: {fileID: 11400000, guid: 8d071291c540703448f374a4a61296c5,
-    type: 2}
+  _artworkInfoData:
+    m_TableReference:
+      m_TableCollectionName: GUID:4813ff77051470244810bfde20ac159a
+    m_TableEntryReference:
+      m_KeyId: 5669982208
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
 --- !u!1 &622160529493824452
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,8 +669,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: {fileID: 3058790801971204166}
   _description: {fileID: 3640126809158147943}
-  <ArtworkInfoData>k__BackingField: {fileID: 11400000, guid: 8d071291c540703448f374a4a61296c5,
-    type: 2}
+  _artworkInfoData:
+    m_TableReference:
+      m_TableCollectionName: GUID:4813ff77051470244810bfde20ac159a
+    m_TableEntryReference:
+      m_KeyId: 5669982208
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
 --- !u!1 &1831986640599096732
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +742,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIp
+  m_text: HELO HELO HELO HELLO THIS IS ENGLISH
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1490,7 +1502,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIpsiLeremIp
+  m_text: HELO HELO HELO HELLO THIS IS ENGLISH
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1744,7 +1756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SanGiuvan
+  m_text: Saint Jonh
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1771,7 +1783,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 3
+  m_fontSize: 3.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1948,7 +1960,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   InteractButton: {fileID: 320545232238931}
-  _artworkInfo: {fileID: 0}
+  _artworkInfo: {fileID: 4844744798001524770}
 --- !u!1 &5745403077458944350
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,7 +2400,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SanGiuvan
+  m_text: Saint Jonh
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2415,7 +2427,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 3
+  m_fontSize: 3.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2605,10 +2617,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueContainer: {fileID: 11400000, guid: 795255cb449cb624096ed71fafdfd543, type: 2}
   StartDialogue: {fileID: 0}
+  _dialogueGroup: {fileID: 11400000, guid: 01de217281b711c4fb6944d6be4d7707, type: 2}
   RandomStartDialogue: 1
   IsInstantDialogue: 0
   IsRepeatable: 1
-  _dialogueGroup: {fileID: 11400000, guid: 01de217281b711c4fb6944d6be4d7707, type: 2}
   _groupedDialogues: 0
   _startingDialoguesOnly: 0
   _selectedDialogueGroupIndex: 0
