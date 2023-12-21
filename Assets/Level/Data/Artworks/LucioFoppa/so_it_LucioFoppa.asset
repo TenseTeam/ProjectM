@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_it_LucioFoppa
+  m_EditorClassIdentifier: 
+  Name: Lucio Foppa
+  Description: "Ambrogio Figino o Figini o Giovanni Ambrogio Figino \xE8 stato un
+    pittore manierista italiano.\r\nAllievo di Giovan Paolo Lomazzo dal 1564, Figino
+    si pose in luce nel panorama artistico milanese inizialmente come ritrattista.
+    L'effigie di Ambrogio Annoni, uno dei pochi ritratti a lui attribuibili con sicurezza,
+    mostra una capacit\xE0 minuziosa di rendere i particolari degna della pittura
+    fiamminga. Nei primi anni '80 del XVI secolo l'artista ricevette dai Gesuiti
+    la commissione per due pale d'altare, un tempo in San Fedele: la Madonna della
+    Serpe (di cui si ricorder\xE0 il Michelangelo Merisi da Caravaggio; 1581-1583)
+    e l'Incoronazione della Vergine (1585-1586).\r\nA questi anni risale probabilmente
+    il viaggio romano di Figino; nella Citt\xE0 Eterna fu l'arte di Michelangelo,
+    oltre allo studio dell'antico, ad essere decisivo per la sua formazione, come
+    \xE8 evidente dai suoi dipinti successivi, come il bellissimo San Matteo e l'Angelo,
+    anch'esso reinterpretato in un successivo quadro di Caravaggio. Risale al 1590
+    invece la pala con Sant'Ambrogio che sconfigge Ario, oggi alla Pinacoteca di
+    Brera (un'altra versione autografa \xE8 nella chiesa di Sant'Eustorgio)."

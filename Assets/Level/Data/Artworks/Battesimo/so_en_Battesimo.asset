@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_en_Battesimo
+  m_EditorClassIdentifier: 
+  Name: Battesimo e Tentazioni di Cristo
+  Description: "Before the suppression, the Church of San Nicol\xF2 ai Frari preserved
+    an important cycle of paintings by Veronese, which was unfortunately dismembered
+    and dispersed in different locations: this cycle attests to the master's maturity
+    but also to his last great undertaking of a religious nature. As regards the
+    chronology, it is hypothesized on the basis of the date of reconsecration of
+    the church in 1582 and the lack of notations on the cycle of paintings in the
+    Sansovino Guide of 1581.\r\nIn this work, Veronese shows off his ability to stage
+    complex representations by exploiting theatrical expedients, such as plays of
+    light or exasperated gestures. The iconography of the painting brings together
+    the two subjects of the Baptism and the Temptations of Christ. The Christ baptized
+    by the Baptist and surrounded by angels is moved completely to the left, in a
+    fumigation of lights starting from the dove of the Holy Spirit. Around there
+    is a dense leafy scrub, broken by rays that descend from above, creating luminous
+    effects in the iridescent folds of the robes. The entire right area, more than
+    half of the painting, is intended for viewing the landscape, in which Christ
+    is tempted by Satan: the figures are small in the humid and foggy atmosphere."

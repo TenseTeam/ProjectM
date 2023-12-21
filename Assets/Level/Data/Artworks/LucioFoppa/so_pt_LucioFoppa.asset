@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_pt_LucioFoppa
+  m_EditorClassIdentifier: 
+  Name: Lucio Foppa
+  Description: "Ambrogio Figino ou Figini ou Giovanni Ambrogio Figino foi um pintor
+    maneirista italiano.\r\nAluno de Giovan Paolo Lomazzo desde 1564, Figino ganhou
+    destaque no panorama art\xEDstico milan\xEAs inicialmente como retratista. A
+    ef\xEDgie de Ambrogio Annoni, um dos poucos retratos que lhe podem ser atribu\xEDdos
+    com seguran\xE7a, mostra uma capacidade meticulosa de reproduzir detalhes dignos
+    da pintura flamenga. No in\xEDcio da d\xE9cada de 1680, o artista recebeu dos
+    jesu\xEDtas a encomenda de dois ret\xE1bulos, uma vez em San Fedele: a Madonna
+    della Serpe (da qual ser\xE1 lembrado Michelangelo Merisi da Caravaggio; 1581-1583)
+    e a 'Coroa\xE7\xE3o da Virgem (1585- 1586).\r\nA viagem romana de Figino remonta
+    provavelmente a estes anos; na Cidade Eterna foi a arte de Michelangelo, al\xE9m
+    do estudo da antiguidade, que foi decisiva para sua forma\xE7\xE3o, como fica
+    evidente em suas pinturas posteriores, como a bela S\xE3o Mateus e o Anjo, tamb\xE9m
+    reinterpretada em pintura posterior de Caravaggio . O ret\xE1bulo com Santo Ambr\xF3sio
+    derrotando \xC1rio data de 1590 e hoje est\xE1 na Pinacoteca di Brera (outra
+    vers\xE3o autografada est\xE1 na igreja de Sant'Eustorgio)."

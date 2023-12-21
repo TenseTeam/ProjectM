@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_it_Crucifixion
+  m_EditorClassIdentifier: 
+  Name: La Crofissione
+  Description: "Non si conoscono l'ubicazione originaria e il committente dell'opera;
+    il primo potrebbe essere stato il Duomo di Milano o la chiesa di Santa Maria
+    in Brera. Il pannello potrebbe essere stato conservato in deposito a causa della
+    sua iconografia non ortodossa. Alcuni ipotizzano che sia stato realizzato nell'ambito
+    dei movimenti di riforma religiosa presenti a Milano durante l'occupazione francese
+    (poi avversata da Carlo Borromeo e dalla Controriforma), oppure che sia stato
+    commissionato direttamente dal maresciallo Gian Giacomo Trivulzio, governatore
+    della citt\xE0. per conto dei francesi, che avevano commissionato al Bramantino
+    anche i cartoni per gli arazzi Trivulzio."

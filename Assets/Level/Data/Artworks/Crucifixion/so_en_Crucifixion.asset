@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_en_Crucifixion
+  m_EditorClassIdentifier: 
+  Name: Crucifixion
+  Description: The work's original location and commissioner are unknown; the former
+    may have been Milan Cathedral or the church of Santa Maria in Brera. The panel
+    might have been kept in storage due to its unorthodox iconography. Some theorise
+    that it was produced in the milieu of religious reform movements current in Milan
+    during its occupation by the French (later opposed by Carlo Borromeo and the
+    Counter-Reformation), or that it was directly commissioned by Marshal Gian Giacomo
+    Trivulzio, the city's governor on behalf of the French, who had also commissioned
+    the cartoons for the Trivulzio tapestries from Bramantino.

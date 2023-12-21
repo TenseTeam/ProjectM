@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_pt_Crucifixion
+  m_EditorClassIdentifier: 
+  Name: "A Crucifica\xE7\xE3o"
+  Description: "O local original e o cliente da obra s\xE3o desconhecidos; a primeira
+    pode ter sido a Catedral de Mil\xE3o ou a igreja de Santa Maria in Brera. O painel
+    pode ter sido guardado devido \xE0 sua iconografia pouco ortodoxa. Alguns levantam
+    a hip\xF3tese de que foi criado como parte dos movimentos de reforma religiosa
+    presentes em Mil\xE3o durante a ocupa\xE7\xE3o francesa (posteriormente contestados
+    por Carlo Borromeo e a Contra-Reforma), ou que foi encomendado diretamente pelo
+    Marechal Gian Giacomo Trivulzio, governador da cidade. em nome dos franceses,
+    que tamb\xE9m encomendaram os desenhos para as tape\xE7arias Trivulzio de Bramantino."

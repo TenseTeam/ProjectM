@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_it_LaPresentazione
+  m_EditorClassIdentifier: 
+  Name: "Presentazione di Ges\xF9 al Tempio "
+  Description: "L'opera non \xE8 documentata dalle fonti antiche. \xC8 nota con certezza
+    dal 1826, quando risulta citata in una guida alla citt\xE0 di Brescia, ed \xE8
+    probabile che provenisse da altrove: nel '29 infatti l'artista si trovava a Sal\xF2
+    per eseguire il dipinto con Sant'Antonio da Padova e un donatore, ancora oggi
+    nel Duomo. Si ipotizza quindi che la Presentazione fosse stata dipinta per un
+    committente dell'area del Garda.\r\nSi trova a Brera dal 1923."

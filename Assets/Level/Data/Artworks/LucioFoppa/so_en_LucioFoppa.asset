@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_en_LucioFoppa
+  m_EditorClassIdentifier: 
+  Name: Lucio Foppa
+  Description: 'Ambrogio Figino or Figini or Giovanni Ambrogio Figino was an Italian
+    mannerist painter.
+
+    A pupil of Giovan Paolo Lomazzo from 1564, Figino came
+    to prominence in the Milanese artistic panorama initially as a portraitist. The
+    effigy of Ambrogio Annoni, one of the few portraits that can be confidently attributed
+    to him, shows a meticulous ability to render details worthy of Flemish painting.
+    In the early 1680s the artist received the commission from the Jesuits for two
+    altarpieces, once in San Fedele: the Madonna della Serpe (of which Michelangelo
+    Merisi da Caravaggio will be remembered; 1581-1583) and the ''Coronation of the
+    Virgin (1585-1586).
+
+    Figino''s Roman journey probably dates back to these
+    years; in the Eternal City it was Michelangelo''s art, in addition to the study
+    of antiquity, that was decisive for his education, as is evident from his later
+    paintings, such as the beautiful Saint Matthew and the Angel, also reinterpreted
+    in a next painting by Caravaggio. The altarpiece with Saint Ambrose defeating
+    Arius dates back to 1590 and is now in the Pinacoteca di Brera (another autograph
+    version is in the church of Sant''Eustorgio).'
