@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
   m_Name: so_pt_SaintJohn
   m_EditorClassIdentifier: 
-  Name: "S\xE3o Jo\xE3o"
+  Name: 
   Description: "\rA figura do santo emerge com a solidez de uma escultura policromada,
     apoiada em um terreno fraturado que a isola como um pedestal. Al\xE9m disso,
     abre-se uma paisagem fant\xE1stica com arcos prec\xE1rios que enquadram plan\xEDcies

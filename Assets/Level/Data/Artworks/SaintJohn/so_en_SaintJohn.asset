@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
   m_Name: so_en_SaintJohn
   m_EditorClassIdentifier: 
-  Name: Saint John
+  Name: 
   Description: The figure of the saint emerges with the solidity of a polychrome
     sculpture, resting on a fractured ground that isolates it like a pedestal. Beyond
     this, a fantastic landscape opens up with precarious arches framing plains traversed
