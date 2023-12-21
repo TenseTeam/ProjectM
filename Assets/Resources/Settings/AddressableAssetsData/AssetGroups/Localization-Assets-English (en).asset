@@ -47,12 +47,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f7459192b002e0c49b65a84c690888a5
-    m_Address: so_en_DialoguePuizzle_0a
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bdad23b6e70d3c64c9f191b3e1bd446b
     m_Address: enNapoleonDialogue
     m_ReadOnly: 1

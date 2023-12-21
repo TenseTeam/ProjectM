@@ -53,6 +53,14 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7459192b002e0c49b65a84c690888a5
+    m_Address: so_en_DialoguePuizzle_0a
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-it
+    - Locale-pt
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 2551f65ca7c642a41a3f638520c6e766, type: 2}
   m_SchemaSet:
