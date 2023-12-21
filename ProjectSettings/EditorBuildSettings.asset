@@ -5,12 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Level/Scenes/_Debug/scn_DebugLevelDesign.unity
-    guid: a8e148d904f43f642bd01a95c39918c2
   - enabled: 1
-    path: Assets/Level/Scenes/_Debug/scn_DebugAR.unity
-    guid: 604253a3970b61f4db3b8cd4b7891120
+    path: Assets/Level/Scenes/scn_MainScene.unity
+    guid: b0c1be5f81556aa4d8a7da0f5751229b
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
       guid: a9f42210703ee3543a77d543b590b6be, type: 2}
