@@ -4768,18 +4768,28 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 69a71038dc32e084da5c12c8dde98ee2, type: 2}
     - target: {fileID: -5256346376709606755, guid: 25cea58cc35fca9499cb1fd9924b6d5e,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9025
+      objectReference: {fileID: 0}
+    - target: {fileID: -5256346376709606755, guid: 25cea58cc35fca9499cb1fd9924b6d5e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.811146
+      objectReference: {fileID: 0}
+    - target: {fileID: -5256346376709606755, guid: 25cea58cc35fca9499cb1fd9924b6d5e,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -2860.1
       objectReference: {fileID: 0}
     - target: {fileID: -5256346376709606755, guid: 25cea58cc35fca9499cb1fd9924b6d5e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -448.1
+      value: -458.94
       objectReference: {fileID: 0}
     - target: {fileID: -5256346376709606755, guid: 25cea58cc35fca9499cb1fd9924b6d5e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3649.6
+      value: 3650.53
       objectReference: {fileID: 0}
     - target: {fileID: -5256346376709606755, guid: 25cea58cc35fca9499cb1fd9924b6d5e,
         type: 3}
@@ -6333,18 +6343,28 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 69a71038dc32e084da5c12c8dde98ee2, type: 2}
     - target: {fileID: -5256346376709606755, guid: 25cea58cc35fca9499cb1fd9924b6d5e,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: -5256346376709606755, guid: 25cea58cc35fca9499cb1fd9924b6d5e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8627978
+      objectReference: {fileID: 0}
+    - target: {fileID: -5256346376709606755, guid: 25cea58cc35fca9499cb1fd9924b6d5e,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4426
+      value: -4430
       objectReference: {fileID: 0}
     - target: {fileID: -5256346376709606755, guid: 25cea58cc35fca9499cb1fd9924b6d5e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -440
+      value: -435.29
       objectReference: {fileID: 0}
     - target: {fileID: -5256346376709606755, guid: 25cea58cc35fca9499cb1fd9924b6d5e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3961
+      value: 3936
       objectReference: {fileID: 0}
     - target: {fileID: -5256346376709606755, guid: 25cea58cc35fca9499cb1fd9924b6d5e,
         type: 3}
@@ -8077,6 +8097,31 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 5473090282839852266, guid: 50f1035b080eab24daa43874dcf89351,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473090282839852266, guid: 50f1035b080eab24daa43874dcf89351,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7664
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473090282839852266, guid: 50f1035b080eab24daa43874dcf89351,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473090282839852266, guid: 50f1035b080eab24daa43874dcf89351,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -34.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473090282839852266, guid: 50f1035b080eab24daa43874dcf89351,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8490,6 +8535,26 @@ PrefabInstance:
         est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
         sentados e ajoelhados."
       objectReference: {fileID: 0}
+    - target: {fileID: 1793774444747018524, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 44.349
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793774444747018524, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000000059579
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793774444747018524, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0001483
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793774444747018524, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8504,6 +8569,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSize
       value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 44.349
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 13.824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000011923
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000099182
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -8530,6 +8620,31 @@ PrefabInstance:
       propertyPath: _artworkInfo
       value: 
       objectReference: {fileID: 464304992}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 44.349
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 20.144
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.852
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.734
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7649650050219688187, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -15389,12 +15504,12 @@ PrefabInstance:
     - target: {fileID: 7883913902388544588, guid: a541b35a168760e4297ef21ef1bb11ed,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.1149
+      value: 1.3219392
       objectReference: {fileID: 0}
     - target: {fileID: 7883913902388544588, guid: a541b35a168760e4297ef21ef1bb11ed,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7679464
+      value: 0.7756259
       objectReference: {fileID: 0}
     - target: {fileID: 7883913902388544588, guid: a541b35a168760e4297ef21ef1bb11ed,
         type: 3}
@@ -15404,12 +15519,12 @@ PrefabInstance:
     - target: {fileID: 7883913902388544588, guid: a541b35a168760e4297ef21ef1bb11ed,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19
+      value: -19.62
       objectReference: {fileID: 0}
     - target: {fileID: 7883913902388544588, guid: a541b35a168760e4297ef21ef1bb11ed,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22
+      value: -23.79
       objectReference: {fileID: 0}
     - target: {fileID: 7883913902388544588, guid: a541b35a168760e4297ef21ef1bb11ed,
         type: 3}
@@ -15960,6 +16075,19 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 783911017}
+        m_TargetAssemblyTypeName: VUDK.Features.Main.PointsSystem.Rewards.RewardTrigger,
+          Assembly-CSharp
+        m_MethodName: TriggerReward
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -16931,6 +17059,11 @@ PrefabInstance:
         est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
         sentados e ajoelhados."
       objectReference: {fileID: 0}
+    - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_overflowMode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -16945,6 +17078,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSize
       value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 27.852
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 7.884
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.135
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -16971,6 +17129,31 @@ PrefabInstance:
       propertyPath: _artworkInfo
       value: 
       objectReference: {fileID: 831986936}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 28.129
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 13.953
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.344
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.554
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7649650050219688187, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -18642,6 +18825,21 @@ PrefabInstance:
       propertyPath: _artworkInfo
       value: 
       objectReference: {fileID: 1615604165}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 32.355
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.661
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7649650050219688187, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -19084,6 +19282,11 @@ PrefabInstance:
         est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
         sentados e ajoelhados."
       objectReference: {fileID: 0}
+    - target: {fileID: 1925950445234496266, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -19308,6 +19511,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677959569695928744, guid: 6ec8d5e7758da0e49b08b4cf3c2e12e3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.97
       objectReference: {fileID: 0}
     - target: {fileID: 6365315337726033869, guid: 6ec8d5e7758da0e49b08b4cf3c2e12e3,
         type: 3}
@@ -20017,8 +20225,8 @@ Transform:
   m_GameObject: {fileID: 1016727272}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.0000002682209, z: -0, w: 1}
-  m_LocalPosition: {x: -27.708004, y: -4.1470003, z: -53.599483}
-  m_LocalScale: {x: 0.022751072, y: 0.026157998, z: 0.01}
+  m_LocalPosition: {x: -27.6041, y: -4.0558, z: -53.599483}
+  m_LocalScale: {x: 0.024726637, y: 0.026882255, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 167995372}
@@ -20312,13 +20520,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 794515579714983672, guid: f0ccba29a0c1c8d498f95b7854f6b174,
         type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 794515579714983672, guid: f0ccba29a0c1c8d498f95b7854f6b174,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 359
       objectReference: {fileID: 0}
     - target: {fileID: 794515579714983672, guid: f0ccba29a0c1c8d498f95b7854f6b174,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -432.7
+      value: -435.83
       objectReference: {fileID: 0}
     - target: {fileID: 794515579714983672, guid: f0ccba29a0c1c8d498f95b7854f6b174,
         type: 3}
@@ -20456,13 +20669,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4679929555319854617, guid: ca46737cd443f194ca3f18106b099bbc,
         type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679929555319854617, guid: ca46737cd443f194ca3f18106b099bbc,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -5740
       objectReference: {fileID: 0}
     - target: {fileID: 4679929555319854617, guid: ca46737cd443f194ca3f18106b099bbc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -338
+      value: -336.22
       objectReference: {fileID: 0}
     - target: {fileID: 4679929555319854617, guid: ca46737cd443f194ca3f18106b099bbc,
         type: 3}
@@ -20520,6 +20738,11 @@ PrefabInstance:
         e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
         est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
         sentados e ajoelhados."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925950445234496266, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -25548,6 +25771,36 @@ PrefabInstance:
         with Saint Ambrose defeating Arius dates back to 1590 and is now in the Pinacoteca
         di Brera (another autograph version is in the church of Sant''Eustorgio).'
       objectReference: {fileID: 0}
+    - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_overflowMode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793774444747018524, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 19.878
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793774444747018524, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 4.313
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793774444747018524, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793774444747018524, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.071
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793774444747018524, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -25562,6 +25815,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSize
       value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 30.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10.377
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.134
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -25588,6 +25866,31 @@ PrefabInstance:
       propertyPath: _artworkInfo
       value: 
       objectReference: {fileID: 7785182}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 32.605
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 14.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.792
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.232
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7649650050219688187, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -26821,6 +27124,11 @@ PrefabInstance:
         work of the artist whose work is the result of an elaborate and complex synthesis
         of elements taken from authoritative models.
       objectReference: {fileID: 0}
+    - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_overflowMode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -26835,6 +27143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSize
       value: 2.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 3.753
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -26891,6 +27204,21 @@ PrefabInstance:
       propertyPath: _artworkInfo
       value: 
       objectReference: {fileID: 406392751}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 6.708
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.036
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7734599877621741691, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27493,7 +27821,7 @@ PrefabInstance:
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
       propertyPath: _onExit.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
@@ -27503,7 +27831,7 @@ PrefabInstance:
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
       propertyPath: _onExit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
@@ -27529,12 +27857,12 @@ PrefabInstance:
         type: 3}
       propertyPath: _onExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1322671046}
+      objectReference: {fileID: 2098518074}
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
       propertyPath: _onExit.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2098518074}
+      objectReference: {fileID: 654296699}
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
       propertyPath: _onExit.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -27578,7 +27906,7 @@ PrefabInstance:
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
       propertyPath: _onExit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: InterruptTask
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
@@ -27603,7 +27931,7 @@ PrefabInstance:
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
       propertyPath: _onExit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ProjectM.Puzzles.Quiz.QuizManager, Assembly-CSharp
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
@@ -27627,8 +27955,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
-      propertyPath: _onExit.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      propertyPath: _onExit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
+        type: 3}
+      propertyPath: _onExit.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
@@ -29388,6 +29721,11 @@ PrefabInstance:
         who had also commissioned the cartoons for the Trivulzio tapestries from
         Bramantino.
       objectReference: {fileID: 0}
+    - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_overflowMode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -29402,6 +29740,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSize
       value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 21.556
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 18.641
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929289985709812300, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.396
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -29433,6 +29791,31 @@ PrefabInstance:
       propertyPath: _artworkInfo
       value: 
       objectReference: {fileID: 889567253}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 23.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 24.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.171
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7649650050219688187, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -31014,6 +31397,11 @@ PrefabInstance:
         est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
         sentados e ajoelhados."
       objectReference: {fileID: 0}
+    - target: {fileID: 1925950445234496266, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -31059,6 +31447,26 @@ PrefabInstance:
       propertyPath: _artworkInfo
       value: 
       objectReference: {fileID: 1217801686}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846427650317361134, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7649650050219688187, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -31143,6 +31551,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pf_NodeArtwork_13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325625701185769455, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9038051064689959242, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -32791,6 +33204,31 @@ PrefabInstance:
       propertyPath: _artworkInfo
       value: 
       objectReference: {fileID: 263591849}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 38.994
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 19.359
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.232
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.428
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7649650050219688187, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -34823,7 +35261,7 @@ PrefabInstance:
     - target: {fileID: 6440752483460866235, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -12.404358
+      value: -12.404343
       objectReference: {fileID: 0}
     - target: {fileID: 6665527329094291583, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
@@ -36701,6 +37139,11 @@ PrefabInstance:
         est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
         sentados e ajoelhados."
       objectReference: {fileID: 0}
+    - target: {fileID: 1925950445234496266, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -37610,13 +38053,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5280307330469554419, guid: 908acbd4350e5fd488be8bca381da1a0,
         type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: -5280307330469554419, guid: 908acbd4350e5fd488be8bca381da1a0,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -2365
       objectReference: {fileID: 0}
     - target: {fileID: -5280307330469554419, guid: 908acbd4350e5fd488be8bca381da1a0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -410
+      value: -411.64
       objectReference: {fileID: 0}
     - target: {fileID: -5280307330469554419, guid: 908acbd4350e5fd488be8bca381da1a0,
         type: 3}
@@ -37740,6 +38188,21 @@ PrefabInstance:
       propertyPath: _artworkInfo
       value: 
       objectReference: {fileID: 510205880}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663701437131072657, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7734599877621741691, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41711,12 +42174,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The figure of the saint emerges with the solidity of a polychrome sculpture,
-    resting on a fractured ground that isolates it like a pedestal. Beyond this,
-    a fantastic landscape opens up with precarious arches framing plains traversed
-    by rivers and dotted with constructions. This landscape representation lends
-    the painting an evocative character and contributes to its significance within
-    the artistic context of the Ferrarese Renaissance.
+  m_text: "La figura del santo emerge con la solidit\xE0 di una scultura policroma,
+    poggiata su un terreno scheggiato che lo isola come un basamento. Al di l\xE0
+    di questo, si apre un paesaggio fantastico con archi pericolanti che incorniciano
+    pianure attraversate da fiumi e punteggiate da costruzioni. Questa rappresentazione
+    paesaggistica conferisce al dipinto un carattere suggestivo e contribuisce alla
+    sua importanza all'interno del contesto artistico del Rinascimento ferrarese."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d7d6a08dde859e429bb587ffb92a63e, type: 2}
   m_sharedMaterial: {fileID: 8881984902152613597, guid: 3d7d6a08dde859e429bb587ffb92a63e,
