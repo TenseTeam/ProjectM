@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: DebugSeek
     m_Metadata:
       m_Items: []
+  - m_Id: 14112704176128
+    m_Key: so_SeekDialoguePuzzle
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 1982515587313565739
@@ -37,6 +41,11 @@ MonoBehaviour:
       data:
         m_Entries:
         - m_KeyId: 5327384576
+          m_TableCodes:
+          - en
+          - it
+          - pt
+        - m_KeyId: 14112704176128
           m_TableCodes:
           - en
           - it

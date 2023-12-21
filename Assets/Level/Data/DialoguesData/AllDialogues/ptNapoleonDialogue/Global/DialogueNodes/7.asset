@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71793e812f3192d4c83152084082ded1, type: 3}
+  m_Name: 7
+  m_EditorClassIdentifier: 
+  DialogueName: 7
+  DialogueText: "...Mas por favor me ajude, em troca... vou te dar esses 'Pontos
+    Brera' que encontrei durante minhas explora\xE7\xF5es entre as obras aqui."
+  ActorData: {fileID: 0}
+  DialogueAudioClip: {fileID: 0}
+  Choices:
+  - Text: Next Dialogue
+    NextDialogue: {fileID: 11400000, guid: 736ea470b8e39a94fb62473f1f88fd8b, type: 2}
+  DialogueType: 0
+  IsStartDialogue: 0

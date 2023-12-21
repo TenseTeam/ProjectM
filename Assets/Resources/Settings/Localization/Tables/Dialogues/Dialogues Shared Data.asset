@@ -19,13 +19,14 @@ MonoBehaviour:
     m_Key: so_DebugDialoguesPool
     m_Metadata:
       m_Items: []
-  - m_Id: 551790344413184
-    m_Key: so_DialoguePuzzle_0a
+  - m_Id: 582739811639296
+    m_Key: so_DialoguePuzzlePool
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items:
     - rid: 1982515565045743623
+    - rid: 8513536596435271735
   m_KeyGenerator:
     rid: 1982515565045743618
   references:
@@ -44,8 +45,13 @@ MonoBehaviour:
           m_TableCodes:
           - en
           - it
-        - m_KeyId: 551790344413184
+        m_TypeString: 
+    - rid: 8513536596435271735
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 582739811639296
           m_TableCodes:
           - en
-        m_TypeString: VUDK.Features.More.DialogueSystem.Data.DSDialoguesPool, Assembly-CSharp,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_TypeString: VUDK.Features.More.DialogueSystem.Data.DSDialoguesPoolData,
+          Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
