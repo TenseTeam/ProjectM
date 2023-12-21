@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71793e812f3192d4c83152084082ded1, type: 3}
+  m_Name: 13
+  m_EditorClassIdentifier: 
+  DialogueName: 13
+  DialogueText: Layers of truth, my friend! It's the subtle nuances, the unspoken
+    sincerity that only a sincere heart comprehends. The impostor lacks this depth.
+  ActorData: {fileID: 11400000, guid: c82f6a4b1bc48044f8e961d884bedd23, type: 2}
+  DialogueAudioClip: {fileID: 0}
+  Choices:
+  - Text: Next Dialogue
+    NextDialogue: {fileID: 11400000, guid: fbce0125b8d37a04ab36b04de82a04b4, type: 2}
+  DialogueType: 0
+  IsStartDialogue: 0

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71793e812f3192d4c83152084082ded1, type: 3}
+  m_Name: 11
+  m_EditorClassIdentifier: 
+  DialogueName: 11
+  DialogueText: 
+  ActorData: {fileID: 0}
+  DialogueAudioClip: {fileID: 0}
+  Choices:
+  - Text: St. Peter, elaborate on the signs of deception in St. John's gaze
+    NextDialogue: {fileID: 11400000, guid: 19d64b76652fc2942afafe86611d4471, type: 2}
+  - Text: St. John, expound on the layers of truth you speak of.
+    NextDialogue: {fileID: 11400000, guid: d1149ab19727b8b40ae051f64784d6a4, type: 2}
+  - Text: I trust my instincts and will decide based on my perceptions.
+    NextDialogue: {fileID: 11400000, guid: fbce0125b8d37a04ab36b04de82a04b4, type: 2}
+  DialogueType: 1
+  IsStartDialogue: 0

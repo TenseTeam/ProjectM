@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71793e812f3192d4c83152084082ded1, type: 3}
+  m_Name: 10
+  m_EditorClassIdentifier: 
+  DialogueName: 10
+  DialogueText: Peter, you mistake introspection for deceit. Look beyond the surface,
+    for truth is often obscured by layers of misinterpretation.
+  ActorData: {fileID: 11400000, guid: c82f6a4b1bc48044f8e961d884bedd23, type: 2}
+  DialogueAudioClip: {fileID: 0}
+  Choices:
+  - Text: Next Dialogue
+    NextDialogue: {fileID: 11400000, guid: 4e89fe9fd2fd6b74a9ff0c7e96c04352, type: 2}
+  DialogueType: 0
+  IsStartDialogue: 0

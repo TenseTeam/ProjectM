@@ -16,7 +16,20 @@ MonoBehaviour:
   DialogueGroups:
     _dictionary: []
   UngroupedDialogues:
-  - {fileID: 11400000, guid: d9a3791a7555d234eb977e988966fa69, type: 2}
-  - {fileID: 11400000, guid: f167c222c6697a84d938e6dc6a89f76b, type: 2}
+  - {fileID: 11400000, guid: 9b14c8be769f17f40ab1b09925b40e4d, type: 2}
+  - {fileID: 11400000, guid: a2f060852e52ef448b8a85b0e144334f, type: 2}
+  - {fileID: 11400000, guid: 51ae382dec3b19340a8cb97232aad30f, type: 2}
+  - {fileID: 11400000, guid: 766b6a815315534478ee63dd46775f6c, type: 2}
+  - {fileID: 11400000, guid: d786cce175b66524290f727e96af6a83, type: 2}
+  - {fileID: 11400000, guid: c46f5e2f4acbb784eb5a427cd8b58d56, type: 2}
+  - {fileID: 11400000, guid: 678babab276634247b69dd7f9455963f, type: 2}
+  - {fileID: 11400000, guid: 85ec6a5ded8d5a94b9e69f17d68a79f4, type: 2}
+  - {fileID: 11400000, guid: ac900a9c2d1697643a6475505aa32dcb, type: 2}
+  - {fileID: 11400000, guid: cacdbb07447b64f448f270bcb51b40b5, type: 2}
+  - {fileID: 11400000, guid: 19d64b76652fc2942afafe86611d4471, type: 2}
+  - {fileID: 11400000, guid: d1149ab19727b8b40ae051f64784d6a4, type: 2}
+  - {fileID: 11400000, guid: fbce0125b8d37a04ab36b04de82a04b4, type: 2}
+  - {fileID: 11400000, guid: b3444044d9664c747b265db6a4262b0c, type: 2}
+  - {fileID: 11400000, guid: 4e89fe9fd2fd6b74a9ff0c7e96c04352, type: 2}
   StartingDialogues:
-  - {fileID: 11400000, guid: d9a3791a7555d234eb977e988966fa69, type: 2}
+  - {fileID: 11400000, guid: a2f060852e52ef448b8a85b0e144334f, type: 2}

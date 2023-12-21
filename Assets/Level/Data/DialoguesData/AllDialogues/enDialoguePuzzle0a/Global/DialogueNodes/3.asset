@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71793e812f3192d4c83152084082ded1, type: 3}
+  m_Name: 3
+  m_EditorClassIdentifier: 
+  DialogueName: 3
+  DialogueText: 
+  ActorData: {fileID: 0}
+  DialogueAudioClip: {fileID: 0}
+  Choices:
+  - Text: St. Peter, lay forth your evidence to bolster this claim
+    NextDialogue: {fileID: 11400000, guid: 9b14c8be769f17f40ab1b09925b40e4d, type: 2}
+  - Text: St. John, offer reassurance to dispel these looming suspicions.
+    NextDialogue: {fileID: 11400000, guid: d786cce175b66524290f727e96af6a83, type: 2}
+  - Text: I crave further observation before making an informed decision.
+    NextDialogue: {fileID: 11400000, guid: c46f5e2f4acbb784eb5a427cd8b58d56, type: 2}
+  DialogueType: 1
+  IsStartDialogue: 0

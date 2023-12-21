@@ -15,12 +15,26 @@ MonoBehaviour:
   FileName: enDialoguePuzzle0a
   Groups: []
   Nodes:
+  - NodeID: b8b622b1-2acd-484f-9cbe-376ada8a87a1
+    GroupID: 
+    Position: {x: 1625, y: -252}
+    Name: 4
+    DialogueText: "Behold, seeker, the impostor's gaze wavers \u2013 a subtle tremor
+      of uncertainty. A telltale sign betraying the fa\xE7ade."
+    ActorData: {fileID: 11400000, guid: 4f2c7b7aff54e9a4192c3bdde7b01ff9, type: 2}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: c33e77b6-dc5f-43d9-8e49-d2dd35817ebe
   - NodeID: 8eced77f-9b76-4c83-84c5-87ac07be0861
     GroupID: 
-    Position: {x: 0, y: 0}
-    Name: Test
-    DialogueText: Dialogue text.
-    ActorData: {fileID: 0}
+    Position: {x: -182, y: 10}
+    Name: 1
+    DialogueText: "Hail, noble seeker, as you stand before these sacred canvases,
+      a whisper of uncertainty beckons. Amidst the divine brushstrokes, I reveal
+      a hidden truth \u2013 one among us is an impostor, a mirage veiling deception"
+    ActorData: {fileID: 11400000, guid: 4f2c7b7aff54e9a4192c3bdde7b01ff9, type: 2}
     DialogueAudioClip: {fileID: 0}
     DialogueType: 0
     Choices:
@@ -28,18 +42,188 @@ MonoBehaviour:
       NodeID: 8d29a62d-8c45-4fe4-85de-4a192002d2cc
   - NodeID: 8d29a62d-8c45-4fe4-85de-4a192002d2cc
     GroupID: 
-    Position: {x: 412, y: 0}
-    Name: test2
-    DialogueText: Dialogue text.
+    Position: {x: 372, y: 10}
+    Name: 2
+    DialogueText: Ah, dear friend, let not these allegations cast shadows upon our
+      sanctity. I, too, assure you, my essence is as genuine as the celestial radiance
+      that bathes our sacred abode. What proof does Peter wield to sow doubt?
+    ActorData: {fileID: 11400000, guid: c82f6a4b1bc48044f8e961d884bedd23, type: 2}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 5803a656-b4bc-4b25-aef7-4b59bd47562b
+  - NodeID: 5803a656-b4bc-4b25-aef7-4b59bd47562b
+    GroupID: 
+    Position: {x: 905, y: -15}
+    Name: 3
+    DialogueText: 
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 1
+    Choices:
+    - Text: St. Peter, lay forth your evidence to bolster this claim
+      NodeID: b8b622b1-2acd-484f-9cbe-376ada8a87a1
+    - Text: St. John, offer reassurance to dispel these looming suspicions.
+      NodeID: bd06c491-41f9-486c-b8e8-3e902686c288
+    - Text: I crave further observation before making an informed decision.
+      NodeID: c33e77b6-dc5f-43d9-8e49-d2dd35817ebe
+  - NodeID: bd06c491-41f9-486c-b8e8-3e902686c288
+    GroupID: 
+    Position: {x: 1627, y: 350}
+    Name: 5
+    DialogueText: Dear Peter, evidence is but a crutch when truth emanates from within.
+      Baseless accusations breed only confusion
+    ActorData: {fileID: 11400000, guid: c82f6a4b1bc48044f8e961d884bedd23, type: 2}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: c33e77b6-dc5f-43d9-8e49-d2dd35817ebe
+  - NodeID: c33e77b6-dc5f-43d9-8e49-d2dd35817ebe
+    GroupID: 
+    Position: {x: 2274, y: 32}
+    Name: 6
+    DialogueText: 'According to the information provided, who announced the birth
+      of John the Baptist to Zechariah and Mary?
+
+'
     ActorData: {fileID: 0}
     DialogueAudioClip: {fileID: 0}
     DialogueType: 0
     Choices:
     - Text: Next Dialogue
+      NodeID: e0fce93a-4343-45d4-b9f6-45ae2b253d55
+  - NodeID: e0fce93a-4343-45d4-b9f6-45ae2b253d55
+    GroupID: 
+    Position: {x: 2896, y: 7}
+    Name: 7
+    DialogueText: 
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 1
+    Choices:
+    - Text: Archangel Raphael
       NodeID: 
+    - Text: Archangel Michael
+      NodeID: 
+    - Text: Archangel Gabriel
+      NodeID: 6dcd9236-a3d5-47ba-b466-ed66862ca94b
+    - Text: Archangel Uriel
+      NodeID: 
+  - NodeID: 6dcd9236-a3d5-47ba-b466-ed66862ca94b
+    GroupID: 
+    Position: {x: 3398, y: 76}
+    Name: 8
+    DialogueText: According to the information provided, Archangel Gabriel announced
+      the birth of John the Baptist to both Zechariah and Mary.
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 2bfed563-1ee5-431e-a6ac-cdcd37b85486
+  - NodeID: 2bfed563-1ee5-431e-a6ac-cdcd37b85486
+    GroupID: 
+    Position: {x: 3842, y: 76}
+    Name: 9
+    DialogueText: Witness, seeker, the demeanor of the impostor. A subtle unease
+      in his gaze, an aura of deception that unveils itself
+    ActorData: {fileID: 11400000, guid: 4f2c7b7aff54e9a4192c3bdde7b01ff9, type: 2}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: f2c1cab0-6d9e-44b9-b827-c1a4bf1dfc9b
+  - NodeID: f2c1cab0-6d9e-44b9-b827-c1a4bf1dfc9b
+    GroupID: 
+    Position: {x: 4396, y: 76}
+    Name: 10
+    DialogueText: Peter, you mistake introspection for deceit. Look beyond the surface,
+      for truth is often obscured by layers of misinterpretation.
+    ActorData: {fileID: 11400000, guid: c82f6a4b1bc48044f8e961d884bedd23, type: 2}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 9957e115-a1ea-484a-89c6-59fdbcda4ada
+  - NodeID: 35861426-ef79-494e-a7b0-e11205964cf4
+    GroupID: 
+    Position: {x: 5669, y: -174}
+    Name: 12
+    DialogueText: The impostor's gaze lacks the unwavering commitment of a true saint.
+      A flicker of doubt, a nuance no genuine soul would exhibit.
+    ActorData: {fileID: 11400000, guid: 4f2c7b7aff54e9a4192c3bdde7b01ff9, type: 2}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 5e937553-0e16-4f84-a957-3fdaa29fafb0
+  - NodeID: 9330102e-0df5-4efe-b179-98d8283951cf
+    GroupID: 
+    Position: {x: 5671, y: 371}
+    Name: 13
+    DialogueText: Layers of truth, my friend! It's the subtle nuances, the unspoken
+      sincerity that only a sincere heart comprehends. The impostor lacks this depth.
+    ActorData: {fileID: 11400000, guid: c82f6a4b1bc48044f8e961d884bedd23, type: 2}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: 5e937553-0e16-4f84-a957-3fdaa29fafb0
+  - NodeID: 5e937553-0e16-4f84-a957-3fdaa29fafb0
+    GroupID: 
+    Position: {x: 6290, y: 124}
+    Name: 14
+    DialogueText: 'Third question: Where was Simon Peter born?'
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 0
+    Choices:
+    - Text: Next Dialogue
+      NodeID: ad81b4ba-7c86-410b-9322-540f418c48cb
+  - NodeID: ad81b4ba-7c86-410b-9322-540f418c48cb
+    GroupID: 
+    Position: {x: 6736, y: 144}
+    Name: 15
+    DialogueText: 
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 1
+    Choices:
+    - Text: New Choice
+      NodeID: 
+  - NodeID: 9957e115-a1ea-484a-89c6-59fdbcda4ada
+    GroupID: 
+    Position: {x: 4980, y: 53}
+    Name: 11
+    DialogueText: 
+    ActorData: {fileID: 0}
+    DialogueAudioClip: {fileID: 0}
+    DialogueType: 1
+    Choices:
+    - Text: St. Peter, elaborate on the signs of deception in St. John's gaze
+      NodeID: 35861426-ef79-494e-a7b0-e11205964cf4
+    - Text: St. John, expound on the layers of truth you speak of.
+      NodeID: 9330102e-0df5-4efe-b179-98d8283951cf
+    - Text: I trust my instincts and will decide based on my perceptions.
+      NodeID: 5e937553-0e16-4f84-a957-3fdaa29fafb0
   OldGroupNames: []
   OldUngroupedNodeNames:
-  - Test
-  - test2
+  - 4
+  - 1
+  - 2
+  - 3
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 12
+  - 13
+  - 14
+  - 15
+  - 11
   OldGroupedNodeNames:
     _dictionary: []
