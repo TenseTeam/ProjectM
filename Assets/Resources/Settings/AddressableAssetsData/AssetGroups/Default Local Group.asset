@@ -16,7 +16,12 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: a1fcd3ac9ce732d4889afcc9942af0ad
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 81593a7ede03620438a6b90175d44ca4
+    m_Address: Assets/Art/Sprites/UI/spr_Line_1a.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2551f65ca7c642a41a3f638520c6e766, type: 2}
   m_SchemaSet:
