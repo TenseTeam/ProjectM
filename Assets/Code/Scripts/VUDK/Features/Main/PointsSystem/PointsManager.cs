@@ -36,11 +36,16 @@
             PointsEvents.ModifyPointsHandler -= ModifyPoints;
         }
 
+        /// <inheritdoc/>
         public override void Init()
         {
             PointsEvents.OnPointsInit?.Invoke(Points);
         }
 
+        /// <summary>
+        /// Modifies the points.
+        /// </summary>
+        /// <param name="pointsToModify">Points to modify.</param>
         public void ModifyPoints(int pointsToModify)
         {
             int modifiedPoints = Mathf.Clamp(Points + pointsToModify, _pointsLimits.Min, _pointsLimits.Max) - Points;
@@ -50,6 +55,7 @@
             Push();
         }
 
+        /// <inheritdoc/>
         public override string GetSaveName()
         {
             return "Points";

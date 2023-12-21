@@ -46,6 +46,9 @@
             _dialoguesPool.AssetChanged -= LoadDialoguesPool;
         }
 
+        /// <summary>
+        /// Subscribes to the dialogue events.
+        /// </summary>
         public void SubscribeEvents()
         {
             if (_currentDialogueContainerData == null) return;
@@ -55,6 +58,9 @@
             _currentDialogueContainerData.OnInterrupt += OnDialogueInterrupt;
         }
 
+        /// <summary>
+        /// Unsubscribes from the dialogue events.
+        /// </summary>
         public void UnsubscribeEvents()
         {
             if(_currentDialogueContainerData == null) return;
@@ -64,6 +70,7 @@
             _currentDialogueContainerData.OnInterrupt -= OnDialogueInterrupt;
         }
 
+        /// <inheritdoc/>
         public override void BeginTask()
         {
             base.BeginTask();
@@ -74,6 +81,7 @@
             SubscribeEvents();
         }
 
+        /// <inheritdoc/>
         public override void InterruptTask()
         {
             base.InterruptTask();
@@ -81,27 +89,40 @@
             UnsubscribeEvents();
         }
 
+        /// <inheritdoc/>
         public override void ResolveTask()
         {
             base.ResolveTask();
             _rewarder.TriggerReward();
         }
 
+        /// <summary>
+        /// Called when the dialogue starts.
+        /// </summary>
         protected virtual void OnDialogueStart()
         {
             OnStart?.Invoke();
         }
 
+        /// <summary>
+        /// Called when the dialogue goes to the next node.
+        /// </summary>
         protected virtual void OnDialogueNext()
         {
             OnNext?.Invoke();
         }
-
+        
+        /// <summary>
+        /// Called when the dialogue is interrupted.
+        /// </summary>
         protected virtual void OnDialogueInterrupt()
         {
             OnInterrupt?.Invoke();
         }
 
+        /// <summary>
+        /// Called when the dialogue ends.
+        /// </summary>
         protected virtual void OnDialogueEnd()
         {
             OnEnd?.Invoke();
@@ -109,6 +130,10 @@
             UnsubscribeEvents();
         }
 
+        /// <summary>
+        /// Loads the dialogues pool.
+        /// </summary>
+        /// <param name="asset"><see cref="DSDialoguesPoolData"/> to load.</param>
         private void LoadDialoguesPool(DSDialoguesPoolData asset)
         {
             _loadedDialogues = asset;

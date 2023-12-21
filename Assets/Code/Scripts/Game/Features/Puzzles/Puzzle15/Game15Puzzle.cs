@@ -37,6 +37,7 @@
             Grid.Init(this, _game15Texture, IsSolved);
         }
 
+        /// <inheritdoc/>
         public override void BeginTask()
         {
             base.BeginTask();
@@ -51,6 +52,10 @@
             Machine.StartMachine();
         }
 
+        /// <summary>
+        /// Moves the piece in the empty tile.
+        /// </summary>
+        /// <param name="tile">Tile with the piece to move.</param>
         public void MovePieceInEmptyTile(Game15Tile tile)
         {
             if (!IsFocused) return;

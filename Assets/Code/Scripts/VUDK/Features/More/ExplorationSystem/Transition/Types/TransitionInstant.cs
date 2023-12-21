@@ -6,16 +6,19 @@
         {
         }
 
+        /// <inheritdoc/>
         public override void Begin()
         {
             Context.PathExplorer.transform.SetPositionAndRotation(Context.TargetNode.NodePosition, Context.TargetNode.NodeRotation);
         }
 
+        /// <inheritdoc/>
         public override void Process()
         {
             OnTransitionCompletedHandler();
         }
 
+        /// <inheritdoc/>
         public override void End()
         {
         }

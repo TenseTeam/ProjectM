@@ -10,12 +10,14 @@ namespace ProjectM.Features.Exploration
         [SerializeField]
         private ArtworkInfo _artworkInfo;
 
+        /// <inheritdoc/>
         public override void OnNodeEnter()
         {
             base.OnNodeEnter();
             _artworkInfo.EnableCanvas();
         }
 
+        /// <inheritdoc/>
         public override void OnNodeExit()
         {
             base.OnNodeExit();

@@ -26,30 +26,42 @@
             Init();
         }
 
+        /// <inheritdoc/>
         public virtual void Init()
         {
             IsInProgress = SaveValue.IsInProgress;
             IsSolved = !IsTimePassed();
         }
 
+        /// <inheritdoc/>
         public bool Check()
         {
             return SaveValue != null;
         }
 
+        /// <summary>
+        /// Returns the name of the save file.
+        /// </summary>
+        /// <returns>String name of the save file.</returns>
         public virtual string GetSaveName() => "Tasks";
 
+        /// <summary>
+        /// Checks if the time has passed for the task to be solved again.
+        /// </summary>
+        /// <returns>True if the time has passed, False if not.</returns>
         private bool IsTimePassed()
         {
             return DateTime.Now > AchieveDate;
         }
 
+        /// <inheritdoc/>
         public override void BeginTask()
         {
             base.BeginTask();
             Push(); // Push to save task is in progress
         }
 
+        /// <inheritdoc/>
         public override void ResolveTask()
         {
             base.ResolveTask();
@@ -59,12 +71,14 @@
             Push(); // Push to save task is solved
         }
 
+        /// <inheritdoc/>
         public void Push()
         {
             SavePacketData saveData = new SavePacketData(SaveValue);
             SaveManager.Push(GetSaveName(), SaveID, saveData);
         }
 
+        /// <inheritdoc/>
         public void Pull()
         {
             if (SaveManager.TryPull<T>(GetSaveName(), SaveID, out SavePacketData _saveData))
@@ -77,18 +91,24 @@
             }
         }
 
+        /// <inheritdoc/>
         protected override void OnEnterFocus()
         {
             IsSolved = !IsTimePassed();
             base.OnEnterFocus();
         }
 
+        /// <inheritdoc/>
         protected override void OnExitFocus()
         {
             base.OnExitFocus();
             DisplayTimer(false);
         }
 
+        /// <summary>
+        /// Returns the number of seconds to wait before the task is solved.
+        /// </summary>
+        /// <returns>Number of seconds.</returns>
         protected int GetSecondsToWait()
         {
             TimeSpan timeDifference = AchieveDate - DateTime.Now;
@@ -96,6 +116,10 @@
             return secondsToWait;
         }
 
+        /// <summary>
+        /// Displays the timer.
+        /// </summary>
+        /// <param name="isEnabled">True if the timer is enabled, False if not.</param>
         protected void DisplayTimer(bool isEnabled)
         {
             if (isEnabled)
@@ -104,6 +128,7 @@
                 TimerEventsHandler.StopTimerHandler();
         }
 
+        /// <inheritdoc/>
         protected override void OnEnterFocusIsSolved()
         {
             DisplayTimer(true);

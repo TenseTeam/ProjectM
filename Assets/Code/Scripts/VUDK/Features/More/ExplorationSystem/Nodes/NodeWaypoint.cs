@@ -17,18 +17,23 @@
             LinkedNodes.RemoveAll(node => !node);
         }
 
+        /// <inheritdoc/>
         public override void OnFirstNode(TransitionType transitionType)
         {
             base.OnFirstNode(transitionType);
             EnableLinkedNodes();
         }
 
+        /// <inheritdoc/>
         public override void OnNodeEnter()
         {
             base.OnNodeEnter();
             EnableLinkedNodes();
         }
 
+        /// <summary>
+        /// Enables all the linked nodes.
+        /// </summary>
         private void EnableLinkedNodes()
         {
             foreach (var node in LinkedNodes)

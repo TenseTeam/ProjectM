@@ -27,6 +27,9 @@ namespace ProjectM.Utility
             _arCamera.enabled = !_isMainCameraOnStart;
         }
 
+        /// <summary>
+        /// Switches the camera.
+        /// </summary>
         [ContextMenu("Switch")]
         public void SwitchCamera()
         {

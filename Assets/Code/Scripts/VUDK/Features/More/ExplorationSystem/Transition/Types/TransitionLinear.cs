@@ -14,6 +14,7 @@
             TimeProcess = timeProcess;
         }
 
+        /// <inheritdoc/>
         public override void Begin()
         {
             StartPosition = Context.PathExplorer.transform.position;
@@ -22,6 +23,7 @@
             TimeProcess.OnTaskCompleted += OnTransitionCompletedHandler;
         }
 
+        /// <inheritdoc/>
         public override void Process()
         {
             if (!TimeProcess.Process()) return;
@@ -30,6 +32,7 @@
             Context.PathExplorer.transform.rotation = Quaternion.Lerp(StartRotation, Context.TargetNode.NodeRotation, TimeProcess.ElapsedPercentPrecise);
         }
 
+        /// <inheritdoc/>
         public override void End()
         {
             TimeProcess.OnTaskCompleted -= OnTransitionCompletedHandler;

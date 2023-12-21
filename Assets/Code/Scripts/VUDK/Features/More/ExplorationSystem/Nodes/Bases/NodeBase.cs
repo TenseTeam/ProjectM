@@ -9,8 +9,9 @@ namespace VUDK.Features.More.ExplorationSystem.Nodes
     using VUDK.Features.More.ExplorationSystem.Managers;
     using VUDK.Features.More.ExplorationSystem.Nodes.Components;
     using VUDK.Features.More.ExplorationSystem.Transition.Types.Keys;
+    using VUDK.Patterns.Initialization.Interfaces;
 
-    public abstract class NodeBase : MonoBehaviour, IInteractable
+    public abstract class NodeBase : MonoBehaviour, IInteractable, IInit<ExplorationManager>
     {
         [field: Header("Node Settings")]
         [field: SerializeField]
@@ -61,12 +62,21 @@ namespace VUDK.Features.More.ExplorationSystem.Nodes
             EventManager.Ins.RemoveListener<ExplorationManager>(ExplorationEventKeys.OnExplorationManagerInit, Init);
         }
 
+        /// <inheritdoc/>
         public virtual void Init(ExplorationManager explorationManager)
         {
             ExplorationManager = explorationManager;
         }
 
-        [ContextMenu("Interact")]
+        /// <inheritdoc/>
+        public virtual bool Check()
+        {
+            return ExplorationManager != null;
+        }
+
+        /// <summary>
+        /// Interacts with this node.
+        /// </summary>
         public virtual void Interact()
         {
             CheckCustomTransition();
@@ -75,6 +85,10 @@ namespace VUDK.Features.More.ExplorationSystem.Nodes
             Disable();
         }
 
+        /// <summary>
+        /// Interacts with this node as the first node.
+        /// </summary>
+        /// <param name="transitionType">Transtion Type.</param>
         public virtual void OnFirstNode(TransitionType transitionType)
         {
             PathExplorer.ChangeTransitionType(transitionType);
@@ -83,30 +97,51 @@ namespace VUDK.Features.More.ExplorationSystem.Nodes
             Disable();
         }
 
+        /// <summary>
+        /// Enables the node.
+        /// </summary>
         public abstract void Enable();
 
+        /// <summary>
+        /// Disables the node.
+        /// </summary>
         public abstract void Disable();
 
+        /// <summary>
+        /// Called when the player enters the node.
+        /// </summary>
         public virtual void OnNodeEnter()
         {
             _onEnter?.Invoke();
         }
 
+        /// <summary>
+        /// Called when the player exits the node.
+        /// </summary>
         public virtual void OnNodeExit()
         {
             _onExit?.Invoke();
         }
 
+        /// <summary>
+        /// Called when the node changes.
+        /// </summary>
         protected void OnNodeChangedHandler()
         {
             EventManager.Ins.TriggerEvent(ExplorationEventKeys.OnChangedNode);
         }
 
+        /// <summary>
+        /// Goes to this node.
+        /// </summary>
         protected void GoToThisNode()
         {
             ExplorationManager.GoToNode(this);
         }
 
+        /// <summary>
+        /// Checks if the node has a custom transition.
+        /// </summary>
         protected void CheckCustomTransition()
         {
             if (HasCustomTransition)

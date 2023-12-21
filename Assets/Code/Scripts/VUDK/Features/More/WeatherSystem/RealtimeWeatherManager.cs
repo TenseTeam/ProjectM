@@ -88,6 +88,9 @@
             _timeUpdateDelay.Process();
         }
 
+        /// <summary>
+        /// Updates the weather in the game.
+        /// </summary>
         [ContextMenu("Update Weather")]
         private void UpdateInGameWeather()
         {
@@ -97,6 +100,10 @@
             _timeUpdateDelay.Start();
         }
 
+        /// <summary>
+        /// Triggers the weather event.
+        /// </summary>
+        /// <param name="weatherData">Weather data to trigger.</param>
         private void TriggerWeatherEvent(WeatherData weatherData)
         {
 #if UNITY_EDITOR
@@ -109,6 +116,10 @@
             TriggerSpecificWeatherEvent(condition);
         }
 
+        /// <summary>
+        /// Triggers the day/night event.
+        /// </summary>
+        /// <param name="isDay">True if is Day, False if not.</param>
         private void TriggerDayNightEvent(bool isDay)
         {
             if (isDay)
@@ -117,6 +128,10 @@
                 OnNight?.Invoke();
         }
 
+        /// <summary>
+        /// Triggers the major weather event.
+        /// </summary>
+        /// <param name="weatherCondition">Weather condition to trigger.</param>
         private void TriggerMajorWeatherEvent(WeatherConditionType weatherCondition)
         {
             switch (weatherCondition)
@@ -178,12 +193,19 @@
             }
         }
 
+        /// <summary>
+        /// Triggers the specific weather event.
+        /// </summary>
+        /// <param name="weatherCondition">Weather condition to trigger.</param>
         private void TriggerSpecificWeatherEvent(WeatherConditionType weatherCondition)
         {
             if (_weatherEvents.ContainsKey(weatherCondition))
                 _weatherEvents[weatherCondition]?.Invoke();
         }
 
+        /// <summary>
+        /// Triggers the default weather events.
+        /// </summary>
         private void TriggerDefaults()
         {
             TriggerDayNightEvent(_defaultIsDay);

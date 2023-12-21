@@ -11,6 +11,7 @@
         {
         }
 
+        /// <inheritdoc/>
         public override void Enter()
         {
             if (CheckPiecesOrder())
@@ -19,18 +20,25 @@
                 ChangeState(Game15PhaseKey.MovePhase);
         }
 
+        /// <inheritdoc/>
         public override void Exit()
         {
         }
 
+        /// <inheritdoc/>
         public override void FixedProcess()
         {
         }
 
+        /// <inheritdoc/>
         public override void Process()
         {
         }
 
+        /// <summary>
+        /// Checks the pieces order.
+        /// </summary>
+        /// <returns>True if pieces are in correct order, False if not.</returns>
         private bool CheckPiecesOrder()
         {
             Game15Tile[,] tiles = Context.Puzzle.Tiles;

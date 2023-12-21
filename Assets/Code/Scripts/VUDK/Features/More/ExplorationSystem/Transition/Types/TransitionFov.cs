@@ -14,12 +14,14 @@
             _fovChanger.TimeProcess.ChangeDuration(TimeProcess.Duration / 2f);
         }
 
+        /// <inheritdoc/>
         public override void Begin()
         {
             base.Begin();
             _fovChanger.Change();
         }
 
+        /// <inheritdoc/>
         public override void Process()
         {
             base.Process();
@@ -31,6 +33,7 @@
             }
         }
 
+        /// <inheritdoc/>
         public override void End()
         {
             base.End();

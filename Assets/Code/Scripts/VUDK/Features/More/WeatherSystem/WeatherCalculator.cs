@@ -18,11 +18,25 @@ namespace VUDK.Features.More.WeatherSystem
             public const int TooManyRequests = 429;
         }
 
+        /// <summary>
+        /// Retrieves weather data using the provided APIPackageData and query, with callbacks for success and failure.
+        /// </summary>
+        /// <param name="apipackage">APIPackageData containing API keys.</param>
+        /// <param name="query">The location query for weather data.</param>
+        /// <param name="onReceivedWeatherData">Callback for successful retrieval of weather data.</param>
+        /// <param name="onFailedToReceiveWeatherData">Callback for failed retrieval of weather data.</param>
         public static void GetWeather(APIPackageData apipackage, string query, Action<WeatherData> onReceivedWeatherData, Action onFailedToReceiveWeatherData)
         {
             GetWeather(apipackage.APIS, query, onReceivedWeatherData, onFailedToReceiveWeatherData);
         }
 
+        /// <summary>
+        /// Retrieves weather data using the provided API keys, location query, with callbacks for success and failure.
+        /// </summary>
+        /// <param name="apikeys">Array of API keys for accessing the weather API.</param>
+        /// <param name="query">The location query for weather data.</param>
+        /// <param name="onReceivedWeatherData">Callback for successful retrieval of weather data.</param>
+        /// <param name="onFailedToReceivedWeatherData">Callback for failed retrieval of weather data.</param>
         public static void GetWeather(string[] apikeys, string query, Action<WeatherData> onReceivedWeatherData, Action onFailedToReceivedWeatherData)
         {
             string url = $"https://weatherapi-com.p.rapidapi.com/current.json?q={query}";

@@ -54,11 +54,15 @@
             Init();
         }
 
+        /// <summary>
+        /// Begins the exploration.
+        /// </summary>
         public void Begin()
         {
             CurrentTargetNode.OnFirstNode(_firstTransitionType);
         }
 
+        /// <inheritdoc/>
         public override void Init()
         {
             EventManager.Ins.TriggerEvent(ExplorationEventKeys.OnExplorationManagerInit, this);
@@ -66,11 +70,16 @@
             InitFirstNode();
         }
 
+        /// <inheritdoc/>
         public override bool Check()
         {
             return PathExplorer && _firstNode;
         }
 
+        /// <summary>
+        /// Changes the transition.
+        /// </summary>
+        /// <param name="transition">Transition to use.</param>
         public void ChangeTransition(TransitionBase transition)
         {
             if(transition == null) return;
@@ -78,12 +87,18 @@
             CurrentTransition = transition;
         }
 
+        /// <summary>
+        /// Changes the target node to the previous node.
         public void ChangeTargetToPrevious()
         {
             if (PreviousTargetNode == null) return;
             GoToNode(PreviousTargetNode);
         }
 
+        /// <summary>
+        /// Changes the target node.
+        /// </summary>
+        /// <param name="targetNode">Target node.</param>
         public void GoToNode(NodeBase targetNode)
         {
             if (PathExplorer.IsState(TransitionStateKey.Process)) return;
@@ -92,6 +107,9 @@
             PathExplorer.TransitionStart();
         }
 
+        /// <summary>
+        /// Initializes the first node.
+        /// </summary>
         private void InitFirstNode()
         {
             CurrentTargetNode = _firstNode;

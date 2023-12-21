@@ -12,6 +12,7 @@
         {
         }
 
+        /// <inheritdoc/>
         public override void Enter()
         {
             EventManager.Ins.TriggerEvent(ExplorationEventKeys.OnBeginTransition);
@@ -20,14 +21,17 @@
             ChangeState(TransitionStateKey.Process);
         }
 
+        /// <inheritdoc/>
         public override void Process()
         {
         }
 
+        /// <inheritdoc/>
         public override void FixedProcess()
         {
         }
 
+        /// <inheritdoc/>
         public override void Exit()
         {
         }

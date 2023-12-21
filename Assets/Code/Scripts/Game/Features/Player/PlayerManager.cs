@@ -6,10 +6,11 @@
     using VUDK.Features.More.ExplorationSystem.Constants;
     using VUDK.Features.More.ExplorationSystem.Explorers;
     using VUDK.Features.Main.EventSystem;
+    using VUDK.Patterns.Initialization.Interfaces;
 
     [DisallowMultipleComponent]
     [RequireComponent(typeof(PathExplorer))]
-    public class PlayerManager : MonoBehaviour
+    public class PlayerManager : MonoBehaviour, IInit<ExplorationManager>
     {
         [field: SerializeField]
         public PlayerCamera PlayerCamera { get; private set; }
@@ -37,9 +38,16 @@
             PathExplorer = pathExplorer;
         }
 
+        /// <inheritdoc/>
         public void Init(ExplorationManager explorationManager)
         {
             PlayerCamera.Init(explorationManager);
+        }
+
+        /// <inheritdoc/>
+        public bool Check()
+        {
+            return PlayerCamera.Check();
         }
     }
 }
