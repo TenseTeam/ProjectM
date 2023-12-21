@@ -1,9 +1,11 @@
 ﻿namespace ProjectM.Features.Puzzles.DialogueRewarder
 {
+    using ProjectM.Constants;
     using System.Collections.Generic;
     using UnityEngine;
     using UnityEngine.Events;
     using UnityEngine.Localization;
+    using VUDK.Features.Main.EventSystem;
     using VUDK.Features.Main.PointsSystem.Rewards;
     using VUDK.Features.More.DialogueSystem.Data;
     using VUDK.Features.More.DialogueSystem.Events;
@@ -14,11 +16,11 @@
     {
         [Header("Dialogue Listener Settings")]
         [SerializeField]
-        private LocalizedAsset<DSDialoguesPool> _dialoguesPool;
+        private LocalizedAsset<DSDialoguesPoolData> _dialoguesPool;
         [SerializeField]
         private bool _isInstant;
 
-        private DSDialoguesPool _loadedDialogues;
+        private DSDialoguesPoolData _loadedDialogues;
         private DSDialogueContainerData _currentDialogueContainerData;
         private RewardTrigger _rewarder;
 
@@ -68,6 +70,7 @@
             if(IsSolved && !IsRepeatable) return;
             _currentDialogueContainerData = _loadedDialogues.Pool[Random.Range(0, _loadedDialogues.Pool.Count)];
             DSEventsHandler.StartDialogue(this, _currentDialogueContainerData, null, true, _isInstant);
+            EventManager.Ins.TriggerEvent(GameEventKeys.OnDialogueRewarderBeginTask);
             SubscribeEvents();
         }
 
@@ -106,7 +109,7 @@
             UnsubscribeEvents();
         }
 
-        private void LoadDialoguesPool(DSDialoguesPool asset)
+        private void LoadDialoguesPool(DSDialoguesPoolData asset)
         {
             _loadedDialogues = asset;
         }

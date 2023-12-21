@@ -10,14 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97269afb30aa84742ae3f3342603618a, type: 3}
-  m_Name: Dialogues_en
+  m_Name: SeekDialogues_en
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: en
-  m_SharedData: {fileID: 11400000, guid: 7de7cdd7373549f49bee17c2cfa549d3, type: 2}
+  m_SharedData: {fileID: 11400000, guid: a1bffc8c5cf777542b05d05a741e5f87, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 5327384576
+    m_Localized: 485e8ed7fd435d1428e8cb3e93ec8295
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

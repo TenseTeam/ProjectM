@@ -14,14 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: Dialogues
   m_TableCollectionNameGuidString: 7de7cdd7373549f49bee17c2cfa549d3
-  m_Entries:
-  - m_Id: 5011476480
-    m_Key: so_DebugDialoguesPool
-    m_Metadata:
-      m_Items: []
+  m_Entries: []
   m_Metadata:
-    m_Items:
-    - rid: 1982515565045743623
+    m_Items: []
   m_KeyGenerator:
     rid: 1982515565045743618
   references:
@@ -32,13 +27,3 @@ MonoBehaviour:
         asm: Unity.Localization}
       data:
         m_CustomEpoch: 1702991175718
-    - rid: 1982515565045743623
-      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries:
-        - m_KeyId: 5011476480
-          m_TableCodes:
-          - en
-          - it
-        m_TypeString: VUDK.Features.More.DialogueSystem.Data.DSDialoguesPool, Assembly-CSharp,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null

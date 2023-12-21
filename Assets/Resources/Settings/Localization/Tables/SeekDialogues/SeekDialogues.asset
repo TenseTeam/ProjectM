@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db626ad063b13545924a9839ac5fa83, type: 3}
+  m_Name: SeekDialogues
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: a1bffc8c5cf777542b05d05a741e5f87, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: ed47fbd8d752092498b9c1eea7d33361, type: 2}
+  - {fileID: 11400000, guid: f26cfba107354004185a5b3cc164c209, type: 2}
+  - {fileID: 11400000, guid: e3193c4b338e4f749a1d21bbb570b3e0, type: 2}
+  m_Extensions: []
+  m_Group: Asset Table
+  references:
+    version: 2
+    RefIds: []
