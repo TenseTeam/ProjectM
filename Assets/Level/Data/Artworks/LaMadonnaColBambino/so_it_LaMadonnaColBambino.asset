@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_it_LaMadonnaColBambino
+  m_EditorClassIdentifier: 
+  Name: La Madonna col Bambino
+  Description: "La prima testimonianza del dipinto \xE8 in un documento relativo
+    alla collocazione della pala con \"Sant'Ambrogio che sconfigge gli Ariani\" -
+    destinata al palazzo dei Mercanti ora Musei Civici del Castello - datato 25 gennaio
+    1590, ove \xE8 detto realizzato \"poco innanzi\". Poco dopo Comanini (1591) descrive
+    l'opera esaltando la contrapposizione simbolica tra Lucifero e San Michele e
+    rileva il consueto complesso operare dell'artista la cui opera \xE8 frutto di
+    un elaborata e complessa sintesi di elementi tolti da modelli autorevoli.\r\nLa
+    prima testimonianza del dipinto \xE8 in un documento relativo alla collocazione
+    della pala con \"Sant'Ambrogio che sconfigge gli Ariani\" - destinata al palazzo
+    dei Mercanti ora Musei Civici del Castello - datato 25 gennaio 1590, ove \xE8
+    detto realizzato \"poco innanzi\". Poco dopo Comanini (1591) descrive l'opera
+    esaltando la contrapposizione simbolica tra Lucifero e San Michele e rileva il
+    consueto complesso operare dell'artista la cui opera \xE8 frutto di un elaborata
+    e complessa sintesi di elementi tolti da modelli autorevoli.\r\n"

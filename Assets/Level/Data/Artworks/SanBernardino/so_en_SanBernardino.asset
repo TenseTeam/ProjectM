@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_en_SanBernardino
+  m_EditorClassIdentifier: 
+  Name: San Bernardino da Siena tra due angeli
+  Description: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de
+    Cristo e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas
+    laterais est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+    sentados e ajoelhados."

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_pt_Predica
+  m_EditorClassIdentifier: 
+  Name: Predica di san Marco ad Alessandria d'Egitto
+  Description: "A obra \xE9 uma tela originalmente destinada ao sal\xE3o da Scuola
+    Grande di San Marco, uma das mais poderosas e prestigiadas de Veneza. \xC9 uma
+    das maiores telas que existem, com uma superf\xEDcie de vinte e seis metros quadrados,
+    bem como uma das mais ricas em ideias narrativas e iconogr\xE1ficas. O ciclo
+    de telas com hist\xF3rias da vida de S\xE3o Marcos foi completado muito mais
+    tarde, quase sessenta anos depois, por Giorgione e Tintoretto, e hoje est\xE1
+    dividido entre a Pinacoteca di Brera de Mil\xE3o e a Gallerie dell'Accademia
+    de Veneza."

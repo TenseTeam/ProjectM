@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_pt_Battesimo
+  m_EditorClassIdentifier: 
+  Name: Battesimo e Tentazioni di Cristo
+  Description: "Antes da supress\xE3o, a Igreja de San Nicol\xF2 ai Frari preservou
+    um importante ciclo de pinturas de Veronese, infelizmente desmembrado e disperso
+    em diversos locais: este ciclo atesta a maturidade do mestre, mas tamb\xE9m o
+    seu \xFAltimo grande empreendimento de car\xE1cter religioso. No que diz respeito
+    \xE0 cronologia, a hip\xF3tese \xE9 baseada na data de reconsagra\xE7\xE3o da
+    igreja em 1582 e na falta de anota\xE7\xF5es sobre o ciclo de pinturas no Guia
+    Sansovino de 1581.\r\nNesta obra, Veronese mostra a sua capacidade de encenar
+    representa\xE7\xF5es complexas explorando expedientes teatrais, como jogos de
+    luz ou gestos exasperados. A iconografia da pintura re\xFAne os dois temas do
+    Batismo e das Tenta\xE7\xF5es de Cristo. O Cristo batizado pelo Batista e rodeado
+    de anjos \xE9 deslocado completamente para a esquerda, numa fumiga\xE7\xE3o de
+    luzes a partir da pomba do Esp\xEDrito Santo. Ao redor h\xE1 um matagal denso
+    e frondoso, interrompido por raios que descem do alto, criando efeitos luminosos
+    nas dobras iridescentes das vestes. Toda a \xE1rea direita, mais da metade da
+    pintura, \xE9 destinada \xE0 visualiza\xE7\xE3o da paisagem, em que Cristo \xE9
+    tentado por Satan\xE1s: as figuras s\xE3o pequenas na atmosfera \xFAmida e nebulosa."

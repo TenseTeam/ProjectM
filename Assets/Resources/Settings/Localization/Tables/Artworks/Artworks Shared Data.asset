@@ -27,6 +27,46 @@ MonoBehaviour:
     m_Key: so_SaintPeter
     m_Metadata:
       m_Items: []
+  - m_Id: 635776593915904
+    m_Key: so_Battesimo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 635830377476096
+    m_Key: so_Cucifixion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 635884630798336
+    m_Key: so_Cucina
+    m_Metadata:
+      m_Items: []
+  - m_Id: 635922668941312
+    m_Key: sp_LaMadonnaColBambino
+    m_Metadata:
+      m_Items: []
+  - m_Id: 635977001955328
+    m_Key: so_LaPresentazione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 636021272834048
+    m_Key: so_LucioFoppa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 636059562635264
+    m_Key: so_Pescivendoli
+    m_Metadata:
+      m_Items: []
+  - m_Id: 636108073955328
+    m_Key: so_Predica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 636143520018432
+    m_Key: so_ReMagi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 636181839179776
+    m_Key: so_SanBernardino
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 1982515565045743634
@@ -54,6 +94,56 @@ MonoBehaviour:
           - it
           - pt
         - m_KeyId: 482938730323968
+          m_TableCodes:
+          - en
+          - it
+          - pt
+        - m_KeyId: 635776593915904
+          m_TableCodes:
+          - en
+          - it
+          - pt
+        - m_KeyId: 635830377476096
+          m_TableCodes:
+          - en
+          - it
+          - pt
+        - m_KeyId: 635884630798336
+          m_TableCodes:
+          - en
+          - it
+          - pt
+        - m_KeyId: 635922668941312
+          m_TableCodes:
+          - en
+          - it
+          - pt
+        - m_KeyId: 635977001955328
+          m_TableCodes:
+          - en
+          - it
+          - pt
+        - m_KeyId: 636021272834048
+          m_TableCodes:
+          - en
+          - it
+          - pt
+        - m_KeyId: 636059562635264
+          m_TableCodes:
+          - en
+          - pt
+          - it
+        - m_KeyId: 636108073955328
+          m_TableCodes:
+          - en
+          - it
+          - pt
+        - m_KeyId: 636143520018432
+          m_TableCodes:
+          - en
+          - it
+          - pt
+        - m_KeyId: 636181839179776
           m_TableCodes:
           - en
           - it

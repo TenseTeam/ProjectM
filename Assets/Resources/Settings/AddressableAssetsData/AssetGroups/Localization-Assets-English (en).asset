@@ -59,6 +59,66 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce8f5cacd6f4c4d468c84eda62eb6f65
+    m_Address: so_en_Battesimo
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6ffe98a859d1b04bada2096348cd39c
+    m_Address: so_en_Crucifixion
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11827fbf02bfeed4d9af7bc1a54481c9
+    m_Address: so_en_Cucina
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53a2db1dc42864846a615c5a850b4c46
+    m_Address: so_en_LaMadonnaColBambino
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d6c298a1ee9b5d4989c66928e9f1cee
+    m_Address: so_en_LaPresentazione
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af143d433e5b93e4cb2695b9bde0c16e
+    m_Address: so_en_LucioFoppa
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7aaef04c94f7e4d409c0c73b20404be2
+    m_Address: so_en_Pescivendoli
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a55ac07f59521f4bb4d37b7e2a9e250
+    m_Address: so_en_Predica
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e915744ed3c20b04a88a19dcd8c469ef
+    m_Address: so_en_ReMagi
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0118be83455da734bb1ec8ff9c69913d
+    m_Address: so_en_SanBernardino
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 2551f65ca7c642a41a3f638520c6e766, type: 2}
   m_SchemaSet:

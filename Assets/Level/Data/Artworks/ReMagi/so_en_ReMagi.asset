@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_en_ReMagi
+  m_EditorClassIdentifier: 
+  Name: Adorazione dei Re Magi
+  Description: 'The work was commissioned for the Venetian church of Sant''Elena
+    by Donna Orsa, widow of Simone di Malipiero and Jacopo Palma the Elder who was
+    born in Serina in the province of Bergamo, but who had followed his family to
+    the lagoon city from a young age.
+
+    The canvas depicts the exact evangelical
+    story of the adoration of the characters from the East, with the presence of
+    Saint Helena depicted with the classic iconography holding the cross, a character
+    certainly not present at the birth of Christ. Legend has it, however, that it
+    was she who found the relics of the holy cross. The depiction of the saint confirms
+    her original placement as the altarpiece of the main altar of the Venetian church
+    where she was the owner.'

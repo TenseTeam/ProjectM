@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_en_Predica
+  m_EditorClassIdentifier: 
+  Name: Predica di san Marco ad Alessandria d'Egitto
+  Description: The work is a canvas originally intended for the hall of the Scuola
+    Grande di San Marco, one of the most powerful and prestigious in Venice. It is
+    one of the largest canvases that exist, with a surface area of twenty-six square
+    metres, as well as one of the richest in narrative and iconographic ideas. The
+    cycle of canvases with stories from the life of Saint Mark was completed much
+    later, almost sixty years later, by Giorgione and Tintoretto, and is today divided
+    between the Pinacoteca di Brera in Milan and the Gallerie dell'Accademia in Venice.

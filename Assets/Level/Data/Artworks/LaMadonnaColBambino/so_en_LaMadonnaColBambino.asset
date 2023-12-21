@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_en_LaMadonnaColBambino
+  m_EditorClassIdentifier: 
+  Name: La Madonna col Bambino
+  Description: The first evidence of the painting is in a document relating to the
+    placement of the altarpiece with "St. Ambrose defeating the Arians" - destined
+    for the Palazzo dei Mercanti now the Civic Museums of the Castle - dated 25 January
+    1590, where it is said to have been created "shortly before". Shortly afterwards
+    Comanini (1591) describes the work, exalting the symbolic contrast between Lucifer
+    and Saint Michael and highlights the usual complex work of the artist whose work
+    is the result of an elaborate and complex synthesis of elements taken from authoritative
+    models.

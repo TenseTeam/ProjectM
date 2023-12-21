@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64355a48afd3f8d46a5bd7343510ef92, type: 3}
+  m_Name: so_en_Cucina
+  m_EditorClassIdentifier: 
+  Name: Cucina
+  Description: The painting arrived in Brera in 1809 together with three other paintings
+    also by Campi, the "Greengrocer", the "Fishmongers" and the "Chicken sellers",
+    following the Napoleonic suppression of the Gerlimite convent of San Sigismondo
+    in Cremona where they had been present together since 1798 to other paintings
+    ("The sweeper of the house so called San Martino", the "Mangiaricotta" and other
+    perhaps autograph works), in the guesthouse room of the convent, as reported
+    in the inventory drawn up by the pro-treasurer Father Bonifacio Maria Luccasetti.
