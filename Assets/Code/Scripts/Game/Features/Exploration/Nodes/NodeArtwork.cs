@@ -23,6 +23,9 @@ namespace ProjectM.Features.Exploration
         }
 
 #if UNITY_EDITOR
+        /// <summary>
+        /// Draws the label of the node.
+        /// </summary>
         protected override void DrawLabel()
         {
             UnityEditor.Handles.Label(transform.position, "-Artwork View");
