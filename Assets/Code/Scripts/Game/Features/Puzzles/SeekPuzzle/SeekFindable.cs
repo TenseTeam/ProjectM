@@ -4,21 +4,21 @@
     using VUDK.Features.Main.TriggerSystem;
     using VUDK.Patterns.Initialization.Interfaces;
 
-    public class SeekFindable : MonoBehaviour, IInit<int, SeekPuzzle>, ITrigger
+    public class SeekFindable : MonoBehaviour, IInit<int, SeekDialoguePuzzle>, ITrigger
     {
         [Header("Target Settings")]
         [SerializeField]
         private GameObject _targetGameObject;
 
         private int _seekGroupIndex;
-        private SeekPuzzle _seekPuzzle;
+        private SeekDialoguePuzzle _seekPuzzle;
 
-        public void Init(int groupIndex, SeekPuzzle seekPuzzle)
+        public void Init(int groupIndex, SeekDialoguePuzzle seekPuzzle)
         {
             _seekGroupIndex = groupIndex;
             _seekPuzzle = seekPuzzle;
 
-            if(seekPuzzle.IsSolved || _seekPuzzle.RandomGroupIndex != groupIndex)
+            if(seekPuzzle.IsSolved || _seekPuzzle.GroupIndex != groupIndex)
                 EnableTarget();
             else
                 DisableTarget();

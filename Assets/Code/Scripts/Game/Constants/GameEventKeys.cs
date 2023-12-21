@@ -7,5 +7,8 @@
         public const string OnExitQuiz = "OnExitQuiz";
         public const string OnQuizTrigger = "OnQuizTrigger";
         public const string OnSelectQuizAnswer = "OnSelectQuizAnswer";
+
+        // Dialogue Events
+        public const string OnDialogueRewarderBeginTask = "OnDialogueRewarderBeginTask";
     }
 }

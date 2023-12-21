@@ -471,7 +471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _arCamera: {fileID: 7193892}
   _mainCamera: {fileID: 643695686}
-  _isMainCameraOnStart: 1
+  _isMainCameraOnStart: 0
 --- !u!1 &978464506
 GameObject:
   m_ObjectHideFlags: 0

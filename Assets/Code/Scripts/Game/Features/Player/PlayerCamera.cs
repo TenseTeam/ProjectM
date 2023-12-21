@@ -8,7 +8,6 @@
     using VUDK.Features.Main.Camera.CameraViews;
     using VUDK.Features.Main.EventSystem;
     using ProjectM.Constants;
-    using UnityEngine;
 
     public class PlayerCamera : CameraFreeLook, IInit<ExplorationManager>
     {
@@ -41,11 +40,17 @@
             return _explorationManager != null;
         }
 
+        /// <summary>
+        /// Begins the transition.
+        /// </summary>
         private void OnBeginTransition()
         {
             Disable();
         }
 
+        /// <summary>
+        /// Ends the transition.
+        /// </summary>
         private void OnEndTransition()
         {
             TargetRotation = _explorationManager.CurrentTargetNode.NodeRotation.SignedEulerAngles();
