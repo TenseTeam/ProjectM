@@ -47,14 +47,6 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 485e8ed7fd435d1428e8cb3e93ec8295
-    m_Address: AAA2
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-it
-    - Locale-pt
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a1bffc8c5cf777542b05d05a741e5f87
     m_Address: Assets/Resources/Settings/Localization/Tables/SeekDialogues/SeekDialogues
       Shared Data.asset
