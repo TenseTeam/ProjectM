@@ -339,7 +339,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: 'The Greengrocer and the Fishmongers were part of a series of four paintings:
+        the Kitchen and the Fishmongers are currently preserved at the Brera Academy.
+        The painting is a later and more mature version than the one of the same
+        subject preserved in the Fugger Castle.'
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -349,7 +352,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: Pescivendoli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 2.65
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -3182,7 +3190,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -3192,7 +3203,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4894776484862110653, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -7466,7 +7482,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -7476,7 +7495,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4894776484862110653, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -8461,7 +8485,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -8471,7 +8498,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -9149,7 +9181,7 @@ PrefabInstance:
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
       propertyPath: LinkedNodes.Array.size
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
@@ -9180,27 +9212,27 @@ PrefabInstance:
         type: 3}
       propertyPath: LinkedNodes.Array.data[5]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1022697013}
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
       propertyPath: LinkedNodes.Array.data[6]
       value: 
-      objectReference: {fileID: 1022697013}
+      objectReference: {fileID: 1977778608}
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
       propertyPath: LinkedNodes.Array.data[7]
       value: 
-      objectReference: {fileID: 1977778608}
+      objectReference: {fileID: 498918470}
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
       propertyPath: LinkedNodes.Array.data[8]
       value: 
-      objectReference: {fileID: 498918470}
+      objectReference: {fileID: 193088487}
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
       propertyPath: LinkedNodes.Array.data[9]
       value: 
-      objectReference: {fileID: 193088487}
+      objectReference: {fileID: 1010101009}
     - target: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
         type: 3}
       propertyPath: LinkedNodes.Array.data[10]
@@ -10868,6 +10900,7 @@ Transform:
   - {fileID: 1220208130}
   - {fileID: 983039705}
   - {fileID: 1011038990}
+  - {fileID: 794935936705940158}
   m_Father: {fileID: 1231893157}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &633168314
@@ -14353,35 +14386,39 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4328365853318333658, guid: 2210aef14fec1d0468774b941e941893,
         type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 593198939}
+      insertIndex: 0
+      addedObject: {fileID: 2003456747}
     - targetCorrespondingSourceObject: {fileID: 4328365853318333658, guid: 2210aef14fec1d0468774b941e941893,
         type: 3}
       insertIndex: 4
-      addedObject: {fileID: 2048129381}
+      addedObject: {fileID: 593198939}
     - targetCorrespondingSourceObject: {fileID: 4328365853318333658, guid: 2210aef14fec1d0468774b941e941893,
         type: 3}
       insertIndex: 5
-      addedObject: {fileID: 1275998759}
+      addedObject: {fileID: 2048129381}
     - targetCorrespondingSourceObject: {fileID: 4328365853318333658, guid: 2210aef14fec1d0468774b941e941893,
         type: 3}
       insertIndex: 6
-      addedObject: {fileID: 1846791661}
+      addedObject: {fileID: 1275998759}
     - targetCorrespondingSourceObject: {fileID: 4328365853318333658, guid: 2210aef14fec1d0468774b941e941893,
         type: 3}
       insertIndex: 7
-      addedObject: {fileID: 1288874101}
+      addedObject: {fileID: 1846791661}
     - targetCorrespondingSourceObject: {fileID: 4328365853318333658, guid: 2210aef14fec1d0468774b941e941893,
         type: 3}
       insertIndex: 8
-      addedObject: {fileID: 660744507}
+      addedObject: {fileID: 1288874101}
     - targetCorrespondingSourceObject: {fileID: 4328365853318333658, guid: 2210aef14fec1d0468774b941e941893,
         type: 3}
       insertIndex: 9
-      addedObject: {fileID: 697398742}
+      addedObject: {fileID: 660744507}
     - targetCorrespondingSourceObject: {fileID: 4328365853318333658, guid: 2210aef14fec1d0468774b941e941893,
         type: 3}
       insertIndex: 10
+      addedObject: {fileID: 697398742}
+    - targetCorrespondingSourceObject: {fileID: 4328365853318333658, guid: 2210aef14fec1d0468774b941e941893,
+        type: 3}
+      insertIndex: 11
       addedObject: {fileID: 2036033294}
     - targetCorrespondingSourceObject: {fileID: 4328365853318333658, guid: 2210aef14fec1d0468774b941e941893,
         type: 3}
@@ -14567,7 +14604,7 @@ GameObject:
   - component: {fileID: 718717137}
   - component: {fileID: 718717136}
   m_Layer: 0
-  m_Name: Statua
+  m_Name: Statue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14582,13 +14619,13 @@ Transform:
   m_GameObject: {fileID: 718717134}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.08, y: 3.49, z: -0.5}
+  m_LocalPosition: {x: -9.940767, y: 6.7589226, z: -7.4728317}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 11636150}
   - {fileID: 236996336}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1013534300}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &718717136
 MonoBehaviour:
@@ -16886,11 +16923,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 272843565}
     m_Modifications:
+    - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_text
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
+      objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 829761923}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_text
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_LocalScale.z
@@ -17652,7 +17707,14 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: The painting arrived in Brera in 1809 together with three other paintings
+        also by Campi, the "Greengrocer", the "Fishmongers" and the "Chicken sellers",
+        following the Napoleonic suppression of the Gerlimite convent of San Sigismondo
+        in Cremona where they had been present together since 1798 to other paintings
+        ("The sweeper of the house so called San Martino", the "Mangiaricotta" and
+        other perhaps autograph works), in the guesthouse room of the convent, as
+        reported in the inventory drawn up by the pro-treasurer Father Bonifacio
+        Maria Luccasetti.
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -17662,7 +17724,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: Cucina
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -17831,7 +17898,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -17841,7 +17911,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4894776484862110653, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -18100,7 +18175,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -18110,7 +18188,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4894776484862110653, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -18509,7 +18592,15 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: The work's original location and commissioner are unknown; the former
+        may have been Milan Cathedral or the church of Santa Maria in Brera. The
+        panel might have been kept in storage due to its unorthodox iconography.
+        Some theorise that it was produced in the milieu of religious reform movements
+        current in Milan during its occupation by the French (later opposed by Carlo
+        Borromeo and the Counter-Reformation), or that it was directly commissioned
+        by Marshal Gian Giacomo Trivulzio, the city's governor on behalf of the French,
+        who had also commissioned the cartoons for the Trivulzio tapestries from
+        Bramantino.
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -18519,7 +18610,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: Crucifixion
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -18983,7 +19079,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -18993,7 +19092,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4894776484862110653, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -19871,6 +19975,7 @@ Transform:
   - {fileID: 895143804}
   - {fileID: 24659800}
   - {fileID: 167995372}
+  - {fileID: 718717135}
   m_Father: {fileID: 1231893157}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1016286304 stripped
@@ -20411,7 +20516,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -20421,7 +20529,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -21622,7 +21735,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -21632,7 +21748,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -21730,6 +21851,90 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 590244321}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1153021650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1153021651}
+  - component: {fileID: 1153021652}
+  m_Layer: 0
+  m_Name: spr_PolitticoGriffoni_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1153021651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153021650}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.0006, y: 0.0039, z: 0.001}
+  m_LocalScale: {x: 0.014534114, y: 0.014534114, z: 0.014534114}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1620854937}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!212 &1153021652
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153021650}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: fedd0b1cd41c86c41a6a84e7096dcf10, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10, y: 14.45}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &1155040690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23179,6 +23384,131 @@ Transform:
   - {fileID: 79774489}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1237321335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1237321336}
+  - component: {fileID: 1237321339}
+  - component: {fileID: 1237321338}
+  - component: {fileID: 1237321340}
+  m_Layer: 0
+  m_Name: SanPietroTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1237321336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237321335}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.521, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1902740330}
+  m_Father: {fileID: 1539971549}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1237321338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237321335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatusFilter: 1
+  UsePoseSmoothing: 0
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 3.3333333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 3.3333333
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OnTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1237321339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237321335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreviewVisible: 1
+  RuntimeOcclusion: 0
+  RuntimeCollider: 0
+  mTrackableName: spr_AR_SanPietro
+  mInitializedInEditor: 1
+  mDataSetPath: Vuforia/ProjectM.xml
+  mAspectRatio: 2.065
+  mImageTargetType: 0
+  mWidth: 0.55
+  mHeight: 1.13575
+  mRuntimeTexture: {fileID: 0}
+  mMotionHint: 1
+  mTrackingOptimization: 0
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 1237321340}
+--- !u!114 &1237321340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237321335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1237321339}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: spr_AR_SanPietro
+  mDatasetName: Vuforia/ProjectM.xml
+  mCastedBehaviour: {fileID: 1237321339}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!114 &1238917571 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5639153247524558608, guid: e264e7507fd34ec498c8cbd47f07b5b6,
@@ -25198,7 +25528,25 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: 'Ambrogio Figino or Figini or Giovanni Ambrogio Figino was an Italian
+        mannerist painter.
+
+        A pupil of Giovan Paolo Lomazzo from 1564, Figino
+        came to prominence in the Milanese artistic panorama initially as a portraitist.
+        The effigy of Ambrogio Annoni, one of the few portraits that can be confidently
+        attributed to him, shows a meticulous ability to render details worthy of
+        Flemish painting. In the early 1680s the artist received the commission from
+        the Jesuits for two altarpieces, once in San Fedele: the Madonna della Serpe
+        (of which Michelangelo Merisi da Caravaggio will be remembered; 1581-1583)
+        and the ''Coronation of the Virgin (1585-1586).
+
+        Figino''s Roman
+        journey probably dates back to these years; in the Eternal City it was Michelangelo''s
+        art, in addition to the study of antiquity, that was decisive for his education,
+        as is evident from his later paintings, such as the beautiful Saint Matthew
+        and the Angel, also reinterpreted in a next painting by Caravaggio. The altarpiece
+        with Saint Ambrose defeating Arius dates back to 1590 and is now in the Pinacoteca
+        di Brera (another autograph version is in the church of Sant''Eustorgio).'
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -25208,7 +25556,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: Lucio Foppa
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -26459,7 +26812,14 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: The first evidence of the painting is in a document relating to the
+        placement of the altarpiece with "St. Ambrose defeating the Arians" - destined
+        for the Palazzo dei Mercanti now the Civic Museums of the Castle - dated
+        25 January 1590, where it is said to have been created "shortly before".
+        Shortly afterwards Comanini (1591) describes the work, exalting the symbolic
+        contrast between Lucifer and Saint Michael and highlights the usual complex
+        work of the artist whose work is the result of an elaborate and complex synthesis
+        of elements taken from authoritative models.
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -26469,7 +26829,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: La Madonna col Bambino
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 2.65
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -26624,7 +26989,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -26634,7 +27002,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -27563,6 +27936,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eac7f971ecf48140b6dcaab3db19b6b, type: 3}
+--- !u!81 &1468926300 stripped
+AudioListener:
+  m_CorrespondingSourceObject: {fileID: 1513831278389690667, guid: 4eac7f971ecf48140b6dcaab3db19b6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1468926299}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1473317635
 GameObject:
   m_ObjectHideFlags: 0
@@ -27822,7 +28201,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -27832,7 +28214,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -28073,7 +28460,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -28083,7 +28473,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -28347,6 +28742,57 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a0482175dc6d68438e993d67058bc69, type: 3}
+--- !u!1 &1539971548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1539971549}
+  - component: {fileID: 1539971550}
+  m_Layer: 0
+  m_Name: AR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1539971549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539971548}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -409.5343, y: 540.0543, z: 916.05347}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1882843120}
+  - {fileID: 1237321336}
+  - {fileID: 1558625953}
+  - {fileID: 1620854937}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1539971550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539971548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92281eecd66b206409b87e9d25e98ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _arCamera: {fileID: 1882843125}
+  _mainCamera: {fileID: 827970859}
+  _isMainCameraOnStart: 0
 --- !u!114 &1553622252 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7866917143441265843, guid: e264e7507fd34ec498c8cbd47f07b5b6,
@@ -28359,6 +28805,131 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413cc010d3881bf46bd5623fab955e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1558625952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1558625953}
+  - component: {fileID: 1558625956}
+  - component: {fileID: 1558625955}
+  - component: {fileID: 1558625957}
+  m_Layer: 0
+  m_Name: SanGiovanniTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1558625953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558625952}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.07, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1619590653}
+  m_Father: {fileID: 1539971549}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1558625955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558625952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatusFilter: 1
+  UsePoseSmoothing: 0
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 3.3333333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 3.3333333
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OnTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1558625956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558625952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreviewVisible: 1
+  RuntimeOcclusion: 0
+  RuntimeCollider: 0
+  mTrackableName: spr_AR_SanGiovanni
+  mInitializedInEditor: 1
+  mDataSetPath: Vuforia/ProjectM.xml
+  mAspectRatio: 1.955078
+  mImageTargetType: 0
+  mWidth: 0.55
+  mHeight: 1.075293
+  mRuntimeTexture: {fileID: 0}
+  mMotionHint: 1
+  mTrackingOptimization: 0
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 1558625957}
+--- !u!114 &1558625957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558625952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1558625956}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: spr_AR_SanGiovanni
+  mDatasetName: Vuforia/ProjectM.xml
+  mCastedBehaviour: {fileID: 1558625956}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &1563045943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28807,7 +29378,15 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: The work's original location and commissioner are unknown; the former
+        may have been Milan Cathedral or the church of Santa Maria in Brera. The
+        panel might have been kept in storage due to its unorthodox iconography.
+        Some theorise that it was produced in the milieu of religious reform movements
+        current in Milan during its occupation by the French (later opposed by Carlo
+        Borromeo and the Counter-Reformation), or that it was directly commissioned
+        by Marshal Gian Giacomo Trivulzio, the city's governor on behalf of the French,
+        who had also commissioned the cartoons for the Trivulzio tapestries from
+        Bramantino.
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -28817,7 +29396,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: Crucifixion
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -29073,7 +29657,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -29083,7 +29670,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -29893,6 +30485,215 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413cc010d3881bf46bd5623fab955e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1619590652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1619590653}
+  - component: {fileID: 1619590654}
+  m_Layer: 0
+  m_Name: spr_PolitticoGriffoni_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1619590653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619590652}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.855, y: 0.066, z: 0.766}
+  m_LocalScale: {x: 0.28123215, y: 0.28123215, z: 0.28123215}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1558625953}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!212 &1619590654
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619590652}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: fedd0b1cd41c86c41a6a84e7096dcf10, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10, y: 14.45}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1620854936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1620854937}
+  - component: {fileID: 1620854940}
+  - component: {fileID: 1620854939}
+  - component: {fileID: 1620854941}
+  m_Layer: 0
+  m_Name: ImageTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1620854937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620854936}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.07, y: 0, z: 0.66}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1153021651}
+  m_Father: {fileID: 1539971549}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1620854939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620854936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatusFilter: 1
+  UsePoseSmoothing: 0
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 3.3333333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 3.3333333
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OnTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1620854940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620854936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreviewVisible: 1
+  RuntimeOcclusion: 0
+  RuntimeCollider: 0
+  mTrackableName: ui_CloseButton
+  mInitializedInEditor: 1
+  mDataSetPath: Vuforia/--- EMPTY ---.xml
+  mAspectRatio: 1
+  mImageTargetType: 3
+  mWidth: 0.1
+  mHeight: 0.1
+  mRuntimeTexture: {fileID: 2800000, guid: b088ab08a2d58f44c9ecac832bba3a9d, type: 3}
+  mMotionHint: 1
+  mTrackingOptimization: 0
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 1620854941}
+--- !u!114 &1620854941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620854936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1620854940}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: ui_CloseButton
+  mDatasetName: Vuforia/--- EMPTY ---.xml
+  mCastedBehaviour: {fileID: 1620854940}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!114 &1623232721 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
@@ -30208,7 +31009,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -30218,7 +31022,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4894776484862110653, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -30612,7 +31421,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -30622,7 +31434,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -30735,7 +31552,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -30745,7 +31565,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4894776484862110653, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -31546,7 +32371,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -31556,7 +32384,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -32788,7 +33621,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -32798,7 +33634,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4894776484862110653, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -32907,6 +33748,171 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1275674800}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1882843119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1882843120}
+  - component: {fileID: 1882843125}
+  - component: {fileID: 1882843124}
+  - component: {fileID: 1882843123}
+  - component: {fileID: 1882843122}
+  - component: {fileID: 1882843121}
+  m_Layer: 0
+  m_Name: ARCamera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1882843120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882843119}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -568.4657, y: -540.0543, z: -164.05347}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1539971549}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1882843121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882843119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
+--- !u!114 &1882843122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882843119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47f92041efbb4b429a4eafca855ebe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1882843123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882843119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1826476478, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mWorldCenterMode: 2
+  mWorldCenter: {fileID: 0}
+--- !u!81 &1882843124
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882843119}
+  m_Enabled: 1
+--- !u!20 &1882843125
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882843119}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.05
+  far clip plane: 2000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1001 &1890626426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33288,6 +34294,41 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1285.376
       objectReference: {fileID: 0}
+    - target: {fileID: 3676959218966220009, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676959218966220009, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676959218966220009, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1468926300}
+    - target: {fileID: 3676959218966220009, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676959218966220009, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676959218966220009, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Behaviour, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676959218966220009, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3728949088606423929, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_Name
@@ -33363,6 +34404,41 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -770.2256
       objectReference: {fileID: 0}
+    - target: {fileID: 4162402581148303530, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162402581148303530, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162402581148303530, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1891088508}
+    - target: {fileID: 4162402581148303530, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162402581148303530, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162402581148303530, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VUDK.Features.UI.MenuSystem.UIVolumeSettings, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162402581148303530, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4311278028955720210, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -33371,22 +34447,22 @@ PrefabInstance:
     - target: {fileID: 4322547156545628173, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4322547156545628173, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4322547156545628173, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1653.5516
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4322547156545628173, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -232.28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4344497575212149715, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
@@ -33446,22 +34522,22 @@ PrefabInstance:
     - target: {fileID: 4918363908037880892, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4918363908037880892, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4918363908037880892, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 320.5117
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4918363908037880892, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -232.28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4958538412680589669, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
@@ -33689,6 +34765,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5759985698297807614, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_Name
+      value: SFXSlider
+      objectReference: {fileID: 0}
     - target: {fileID: 5812637801896931851, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33797,7 +34878,7 @@ PrefabInstance:
     - target: {fileID: 6905006817134288719, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6981804612087759201, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
@@ -33884,6 +34965,41 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7799683224788839706, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799683224788839706, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799683224788839706, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1891088508}
+    - target: {fileID: 7799683224788839706, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799683224788839706, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetEffects
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799683224788839706, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VUDK.Features.UI.MenuSystem.UIVolumeSettings, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799683224788839706, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7866012799583906355, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_IsActive
@@ -33902,22 +35018,22 @@ PrefabInstance:
     - target: {fileID: 8626754775275060745, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8626754775275060745, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8626754775275060745, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 987.0317
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8626754775275060745, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -232.28
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5950724825509150327, guid: 9afb9c7727edad1499706ea643d557bd, type: 3}
@@ -33945,6 +35061,10 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 821230959}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6261777077548114815, guid: 9afb9c7727edad1499706ea643d557bd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1891088508}
     - targetCorrespondingSourceObject: {fileID: 5311070370734708070, guid: 9afb9c7727edad1499706ea643d557bd,
         type: 3}
       insertIndex: -1
@@ -33958,6 +35078,136 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1413935770}
   m_SourcePrefab: {fileID: 100100000, guid: 9afb9c7727edad1499706ea643d557bd, type: 3}
+--- !u!1 &1891088505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6261777077548114815, guid: 9afb9c7727edad1499706ea643d557bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1891088504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1891088506 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7799683224788839706, guid: 9afb9c7727edad1499706ea643d557bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1891088504}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1891088507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4162402581148303530, guid: 9afb9c7727edad1499706ea643d557bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1891088504}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1891088508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891088505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83b0bf59c2f4f84aa137964a7e2e6cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mixer: {fileID: 24100000, guid: e9f41cb5f3336e743899259eafdb2672, type: 2}
+  _masterSlider: {fileID: 0}
+  _musicSlider: {fileID: 1891088507}
+  _effectsSlider: {fileID: 1891088506}
+--- !u!1 &1902740329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1902740330}
+  - component: {fileID: 1902740331}
+  m_Layer: 0
+  m_Name: spr_PolitticoGriffoni
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1902740330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902740329}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.828, y: 0, z: 0.788}
+  m_LocalScale: {x: 0.28123215, y: 0.28123215, z: 0.28123215}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1237321336}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!212 &1902740331
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902740329}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: fedd0b1cd41c86c41a6a84e7096dcf10, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10, y: 14.45}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!114 &1908245598 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4207140177957347673, guid: e1a54c0f3111e4148bd77999ffb71b8c,
@@ -34329,7 +35579,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -34339,7 +35592,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -35367,7 +36625,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -35377,7 +36638,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4894776484862110653, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -36062,12 +37328,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003456745}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 136.65385, y: 7.667938, z: 73.39636}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 130.98816, y: 3.2139297, z: 78.82636}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 543432442}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2011177460
 PrefabInstance:
@@ -36348,7 +37614,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -36358,7 +37627,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4470240460450667621, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -37992,7 +39266,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -38002,7 +39279,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4894776484862110653, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -38848,7 +40130,10 @@ PrefabInstance:
     - target: {fileID: 1348015481507294496, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: HELO HELO HELO HELLO THIS IS ENGLISH
+      value: "\rA figura do Santo \xE9 central: segura na m\xE3o o trigrama de Cristo
+        e os p\xE9s repousam sobre uma base coberta por um tapete oriental. Nas laterais
+        est\xE3o dois anjos, enquanto acima da arquitrave quatro querubins est\xE3o
+        sentados e ajoelhados."
       objectReference: {fileID: 0}
     - target: {fileID: 2920553601913068487, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -38858,7 +40143,12 @@ PrefabInstance:
     - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
       propertyPath: m_text
-      value: Saint Jonh
+      value: San Bernardino da Siena tra due angeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653208679339991947, guid: e264e7507fd34ec498c8cbd47f07b5b6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4894776484862110653, guid: e264e7507fd34ec498c8cbd47f07b5b6,
         type: 3}
@@ -39815,22 +41105,22 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 624658752}
     m_Modifications:
     - target: {fileID: 2349827146671566043, guid: e732e325aee2d7c4db67ab9b4733b67b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.3
+      value: 16.226738
       objectReference: {fileID: 0}
     - target: {fileID: 2349827146671566043, guid: e732e325aee2d7c4db67ab9b4733b67b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.4227
       objectReference: {fileID: 0}
     - target: {fileID: 2349827146671566043, guid: e732e325aee2d7c4db67ab9b4733b67b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.4
+      value: 24.004835
       objectReference: {fileID: 0}
     - target: {fileID: 2349827146671566043, guid: e732e325aee2d7c4db67ab9b4733b67b,
         type: 3}
@@ -39887,6 +41177,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e732e325aee2d7c4db67ab9b4733b67b, type: 3}
+--- !u!4 &794935936705940158 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2349827146671566043, guid: e732e325aee2d7c4db67ab9b4733b67b,
+    type: 3}
+  m_PrefabInstance: {fileID: 794935936705940157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &846912681908486674
 GameObject:
   m_ObjectHideFlags: 0
@@ -40344,12 +41640,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The figure of the saint emerges with the solidity of a polychrome sculpture,
-    resting on a fractured ground that isolates it like a pedestal. Beyond this,
-    a fantastic landscape opens up with precarious arches framing plains traversed
-    by rivers and dotted with constructions. This landscape representation lends
-    the painting an evocative character and contributes to its significance within
-    the artistic context of the Ferrarese Renaissance.
+  m_text: "La figura del santo emerge con la solidit\xE0 di una scultura policroma,
+    poggiata su un terreno scheggiato che lo isola come un basamento. Al di l\xE0
+    di questo, si apre un paesaggio fantastico con archi pericolanti che incorniciano
+    pianure attraversate da fiumi e punteggiate da costruzioni. Questa rappresentazione
+    paesaggistica conferisce al dipinto un carattere suggestivo e contribuisce alla
+    sua importanza all'interno del contesto artistico del Rinascimento ferrarese."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d7d6a08dde859e429bb587ffb92a63e, type: 2}
   m_sharedMaterial: {fileID: 8881984902152613597, guid: 3d7d6a08dde859e429bb587ffb92a63e,
@@ -42436,6 +43732,4 @@ SceneRoots:
   - {fileID: 1891088504}
   - {fileID: 1231893157}
   - {fileID: 1468926299}
-  - {fileID: 718717135}
-  - {fileID: 794935936705940157}
-  - {fileID: 2003456747}
+  - {fileID: 1539971549}
