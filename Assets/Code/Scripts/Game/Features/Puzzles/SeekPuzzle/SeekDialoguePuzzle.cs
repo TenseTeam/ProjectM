@@ -18,6 +18,7 @@
         private DSDialogueContainerData _loadedDialogue;
         private int _foundCount;
 
+        /// <inheritdoc/>
         public override void Init()
         {
             base.Init();
@@ -31,7 +32,7 @@
             }
         }
 
-        [ContextMenu("Begin Task")]
+        /// <inheritdoc/>
         public override void BeginTask()
         {
             base.BeginTask();
@@ -41,6 +42,10 @@
                 DSEventsHandler.StartDialogue(this, _loadedDialogue, null, true, false);
         }
 
+        /// <summary>
+        /// Subscribes to the dialogue events.
+        /// </summary>
+        /// <param name="dialogueContainerData">The dialogue container data.</param>
         public void Found(int seekGroupIndex)
         {
             if (GroupIndex != seekGroupIndex) return;
@@ -50,6 +55,17 @@
                 ResolveTask();
         }
 
+        /// <inheritdoc/>
+        public override void ResolveTask()
+        {
+            base.ResolveTask();
+            DisplayTimer(false);
+        }
+
+        /// <summary>
+        /// Subscribes to the dialogue events.
+        /// </summary>
+        /// <param name="dialogueContainerData">The dialogue container data.</param>
         public bool HasFoundAll()
         {
             return _foundCount == _seekGroups[GroupIndex].Targets.Count;
