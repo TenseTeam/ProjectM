@@ -18,12 +18,12 @@ MonoBehaviour:
   DialogueAudioClip: {fileID: 0}
   Choices:
   - Text: Archangel Raphael
-    NextDialogue: {fileID: 0}
+    NextDialogue: {fileID: 11400000, guid: f4e4f9ab769fd5c4aa268eb17a1ddfe3, type: 2}
   - Text: Archangel Michael
-    NextDialogue: {fileID: 0}
+    NextDialogue: {fileID: 11400000, guid: f4e4f9ab769fd5c4aa268eb17a1ddfe3, type: 2}
   - Text: Archangel Gabriel
     NextDialogue: {fileID: 11400000, guid: 85ec6a5ded8d5a94b9e69f17d68a79f4, type: 2}
   - Text: Archangel Uriel
-    NextDialogue: {fileID: 0}
+    NextDialogue: {fileID: 11400000, guid: f4e4f9ab769fd5c4aa268eb17a1ddfe3, type: 2}
   DialogueType: 1
   IsStartDialogue: 0

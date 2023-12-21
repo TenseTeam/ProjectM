@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71793e812f3192d4c83152084082ded1, type: 3}
-  m_Name: 15
+  m_Name: 23
   m_EditorClassIdentifier: 
-  DialogueName: 15
+  DialogueName: 23
   DialogueText: 
   ActorData: {fileID: 0}
   DialogueAudioClip: {fileID: 0}
   Choices:
-  - Text: Jerusalem
-    NextDialogue: {fileID: 11400000, guid: 7603d33019424d249a71aca788afb15a, type: 2}
-  - Text: Capernaum
-    NextDialogue: {fileID: 11400000, guid: 7603d33019424d249a71aca788afb15a, type: 2}
-  - Text: Bethsaida
-    NextDialogue: {fileID: 11400000, guid: ff32738eddc4fb944af8119e3466bff2, type: 2}
-  - Text: Antioch
-    NextDialogue: {fileID: 11400000, guid: 7603d33019424d249a71aca788afb15a, type: 2}
+  - Text: Animal fur robe
+    NextDialogue: {fileID: 11400000, guid: 0bdc0553c983e0242806969a241a4f0e, type: 2}
+  - Text: Leather shoes
+    NextDialogue: {fileID: 11400000, guid: 0bdc0553c983e0242806969a241a4f0e, type: 2}
+  - Text: Golden crown
+    NextDialogue: {fileID: 11400000, guid: 510332ecea3855f4eb40822b1c31e266, type: 2}
+  - Text: Lizard at the base of the figure
+    NextDialogue: {fileID: 11400000, guid: 0bdc0553c983e0242806969a241a4f0e, type: 2}
   DialogueType: 1
   IsStartDialogue: 0

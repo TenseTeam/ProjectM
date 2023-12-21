@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71793e812f3192d4c83152084082ded1, type: 3}
-  m_Name: DialogueName
+  m_Name: 24
   m_EditorClassIdentifier: 
-  DialogueName: DialogueName
-  DialogueText: Dialogue text.
+  DialogueName: 24
+  DialogueText: ' The characteristics mentioned for Saint John the Baptist''s hermitage
+    include an animal fur robe, leather shoes, and a lizard at the base of the figure.
+    However, there is no mention of a golden crown in the provided information.'
   ActorData: {fileID: 0}
   DialogueAudioClip: {fileID: 0}
   Choices:
-  - Text: New Choice
-    NextDialogue: {fileID: 0}
-  DialogueType: 1
-  IsStartDialogue: 1
+  - Text: Next Dialogue
+    NextDialogue: {fileID: 11400000, guid: 9e76eec45a5b90a47a12104ac517062d, type: 2}
+  DialogueType: 0
+  IsStartDialogue: 0

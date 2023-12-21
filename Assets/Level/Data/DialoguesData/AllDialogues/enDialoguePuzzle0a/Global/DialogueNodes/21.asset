@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71793e812f3192d4c83152084082ded1, type: 3}
-  m_Name: DialogueName
+  m_Name: 21
   m_EditorClassIdentifier: 
-  DialogueName: DialogueName
-  DialogueText: Dialogue text.
-  ActorData: {fileID: 0}
+  DialogueName: 21
+  DialogueText: Resonance, my friend, is the soul's unique melody. The impostor lacks
+    the authentic notes that echo through the sanctity of a true saint.
+  ActorData: {fileID: 11400000, guid: c82f6a4b1bc48044f8e961d884bedd23, type: 2}
   DialogueAudioClip: {fileID: 0}
   Choices:
-  - Text: New Choice
-    NextDialogue: {fileID: 0}
-  DialogueType: 1
-  IsStartDialogue: 1
+  - Text: Next Dialogue
+    NextDialogue: {fileID: 11400000, guid: 24438799f480dcd4abc6fd51da4e9b9a, type: 2}
+  DialogueType: 0
+  IsStartDialogue: 0

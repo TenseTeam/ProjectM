@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71793e812f3192d4c83152084082ded1, type: 3}
-  m_Name: DialogueName
+  m_Name: 16
   m_EditorClassIdentifier: 
-  DialogueName: DialogueName
-  DialogueText: Dialogue text.
+  DialogueName: 16
+  DialogueText: The actual location of where the saint was born is Bethsaida
   ActorData: {fileID: 0}
   DialogueAudioClip: {fileID: 0}
   Choices:
-  - Text: New Choice
-    NextDialogue: {fileID: 0}
-  DialogueType: 1
-  IsStartDialogue: 1
+  - Text: Next Dialogue
+    NextDialogue: {fileID: 11400000, guid: a5f0b44501be8f44cb39f47a14ad4469, type: 2}
+  DialogueType: 0
+  IsStartDialogue: 0

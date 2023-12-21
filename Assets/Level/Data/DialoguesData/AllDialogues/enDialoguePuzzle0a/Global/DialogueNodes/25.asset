@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71793e812f3192d4c83152084082ded1, type: 3}
+  m_Name: 25
+  m_EditorClassIdentifier: 
+  DialogueName: 25
+  DialogueText: Noble seeker, through the depths of discernment, you've unearthed
+    the truth. The brilliance of your understanding echoes the celestial glow guiding
+    our way.
+  ActorData: {fileID: 11400000, guid: 4f2c7b7aff54e9a4192c3bdde7b01ff9, type: 2}
+  DialogueAudioClip: {fileID: 0}
+  Choices:
+  - Text: Next Dialogue
+    NextDialogue: {fileID: 11400000, guid: 8cb4e23568279484fbe384fb10ca8647, type: 2}
+  DialogueType: 0
+  IsStartDialogue: 0

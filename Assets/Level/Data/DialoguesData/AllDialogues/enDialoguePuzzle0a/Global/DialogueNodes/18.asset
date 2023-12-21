@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71793e812f3192d4c83152084082ded1, type: 3}
-  m_Name: DialogueName
+  m_Name: 18
   m_EditorClassIdentifier: 
-  DialogueName: DialogueName
-  DialogueText: Dialogue text.
-  ActorData: {fileID: 0}
+  DialogueName: 18
+  DialogueText: Ah, the trials of discernment! Trust not only your eyes but the resonance
+    in your heart. The genuine radiates a warmth unique unto itself.
+  ActorData: {fileID: 11400000, guid: c82f6a4b1bc48044f8e961d884bedd23, type: 2}
   DialogueAudioClip: {fileID: 0}
   Choices:
-  - Text: New Choice
-    NextDialogue: {fileID: 0}
-  DialogueType: 1
-  IsStartDialogue: 1
+  - Text: Next Dialogue
+    NextDialogue: {fileID: 11400000, guid: e54b8f87553457445b93526d42732c43, type: 2}
+  DialogueType: 0
+  IsStartDialogue: 0

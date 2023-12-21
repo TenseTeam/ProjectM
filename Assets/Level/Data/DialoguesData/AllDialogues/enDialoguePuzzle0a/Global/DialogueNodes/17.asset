@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71793e812f3192d4c83152084082ded1, type: 3}
-  m_Name: DialogueName
+  m_Name: 17
   m_EditorClassIdentifier: 
-  DialogueName: DialogueName
-  DialogueText: Dialogue text.
-  ActorData: {fileID: 0}
+  DialogueName: 17
+  DialogueText: I implore you, seeker, let not cunning words cloud your judgment.
+    Seek clarity, and the path to truth shall unveil itself.
+  ActorData: {fileID: 11400000, guid: 4f2c7b7aff54e9a4192c3bdde7b01ff9, type: 2}
   DialogueAudioClip: {fileID: 0}
   Choices:
-  - Text: New Choice
-    NextDialogue: {fileID: 0}
-  DialogueType: 1
-  IsStartDialogue: 1
+  - Text: Next Dialogue
+    NextDialogue: {fileID: 11400000, guid: 3d3cc285d6fd4bf4cbc2a982fd49252d, type: 2}
+  DialogueType: 0
+  IsStartDialogue: 0
