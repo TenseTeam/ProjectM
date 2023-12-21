@@ -32,26 +32,41 @@ namespace ProjectM.Features.UI.UIExploration
             _exitViewButton.onClick.RemoveListener(OnExitObservationButtonHanlder);
         }
 
+        /// <summary>
+        /// Enables the panel.
+        /// </summary>
         public void Enable()
         {
             _panel.gameObject.SetActive(true);
         }
-
+        
+        /// <summary>
+        /// Disables the panel.
+        /// </summary>
         public void Disable()
         {
             _panel.gameObject.SetActive(false);
         }
 
+        /// <summary>
+        /// Called when the player enters the observation mode.
+        /// </summary>
         private void EnterObservation()
         {
             Enable();
         }
 
+        /// <summary>
+        /// Called when the player exits the observation mode.
+        /// </summary>
         private void ExitObservation()
         {
             Disable();
         }
 
+        /// <summary>
+        /// Called when the player clicks on the exit observation button.
+        /// </summary>
         private void OnExitObservationButtonHanlder()
         {
             EventManager.Ins.TriggerEvent(ExplorationEventKeys.OnExitObservationButton);

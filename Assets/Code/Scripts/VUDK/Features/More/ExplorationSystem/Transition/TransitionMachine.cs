@@ -34,12 +34,14 @@
         private TransitionFov _transitionFov;
         #endregion
 
+        /// <inheritdoc/>
         public virtual void Init(ExplorationManager explorationManager)
         {
             _explorationManager = explorationManager;
             Init();
         }
 
+        /// <inheritdoc/>
         public override void Init()
         {
             if(!Check()) return;
@@ -57,27 +59,43 @@
             SetTransition(_defaultTransition);
         }
 
+        /// <inheritdoc/>
         public override bool Check()
         {
             return _explorationManager != null;
         }
 
+        /// <summary>
+        /// Resets the transition to the default transition.
+        /// </summary>
         public void ResetToDefaultTransition()
         {
             ChangeTransitionType(_defaultTransition);
         }
 
+        /// <summary>
+        /// Changes the default transition.
+        /// </summary>
+        /// <param name="transitionType">New default transition.</param>
         public void ChangeDefaultTransition(TransitionType transitionType)
         {
             _defaultTransition = transitionType;
         }
 
+        /// <summary>
+        /// Changes the current transition.
+        /// </summary>
+        /// <param name="transitionType">New transition.</param>
         public void ChangeTransitionType(TransitionType transitionType)
         {
             if(_currentTransitionType == transitionType) return;
             SetTransition(transitionType);
         }
 
+        /// <summary>
+        /// Sets the current transition.
+        /// </summary>
+        /// <param name="transitionType">New transition.</param>
         private void SetTransition(TransitionType transitionType)
         {
             _currentTransitionType = transitionType;

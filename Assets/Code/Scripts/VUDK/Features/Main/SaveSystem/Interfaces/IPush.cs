@@ -2,6 +2,9 @@
 {
     public interface IPush
     {
+        /// <summary>
+        /// Push data to save.
+        /// </summary>
         public void Push();
     }
 }

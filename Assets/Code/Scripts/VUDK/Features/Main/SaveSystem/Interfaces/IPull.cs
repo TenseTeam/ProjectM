@@ -2,6 +2,9 @@
 {
     public interface IPull
     {
+        /// <summary>
+        /// Pull data from save.
+        /// </summary>
         public void Pull();
     }
 }

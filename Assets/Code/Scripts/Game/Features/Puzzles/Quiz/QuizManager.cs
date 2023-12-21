@@ -86,6 +86,7 @@
             InputsManager.Inputs.Interaction.Interact.canceled -= DisplayQuestion;
         }
 
+        /// <inheritdoc/>
         public override void Init()
         {
             base.Init();
@@ -96,6 +97,7 @@
             }
         }
 
+        /// <inheritdoc/>
         public override void BeginTask()
         {
             base.BeginTask();
@@ -107,18 +109,21 @@
             DisplayQuestion();
         }
 
+        /// <inheritdoc/>
         public override void ResolveTask()
         {
             base.ResolveTask();
             PrintMessage(_quizCompletedMessage.GetLocalizedString());
         }
 
+        /// <inheritdoc/>
         public override void InterruptTask()
         {
             base.InterruptTask();
             Disable();
         }
 
+        /// <inheritdoc/>
         public override void ResumeTask()
         {
             base.ResumeTask();
@@ -126,24 +131,30 @@
             Enable();
         }
 
+        /// <inheritdoc/>
         protected override void OnEnterFocusIsSolved()
         {
             base.OnEnterFocusIsSolved();
             DisplayCompletedQuiz();
         }
 
+        /// <inheritdoc/>
         public void Enable()
         {
             EventManager.Ins.TriggerEvent(GameEventKeys.OnEnterQuiz);
             _quizPanel.gameObject.SetActive(true);
         }
 
+        /// <inheritdoc/>
         public void Disable()
         {
             EventManager.Ins.TriggerEvent(GameEventKeys.OnExitQuiz);
             _quizPanel.gameObject.SetActive(false);
         }
 
+        /// <summary>
+        /// Displays the current question.
+        /// </summary>
         public void DisplayQuestion()
         {
             if (_isWaitingAnswer || !IsFocused || !IsInProgress) return;
@@ -151,11 +162,17 @@
             DisaplayAnswers();
         }
 
+        /// <summary>
+        /// Displays the current question.
+        /// </summary>
         private void DisplayQuestion(InputAction.CallbackContext ctx)
         {
             DisplayQuestion();
         }
 
+        /// <summary>
+        /// Goes to the next question.
+        /// </summary>
         private void NextQuestion()
         {
             _currentQuestionIndex++;
@@ -165,16 +182,25 @@
                 SaveQuizState(); // Saving at every question to prevent data loss in case of crash
         }
 
+        /// <summary>
+        /// Enables the choices box.
+        /// </summary>
         private void EnableChoicesBox()
         {
             _answersBox.gameObject.SetActive(true);
         }
 
+        /// <summary>
+        /// Disables the choices box.
+        /// </summary>
         private void DisableAnswersBox()
         {
             _answersBox.gameObject.SetActive(false);
         }
 
+        /// <summary>
+        /// Displays the answers.
+        /// </summary>
         private void DisaplayAnswers()
         {
             _isWaitingAnswer = true;
@@ -193,6 +219,10 @@
             }
         }
 
+        /// <summary>
+        /// Receives the answer from the player.
+        /// </summary>
+        /// <param name="choiceIndex">Index of the choice.</param>
         private void ReceiveAnswer(int choiceIndex)
         {
             if (!_isWaitingAnswer) return;
@@ -207,6 +237,9 @@
             NextQuestion();
         }
 
+        /// <summary>
+        /// Called when the player answers correctly.
+        /// </summary>
         private void CorrectAnswer()
         {
             OnCorrectAnswer?.Invoke();
@@ -216,22 +249,35 @@
                 _rewarder.SendReward(CurrentQuestion.PointsReward);
         }
 
+        /// <summary>
+        /// Called when the player answers incorrectly.
+        /// </summary>
         private void WrongAnswer()
         {
             OnWrongAnswer?.Invoke();
             PrintMessage(_wrongAnswerMessage.GetLocalizedString());
         }
 
+        /// <summary>
+        /// Prints the message.
+        /// </summary>
+        /// <param name="message">Message to print.</param>
         private void PrintMessage(string message)
         {
             _questionText.text = message;
         }
 
+        /// <summary>
+        /// Prints the question.
+        /// </summary>
         private void PrintQuestion()
         {
             _questionText.text = CurrentQuestion.QuestionText;
         }
 
+        /// <summary>
+        /// Displays the completed quiz.
+        /// </summary>
         private void DisplayCompletedQuiz()
         {
             Enable();
@@ -239,6 +285,9 @@
             DisableAnswersBox();
         }
 
+        /// <summary>
+        /// Saves the quiz state.
+        /// </summary>
         private void SaveQuizState()
         {
             SaveValue.IsInProgress = IsInProgress;
@@ -247,6 +296,10 @@
             Push();
         }
 
+        /// <summary>
+        /// Loads the quiz pool data.
+        /// </summary>
+        /// <param name="asset"><see cref="QuizPoolData"/> to load.</param>
         private void LoadQuizPoolData(QuizPoolData asset)
         {
             _loadedQuizPool = asset;

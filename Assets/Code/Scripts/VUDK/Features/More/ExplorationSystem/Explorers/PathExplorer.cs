@@ -5,6 +5,9 @@
 
     public class PathExplorer : TransitionMachine
     {
+        /// <summary>
+        /// Start the transition state machine.
+        /// </summary>
         public void TransitionStart()
         {
             ChangeState(TransitionStateKey.Start);

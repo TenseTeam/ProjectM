@@ -39,24 +39,30 @@
 
         protected virtual void Update() => LookAtExplorer();
 
+        /// <inheritdoc/>
         public override void Enable()
         {
             IsInteractable = true;
             InteractButton.gameObject.SetActive(true);
         }
 
+        /// <inheritdoc/>
         public override void Disable()
         {
             IsInteractable = false;
             InteractButton.gameObject.SetActive(false);
         }
 
+        /// <inheritdoc/>
         public override void Interact()
         {
             if (!IsInteractable) return;
             base.Interact();
         }
 
+        /// <summary>
+        /// Makes the node button look at the explorer.
+        /// </summary>
         private void LookAtExplorer()
         {
             Vector3 direction = PathExplorer.transform.position - InteractButton.transform.parent.position;

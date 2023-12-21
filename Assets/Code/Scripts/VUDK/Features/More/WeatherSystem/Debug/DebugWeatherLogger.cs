@@ -25,6 +25,10 @@ namespace VUDK.Features.More.WeatherSystem.Debug
             WeatherEvents.OnWeatherChanged -= OnWeatherChanged;
         }
 
+        /// <summary>
+        /// Called when the weather changes.
+        /// </summary>
+        /// <param name="data">Weather data.</param>
         private void OnWeatherChanged(WeatherData data)
         {
             _text.text = $"Weather:\n{data}";

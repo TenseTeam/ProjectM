@@ -11,6 +11,7 @@
         {
         }
 
+        /// <inheritdoc/>
         public override void Enter()
         {
             EventManager.Ins.TriggerEvent(ExplorationEventKeys.OnEndTransition);
@@ -18,14 +19,17 @@
             Context.TargetNode.OnNodeEnter();
         }
 
+        /// <inheritdoc/>
         public override void Process()
         {
         }
 
+        /// <inheritdoc/>
         public override void FixedProcess()
         {
         }
 
+        /// <inheritdoc/>
         public override void Exit()
         {
         }

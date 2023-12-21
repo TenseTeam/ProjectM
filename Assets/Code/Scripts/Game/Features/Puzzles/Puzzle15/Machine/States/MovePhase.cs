@@ -9,28 +9,32 @@
         {
         }
 
+        /// <inheritdoc/>
         public override void Enter()
         {
             Context.Puzzle.OnMovedPiece += OnMovedPiece;
         }
 
+        /// <inheritdoc/>
         public override void Exit()
         {
             Context.Puzzle.OnMovedPiece -= OnMovedPiece;
         }
 
+        /// <inheritdoc/>
         public override void FixedProcess()
         {
         }
 
+        /// <inheritdoc/>
         public override void Process()
         {
         }
 
+        /// <inheritdoc/>
         private void OnMovedPiece()
         {
             ChangeState(Game15PhaseKey.CheckPhase);
         }
-
     }
 }

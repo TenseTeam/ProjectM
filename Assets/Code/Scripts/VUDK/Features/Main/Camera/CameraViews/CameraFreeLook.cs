@@ -46,23 +46,36 @@
             SetTargetRotation(transform.root.rotation);
         }
 
+        /// <summary>
+        /// Enables the camera rotation.
+        /// </summary>
         public virtual void Enable()
         {
             InputsManager.Inputs.Camera.Enable();
             _canRotate = true;
         }
 
+        /// <summary>
+        /// Disables the camera rotation.
+        /// </summary>
         public virtual void Disable()
         {
             InputsManager.Inputs.Camera.Disable();
             _canRotate = false;
         }
 
+        /// <summary>
+        /// Sets the target rotation.
+        /// </summary>
+        /// <param name="rotation">Target rotation as a Quaternion.</param>
         public void SetTargetRotation(Quaternion rotation)
         {
             TargetRotation = rotation.SignedEulerAngles();
         }
 
+        /// <summary>
+        /// Resets the target rotation to Vector3.zero.
+        /// </summary>
         public virtual void ResetTargetRotation()
         {
             TargetRotation = Vector3.zero;
@@ -73,6 +86,9 @@
             LookRotate();
         }
 
+        /// <summary>
+        /// Rotates the camera.
+        /// </summary>
         protected virtual void LookRotate()
         {
             if (!_canRotate) return;

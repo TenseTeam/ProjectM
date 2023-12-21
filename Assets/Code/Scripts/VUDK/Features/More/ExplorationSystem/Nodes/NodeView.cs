@@ -7,12 +7,14 @@
 
     public class NodeView : NodeInteractiveBase
     {
+        /// <inheritdoc/>
         public override void OnNodeEnter()
         {
             base.OnNodeEnter();
             EventManager.Ins.TriggerEvent(ExplorationEventKeys.OnEnterNodeView);
         }
 
+        /// <inheritdoc/>
         public override void OnNodeExit()
         {
             base.OnNodeExit();

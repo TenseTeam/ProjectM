@@ -8,12 +8,17 @@
     {
         private Game15MachineContext _context;
 
+        /// <summary>
+        /// Initializes the machine.
+        /// </summary>
+        /// <param name="puzzle">Puzzle.</param>
         public void Init(Game15Puzzle puzzle)
         {
             _context = Game15Factory.Create(puzzle);
             Init();
         }
 
+        /// <inheritdoc/>
         public override void Init()
         {
             if (!Check()) return;
@@ -23,12 +28,16 @@
             AddState(Game15PhaseKey.MovePhase, movePhase);
             AddState(Game15PhaseKey.CheckPhase, checkPhase);
         }
-
+        
+        /// <inheritdoc/>
         public override bool Check()
         {
             return _context != null;
         }
 
+        /// <summary>
+        /// Starts the machine.
+        /// </summary>
         public void StartMachine()
         {
             if (Check())

@@ -29,12 +29,14 @@
             EventManager.Ins.AddListener(ExplorationEventKeys.OnEndTransition, OnEndTransition);
         }
 
+        /// <inheritdoc/>
         public void Init(ExplorationManager eplorationManager)
         {
             if (Check()) return;
             _explorationManager = eplorationManager;
         }
 
+        /// <inheritdoc/>
         public bool Check()
         {
             return _explorationManager != null;

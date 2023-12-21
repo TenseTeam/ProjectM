@@ -21,6 +21,9 @@
         [SerializeField]
         public UnityEvent OnTaskInterrupted;
 
+        /// <summary>
+        /// Begin task.
+        /// </summary>
         public virtual void BeginTask()
         {
             OnEnterFocus();
@@ -32,17 +35,26 @@
             }
         }
 
+        /// <summary>
+        /// Resume task.
+        /// </summary>
         public virtual void ResumeTask()
         {
             OnEnterFocus();
         }
 
+        /// <summary>
+        /// Interrupt task.
+        /// </summary>
         public virtual void InterruptTask()
         {
             OnExitFocus();
             OnTaskInterrupted?.Invoke();
         }
 
+        /// <summary>
+        /// Resolve task.
+        /// </summary>
         public virtual void ResolveTask()
         {
             OnTaskResolved?.Invoke();
@@ -51,17 +63,26 @@
             OnEnterFocus();
         }
 
+        /// <summary>
+        /// On Enter Focus task.
+        /// </summary>
         protected virtual void OnEnterFocus()
         {
             IsFocused = true;
             if (IsSolved && !IsRepeatable) OnEnterFocusIsSolved();
         }
 
+        /// <summary>
+        /// On Exit Focus task.
+        /// </summary>
         protected virtual void OnExitFocus()
         {
             IsFocused = false;
         }
 
+        /// <summary>
+        /// On Enter Focus task when task is solved.
+        /// </summary>
         protected abstract void OnEnterFocusIsSolved();
     }
 }
