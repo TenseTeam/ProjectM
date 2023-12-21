@@ -37035,7 +37035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mixer: {fileID: 24100000, guid: e9f41cb5f3336e743899259eafdb2672, type: 2}
-  _masterSlider: {fileID: 0}
+  _masterSlider: {fileID: 1891088507}
   _musicSlider: {fileID: 1891088507}
   _effectsSlider: {fileID: 1891088506}
 --- !u!1 &1891088509 stripped
@@ -43795,12 +43795,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The figure of the saint emerges with the solidity of a polychrome sculpture,
-    resting on a fractured ground that isolates it like a pedestal. Beyond this,
-    a fantastic landscape opens up with precarious arches framing plains traversed
-    by rivers and dotted with constructions. This landscape representation lends
-    the painting an evocative character and contributes to its significance within
-    the artistic context of the Ferrarese Renaissance.
+  m_text: "La figura del santo emerge con la solidit\xE0 di una scultura policroma,
+    poggiata su un terreno scheggiato che lo isola come un basamento. Al di l\xE0
+    di questo, si apre un paesaggio fantastico con archi pericolanti che incorniciano
+    pianure attraversate da fiumi e punteggiate da costruzioni. Questa rappresentazione
+    paesaggistica conferisce al dipinto un carattere suggestivo e contribuisce alla
+    sua importanza all'interno del contesto artistico del Rinascimento ferrarese."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d7d6a08dde859e429bb587ffb92a63e, type: 2}
   m_sharedMaterial: {fileID: 8881984902152613597, guid: 3d7d6a08dde859e429bb587ffb92a63e,
